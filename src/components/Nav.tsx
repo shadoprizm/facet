@@ -1,0 +1,53 @@
+import Link from "next/link";
+import { createClient } from "@/lib/supabase/server";
+import { getActivePersona, listMyPersonas } from "@/lib/persona";
+import { signOut } from "@/lib/actions";
+import PersonaSwitcher from "./PersonaSwitcher";
+
+export default async function Nav() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const [personas, active] = user
+    ? await Promise.all([listMyPersonas(), getActivePersona()])
+    : [[], null];
+
+  return (
+    <nav
+      className="sticky top-0 z-40 border-b"
+      style={{ background: "rgba(11,13,18,0.9)", borderColor: "var(--border)", backdropFilter: "blur(8px)" }}
+    >
+      <div className="mx-auto flex h-14 max-w-5xl items-center gap-4 px-4">
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold">
+          <span
+            className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-sm text-white"
+            style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)" }}
+          >
+            ◆
+          </span>
+          Facet
+        </Link>
+        <div className="flex-1" />
+        {user ? (
+          <>
+            <Link href="/rooms/new" className="btn btn-ghost hidden sm:inline-flex">
+              + New Room
+            </Link>
+            <PersonaSwitcher personas={personas} active={active} />
+            <form action={signOut}>
+              <button className="btn btn-ghost" title={`Root: ${user.email} (never shown to others)`}>
+                Sign out
+              </button>
+            </form>
+          </>
+        ) : (
+          <Link href="/login" className="btn btn-primary">
+            Sign in
+          </Link>
+        )}
+      </div>
+    </nav>
+  );
+}

@@ -1,0 +1,274 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+import { createClient } from "@/lib/supabase/server";
+import { ACTIVE_PERSONA_COOKIE, getActivePersona } from "@/lib/persona";
+import { runAgentOnComment, runAgentOnPost } from "@/lib/agent/run";
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+function fail(path: string, message: string): never {
+  const sep = path.includes("?") ? "&" : "?";
+  redirect(`${path}${sep}error=${encodeURIComponent(message)}`);
+}
+
+// ============================================================ auth
+
+export async function signIn(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.auth.signInWithPassword({
+    email: String(formData.get("email") ?? ""),
+    password: String(formData.get("password") ?? ""),
+  });
+  if (error) fail("/login", error.message);
+  redirect("/");
+}
+
+export async function signUp(formData: FormData) {
+  const supabase = await createClient();
+  const { data, error } = await supabase.auth.signUp({
+    email: String(formData.get("email") ?? ""),
+    password: String(formData.get("password") ?? ""),
+    options: { emailRedirectTo: `${SITE}/auth/confirm` },
+  });
+  if (error) fail("/login", error.message);
+  if (data.session) redirect("/");
+  redirect("/login?notice=" + encodeURIComponent("Check your email to confirm your root account."));
+}
+
+export async function sendMagicLink(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.auth.signInWithOtp({
+    email: String(formData.get("email") ?? ""),
+    options: { emailRedirectTo: `${SITE}/auth/confirm` },
+  });
+  if (error) fail("/login", error.message);
+  redirect("/login?notice=" + encodeURIComponent("Magic link sent — check your email."));
+}
+
+export async function signOut() {
+  const supabase = await createClient();
+  await supabase.auth.signOut();
+  redirect("/login");
+}
+
+// ============================================================ personas
+
+export async function createPersona(formData: FormData) {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("create_persona", {
+    p_handle: String(formData.get("handle") ?? "").trim().toLowerCase(),
+    p_display_name: String(formData.get("display_name") ?? "").trim(),
+    p_avatar_color: String(formData.get("avatar_color") ?? "#6366f1"),
+    p_bio: String(formData.get("bio") ?? "").trim(),
+  });
+  if (error) fail("/me", error.message);
+  const cookieStore = await cookies();
+  cookieStore.set(ACTIVE_PERSONA_COOKIE, data as string, { path: "/" });
+  revalidatePath("/", "layout");
+  redirect("/me");
+}
+
+export async function retirePersona(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("retire_persona", {
+    p_persona: String(formData.get("persona_id")),
+  });
+  if (error) fail("/me", error.message);
+  revalidatePath("/", "layout");
+  redirect("/me");
+}
+
+export async function switchPersona(formData: FormData) {
+  const personaId = String(formData.get("persona_id"));
+  const backTo = String(formData.get("back_to") || "/");
+  const supabase = await createClient();
+  // Ownership check: RLS means this select only finds the caller's personas.
+  const { data } = await supabase
+    .from("personas")
+    .select("id")
+    .eq("id", personaId)
+    .eq("status", "active")
+    .single();
+  if (!data) fail(backTo, "That mask isn't yours.");
+  const cookieStore = await cookies();
+  cookieStore.set(ACTIVE_PERSONA_COOKIE, personaId, { path: "/" });
+  revalidatePath("/", "layout");
+  redirect(backTo);
+}
+
+// ============================================================ rooms
+
+export async function createRoom(formData: FormData) {
+  const persona = await getActivePersona();
+  if (!persona) fail("/rooms/new", "Create a persona first.");
+  const slug = String(formData.get("slug") ?? "").trim().toLowerCase();
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("create_room", {
+    p_persona: persona.id,
+    p_slug: slug,
+    p_name: String(formData.get("name") ?? "").trim(),
+    p_description: String(formData.get("description") ?? "").trim(),
+    p_constitution: String(formData.get("constitution") ?? ""),
+  });
+  if (error) fail("/rooms/new", error.message);
+  redirect(`/r/${slug}`);
+}
+
+export async function toggleSubscribe(formData: FormData) {
+  const persona = await getActivePersona();
+  const slug = String(formData.get("slug"));
+  if (!persona) fail(`/r/${slug}`, "Create a persona first.");
+  const roomId = String(formData.get("room_id"));
+  const subscribed = formData.get("subscribed") === "true";
+  const supabase = await createClient();
+  const { error } = await supabase.rpc(
+    subscribed ? "unsubscribe_room" : "subscribe_room",
+    { p_persona: persona.id, p_room: roomId }
+  );
+  if (error) fail(`/r/${slug}`, error.message);
+  revalidatePath(`/r/${slug}`);
+  redirect(`/r/${slug}`);
+}
+
+export async function updateConstitution(formData: FormData) {
+  const slug = String(formData.get("slug"));
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("update_constitution", {
+    p_room: String(formData.get("room_id")),
+    p_constitution: String(formData.get("constitution") ?? ""),
+  });
+  if (error) fail(`/r/${slug}/agent`, error.message);
+  revalidatePath(`/r/${slug}/agent`);
+  redirect(`/r/${slug}/agent`);
+}
+
+// ============================================================ content
+
+export async function createPost(formData: FormData) {
+  const persona = await getActivePersona();
+  const slug = String(formData.get("room_slug"));
+  if (!persona) fail(`/r/${slug}/submit`, "Create a persona first.");
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("create_post", {
+    p_persona: persona.id,
+    p_room: String(formData.get("room_id")),
+    p_title: String(formData.get("title") ?? "").trim(),
+    p_body: String(formData.get("body") ?? "").trim(),
+  });
+  if (error) fail(`/r/${slug}/submit`, error.message);
+  await runAgentOnPost(supabase, data as string);
+  redirect(`/post/${data}`);
+}
+
+export async function createComment(formData: FormData) {
+  const persona = await getActivePersona();
+  const postId = String(formData.get("post_id"));
+  if (!persona) fail(`/post/${postId}`, "Create a persona first.");
+  const parent = formData.get("parent_id");
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("create_comment", {
+    p_persona: persona.id,
+    p_post: postId,
+    p_body: String(formData.get("body") ?? "").trim(),
+    p_parent: parent ? String(parent) : null,
+  });
+  if (error) fail(`/post/${postId}`, error.message);
+  await runAgentOnComment(supabase, data as string);
+  revalidatePath(`/post/${postId}`);
+  redirect(`/post/${postId}`);
+}
+
+export async function crosspost(formData: FormData) {
+  const sourceId = String(formData.get("source_post_id"));
+  const personaId = String(formData.get("persona_id"));
+  const roomId = String(formData.get("room_id"));
+  const supabase = await createClient();
+
+  const { data: source } = await supabase
+    .from("posts")
+    .select("title, body")
+    .eq("id", sourceId)
+    .single();
+  if (!source) fail(`/post/${sourceId}`, "Source post not found.");
+
+  const { data, error } = await supabase.rpc("create_post", {
+    p_persona: personaId,
+    p_room: roomId,
+    p_title: source.title,
+    p_body: source.body,
+    p_crosspost_from: sourceId,
+  });
+  if (error) fail(`/post/${sourceId}`, error.message);
+  await runAgentOnPost(supabase, data as string);
+  redirect(`/post/${data}`);
+}
+
+// ============================================================ votes (called from client components)
+
+export async function vote(
+  targetType: "post" | "comment",
+  targetId: string,
+  value: -1 | 0 | 1,
+  path: string
+): Promise<{ error?: string }> {
+  const persona = await getActivePersona();
+  if (!persona) return { error: "Create a persona first." };
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("cast_vote", {
+    p_persona: persona.id,
+    p_target_type: targetType,
+    p_target: targetId,
+    p_value: value,
+  });
+  if (error) return { error: error.message };
+  revalidatePath(path);
+  return {};
+}
+
+export async function overrideVote(
+  actionId: string,
+  choice: "uphold" | "override",
+  path: string
+): Promise<{ error?: string; status?: string }> {
+  const persona = await getActivePersona();
+  if (!persona) return { error: "Create a persona first." };
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("cast_override_vote", {
+    p_persona: persona.id,
+    p_action: actionId,
+    p_vote: choice,
+  });
+  if (error) return { error: error.message };
+  revalidatePath(path);
+  return { status: data as string };
+}
+
+// ============================================================ moderation (human)
+
+export async function resolveFlag(formData: FormData) {
+  const slug = String(formData.get("slug"));
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("resolve_flag", {
+    p_action: String(formData.get("action_id")),
+    p_disposition: "reviewed",
+  });
+  if (error) fail(`/r/${slug}/agent`, error.message);
+  revalidatePath(`/r/${slug}/agent`);
+  redirect(`/r/${slug}/agent`);
+}
+
+export async function banPersona(formData: FormData) {
+  const slug = String(formData.get("slug"));
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("ban_persona_from_room", {
+    p_room: String(formData.get("room_id")),
+    p_persona: String(formData.get("persona_id")),
+    p_reason: String(formData.get("reason") ?? "Moderator action"),
+  });
+  if (error) fail(`/r/${slug}/agent`, error.message);
+  revalidatePath(`/r/${slug}/agent`);
+  redirect(`/r/${slug}/agent`);
+}

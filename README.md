@@ -51,22 +51,58 @@ src/
   lib/
     supabase/server.ts     Per-request Supabase client (cookie-bound)
     persona.ts             Active-persona cookie resolution
-    actions.ts             All server actions (forms + votes) → Postgres RPCs
+    admin.ts               isPlatformAdmin() / requireAdmin() checks
+    actions.ts             All server actions (forms + votes + avatars) → Postgres RPCs
+    admin-actions.ts       Admin-only server actions (bans, flags, grants)
     data.ts                personas_public batch reads
     agent/
       lexicon.ts           Hostility lexicon with calibrated weights
       text.ts              Tokenizer, hashed BoW vectors, cosine (the "embedding")
       constitution.ts      Parses constitution directives + values prose
       engine.ts            analyzeContent / decide / detectDogpile (pure functions)
-      run.ts               Agent runtime: evaluates new posts/comments in-request
+      run.ts                Agent runtime: evaluates new posts/comments in-request
   app/                     Routes: /, /login, /me, /p/[handle], /r/[slug],
-                           /r/[slug]/submit, /r/[slug]/agent, /post/[id]
+                           /r/[slug]/submit, /r/[slug]/agent, /post/[id],
+                           /admin, /admin/flags, /admin/bans, /admin/rooms, /admin/admins
 supabase/
   migrations/0001_init.sql             Schema, RLS, views
   migrations/0002_functions.sql        All write-path RPCs (security definer)
   migrations/0003_harden_rpc_grants.sql
+  migrations/0004_avatars_and_admin.sql   avatar_url columns, Storage buckets, platform_admins, admin RPCs
+  migrations/0005_fix_grants.sql          Fixes anon-execute leak via the PUBLIC pseudo-role; drops
+                                           unneeded bucket-listing policies
   seed.sql                             Demo data
 ```
+
+### Image avatars
+
+Personas and Rooms can upload an image avatar (PNG/JPEG/WebP/GIF, ≤3MB) via
+Supabase Storage. Two public buckets (`persona-avatars`, `room-avatars`)
+store objects under `{owner_id}/{random}.{ext}`; storage RLS restricts writes
+to the owning persona's root (or, for Rooms, the founder or a platform
+admin) using `storage.foldername(name)`. Public buckets serve files through
+a CDN path that bypasses `storage.objects` RLS entirely, so no SELECT policy
+is needed (or wanted — it would only add unnecessary bucket-listing
+ability). Falls back to the existing colour-dot/glyph when no image has been
+uploaded.
+
+### Admin backend
+
+`/admin` is gated by a `platform_admins` table and an `is_platform_admin()`
+RPC that every admin page/action re-checks server-side. It is the one
+deliberate exception to "root is hidden": `admin_lookup_persona()` resolves
+a persona handle to its root email specifically for abuse enforcement,
+matching the product spec's "known only to the platform for abuse
+enforcement" clause. From there, admins can:
+
+- View platform-wide stats and the global flag queue (every Room's escalations in one place)
+- Platform-ban a root by persona handle, or unban
+- View and unban Room-level bans
+- Upload a Room's avatar for any Room (not just ones they founded)
+- Grant/revoke admin status by email (blocked from removing the last admin)
+
+Founders keep their existing Room-scoped powers (constitution edits, flag
+review, bans) unchanged; admin powers are additive, not a replacement.
 
 ### The identity tree
 

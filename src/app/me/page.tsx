@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { getActivePersona, listMyPersonas } from "@/lib/persona";
-import { createPersona, retirePersona, switchPersona } from "@/lib/actions";
+import { createPersona, retirePersona, switchPersona, uploadPersonaAvatar } from "@/lib/actions";
+import { PersonaAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import Link from "next/link";
 
@@ -42,43 +43,60 @@ export default async function MePage({
             </p>
           )}
           {personas.map((p) => (
-            <div key={p.id} className="panel flex items-center gap-3 p-4">
-              <span className="h-9 w-9 shrink-0 rounded-full" style={{ background: p.avatar_color }} />
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <Link href={`/p/${p.handle}`} className="truncate font-bold hover:underline">
-                    {p.display_name}
-                  </Link>
-                  {p.status === "retired" && <span className="chip">retired</span>}
-                  {active?.id === p.id && (
-                    <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
-                      wearing
-                    </span>
-                  )}
+            <div key={p.id} className="panel p-4">
+              <div className="flex items-center gap-3">
+                <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={36} />
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <Link href={`/p/${p.handle}`} className="truncate font-bold hover:underline">
+                      {p.display_name}
+                    </Link>
+                    {p.status === "retired" && <span className="chip">retired</span>}
+                    {active?.id === p.id && (
+                      <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
+                        wearing
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-xs" style={{ color: "var(--muted)" }}>
+                    @{p.handle} · {p.karma} karma
+                  </div>
                 </div>
-                <div className="text-xs" style={{ color: "var(--muted)" }}>
-                  @{p.handle} · {p.karma} karma
-                </div>
+                {p.status === "active" && (
+                  <div className="flex gap-2">
+                    {active?.id !== p.id && (
+                      <form action={switchPersona}>
+                        <input type="hidden" name="persona_id" value={p.id} />
+                        <input type="hidden" name="back_to" value="/me" />
+                        <button className="btn !py-1 text-xs">Wear</button>
+                      </form>
+                    )}
+                    <form action={retirePersona}>
+                      <input type="hidden" name="persona_id" value={p.id} />
+                      <button
+                        className="btn btn-danger !py-1 text-xs"
+                        title="Retired personas keep their history and karma forever, but can no longer act. Personas are never merged."
+                      >
+                        Retire
+                      </button>
+                    </form>
+                  </div>
+                )}
               </div>
               {p.status === "active" && (
-                <div className="flex gap-2">
-                  {active?.id !== p.id && (
-                    <form action={switchPersona}>
-                      <input type="hidden" name="persona_id" value={p.id} />
-                      <input type="hidden" name="back_to" value="/me" />
-                      <button className="btn !py-1 text-xs">Wear</button>
-                    </form>
-                  )}
-                  <form action={retirePersona}>
+                <details className="mt-2">
+                  <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+                    Change avatar image
+                  </summary>
+                  <form action={uploadPersonaAvatar} className="mt-2 flex flex-wrap items-center gap-2">
                     <input type="hidden" name="persona_id" value={p.id} />
-                    <button
-                      className="btn btn-danger !py-1 text-xs"
-                      title="Retired personas keep their history and karma forever, but can no longer act. Personas are never merged."
-                    >
-                      Retire
-                    </button>
+                    <input type="file" name="avatar" accept="image/png,image/jpeg,image/webp,image/gif" required className="text-xs" />
+                    <button className="btn !py-1 text-xs">Upload</button>
+                    <span className="w-full text-xs" style={{ color: "var(--muted)" }}>
+                      PNG/JPEG/WebP/GIF, up to 3MB. Falls back to the colour dot until you upload one.
+                    </span>
                   </form>
-                </div>
+                </details>
               )}
             </div>
           ))}

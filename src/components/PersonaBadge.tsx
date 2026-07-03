@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Persona } from "@/lib/types";
+import { PersonaAvatar } from "./Avatar";
 
 /**
  * The public face of a persona. If it belongs to the viewing root, a subtle
@@ -18,13 +19,10 @@ export default function PersonaBadge({
   if (!persona) {
     return <span style={{ color: "var(--muted)" }}>[deleted]</span>;
   }
-  const dot = size === "md" ? "h-6 w-6" : "h-4 w-4";
+  const dotPx = size === "md" ? 24 : 16;
   return (
     <span className="inline-flex items-center gap-1.5">
-      <span
-        className={`inline-block ${dot} rounded-full`}
-        style={{ background: persona.avatar_color }}
-      />
+      <PersonaAvatar avatarUrl={persona.avatar_url} avatarColor={persona.avatar_color} size={dotPx} />
       <Link
         href={`/p/${persona.handle}`}
         className="font-semibold hover:underline"

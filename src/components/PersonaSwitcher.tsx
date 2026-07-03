@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { switchPersona } from "@/lib/actions";
 import type { Persona } from "@/lib/types";
+import { PersonaAvatar } from "./Avatar";
 
 /**
  * One-click mask change. The active persona is a cookie; every write action
@@ -35,10 +36,7 @@ export default function PersonaSwitcher({
         onClick={() => setOpen((o) => !o)}
         title="Switch persona"
       >
-        <span
-          className="inline-block h-4 w-4 rounded-full"
-          style={{ background: active.avatar_color }}
-        />
+        <PersonaAvatar avatarUrl={active.avatar_url} avatarColor={active.avatar_color} size={16} />
         <span className="max-w-32 truncate">{active.display_name}</span>
         <span style={{ color: "var(--muted)" }}>▾</span>
       </button>
@@ -59,10 +57,7 @@ export default function PersonaSwitcher({
                 className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left text-sm hover:bg-white/5"
                 type="submit"
               >
-                <span
-                  className="inline-block h-5 w-5 shrink-0 rounded-full"
-                  style={{ background: p.avatar_color }}
-                />
+                <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={20} />
                 <span className="flex-1 truncate">
                   {p.display_name}
                   <span className="block text-xs" style={{ color: "var(--muted)" }}>

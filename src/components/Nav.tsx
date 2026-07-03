@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { getActivePersona, listMyPersonas } from "@/lib/persona";
+import { isPlatformAdmin } from "@/lib/admin";
 import { signOut } from "@/lib/actions";
 import PersonaSwitcher from "./PersonaSwitcher";
 
@@ -10,9 +11,9 @@ export default async function Nav() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [personas, active] = user
-    ? await Promise.all([listMyPersonas(), getActivePersona()])
-    : [[], null];
+  const [personas, active, admin] = user
+    ? await Promise.all([listMyPersonas(), getActivePersona(), isPlatformAdmin()])
+    : [[], null, false];
 
   return (
     <nav
@@ -35,6 +36,11 @@ export default async function Nav() {
             <Link href="/rooms/new" className="btn btn-ghost hidden sm:inline-flex">
               + New Room
             </Link>
+            {admin && (
+              <Link href="/admin" className="btn btn-ghost hidden sm:inline-flex">
+                🛡️ Admin
+              </Link>
+            )}
             <PersonaSwitcher personas={personas} active={active} />
             <form action={signOut}>
               <button className="btn btn-ghost" title={`Root: ${user.email} (never shown to others)`}>

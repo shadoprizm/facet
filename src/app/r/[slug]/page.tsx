@@ -5,6 +5,7 @@ import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
 import { getActivePersona } from "@/lib/persona";
 import { toggleSubscribe } from "@/lib/actions";
 import PersonaBadge from "@/components/PersonaBadge";
+import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import type { Post, Room } from "@/lib/types";
 
@@ -57,6 +58,7 @@ export default async function RoomPage({
       <Banner error={sp.error} />
       <div className="panel p-5">
         <div className="flex flex-wrap items-center gap-3">
+          <RoomAvatar avatarUrl={r.avatar_url} size={48} />
           <div className="flex-1">
             <h1 className="text-xl font-bold">r/{r.slug}</h1>
             <p className="text-sm" style={{ color: "var(--muted)" }}>

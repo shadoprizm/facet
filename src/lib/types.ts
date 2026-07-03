@@ -3,6 +3,7 @@ export type Persona = {
   handle: string;
   display_name: string;
   avatar_color: string;
+  avatar_url: string | null;
   bio: string;
   karma: number;
   status: "active" | "retired";
@@ -15,6 +16,7 @@ export type Room = {
   name: string;
   description: string;
   constitution: string;
+  avatar_url: string | null;
   agent_config: { quorum?: number; vote_window_minutes?: number };
   created_by_persona_id: string | null;
   created_by_root?: string;
@@ -69,6 +71,44 @@ export type AgentAction = {
   votes_override: number;
   created_at: string;
   resolved_at: string | null;
+};
+
+export type PlatformBanRow = {
+  root_user_id: string;
+  email: string;
+  reason: string;
+  created_at: string;
+};
+
+export type RoomBanRow = {
+  room_id: string;
+  room_slug: string;
+  root_user_id: string;
+  root_email: string;
+  banned_persona_id: string;
+  banned_handle: string | null;
+  reason: string;
+  created_at: string;
+};
+
+export type AdminRow = {
+  root_user_id: string;
+  email: string;
+  granted_by: string | null;
+  created_at: string;
+};
+
+export type AdminStats = {
+  roots: number;
+  personas_active: number;
+  personas_retired: number;
+  rooms: number;
+  posts: number;
+  comments: number;
+  open_flags: number;
+  pending_votes: number;
+  room_bans: number;
+  platform_bans: number;
 };
 
 export type Calibration = {

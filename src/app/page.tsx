@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
 import { getActivePersona } from "@/lib/persona";
 import PersonaBadge from "@/components/PersonaBadge";
+import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import type { Post, Room } from "@/lib/types";
 
@@ -82,17 +83,20 @@ export default async function HomePage({
           </Link>
         </div>
         {(rooms ?? []).map((room: Room) => (
-          <Link key={room.id} href={`/r/${room.slug}`} className="panel block p-3 hover:brightness-125">
-            <div className="flex items-center gap-2 font-semibold">
-              r/{room.slug}
-              {subscribedRoomIds.has(room.id) && (
-                <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
-                  joined
-                </span>
-              )}
-            </div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>
-              {room.name} · {countMap.get(room.id) ?? 0} subscriber{(countMap.get(room.id) ?? 0) === 1 ? "" : "s"}
+          <Link key={room.id} href={`/r/${room.slug}`} className="panel flex items-center gap-2 p-3 hover:brightness-125">
+            <RoomAvatar avatarUrl={room.avatar_url} size={28} />
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2 font-semibold">
+                r/{room.slug}
+                {subscribedRoomIds.has(room.id) && (
+                  <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
+                    joined
+                  </span>
+                )}
+              </div>
+              <div className="text-xs" style={{ color: "var(--muted)" }}>
+                {room.name} · {countMap.get(room.id) ?? 0} subscriber{(countMap.get(room.id) ?? 0) === 1 ? "" : "s"}
+              </div>
             </div>
           </Link>
         ))}

@@ -272,3 +272,65 @@ export async function banPersona(formData: FormData) {
   revalidatePath(`/r/${slug}/agent`);
   redirect(`/r/${slug}/agent`);
 }
+
+// ============================================================ avatars (Storage)
+
+const MAX_AVATAR_BYTES = 3 * 1024 * 1024;
+
+function avatarExt(file: File): string {
+  const fromName = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (fromName) return fromName;
+  return file.type.split("/")[1] ?? "png";
+}
+
+export async function uploadPersonaAvatar(formData: FormData) {
+  const personaId = String(formData.get("persona_id"));
+  const file = formData.get("avatar") as File | null;
+  if (!file || file.size === 0) fail("/me", "Choose an image first.");
+  if (file.size > MAX_AVATAR_BYTES) fail("/me", "Image must be under 3MB.");
+  if (!file.type.startsWith("image/")) fail("/me", "File must be an image.");
+
+  const supabase = await createClient();
+  const path = `${personaId}/${crypto.randomUUID()}.${avatarExt(file)}`;
+
+  const { error: upErr } = await supabase.storage
+    .from("persona-avatars")
+    .upload(path, file, { contentType: file.type, upsert: false });
+  if (upErr) fail("/me", upErr.message);
+
+  const { data: pub } = supabase.storage.from("persona-avatars").getPublicUrl(path);
+  const { error } = await supabase.rpc("set_persona_avatar", {
+    p_persona: personaId,
+    p_avatar_url: pub.publicUrl,
+  });
+  if (error) fail("/me", error.message);
+  revalidatePath("/", "layout");
+  redirect("/me");
+}
+
+export async function uploadRoomAvatar(formData: FormData) {
+  const roomId = String(formData.get("room_id"));
+  const returnTo = String(formData.get("return_to") || `/r/${formData.get("slug")}/agent`);
+  const file = formData.get("avatar") as File | null;
+  if (!file || file.size === 0) fail(returnTo, "Choose an image first.");
+  if (file.size > MAX_AVATAR_BYTES) fail(returnTo, "Image must be under 3MB.");
+  if (!file.type.startsWith("image/")) fail(returnTo, "File must be an image.");
+
+  const supabase = await createClient();
+  const path = `${roomId}/${crypto.randomUUID()}.${avatarExt(file)}`;
+
+  const { error: upErr } = await supabase.storage
+    .from("room-avatars")
+    .upload(path, file, { contentType: file.type, upsert: false });
+  if (upErr) fail(returnTo, upErr.message);
+
+  const { data: pub } = supabase.storage.from("room-avatars").getPublicUrl(path);
+  const { error } = await supabase.rpc("set_room_avatar", {
+    p_room: roomId,
+    p_avatar_url: pub.publicUrl,
+  });
+  if (error) fail(returnTo, error.message);
+  revalidatePath(returnTo);
+  revalidatePath("/");
+  redirect(returnTo);
+}

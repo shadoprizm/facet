@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { updateConstitution, resolveFlag, banPersona } from "@/lib/actions";
+import { updateConstitution, resolveFlag, banPersona, uploadRoomAvatar } from "@/lib/actions";
+import { isPlatformAdmin } from "@/lib/admin";
 import { fetchPersonaMap } from "@/lib/data";
 import AgentActionCard from "@/components/AgentActionCard";
+import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import type { AgentAction, Calibration, Room } from "@/lib/types";
 
@@ -34,6 +36,8 @@ export default async function AgentPage({
     data: { user },
   } = await supabase.auth.getUser();
   const isFounder = user?.id === r.created_by_root;
+  const admin = await isPlatformAdmin();
+  const canManage = isFounder || admin;
 
   const [{ data: cal }, { data: actions }] = await Promise.all([
     supabase.from("agent_calibration").select("*").eq("room_id", r.id).single(),
@@ -74,15 +78,35 @@ export default async function AgentPage({
   return (
     <div className="space-y-6">
       <Banner error={sp.error} />
-      <div>
-        <h1 className="text-xl font-bold">
-          🤖 Agent Moderator — <Link href={`/r/${slug}`} className="hover:underline" style={{ color: "var(--accent)" }}>r/{slug}</Link>
-        </h1>
-        <p className="text-sm" style={{ color: "var(--muted)" }}>
-          This agent reads every post and comment against the Room's
-          constitution. Every action it takes is voteable; overrides move the
-          thresholds below. It never bans — hard calls go to the human queue.
-        </p>
+      <div className="flex items-start gap-3">
+        <RoomAvatar avatarUrl={r.avatar_url} size={40} />
+        <div className="flex-1">
+          <h1 className="text-xl font-bold">
+            🤖 Agent Moderator — <Link href={`/r/${slug}`} className="hover:underline" style={{ color: "var(--accent)" }}>r/{slug}</Link>
+          </h1>
+          <p className="text-sm" style={{ color: "var(--muted)" }}>
+            This agent reads every post and comment against the Room's
+            constitution. Every action it takes is voteable; overrides move the
+            thresholds below. It never bans — hard calls go to the human queue.
+          </p>
+          {canManage && (
+            <details className="mt-2">
+              <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+                Change Room avatar
+              </summary>
+              <form action={uploadRoomAvatar} className="mt-2 flex flex-wrap items-center gap-2">
+                <input type="hidden" name="room_id" value={r.id} />
+                <input type="hidden" name="slug" value={slug} />
+                <input type="hidden" name="return_to" value={`/r/${slug}/agent`} />
+                <input type="file" name="avatar" accept="image/png,image/jpeg,image/webp,image/gif" required className="text-xs" />
+                <button className="btn !py-1 text-xs">Upload</button>
+                <span className="w-full text-xs" style={{ color: "var(--muted)" }}>
+                  PNG/JPEG/WebP/GIF, up to 3MB.
+                </span>
+              </form>
+            </details>
+          )}
+        </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -171,7 +195,7 @@ export default async function AgentPage({
                       view thread →
                     </Link>
                   )}
-                  {isFounder && (
+                  {canManage && (
                     <div className="mt-2 flex gap-2">
                       <form action={resolveFlag}>
                         <input type="hidden" name="action_id" value={a.id} />

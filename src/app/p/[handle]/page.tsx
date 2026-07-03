@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { myPersonaIds } from "@/lib/data";
+import { PersonaAvatar } from "@/components/Avatar";
 import type { Persona, Post, Comment } from "@/lib/types";
 
 /**
@@ -44,7 +45,7 @@ export default async function PersonaPage({
   return (
     <div className="space-y-6">
       <div className="panel flex items-center gap-4 p-6">
-        <span className="h-14 w-14 rounded-full" style={{ background: p.avatar_color }} />
+        <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={56} />
         <div className="flex-1">
           <div className="flex items-center gap-2 text-xl font-bold">
             {p.display_name}

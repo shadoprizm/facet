@@ -155,7 +155,16 @@ comment then received only a nudge.
 
 ## Deployment
 
-The app is Vercel-ready (`next build` is clean): import the repo, set
-`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and
-`NEXT_PUBLIC_SITE_URL`, and point `facet.social` at the deployment. Update
-the Supabase Auth site URL + redirect allow-list to match.
+Deployed on Vercel (project `facet`, team `shadoprizms-projects`), with
+`facet.social` / `www.facet.social` aliased to production and auto-deploys
+on push to `main`. Environment variables (`NEXT_PUBLIC_SUPABASE_URL`,
+`NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SITE_URL=https://facet.social`)
+are set in the Vercel project.
+
+Go-live checklist for the custom domain:
+
+1. Point DNS for `facet.social` at Vercel (apex `A 76.76.21.21` +
+   `www CNAME cname.vercel-dns.com`, or delegate to Vercel nameservers).
+2. In Supabase → Authentication → URL Configuration, set the Site URL to
+   `https://facet.social` and keep `http://localhost:3000` in the additional
+   redirect list for local dev — magic links and signup confirmations use it.

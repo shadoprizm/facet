@@ -1,0 +1,90 @@
+export type Persona = {
+  id: string;
+  handle: string;
+  display_name: string;
+  avatar_color: string;
+  bio: string;
+  karma: number;
+  status: "active" | "retired";
+  created_at: string;
+};
+
+export type Room = {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  constitution: string;
+  agent_config: { quorum?: number; vote_window_minutes?: number };
+  created_by_persona_id: string | null;
+  created_by_root?: string;
+  created_at: string;
+};
+
+export type Post = {
+  id: string;
+  room_id: string;
+  author_persona_id: string;
+  title: string;
+  body: string;
+  crossposted_from_post_id: string | null;
+  score: number;
+  comment_count: number;
+  status: string;
+  created_at: string;
+};
+
+export type Comment = {
+  id: string;
+  post_id: string;
+  room_id: string;
+  parent_comment_id: string | null;
+  author_persona_id: string;
+  body: string;
+  score: number;
+  collapsed: boolean;
+  collapse_reason: string | null;
+  status: string;
+  created_at: string;
+};
+
+export type AgentAction = {
+  id: string;
+  room_id: string;
+  post_id: string | null;
+  action_type: "nudge" | "collapse" | "flag";
+  trigger_param:
+    | "heat_nudge"
+    | "heat_collapse"
+    | "heat_flag"
+    | "drift_nudge"
+    | "dogpile_count";
+  target_type: "post" | "comment" | "thread";
+  target_id: string | null;
+  reason: string;
+  metrics: Record<string, unknown>;
+  status: "pending" | "upheld" | "overridden";
+  review_status: "open" | "reviewed" | "dismissed" | null;
+  votes_uphold: number;
+  votes_override: number;
+  created_at: string;
+  resolved_at: string | null;
+};
+
+export type Calibration = {
+  room_id: string;
+  heat_nudge: number;
+  heat_collapse: number;
+  heat_flag: number;
+  drift_nudge: number;
+  dogpile_count: number;
+  learning_rate: number;
+  history: Array<{
+    at: string;
+    action_id: string;
+    param: string;
+    outcome: "upheld" | "overridden";
+    new_value: number;
+  }>;
+  updated_at: string;
+};

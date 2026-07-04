@@ -11,6 +11,16 @@ export default async function LoginPage({
   return (
     <div className="mx-auto grid max-w-4xl gap-8 py-8 md:grid-cols-2">
       <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <span
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl"
+            style={{ background: "#fff" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/facet-mark.png" alt="Facet" className="h-8 w-8 object-contain" />
+          </span>
+          <span className="text-2xl font-bold tracking-tight">Facet</span>
+        </div>
         <h1 className="text-4xl font-extrabold">
           One root.
           <br />

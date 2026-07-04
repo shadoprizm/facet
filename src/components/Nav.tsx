@@ -23,10 +23,11 @@ export default async function Nav() {
       <div className="mx-auto flex h-14 max-w-5xl items-center gap-4 px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
           <span
-            className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-sm text-white"
-            style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)" }}
+            className="inline-flex h-7 w-7 items-center justify-center rounded-lg"
+            style={{ background: "#fff" }}
           >
-            ◆
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/facet-mark.png" alt="" className="h-5 w-5 object-contain" />
           </span>
           Facet
         </Link>

@@ -31,9 +31,25 @@ export default async function Nav() {
           </span>
           Facet
         </Link>
-        <div className="flex-1" />
+        {user ? (
+          <div className="mx-2 flex flex-1 justify-center">
+            <form action="/search" className="hidden w-full max-w-xs sm:block">
+              <input
+                name="q"
+                placeholder="Search rooms & facets"
+                aria-label="Search Facet"
+                className="input !py-1.5"
+              />
+            </form>
+          </div>
+        ) : (
+          <div className="flex-1" />
+        )}
         {user ? (
           <>
+            <Link href="/search" className="btn btn-ghost sm:hidden" aria-label="Search">
+              ⌕
+            </Link>
             <Link href="/rooms/new" className="btn btn-ghost hidden sm:inline-flex">
               + New Room
             </Link>

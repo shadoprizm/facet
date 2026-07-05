@@ -1,7 +1,9 @@
 import PersonaBadge from "./PersonaBadge";
 import VoteButtons from "./VoteButtons";
 import AgentActionCard from "./AgentActionCard";
-import { createComment } from "@/lib/actions";
+import ReportButton from "./ReportButton";
+import ConfirmButton from "./ConfirmButton";
+import { createComment, deleteComment } from "@/lib/actions";
 import type { AgentAction, Comment, Persona } from "@/lib/types";
 
 export type ThreadContext = {
@@ -71,6 +73,19 @@ export default function CommentNode({
             <button className="btn !py-1 text-xs">Reply</button>
           </form>
         </details>
+        {ctx.mine.has(comment.author_persona_id) && comment.status === "active" ? (
+          <form action={deleteComment}>
+            <input type="hidden" name="comment_id" value={comment.id} />
+            <input type="hidden" name="post_id" value={ctx.postId} />
+            <ConfirmButton
+              label="Delete"
+              title="Removes your comment permanently (karma already earned stays)."
+              confirmMessage="Delete this comment? It will be replaced with '[removed]' and cannot be undone."
+            />
+          </form>
+        ) : (
+          <ReportButton targetType="comment" targetId={comment.id} backTo={ctx.path} />
+        )}
       </div>
 
       {actions.map((a) => (

@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { ACTIVE_PERSONA_COOKIE, getActivePersona } from "@/lib/persona";
-import { runAgentOnComment, runAgentOnPost } from "@/lib/agent/run";
+import { invokeAgent } from "@/lib/agent/invoke";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -28,10 +28,16 @@ export async function signIn(formData: FormData) {
 
 export async function signUp(formData: FormData) {
   const supabase = await createClient();
+  const captchaToken = formData.get("captchaToken");
   const { data, error } = await supabase.auth.signUp({
     email: String(formData.get("email") ?? ""),
     password: String(formData.get("password") ?? ""),
-    options: { emailRedirectTo: `${SITE}/auth/confirm` },
+    options: {
+      emailRedirectTo: `${SITE}/auth/confirm`,
+      // Forwarded when the login form renders a captcha widget; absent (no-op)
+      // when captcha is disabled in the dashboard. See docs/AUTH-HARDENING.md.
+      ...(captchaToken ? { captchaToken: String(captchaToken) } : {}),
+    },
   });
   if (error) fail("/login", error.message);
   if (data.session) redirect("/");
@@ -40,9 +46,13 @@ export async function signUp(formData: FormData) {
 
 export async function sendMagicLink(formData: FormData) {
   const supabase = await createClient();
+  const captchaToken = formData.get("captchaToken");
   const { error } = await supabase.auth.signInWithOtp({
     email: String(formData.get("email") ?? ""),
-    options: { emailRedirectTo: `${SITE}/auth/confirm` },
+    options: {
+      emailRedirectTo: `${SITE}/auth/confirm`,
+      ...(captchaToken ? { captchaToken: String(captchaToken) } : {}),
+    },
   });
   if (error) fail("/login", error.message);
   redirect("/login?notice=" + encodeURIComponent("Magic link sent — check your email."));
@@ -159,7 +169,7 @@ export async function createPost(formData: FormData) {
     p_body: String(formData.get("body") ?? "").trim(),
   });
   if (error) fail(`/r/${slug}/submit`, error.message);
-  await runAgentOnPost(supabase, data as string);
+  await invokeAgent("post", data as string);
   redirect(`/post/${data}`);
 }
 
@@ -176,7 +186,7 @@ export async function createComment(formData: FormData) {
     p_parent: parent ? String(parent) : null,
   });
   if (error) fail(`/post/${postId}`, error.message);
-  await runAgentOnComment(supabase, data as string);
+  await invokeAgent("comment", data as string);
   revalidatePath(`/post/${postId}`);
   redirect(`/post/${postId}`);
 }
@@ -202,7 +212,7 @@ export async function crosspost(formData: FormData) {
     p_crosspost_from: sourceId,
   });
   if (error) fail(`/post/${sourceId}`, error.message);
-  await runAgentOnPost(supabase, data as string);
+  await invokeAgent("post", data as string);
   redirect(`/post/${data}`);
 }
 
@@ -271,6 +281,60 @@ export async function banPersona(formData: FormData) {
   if (error) fail(`/r/${slug}/agent`, error.message);
   revalidatePath(`/r/${slug}/agent`);
   redirect(`/r/${slug}/agent`);
+}
+
+// ============================================================ user reporting
+
+export async function createReport(formData: FormData) {
+  const persona = await getActivePersona();
+  const backTo = String(formData.get("back_to") || "/");
+  if (!persona) fail(backTo, "Create a persona first.");
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("create_report", {
+    p_persona: persona.id,
+    p_target_type: String(formData.get("target_type")),
+    p_target_id: String(formData.get("target_id")),
+    p_category: String(formData.get("category") ?? "other"),
+    p_reason: String(formData.get("reason") ?? "").trim().slice(0, 500),
+  });
+  if (error) fail(backTo, error.message);
+  redirect(`${backTo}?notice=${encodeURIComponent("Reported. Thank you — a moderator will review it.")}`);
+}
+
+// ============================================================ content deletion (owner)
+
+export async function deletePost(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("delete_post", {
+    p_post: String(formData.get("post_id")),
+  });
+  if (error) fail(`/post/${formData.get("post_id")}`, error.message);
+  // After deletion the post is removed; bounce to its Room (or home).
+  const roomSlug = String(formData.get("room_slug") || "");
+  revalidatePath("/");
+  redirect(roomSlug ? `/r/${roomSlug}` : "/");
+}
+
+export async function deleteComment(formData: FormData) {
+  const postId = String(formData.get("post_id"));
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("delete_comment", {
+    p_comment: String(formData.get("comment_id")),
+  });
+  if (error) fail(`/post/${postId}`, error.message);
+  revalidatePath(`/post/${postId}`);
+  redirect(`/post/${postId}`);
+}
+
+// ============================================================ notifications (T3#11)
+
+export async function markNotificationsRead() {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("mark_notifications_read");
+  if (error) fail("/notifications", error.message);
+  revalidatePath("/notifications");
+  revalidatePath("/", "layout");
+  redirect("/notifications");
 }
 
 // ============================================================ avatars (Storage)

@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint-typecheck-test:
+    name: Lint, typecheck, unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Unit tests
+        run: npm test
+
+  migrations:
+    name: Migrations apply cleanly on fresh DB
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The supabase CLI local stack needs Docker.
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Start local Supabase
+        run: supabase start --ignore-health-check || true
+      - name: Reset & apply all migrations to a fresh local DB
+        env:
+          SUPABASE_DB_URL: postgresql://postgres:postgres@localhost:54322/postgres
+        run: |
+          # `db push` against the local stack applies everything in supabase/migrations
+          # in order. A non-zero exit means a migration won't apply on a fresh schema.
+          supabase db push --db-url "$SUPABASE_DB_URL" || \
+            psql "$SUPABASE_DB_URL" -f supabase/migrations/0001_init.sql \
+                 -f supabase/migrations/0002_functions.sql \
+                 -f supabase/migrations/0003_harden_rpc_grants.sql \
+                 -f supabase/migrations/0004_avatars_and_admin.sql \
+                 -f supabase/migrations/0005_fix_grants.sql \
+                 -f supabase/migrations/0006_hardening.sql \
+                 -f supabase/migrations/0007_fix_notification_fk.sql
+      - if: always()
+        name: Stop local Supabase
+        run: supabase stop || true

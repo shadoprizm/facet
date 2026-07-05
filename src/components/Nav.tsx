@@ -11,9 +11,18 @@ export default async function Nav() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [personas, active, admin] = user
-    ? await Promise.all([listMyPersonas(), getActivePersona(), isPlatformAdmin()])
-    : [[], null, false];
+  const [personas, active, admin, unread] = user
+    ? await Promise.all([
+        listMyPersonas(),
+        getActivePersona(),
+        isPlatformAdmin(),
+        supabase
+          .from("notifications")
+          .select("id", { count: "exact", head: true })
+          .eq("read", false),
+      ])
+    : [ [], null, false, { count: 0 } ];
+  const unreadCount = (unread as { count?: number }).count ?? 0;
 
   return (
     <nav
@@ -58,6 +67,17 @@ export default async function Nav() {
                 🛡️ Admin
               </Link>
             )}
+            <Link href="/notifications" className="btn btn-ghost relative" title="Notifications">
+              🔔
+              {unreadCount > 0 && (
+                <span
+                  className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-white"
+                  style={{ background: "var(--bad)" }}
+                >
+                  {unreadCount > 9 ? "9+" : unreadCount}
+                </span>
+              )}
+            </Link>
             <PersonaSwitcher personas={personas} active={active} />
             <form action={signOut}>
               <button className="btn btn-ghost" title={`Root: ${user.email} (never shown to others)`}>

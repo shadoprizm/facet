@@ -3,11 +3,13 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
 import { listMyPersonas } from "@/lib/persona";
-import { createComment, crosspost } from "@/lib/actions";
+import { createComment, crosspost, deletePost } from "@/lib/actions";
 import PersonaBadge from "@/components/PersonaBadge";
 import VoteButtons from "@/components/VoteButtons";
 import AgentActionCard from "@/components/AgentActionCard";
 import CommentNode, { type ThreadContext } from "@/components/CommentNode";
+import ReportButton from "@/components/ReportButton";
+import ConfirmButton from "@/components/ConfirmButton";
 import Banner from "@/components/Banner";
 import type { AgentAction, Comment, Post, Room } from "@/lib/types";
 
@@ -113,7 +115,7 @@ export default async function PostPage({
         </div>
         <h1 className="mt-2 text-2xl font-bold">{p.title}</h1>
         {p.body && <p className="mt-2 whitespace-pre-wrap text-sm">{p.body}</p>}
-        <div className="mt-3 flex items-center gap-4">
+        <div className="mt-3 flex flex-wrap items-center gap-4">
           <VoteButtons
             targetType="post"
             targetId={p.id}
@@ -124,6 +126,19 @@ export default async function PostPage({
           <span className="text-xs" style={{ color: "var(--muted)" }}>
             {p.comment_count} comments
           </span>
+          {iAmAuthor && p.status === "active" ? (
+            <form action={deletePost}>
+              <input type="hidden" name="post_id" value={p.id} />
+              <input type="hidden" name="room_slug" value={p.rooms.slug} />
+              <ConfirmButton
+                label="Delete post"
+                title="Removes your post permanently (karma already earned stays)."
+                confirmMessage="Delete this post? It will be replaced with '[removed]' and cannot be undone."
+              />
+            </form>
+          ) : (
+            <ReportButton targetType="post" targetId={p.id} backTo={path} />
+          )}
         </div>
 
         {iAmAuthor && otherPersonas.length > 0 && (

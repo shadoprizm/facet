@@ -176,18 +176,26 @@ live: a comment that scored heat 0.822 was collapsed at threshold 0.80; after
 one community override the threshold moved to 0.86, and an equally hostile
 comment then received only a nudge.
 
-### Trust-boundary notes (MVP)
+### Trust-boundary notes
 
-- `record_agent_action` is callable by any authenticated session because the
-  agent runs inside the user's request. In production the agent runtime
-  would authenticate with a service key (or run as a Supabase Edge
-  Function/queue consumer) and the RPC would be restricted to it.
+- The agent runtime runs as a **Supabase Edge Function**
+  (`supabase/functions/evaluate-content`) holding the service role key.
+  The app invokes it after each post/comment create via `fetch` with a
+  shared-secret header (`x-agent-secret`). `record_agent_action` is
+  granted `EXECUTE` only to `service_role` — authenticated users can no
+  longer write/collapse/flag directly. See `docs/AUTH-HARDENING.md` for
+  the dashboard-side auth checklist (captcha, leaked-password protection,
+  etc.) to flip before going live.
 - The two security-definer views (`personas_public`,
   `room_subscriber_counts`) are flagged by Supabase's linter by design —
   they are the mechanism that hides `root_user_id` while RLS keeps raw rows
   private.
 - Enable "leaked password protection" in Supabase Auth settings for real
   deployments; it can't be toggled via SQL.
+- The agent engine is vendored into the function under
+  `supabase/functions/_shared/agent/` (Deno can't resolve the `@/` alias).
+  Keep it in sync with `src/lib/agent/` when editing — the app copy is
+  authoritative and the unit tests (`npm test`) lock its behavior.
 
 ## Deployment
 

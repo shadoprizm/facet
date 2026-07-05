@@ -1,21 +1,32 @@
+// SOURCE OF TRUTH: src/lib/agent/engine.ts in the Next.js app.
+// Vendored into the Edge Function. KEEP IN SYNC.
+
 import {
   SEVERE_PHRASES,
   SEVERE_WORDS,
   MODERATE_WORDS,
   MILD_WORDS,
   FLAG_IMMEDIATE,
-} from "./lexicon";
-import { normalize, normalizeAggressive, tokenize, driftDistance } from "./text";
-import type { ConstitutionDirectives } from "./constitution";
-import type { Calibration } from "@/lib/types";
+} from "./lexicon.ts";
+import { normalize, normalizeAggressive, tokenize, driftDistance } from "./text.ts";
+import type { ConstitutionDirectives } from "./constitution.ts";
+
+export type Calibration = {
+  heat_nudge: number;
+  heat_collapse: number;
+  heat_flag: number;
+  drift_nudge: number;
+  dogpile_count: number;
+  learning_rate: number;
+};
 
 export type ContentMetrics = {
-  heat: number;               // 0..1 hostility estimate
-  drift: number | null;       // 0..1 topic distance (comments only)
+  heat: number;
+  drift: number | null;
   lexiconHits: string[];
-  directed: boolean;          // aimed at "you"
+  directed: boolean;
   capsRatio: number;
-  forbiddenHits: string[];    // constitution agent.forbid matches
+  forbiddenHits: string[];
   immediateFlag: boolean;
   contentTokens: number;
 };
@@ -31,16 +42,13 @@ export type AgentDecision = {
   reason: string;
 };
 
-/** Analyze a single piece of content against the Room's constitution. */
 export function analyzeContent(
   text: string,
   directives: ConstitutionDirectives,
-  contextText: string | null
+  contextText: string | null,
 ): ContentMetrics {
   const norm = normalize(text);
-  // Aggressive normalization is used ONLY for lexicon matching, so circumvented
-  // variants (m0ron, id.iot, iidiot) still register. Drift vectors use the
-  // standard normalize() path — aggressive folding would destroy their signal.
+  // Aggressive normalization for lexicon matching only — see app source.
   const lexNorm = normalizeAggressive(text);
   const tokens = tokenize(text);
   const lexTokens = lexNorm.split(" ").filter((t) => t.length >= 2);
@@ -58,8 +66,6 @@ export function analyzeContent(
   }
   for (const dict of [SEVERE_WORDS, MODERATE_WORDS, MILD_WORDS]) {
     for (const [word, w] of Object.entries(dict)) {
-      // Match against both the regular token set (preserves accuracy on clean
-      // text) and the aggressive set (catches circumvented variants).
       if (tokenSet.has(word) || lexTokenSet.has(word)) {
         sum += w;
         hits.push(word);
@@ -69,7 +75,6 @@ export function analyzeContent(
 
   const immediateFlag = lexTokens.some((t) => FLAG_IMMEDIATE.has(t));
 
-  // Attacks aimed at a person burn hotter than attacks on an idea.
   const directed = /\b(you|your|youre|u|ur)\b/.test(norm) && sum > 0;
   if (directed) sum *= 1.35;
 
@@ -87,8 +92,6 @@ export function analyzeContent(
 
   const forbiddenHits = directives.forbidden.filter((f) => norm.includes(f));
 
-  // Drift needs enough signal to be meaningful: hashed BoW vectors are too
-  // sparse below ~12 content words, so short comments are never drift-checked.
   const drift =
     contextText && tokens.length >= 12
       ? driftDistance(text, contextText)
@@ -106,17 +109,15 @@ export function analyzeContent(
   };
 }
 
-/**
- * Map metrics onto an action using the Room's *learned* calibration.
- * Severity wins: flag > collapse > nudge. Collapse only applies to comments.
- */
 export function decide(
   metrics: ContentMetrics,
   cal: Calibration,
   directives: ConstitutionDirectives,
-  targetKind: "post" | "comment"
+  targetKind: "post" | "comment",
 ): AgentDecision | null {
-  const motto = directives.motto ? ` This Room's constitution asks: “${directives.motto}”` : "";
+  const motto = directives.motto
+    ? ` This Room's constitution asks: "${directives.motto}"`
+    : "";
 
   if (metrics.immediateFlag || metrics.heat >= cal.heat_flag) {
     return {
@@ -138,7 +139,7 @@ export function decide(
     return {
       action: "nudge",
       trigger: "heat_nudge",
-      reason: `Gentle reminder: the constitution of this Room asks members to avoid “${metrics.forbiddenHits[0]}”. Consider rephrasing.`,
+      reason: `Gentle reminder: the constitution of this Room asks members to avoid "${metrics.forbiddenHits[0]}". Consider rephrasing.`,
     };
   }
 
@@ -165,10 +166,6 @@ export function decide(
   return null;
 }
 
-/**
- * Dogpile detection: N distinct personas piling hostile replies onto one
- * author inside 30 minutes. Returns a thread-level nudge when tripped.
- */
 export function detectDogpile(
   recent: Array<{
     author_persona_id: string;
@@ -177,7 +174,7 @@ export function detectDogpile(
   }>,
   targetAuthorId: string,
   cal: Calibration,
-  directives: ConstitutionDirectives
+  directives: ConstitutionDirectives,
 ): AgentDecision | null {
   const cutoff = Date.now() - 30 * 60 * 1000;
   const hostileAuthors = new Set<string>();

@@ -92,3 +92,61 @@ export async function adminRevoke(formData: FormData) {
   revalidatePath("/admin/admins");
   redirect("/admin/admins");
 }
+
+// ============================================================ reports (T1#2)
+
+export async function adminResolveReport(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("admin_resolve_report", {
+    p_report: String(formData.get("report_id")),
+    p_disposition: String(formData.get("disposition") ?? "reviewed"),
+  });
+  if (error) fail("/admin/flags", error.message);
+  revalidatePath("/admin/flags");
+  redirect("/admin/flags");
+}
+
+/** Admin/founder removes any post via the admin queue. */
+export async function adminRemovePost(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("admin_remove_post", {
+    p_post: String(formData.get("post_id")),
+  });
+  if (error) fail("/admin/flags", error.message);
+  revalidatePath("/admin/flags");
+  redirect("/admin/flags");
+}
+
+export async function adminRemoveComment(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("admin_remove_comment", {
+    p_comment: String(formData.get("comment_id")),
+  });
+  if (error) fail("/admin/flags", error.message);
+  revalidatePath("/admin/flags");
+  redirect("/admin/flags");
+}
+
+// ============================================================ room management (T3#9)
+
+export async function adminRenameRoom(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("admin_rename_room", {
+    p_room: String(formData.get("room_id")),
+    p_slug: String(formData.get("slug") ?? "").trim().toLowerCase(),
+    p_name: String(formData.get("name") ?? "").trim(),
+  });
+  if (error) fail("/admin/rooms", error.message);
+  revalidatePath("/admin/rooms");
+  redirect("/admin/rooms");
+}
+
+export async function adminRemoveRoom(formData: FormData) {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("admin_remove_room", {
+    p_room: String(formData.get("room_id")),
+  });
+  if (error) fail("/admin/rooms", error.message);
+  revalidatePath("/admin/rooms");
+  redirect("/admin/rooms");
+}

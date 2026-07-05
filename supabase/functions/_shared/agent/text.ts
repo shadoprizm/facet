@@ -1,12 +1,8 @@
-/**
- * Minimal local NLP: tokenizer + hashed term-frequency vectors + cosine
- * similarity. This is the "embedding" backing topic-drift detection. It is
- * deterministic, dependency-free, and costs microseconds per comment — the
- * interface (textVector/cosine) is the seam where a real embedding model
- * (transformers.js MiniLM, Ollama, etc.) can be swapped in later.
- */
+// SOURCE OF TRUTH: src/lib/agent/text.ts in the Next.js app.
+// Vendored into the Edge Function so Deno can resolve it (no @/ aliases).
+// KEEP IN SYNC when editing the engine. The app-side copy is authoritative.
 
-const STOPWORDS = new Set(
+export const STOPWORDS = new Set(
   `a an and are as at be but by for from has have i if in is it its me my not
    of on or our so than that the their them then there these they this to was
    we what when which who will with you your yours am do does did just can
@@ -14,7 +10,7 @@ const STOPWORDS = new Set(
    some any all no nor too s t don im ive youre dont its isnt arent wasnt
    like get got make made going go one two also even still way thing things`
     .split(/\s+/)
-    .filter(Boolean)
+    .filter(Boolean),
 );
 
 export function normalize(text: string): string {
@@ -30,16 +26,13 @@ export function normalize(text: string): string {
 /**
  * Aggressive normalization for lexicon matching ONLY (never used for drift
  * vectors — it would destroy signal). Folds common circumvention tricks:
- * leetspeak, repeated characters, and stray internal punctuation. So "id.iot",
- * "m0ron", "iidiot" all collapse to forms the lexicon can match.
+ * leetspeak, repeated characters, and stray internal punctuation.
+ * SOURCE OF TRUTH: src/lib/agent/text.ts — keep in sync.
  */
 export function normalizeAggressive(text: string): string {
   let s = text.toLowerCase();
-  // Strip URLs before folding (so a URL with "l33t" doesn't pollute).
   s = s.replace(/https?:\/\/\S+/g, " ");
-  // Strip emoji and other non-ASCII.
   s = s.replace(/[^\x00-\x7f]/g, " ");
-  // Leet substitutions (order matters: do punctuation/leetspeak first).
   s = s
     .replace(/0/g, "o")
     .replace(/1/g, "i")
@@ -51,13 +44,8 @@ export function normalizeAggressive(text: string): string {
     .replace(/@/g, "a")
     .replace(/\$/g, "s")
     .replace(/!/g, "i");
-  // Collapse internal punctuation used to break words: "id.iot" -> "idiot".
   s = s.replace(/[.\-_,/\\*|~`'"<>]+/g, "");
-  // Collapse 2+ consecutive repeated chars to one: "idddiot" -> "idiot".
-  // (Only applied after leet folding, so legit doubled letters like "book"
-  // also collapse — acceptable tradeoff for lexicon matching.)
   s = s.replace(/([a-z])\1+/g, "$1");
-  // Whitespace cleanup.
   s = s.replace(/\s+/g, " ").trim();
   return s;
 }
@@ -83,7 +71,6 @@ function fnv1a(str: string): number {
 export function textVector(text: string): Float32Array {
   const vec = new Float32Array(DIM);
   for (const tok of tokenize(text)) {
-    // Light stemming: fold trivial plurals into the singular bucket.
     const stem = tok.length > 3 && tok.endsWith("s") ? tok.slice(0, -1) : tok;
     vec[fnv1a(stem)] += 1;
   }

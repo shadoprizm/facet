@@ -4,9 +4,15 @@ import { uploadRoomAvatar } from "@/lib/actions";
 import { adminRenameRoom, adminRemoveRoom } from "@/lib/admin-actions";
 import ConfirmButton from "@/components/ConfirmButton";
 import { RoomAvatar } from "@/components/Avatar";
+import Banner from "@/components/Banner";
 import type { RoomWithMeta } from "@/lib/types";
 
-export default async function AdminRoomsPage() {
+export default async function AdminRoomsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const sp = await searchParams;
   const supabase = await createClient();
   const [{ data: rooms }, { data: counts }] = await Promise.all([
     supabase.from("rooms").select("*").order("created_at", { ascending: false }),
@@ -16,6 +22,7 @@ export default async function AdminRoomsPage() {
 
   return (
     <div className="space-y-4">
+      <Banner error={sp.error} />
       <h1 className="text-xl font-bold">🏠 Rooms ({(rooms ?? []).length})</h1>
       {((rooms ?? []) as RoomWithMeta[]).map((r) => (
         <div key={r.id} className="panel p-4">

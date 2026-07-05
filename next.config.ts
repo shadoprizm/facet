@@ -7,10 +7,10 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     serverActions: {
-      // Avatar uploads allow 3MB images; the default 1MB action body limit
+      // Post images allow 5MB (avatars 3MB); the default 1MB action body limit
       // rejected them before the action code ever ran. Extra 1MB covers
       // multipart boundary/header overhead.
-      bodySizeLimit: "4mb",
+      bodySizeLimit: "6mb",
     },
   },
 };

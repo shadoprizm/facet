@@ -115,6 +115,15 @@ export default async function PostPage({
         </div>
         <h1 className="mt-2 text-2xl font-bold">{p.title}</h1>
         {p.body && <p className="mt-2 whitespace-pre-wrap text-sm">{p.body}</p>}
+        {p.image_url && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={p.image_url}
+            alt=""
+            className="mt-3 max-h-[32rem] w-auto max-w-full rounded-lg border"
+            style={{ borderColor: "var(--border)" }}
+          />
+        )}
         <div className="mt-3 flex flex-wrap items-center gap-4">
           <VoteButtons
             targetType="post"

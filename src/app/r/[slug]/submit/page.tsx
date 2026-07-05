@@ -42,6 +42,20 @@ export default async function SubmitPage({
         <input type="hidden" name="room_slug" value={r.slug} />
         <input className="input" name="title" placeholder="Title" maxLength={200} required />
         <textarea className="input" name="body" placeholder="Text (optional)" rows={6} />
+        <div className="space-y-1">
+          <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
+            Image (optional)
+          </label>
+          <input
+            type="file"
+            name="image"
+            accept="image/png,image/jpeg,image/webp,image/gif"
+            className="block w-full text-xs"
+          />
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            PNG/JPEG/WebP/GIF, up to 5MB.
+          </p>
+        </div>
         <button className="btn btn-primary w-full" disabled={!active}>
           Post
         </button>

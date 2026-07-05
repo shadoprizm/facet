@@ -29,6 +29,7 @@ export type Post = {
   author_persona_id: string;
   title: string;
   body: string;
+  image_url: string | null;
   crossposted_from_post_id: string | null;
   score: number;
   comment_count: number;

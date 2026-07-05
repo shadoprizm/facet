@@ -77,6 +77,17 @@ export default async function HomePage({
               <Link href={`/post/${post.id}`} className="mt-1 block font-semibold hover:underline">
                 {post.title}
               </Link>
+              {post.image_url && (
+                <Link href={`/post/${post.id}`} className="mt-2 block">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.image_url}
+                    alt=""
+                    className="max-h-64 w-auto max-w-full rounded-lg border"
+                    style={{ borderColor: "var(--border)" }}
+                  />
+                </Link>
+              )}
               <div className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
                 {post.score} points · {post.comment_count} comments · {new Date(post.created_at).toLocaleString()}
               </div>

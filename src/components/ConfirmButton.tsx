@@ -31,14 +31,17 @@ export default function ConfirmButton({
       className={className}
       title={title}
       onClick={(e) => {
-        if (!window.confirm(confirmMessage)) {
-          e.preventDefault();
-          return;
-        }
-        // The native form submit will carry the action; the transition just
-        // gates the disabled state for the duration.
-        startTransition(async () => {
-          // no-op — the form's action runs the redirect
+        // Always suppress the native submit and drive it ourselves. Relying on
+        // the native submit while flipping `disabled` in the same tick can make
+        // the browser cancel the submission, so the server action never fires.
+        // requestSubmit() is programmatic and ignores the button's disabled
+        // state, so gating `pending` is safe.
+        e.preventDefault();
+        if (!window.confirm(confirmMessage)) return;
+        const form = e.currentTarget.form;
+        if (!form) return;
+        startTransition(() => {
+          form.requestSubmit();
         });
       }}
     >

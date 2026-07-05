@@ -162,13 +162,20 @@ export async function createPost(formData: FormData) {
   const slug = String(formData.get("room_slug"));
   if (!persona) fail(`/r/${slug}/submit`, "Create a persona first.");
   const supabase = await createClient();
+
+  // Optional image attachment. Upload first (keyed by the posting persona, the
+  // same ownership gate as avatars) so the public URL can be stored on the row.
+  const back = `/r/${slug}/submit`;
+  const imageUrl = await uploadPostImage(supabase, persona.id, formData, back);
+
   const { data, error } = await supabase.rpc("create_post", {
     p_persona: persona.id,
     p_room: String(formData.get("room_id")),
     p_title: String(formData.get("title") ?? "").trim(),
     p_body: String(formData.get("body") ?? "").trim(),
+    p_image_url: imageUrl,
   });
-  if (error) fail(`/r/${slug}/submit`, error.message);
+  if (error) fail(back, error.message);
   await invokeAgent("post", data as string);
   redirect(`/post/${data}`);
 }
@@ -199,7 +206,7 @@ export async function crosspost(formData: FormData) {
 
   const { data: source } = await supabase
     .from("posts")
-    .select("title, body")
+    .select("title, body, image_url")
     .eq("id", sourceId)
     .single();
   if (!source) fail(`/post/${sourceId}`, "Source post not found.");
@@ -210,6 +217,7 @@ export async function crosspost(formData: FormData) {
     p_title: source.title,
     p_body: source.body,
     p_crosspost_from: sourceId,
+    p_image_url: source.image_url,
   });
   if (error) fail(`/post/${sourceId}`, error.message);
   await invokeAgent("post", data as string);
@@ -340,11 +348,36 @@ export async function markNotificationsRead() {
 // ============================================================ avatars (Storage)
 
 const MAX_AVATAR_BYTES = 3 * 1024 * 1024;
+const MAX_POST_IMAGE_BYTES = 5 * 1024 * 1024;
 
 function avatarExt(file: File): string {
   const fromName = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "");
   if (fromName) return fromName;
   return file.type.split("/")[1] ?? "png";
+}
+
+// Upload an optional post image to the `post-images` bucket under the posting
+// persona's folder and return its public URL (null when no file was chosen).
+// Mirrors the avatar upload path; on any failure it redirects via `fail`.
+async function uploadPostImage(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  personaId: string,
+  formData: FormData,
+  back: string
+): Promise<string | null> {
+  const file = formData.get("image") as File | null;
+  if (!file || file.size === 0) return null;
+  if (file.size > MAX_POST_IMAGE_BYTES) fail(back, "Image must be under 5MB.");
+  if (!file.type.startsWith("image/")) fail(back, "Attachment must be an image.");
+
+  const path = `${personaId}/${crypto.randomUUID()}.${avatarExt(file)}`;
+  const { error: upErr } = await supabase.storage
+    .from("post-images")
+    .upload(path, file, { contentType: file.type, upsert: false });
+  if (upErr) fail(back, upErr.message);
+
+  const { data: pub } = supabase.storage.from("post-images").getPublicUrl(path);
+  return pub.publicUrl;
 }
 
 export async function uploadPersonaAvatar(formData: FormData) {

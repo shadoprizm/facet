@@ -5,6 +5,8 @@ import { getActivePersona } from "@/lib/persona";
 import PersonaBadge from "@/components/PersonaBadge";
 import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
+import Landing from "@/components/Landing";
+import { DEFAULT_LOCALE } from "@/lib/i18n/landing";
 import type { Post, Room } from "@/lib/types";
 
 export default async function HomePage({
@@ -14,6 +16,13 @@ export default async function HomePage({
 }) {
   const params = await searchParams;
   const supabase = await createClient();
+
+  // Logged-out visitors (and crawlers) get the public landing page.
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return <Landing copy={DEFAULT_LOCALE} />;
+
   const active = await getActivePersona();
 
   const [{ data: rooms }, { data: posts }, { data: counts }] = await Promise.all([

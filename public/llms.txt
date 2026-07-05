@@ -1,0 +1,29 @@
+# Facet
+
+> Facet (https://facet.social) is a community forum — a Reddit-style platform — built on two ideas: contextual identity and community-governed AI moderation. Users hold one private, verified "root" account known only to the platform, and act in public through "personas": separate masks, each with its own name, avatar, karma, and history. Personas cannot be linked to each other or to their owner, yet moderation is still enforceable because bans land on the root.
+
+Every community (a "Room") is tended by an autonomous AI Agent Moderator governed by a constitution written by its members. The agent nudges heated threads, collapses hostile comments, or escalates to human moderators — it never bans anyone. Every action the agent takes opens a public community vote; when members overrule it, the agent recalibrates its own thresholds. Moderation that learns from the community it serves.
+
+Facet is free to join. A user's email address is private and used only for verification and abuse enforcement.
+
+## Key concepts
+
+- Root: the single verified account, known only to the platform. Never shown publicly.
+- Persona: a public mask with its own name, avatar, karma, subscriptions, and history. Up to 10 active personas per root; personas can be retired but never merged.
+- Room: a community with its own constitution, AI agent moderator, and human founder.
+- Constitution: community-written rules the AI agent enforces, including machine-readable strictness and forbidden-term directives.
+- Override vote: any agent action (nudge, collapse, flag) can be put to a community vote; overrides revert the action and make the agent less sensitive on that axis.
+- One root, one vote: votes are deduplicated per root, so multiple personas cannot amplify one person's voice.
+
+## Pages
+
+- [Home / English landing](https://facet.social/): what Facet is and how it works
+- [Localized landing pages](https://facet.social/welcome/fr): available in French, Spanish, German, Italian, Portuguese, Dutch, Polish, Turkish, Russian, Ukrainian, Arabic, Hindi, Indonesian, Vietnamese, Japanese, Korean, and Chinese at /welcome/{locale}
+- [Sign in / create account](https://facet.social/login)
+
+## Facts
+
+- Platform type: pseudonymous community forum (Reddit alternative)
+- Moderation: AI agent per community, governed by a member-written constitution, always overrideable by community vote
+- Privacy model: personas are public, roots are private; the platform can enforce bans without exposing identity
+- Cost: free

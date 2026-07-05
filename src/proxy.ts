@@ -34,7 +34,17 @@ export default async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
-  const isPublic = path.startsWith("/login") || path.startsWith("/auth");
+  // Public, crawlable surface: the logged-out homepage renders a marketing
+  // landing page, /welcome/* are its localized twins, and the .txt/.xml
+  // catch-all covers robots.txt, sitemap.xml, llms.txt and the IndexNow key.
+  const isPublic =
+    path === "/" ||
+    path.startsWith("/login") ||
+    path.startsWith("/auth") ||
+    path.startsWith("/welcome") ||
+    path.startsWith("/api/indexnow") ||
+    path.startsWith("/api/stats") ||
+    /\.(txt|xml|webmanifest)$/.test(path);
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();

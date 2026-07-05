@@ -6,8 +6,16 @@ import PersonaBadge from "@/components/PersonaBadge";
 import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import Landing from "@/components/Landing";
-import { DEFAULT_LOCALE } from "@/lib/i18n/landing";
+import { DEFAULT_LOCALE, SITE_URL, hreflangAlternates } from "@/lib/i18n/landing";
 import type { Post, Room } from "@/lib/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE_URL}/`,
+    languages: hreflangAlternates(),
+  },
+};
 
 export default async function HomePage({
   searchParams,

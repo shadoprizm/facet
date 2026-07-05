@@ -18,7 +18,7 @@ export default async function PostPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; notice?: string }>;
 }) {
   const { id } = await params;
   const sp = await searchParams;
@@ -99,7 +99,7 @@ export default async function PostPage({
 
   return (
     <div className="mx-auto max-w-3xl space-y-4">
-      <Banner error={sp.error} />
+      <Banner error={sp.error} notice={sp.notice} />
 
       <div className="panel p-5">
         <div className="flex items-center gap-2 text-xs" style={{ color: "var(--muted)" }}>

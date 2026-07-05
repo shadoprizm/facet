@@ -7,6 +7,7 @@ import {
 } from "@/lib/data";
 import { getActivePersona } from "@/lib/persona";
 import { PersonaAvatar, RoomAvatar } from "@/components/Avatar";
+import Banner from "@/components/Banner";
 import type { Persona } from "@/lib/types";
 
 /** Compact avatar + name link for a facet, reused in results and memberships. */
@@ -26,9 +27,9 @@ function FacetChip({ p, mine = false }: { p: Persona; mine?: boolean }) {
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; error?: string }>;
 }) {
-  const { q } = await searchParams;
+  const { q, error } = await searchParams;
   const query = (q ?? "").trim();
   const supabase = await createClient();
   const active = await getActivePersona();
@@ -43,6 +44,7 @@ export default async function SearchPage({
 
   return (
     <div className="space-y-6">
+      <Banner error={error} />
       <form action="/search" className="panel flex items-center gap-2 p-2">
         <span className="pl-2 text-lg" style={{ color: "var(--muted)" }}>
           ⌕

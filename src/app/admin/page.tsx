@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import Banner from "@/components/Banner";
 import type { AdminStats } from "@/lib/types";
 
 type AgentActivity = {
@@ -10,7 +11,12 @@ type AgentActivity = {
   overrides: number;
 };
 
-export default async function AdminDashboard() {
+export default async function AdminDashboard({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const sp = await searchParams;
   const supabase = await createClient();
   const [{ data: stats }, { data: activity }] = await Promise.all([
     supabase.rpc("admin_stats"),
@@ -35,6 +41,7 @@ export default async function AdminDashboard() {
 
   return (
     <div className="space-y-6">
+      <Banner error={sp.error} />
       <div>
         <h1 className="text-xl font-bold">🛡️ Admin</h1>
         <p className="text-sm" style={{ color: "var(--muted)" }}>

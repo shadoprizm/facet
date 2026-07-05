@@ -3,6 +3,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { myPersonaIds } from "@/lib/data";
 import { PersonaAvatar } from "@/components/Avatar";
+import Banner from "@/components/Banner";
 import type { Persona, Post, Comment } from "@/lib/types";
 
 /**
@@ -12,10 +13,13 @@ import type { Persona, Post, Comment } from "@/lib/types";
  */
 export default async function PersonaPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ handle: string }>;
+  searchParams: Promise<{ error?: string }>;
 }) {
   const { handle } = await params;
+  const sp = await searchParams;
   const supabase = await createClient();
 
   const { data: persona } = await supabase
@@ -44,6 +48,7 @@ export default async function PersonaPage({
 
   return (
     <div className="space-y-6">
+      <Banner error={sp.error} />
       <div className="panel flex items-center gap-4 p-6">
         <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={56} />
         <div className="flex-1">

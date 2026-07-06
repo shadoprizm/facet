@@ -186,11 +186,22 @@ export async function createComment(formData: FormData) {
   if (!persona) fail(`/post/${postId}`, "Create a persona first.");
   const parent = formData.get("parent_id");
   const supabase = await createClient();
+
+  // Optional image attachment, same ownership gate and bucket convention as
+  // post images — keyed by the commenting persona's folder.
+  const back = `/post/${postId}`;
+  const imageUrl = await uploadCommentImage(supabase, persona.id, formData, back);
+
+  // A comment needs text or an image (image-only allows GIF-reaction replies).
+  const body = String(formData.get("body") ?? "").trim();
+  if (!body && !imageUrl) fail(back, "Add some text or an image.");
+
   const { data, error } = await supabase.rpc("create_comment", {
     p_persona: persona.id,
     p_post: postId,
-    p_body: String(formData.get("body") ?? "").trim(),
+    p_body: body,
     p_parent: parent ? String(parent) : null,
+    p_image_url: imageUrl,
   });
   if (error) fail(`/post/${postId}`, error.message);
   await invokeAgent("comment", data as string);
@@ -356,11 +367,13 @@ function avatarExt(file: File): string {
   return file.type.split("/")[1] ?? "png";
 }
 
-// Upload an optional post image to the `post-images` bucket under the posting
-// persona's folder and return its public URL (null when no file was chosen).
-// Mirrors the avatar upload path; on any failure it redirects via `fail`.
-async function uploadPostImage(
+// Upload an optional image attachment (form field "image") to a public bucket
+// under the posting persona's folder and return its public URL (null when no
+// file was chosen). Mirrors the avatar upload path; on any failure it redirects
+// via `fail`. Shared by post and comment attachments.
+async function uploadContentImage(
   supabase: Awaited<ReturnType<typeof createClient>>,
+  bucket: string,
   personaId: string,
   formData: FormData,
   back: string
@@ -372,12 +385,30 @@ async function uploadPostImage(
 
   const path = `${personaId}/${crypto.randomUUID()}.${avatarExt(file)}`;
   const { error: upErr } = await supabase.storage
-    .from("post-images")
+    .from(bucket)
     .upload(path, file, { contentType: file.type, upsert: false });
   if (upErr) fail(back, upErr.message);
 
-  const { data: pub } = supabase.storage.from("post-images").getPublicUrl(path);
+  const { data: pub } = supabase.storage.from(bucket).getPublicUrl(path);
   return pub.publicUrl;
+}
+
+function uploadPostImage(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  personaId: string,
+  formData: FormData,
+  back: string
+): Promise<string | null> {
+  return uploadContentImage(supabase, "post-images", personaId, formData, back);
+}
+
+function uploadCommentImage(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  personaId: string,
+  formData: FormData,
+  back: string
+): Promise<string | null> {
+  return uploadContentImage(supabase, "comment-images", personaId, formData, back);
 }
 
 export async function uploadPersonaAvatar(formData: FormData) {

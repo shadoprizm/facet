@@ -30,15 +30,29 @@ export default function CommentNode({
   const children = ctx.childrenMap.get(comment.id) ?? [];
   const actions = ctx.actionsByTarget.get(comment.id) ?? [];
 
+  const image = comment.image_url ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={comment.image_url}
+      alt=""
+      className="mt-2 max-h-80 w-auto max-w-full rounded-lg border"
+      style={{ borderColor: "var(--border)" }}
+    />
+  ) : null;
+
   const body = comment.collapsed ? (
     <details className="mt-1">
       <summary className="cursor-pointer text-sm" style={{ color: "var(--warn)" }}>
         🫧 Collapsed by the Room Agent — {comment.collapse_reason ?? "under review"} (click to read anyway)
       </summary>
-      <p className="mt-2 whitespace-pre-wrap text-sm opacity-70">{comment.body}</p>
+      {comment.body && <p className="mt-2 whitespace-pre-wrap text-sm opacity-70">{comment.body}</p>}
+      {image && <div className="opacity-70">{image}</div>}
     </details>
   ) : (
-    <p className="mt-1 whitespace-pre-wrap text-sm">{comment.body}</p>
+    <>
+      {comment.body && <p className="mt-1 whitespace-pre-wrap text-sm">{comment.body}</p>}
+      {image}
+    </>
   );
 
   return (
@@ -69,7 +83,13 @@ export default function CommentNode({
           <form action={createComment} className="mt-2 space-y-2">
             <input type="hidden" name="post_id" value={ctx.postId} />
             <input type="hidden" name="parent_id" value={comment.id} />
-            <textarea className="input" name="body" rows={2} placeholder="Reply as your active persona…" required />
+            <textarea className="input" name="body" rows={2} placeholder="Reply as your active persona…" />
+            <input
+              type="file"
+              name="image"
+              accept="image/png,image/jpeg,image/webp,image/gif"
+              className="block w-full text-xs"
+            />
             <button className="btn !py-1 text-xs">Reply</button>
           </form>
         </details>

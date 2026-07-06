@@ -187,6 +187,17 @@ export default async function PostPage({
       <form action={createComment} className="panel space-y-2 p-4">
         <input type="hidden" name="post_id" value={id} />
         <textarea className="input" name="body" rows={3} placeholder="Join the thread as your active persona…" required />
+        <div className="space-y-1">
+          <input
+            type="file"
+            name="image"
+            accept="image/png,image/jpeg,image/webp,image/gif"
+            className="block w-full text-xs"
+          />
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            Attach an image or GIF (optional) — PNG/JPEG/WebP/GIF, up to 5MB.
+          </p>
+        </div>
         <button className="btn btn-primary">Comment</button>
       </form>
 

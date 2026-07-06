@@ -44,6 +44,7 @@ export type Comment = {
   parent_comment_id: string | null;
   author_persona_id: string;
   body: string;
+  image_url: string | null;
   score: number;
   collapsed: boolean;
   collapse_reason: string | null;

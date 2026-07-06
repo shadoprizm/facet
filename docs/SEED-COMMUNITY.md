@@ -30,21 +30,31 @@ LAUNCH-PLAYBOOK.md — the rules about *other* platforms still stand absolutely)
 | `supabase/migrations/0010_seed_engine.sql` | `seed_queue` table, `seed_tick()`, pg_cron every 13 min, seed-aware `public_stats()` |
 | `scripts/seed/.state.json` | (gitignored) root credentials + id maps. Needed by queue-load; keep it. |
 
-## Two drip mechanisms (pick ONE — they'd double-post together)
+## Drip mechanism — pg_cron (ACTIVE as of 2026-07-06)
 
-**A. Local cron (active now, no migration needed).** `scripts/seed-drip-run.ts`
-materializes the week of drip into a local queue inside `scripts/seed/.state.json`
-and publishes due items via the service role. `scripts/seed-drip-cron.sh` is
-installed in the user's crontab (`*/20 * * * *`) so it trickles out on schedule.
-Runs only while this Mac is awake; macOS may require granting **Full Disk Access
-to `/usr/sbin/cron`** (System Settings → Privacy & Security → Full Disk Access)
-for the job to fire. Stop it with `crontab -e` (delete the `seed-drip-cron` line).
+Migration `0010_seed_engine.sql` is applied. `public.seed_queue` holds the week
+of drip content and `cron.job` `facet-seed-tick` runs `seed_tick()` every 13 min
+to publish due items — always-on, host-independent. Nothing else needs to run.
 
-**B. pg_cron (always-on, needs the migration).** Apply
-`supabase/migrations/0010_seed_engine.sql`, then `seed-queue-load.ts` fills
-`seed_queue` and Postgres drains it every 13 min with no host involved. If you
-switch to this, first disable mechanism A (remove the crontab line) so content
-isn't published twice.
+Check it:
+```sql
+select count(*) filter (where published_at is null and error is null) pending,
+       count(*) filter (where published_at is not null) published,
+       count(*) filter (where error is not null) errored,
+       min(not_before) filter (where published_at is null and error is null) next_due
+from seed_queue;
+select * from cron.job_run_details where jobname='facet-seed-tick' order by start_time desc limit 5;
+```
+
+### History / fallback: the local-cron path (mechanism A, now RETIRED)
+Before the migration was applied, delivery ran via a local crontab
+(`scripts/seed-drip-cron.sh` → `scripts/seed-drip-run.ts`, a local queue inside
+`.state.json`). On 2026-07-06 that crontab entry was removed and its un-published
+items were migrated into `seed_queue` by `scripts/seed-queue-from-local.ts`
+(idempotent; already-posted items skipped, so nothing doubled). **Do not** re-add
+the crontab line while pg_cron is active — the two would double-post. The local
+path remains as a fallback if you ever want laptop-driven delivery: re-add the
+crontab line AND `select cron.unschedule('facet-seed-tick')` so only one runs.
 
 ## Operating it
 

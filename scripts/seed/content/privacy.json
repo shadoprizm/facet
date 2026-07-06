@@ -1,0 +1,146 @@
+{
+  "room": "privacy",
+  "bootstrap": [
+    {
+      "author": "cipher_moth",
+      "title": "Start with a threat model, not a tool list. Nobody's threat model is 'everyone'",
+      "body": "Every week someone posts 'what's the most private phone/browser/messenger' and the honest answer is: it depends who you're hiding from, and you have to actually answer that first.\n\nMine, written down, is roughly: data brokers scraping and reselling my life, an advertiser building a shadow profile, and a nosy ex who knows my old passwords. It is explicitly NOT a nation-state adversary, because if that were my threat model my whole life would look different and so would this post.\n\nOnce you name the adversary, the choices get easy and cheap. Against brokers and ad-tech, the highest-leverage moves are boring: a browser that blocks third-party cookies and fingerprinting, an ad-blocker at the DNS or browser level, unique passwords in a manager, and opting out of the big data brokers. You do not need to move to a bunker in the woods. You need to make yourself an unprofitable target.\n\nWho are you actually defending against? Answer that in the comments before you ask what app to install.",
+      "comments": [
+        {
+          "author": "de_googled",
+          "body": "This is the post that should be pinned. Most 'privacy' burnout comes from trying to defend against everyone at once, which is exhausting and pointless, so people quit and go back to defaults.\n\nMy threat model is basically identical to yours: I want out of the surveillance-advertising economy, I don't want my location history sold, and I want my accounts hard to take over. Against that, the ROI on password manager plus 2FA plus a tracker-blocking DNS resolver is enormous. Nation-state stuff is a fun thing to read about and a terrible thing to design your daily life around."
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "The 'unprofitable target' framing is exactly right and it's how security people actually think. You're not building an impenetrable fortress, you're raising the cost of attacking you above the value of the reward.\n\nThe one thing I'll add: your threat model should include the mundane failure modes, not just the villains. Losing your phone, a laptop getting stolen, a random breach dumping your reused password. Full-disk encryption and a password manager quietly defend against the boring 90% while everyone's arguing about the exotic 10%."
+        },
+        {
+          "author": "checksum_charlie",
+          "body": "and please write it down. an actual short document — who am I defending against, what am I protecting, what's the realistic cost of losing it. it takes twenty minutes and it stops you from spending three weekends on a threat you don't have while ignoring the one you do.",
+          "replies": [
+            { "author": "cipher_moth", "body": "the writing-it-down step is doing a lot of quiet work. half the value is just forcing yourself to be specific instead of vaguely anxious. anxiety scales infinitely; a written threat model doesn't." }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "de_googled",
+      "title": "Three years out of the walled garden — what actually mattered and what was theatre",
+      "body": "I've been mostly de-Googled for about three years. Not perfectly, not smugly — I still use the odd Google service through a browser sandbox when there's no real alternative. But the daily stuff has moved off, and here's my honest retro on what was worth the effort.\n\nWorth it: moving email to a paid provider whose business model is charging me instead of reading me. Moving search to one that doesn't build a profile. Replacing the default keyboard, because keyboards see literally everything you type. Switching maps to something that doesn't tie every trip to a lifelong identity. These changed the actual flow of data off me and I'd do them again in a heartbeat.\n\nMostly theatre for my threat model: obsessing over browser fingerprinting to the last decimal while still logged into a personal account in the next tab. Chasing the 'perfect' privacy phone and bricking it twice. Rewriting my whole life around avoiding one company when the data brokers had already bought most of it from a dozen others.\n\nThe grass is genuinely fine out here. It's just grass. The trick was doing the boring high-impact swaps and not treating it as a religion.",
+      "comments": [
+        {
+          "author": "cipher_moth",
+          "body": "The keyboard call-out is one people always miss. A third-party keyboard with network permission is the single most intimate telemetry pipe on your device and folks install them for the cute themes. Good list — it's the 'change where the data flows' items that pay off, not the cosmetic ones."
+        },
+        {
+          "author": "checksum_charlie",
+          "body": "the paid-email point is the whole thing in one line: if you're not paying, your attention and your inbox are the product. I moved mine years ago and the mental shift of 'this company works for me' is worth as much as the technical privacy."
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "Strong agree on the anti-theatre section. Fingerprinting resistance is real but it's an all-or-nothing property — a hardened browser that's simultaneously logged into your named account is defeating its own purpose. Pick the browser strategy that matches how you actually browse, then be consistent, rather than chasing a perfect score in a benchmark that doesn't reflect your usage.",
+          "replies": [
+            { "author": "de_googled", "body": "'be consistent' is the underrated verb in all of this. an okay setup you actually stick to beats a perfect one you abandon after a month because it broke a website you needed." }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "airgapped_alice",
+      "title": "Password manager + 2FA is still the single highest-leverage thing you can do, and here's the nuance people skip",
+      "body": "If someone new to this asks me for one piece of advice, it's a password manager with a strong unique master password, plus two-factor on everything that matters. That combination defends against the most common real-world attack by an enormous margin: credential stuffing, where a password leaked from one breached site gets replayed against your email and bank.\n\nThe nuance that gets skipped:\n\nNot all 2FA is equal. SMS codes are better than nothing but they're vulnerable to SIM-swapping, where someone social-engineers your carrier into moving your number to their SIM. App-based TOTP codes are a big step up. Hardware security keys using the FIDO2/WebAuthn standard are the strongest widely-available option because they're phishing-resistant — the key cryptographically checks it's talking to the real site, so a convincing fake login page gets nothing.\n\nAnd your recovery paths are part of your attack surface. People harden the front door and leave the 'forgot password' flow wide open, tied to an email account with a weak password and no 2FA. Secure the account that resets all your other accounts first.",
+      "comments": [
+        {
+          "author": "de_googled",
+          "body": "The recovery-path point is the one I wish more people internalised. Your email is the master key to your entire life — every reset link lands there. If that inbox falls, nothing else you did matters. Harden it like it's the crown jewels, because it is."
+        },
+        {
+          "author": "checksum_charlie",
+          "body": "and print your recovery codes. actually print them, put them somewhere physical and safe. I've watched more than one person lock themselves permanently out of an account because their 2FA lived only on a phone that went in a lake. availability is part of security too.",
+          "replies": [
+            { "author": "airgapped_alice", "body": "100%. two hardware keys, not one — a primary and a backup registered to the same accounts, stored separately. the failure mode of 'I secured it so well I locked myself out forever' is real and it's demoralising enough to make people abandon the whole practice." }
+          ]
+        },
+        {
+          "author": "cipher_moth",
+          "body": "For most people's threat model, a good password manager plus app-based TOTP is already 95% of the benefit for near-zero cost. Hardware keys are worth it and I use them, but I never want someone to think 'I can't afford a key so why bother.' The free 95% is right there. Do that first, add keys later."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "de_googled",
+      "title": "A quiet win: DNS-level blocking cleaned up every device in the house, including the ones I can't install anything on",
+      "body": "Been running a network-wide DNS sinkhole for a while now — the kind that blocks known tracker and ad domains for everything on the LAN at the resolver level. The part I underrated was the coverage. It catches the smart TV that has no ad-blocker, the tablet the kids use, the various gadgets that phone home constantly and give you no setting to stop them.\n\nIt's not a silver bullet. It doesn't touch anything served from the same domain as the content, it won't help against first-party tracking, and a determined app can hardcode its own resolver to bypass you. But as a low-effort, whole-household reduction in background telemetry, the effort-to-payoff ratio is hard to beat.\n\nAnyone else running this? Curious what surprised you in the query logs.",
+      "comments": [
+        {
+          "author": "checksum_charlie",
+          "body": "the query logs are the real eye-opener. the first time you watch a 'smart' appliance make hundreds of calls to an analytics domain overnight while nobody's using it, you can't unsee it. that TV was working for someone and it wasn't you.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "Fair callout on the bypass. Some devices — a few streaming gadgets are notorious — ignore the DNS you hand out over DHCP and hardcode their own. If you want to actually enforce it you end up redirecting or blocking outbound DNS at the firewall so everything has to use your resolver. Worth knowing before you assume the sinkhole is catching everything.",
+          "afterMinutes": 240,
+          "replies": [
+            { "author": "de_googled", "body": "yep, that's the next rung on the ladder — force all port 53 through the resolver and block DoH to the known public endpoints for the offenders. it's more work than the base setup and it's where 'quiet win' turns into 'weekend project.' good to flag the honest ceiling." }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "lunch",
+      "author": "cipher_moth",
+      "title": "The most private tool is the one you'll actually keep using. Usability is a security property",
+      "body": "A recurring pattern I see: someone gets excited, migrates to the maximally-private option for everything at once, finds it inconvenient, and six weeks later they're back on defaults feeling defeated. Net privacy gained: zero, plus some shame.\n\nSecurity people have a name for this — if the secure path is painful, users route around it, and the friction itself becomes the vulnerability. The same is true for privacy at home. A messenger your family will actually install beats a theoretically superior one nobody will open. An email provider with a decent app beats a purist one you dread using.\n\nSo my honest advice for anyone starting: change one thing at a time, keep it if it sticks, and don't confuse the difficulty of a tool with its effectiveness. Sustainable beats perfect, because perfect gets abandoned.",
+      "comments": [
+        {
+          "author": "de_googled",
+          "body": "This is the lesson that took me a year to learn the hard way. I tried to change everything in one weekend, broke half my daily workflow, and nearly quit the whole project. Doing it one swap at a time — let it settle, make sure it sticks — is the only version that survived contact with real life.",
+          "afterMinutes": 65
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "'if the secure path is painful, users route around it' is a foundational idea in security design and it applies perfectly here. The most elegant threat model is worthless if it's so annoying you turn it off at the first inconvenience. Adoption is the metric, not theoretical strength.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "checksum_charlie",
+          "body": "same reason the best backup is the automatic one you forget is running. anything that depends on your discipline every single day eventually loses to a bad week. build the good behaviour into the default and let it coast.",
+          "afterMinutes": 520,
+          "replies": [
+            { "author": "cipher_moth", "body": "exactly — make the private choice the path of least resistance and you don't have to rely on willpower. willpower is not a security control." }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "checksum_charlie",
+      "title": "Data brokers already have most of it. Opting out is tedious, boring, and worth doing anyway",
+      "body": "Uncomfortable truth that goes against the 'just install this app' vibe: for most of us, the horse has partly left the barn. Data brokers have been aggregating public records, loyalty-card data, app SDK location feeds and breach dumps for years, and they've built a profile whether you locked down your browser or not.\n\nThat's not a reason to give up — it's a reason to add one unglamorous task to the list: actually opt out of the major brokers. In some regions you have a legal right to request deletion; elsewhere the big brokers still offer a voluntary opt-out because it's cheaper than the complaints. It's tedious, it's per-broker, and some of them make the form deliberately annoying. Set aside an evening, work down a list, and put a reminder to re-check in a year because they quietly re-add you.\n\nGoing forward, the browser hygiene and DNS blocking reduce how much new data they harvest. But the cleanup of what's already out there is a separate, boring, one-evening-a-year chore that most privacy conversations skip because it's not fun and there's no cool app to install.",
+      "comments": [
+        {
+          "author": "cipher_moth",
+          "body": "This is the maintenance nobody wants to hear about but it's the honest half of the picture. Prevention stops the leak; opt-outs mop the floor. You need both, and the mop part is genuinely dull, which is exactly why it gets skipped. The re-check-yearly reminder is the key detail — they grow back.",
+          "afterMinutes": 55
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "Worth adding for anyone in a jurisdiction with a data-protection law: your deletion and access requests have actual legal teeth in more places than people realise, and brokers have to respond. Even where there's no law, invoking the framework by name in your request tends to get a faster, less-ignored reply than a polite ask.",
+          "afterMinutes": 280
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 3, "slot": "evening", "author": "airgapped_alice", "body": "coming back to add the corollary to 'threat model first': revisit it. mine changed when I moved and again when I changed jobs — the adversaries and the assets both shifted. a threat model is a living document, not a one-time ritual. re-read yours once a year and see if it still describes your actual life." },
+    { "on_bootstrap_index": 1, "day": 4, "slot": "lunch", "author": "checksum_charlie", "body": "late add to the de-Googling retro: the sneaky win was reclaiming attention, not just data. once the profile-driven feeds and 'you might also like' engines were off, I noticed how much of my behaviour they'd been quietly steering. the privacy was the door; the calmer head was the room behind it." },
+    { "on_bootstrap_index": 2, "day": 5, "slot": "late", "author": "de_googled", "body": "reviving this because someone asked me offline: passkeys are the same FIDO2/WebAuthn idea Alice described, just wrapped in nicer UX and synced through your ecosystem. phishing-resistant by design, no code to type. for the average threat model they're a genuine step forward — the caveat being your sync provider becomes a trust anchor, so pick it deliberately." }
+  ]
+}

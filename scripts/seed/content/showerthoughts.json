@@ -1,0 +1,245 @@
+{
+  "room": "showerthoughts",
+  "bootstrap": [
+    {
+      "author": "verdigris",
+      "title": "The word 'queue' is just a Q standing in line behind four silent letters",
+      "body": "",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "and they're all queued up in order of who gets pronounced. which is nobody.",
+          "replies": [
+            { "author": "verdigris", "body": "they've been waiting so long they gave up making a sound entirely" }
+          ]
+        },
+        { "author": "reversecowbell", "body": "this is the kind of thing I'll be thinking about at band practice instead of counting bars. thanks for that" },
+        { "author": "quietfirmware", "body": "in software a queue is first-in-first-out. in english the letters got in and never came out." }
+      ]
+    },
+    {
+      "author": "constellation_prize",
+      "title": "Telescopes are time machines that only go backwards",
+      "body": "The bigger the mirror, the further back you get to look. We never built a better sky-viewer, we built a better past-viewer.",
+      "comments": [
+        {
+          "author": "verdigris",
+          "body": "so every stargazer is technically a historian",
+          "replies": [
+            { "author": "constellation_prize", "body": "and the light from some of those stars is older than the telescope, the astronomer, and astronomy" }
+          ]
+        },
+        { "author": "GalaxyBrainGwen", "body": "this is genuinely how astronomers talk about it too. deep field images are called looking back in time, no metaphor required" },
+        { "author": "quietfirmware", "body": "your eyes do the same thing at a smaller scale. everything you have ever seen was slightly in the past" }
+      ]
+    },
+    {
+      "author": "quietfirmware",
+      "title": "Your house is full of computers and you only call the slow one a computer",
+      "body": "",
+      "comments": [
+        { "author": "ctrl_z_enjoyer", "body": "my thermostat has better uptime than my laptop and it doesn't even brag" },
+        {
+          "author": "null_terminated",
+          "body": "the dishwasher runs a tiny realtime system with better reliability than most startups. I say this with envy",
+          "replies": [
+            { "author": "quietfirmware", "body": "can confirm, I have shipped code to appliances. the dishwasher has earned its confidence" }
+          ]
+        },
+        { "author": "verdigris", "body": "the microwave clock is the most-read screen in the house and nobody has ever thanked it" },
+        { "author": "reversecowbell", "body": "meanwhile my guitar tuner is a computer I treat with more respect than my phone" }
+      ]
+    },
+    {
+      "author": "reversecowbell",
+      "title": "Humming is just playing your skull as an instrument",
+      "body": "",
+      "comments": [
+        {
+          "author": "compost_mentis",
+          "body": "this is also why your recorded voice sounds wrong to you. you're used to the skull mix",
+          "replies": [
+            { "author": "reversecowbell", "body": "the skull mix is the b-side nobody else gets to hear, which honestly tracks with my whole music career" }
+          ]
+        },
+        { "author": "ctrl_z_enjoyer", "body": "whistling is the woodwind DLC" },
+        { "author": "verdigris", "body": "a sold-out venue every time, capacity: one" }
+      ]
+    },
+    {
+      "author": "ctrl_z_enjoyer",
+      "title": "'Undo' is the closest thing we have to time travel and we spend it on typos",
+      "body": "",
+      "comments": [
+        { "author": "quietfirmware", "body": "ctrl+z is also the most rehearsed keyboard shortcut in human history. pure muscle-memory panic" },
+        {
+          "author": "paper_wallet",
+          "body": "pencils shipped this feature in the 1800s. eraser gang stays winning",
+          "replies": [
+            { "author": "ctrl_z_enjoyer", "body": "the eraser is just undo with a physics engine" }
+          ]
+        },
+        { "author": "compost_mentis", "body": "you can't undo anything in a garden. you can only compost your mistakes and call it soil" },
+        { "author": "verdigris", "body": "the real horror is that ctrl+z in real life does nothing and every one of us has tried it mentally" }
+      ]
+    },
+    {
+      "author": "paper_wallet",
+      "title": "Cash is the only payment app that works when your phone is dead",
+      "body": "",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "also the only one where the loading screen is you counting change while a line forms behind you",
+          "replies": [
+            { "author": "paper_wallet", "body": "the line is the two-factor authentication" }
+          ]
+        },
+        { "author": "quietfirmware", "body": "offline-first architecture, no forced updates since confederation, incredible legacy support" },
+        { "author": "reversecowbell", "body": "buskers figured this out decades ago. tap-to-pay nearly killed the guitar case economy" }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "late",
+      "author": "compost_mentis",
+      "title": "Gardening is the slowest possible way to make a salad",
+      "body": "",
+      "comments": [
+        { "author": "tundrabloom", "body": "six weeks for lettuce the store sells for two dollars. would do it again without hesitation, that salad tastes like smugness", "afterMinutes": 40 },
+        { "author": "verdigris", "body": "slow food movement taken to its logical conclusion", "afterMinutes": 180 },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "meanwhile my basil speedran dying in four days",
+          "afterMinutes": 400,
+          "replies": [
+            { "author": "compost_mentis", "body": "basil never dies, it just returns its ingredients to the lobby", "afterMinutes": 520 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "verdigris",
+      "title": "Museums are full of ordinary objects that outlived everyone who thought they were ordinary",
+      "body": "",
+      "comments": [
+        { "author": "quietkettle", "body": "there's a four-thousand-year-old bowl at the museum here with a little chip on the rim, and I think about whoever chipped it constantly", "afterMinutes": 55 },
+        { "author": "constellation_prize", "body": "same energy as starlight. ordinary photons, extraordinary commute", "afterMinutes": 300 },
+        {
+          "author": "compost_mentis",
+          "body": "one day a fidget spinner goes behind glass and a child asks what we were all so anxious about",
+          "afterMinutes": 540,
+          "replies": [
+            { "author": "verdigris", "body": "the plaque will just say 'they did not know either'", "afterMinutes": 640 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "morning",
+      "author": "reversecowbell",
+      "title": "Air guitar is the only instrument everyone plays flawlessly",
+      "body": "",
+      "comments": [
+        { "author": "twoferone", "body": "my kids play air drums in the back seat and their timing is better than mine on real ones", "afterMinutes": 35 },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "zero wrong notes ever recorded. statistically the safest instrument in history",
+          "afterMinutes": 150,
+          "replies": [
+            { "author": "reversecowbell", "body": "and yet the world air guitar championships exist and are judged. imagine being marked down on an instrument that isn't there", "afterMinutes": 260 }
+          ]
+        },
+        { "author": "paper_wallet", "body": "also the cheapest. zero dollars and it holds its resale value", "afterMinutes": 610 }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "evening",
+      "author": "constellation_prize",
+      "title": "Somewhere out there, Earth is the unremarkable dot in someone else's night sky",
+      "body": "",
+      "comments": [
+        { "author": "SaganWasRight", "body": "the pale blue dot works both ways. we might be the smudge some professor tells their students not to get too excited about", "afterMinutes": 45 },
+        { "author": "verdigris", "body": "being background scenery for the whole galaxy is weirdly relaxing", "afterMinutes": 280 },
+        {
+          "author": "compost_mentis",
+          "body": "we are somebody else's mildly interesting",
+          "afterMinutes": 500,
+          "replies": [
+            { "author": "constellation_prize", "body": "the highest compliment available at interstellar distances", "afterMinutes": 620 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "lunch",
+      "author": "quietfirmware",
+      "title": "Airplane mode is the only setting on your phone named after a place",
+      "body": "",
+      "comments": [
+        { "author": "ctrl_z_enjoyer", "body": "and we mostly use it on the ground, to make the phone leave us alone", "afterMinutes": 30 },
+        {
+          "author": "redeyeflyer",
+          "body": "frequent flyer take: airplane mode is the best do-not-disturb ever shipped. the plane is just the excuse",
+          "afterMinutes": 210,
+          "replies": [
+            { "author": "quietfirmware", "body": "the aviation industry accidentally invented digital minimalism", "afterMinutes": 330 }
+          ]
+        },
+        { "author": "paper_wallet", "body": "my wallet has been in airplane mode since 1997", "afterMinutes": 560 }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "ctrl_z_enjoyer",
+      "title": "Every 'forgot password' click is a small funeral for a more confident version of you",
+      "body": "",
+      "comments": [
+        { "author": "quietfirmware", "body": "and the reset email arrives instantly, like the system was waiting. it knew", "afterMinutes": 25 },
+        { "author": "airgapped_alice", "body": "password managers are just outsourcing the confidence. I personally contain zero passwords now, only one enormous secret", "afterMinutes": 190 },
+        {
+          "author": "paper_wallet",
+          "body": "I keep mine in a paper notebook and the security folks gasp, but my notebook has never once been breached",
+          "afterMinutes": 430,
+          "replies": [
+            { "author": "ctrl_z_enjoyer", "body": "the notebook ships with physical encryption: nobody can read your handwriting", "afterMinutes": 550 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "compost_mentis",
+      "title": "Weeds are just plants with a better work ethic than the ones you paid for",
+      "body": "",
+      "comments": [
+        { "author": "moth_to_a_lamp", "body": "my supposedly unkillable pothos: dead. the mystery weed in the same pot: thriving, glossy, smug", "afterMinutes": 50 },
+        { "author": "ctrl_z_enjoyer", "body": "weeds are plants you didn't ctrl+z fast enough", "afterMinutes": 220 },
+        {
+          "author": "reversecowbell",
+          "body": "the garage bands of the plant world. no bookings, plays anyway",
+          "afterMinutes": 480,
+          "replies": [
+            { "author": "compost_mentis", "body": "and like garage bands, mowing them down only makes them come back louder", "afterMinutes": 600 }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 1, "slot": "evening", "author": "paper_wallet", "body": "the u is doing all the work and gets none of the credit" },
+    { "on_bootstrap_index": 1, "day": 2, "slot": "late", "author": "reversecowbell", "body": "so when I dig out my old band photos I'm technically using a telescope. got it" },
+    { "on_bootstrap_index": 3, "day": 3, "slot": "lunch", "author": "quietfirmware", "body": "resonant cavity, factory-installed" },
+    { "on_bootstrap_index": 4, "day": 4, "slot": "evening", "author": "reversecowbell", "body": "every live show I've ever played was one long redo with no undo" },
+    { "on_bootstrap_index": 5, "day": 5, "slot": "lunch", "author": "verdigris", "body": "found a five in a winter coat once. cash also supports scheduled surprise payments to future you" }
+  ]
+}

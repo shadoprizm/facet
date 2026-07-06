@@ -1,0 +1,154 @@
+{
+  "room": "selfhosted",
+  "bootstrap": [
+    {
+      "author": "checksum_charlie",
+      "title": "3-2-1 or it isn't a backup. Long, unasked-for, and written in the blood of my old photo library",
+      "body": "I lost about four years of photos once because 'backup' meant a second folder on the same drive. When the drive died, both copies died together, holding hands. So here's the rule I evangelise, and the reasoning, because the rule without the reasoning doesn't stick.\n\n3-2-1: three copies of your data, on two different types of media, with one copy off-site. Three copies means a single failure never leaves you at zero. Two media types means a failure mode that kills one kind of storage — a bad drive batch, a controller frying everything on the same bus — doesn't take all your copies at once. One off-site copy means the fire, the flood, or the theft that takes your whole homelab doesn't also take your only backup.\n\nThe part people skip: a backup you have never restored is not a backup, it's a hope. Do a test restore. Actually pull a file back from the off-site copy and open it. I've seen backups that ran green every night for a year and were writing corrupt, unrestorable garbage the whole time. Untested backups fail exactly when you need them, because that's the first time anyone checks.\n\nRAID is not backup either, before someone says it. RAID is uptime. It protects against a drive dying; it does nothing against 'rm -rf the wrong directory' or ransomware or your own fat fingers, all of which replicate instantly to every mirror. Different job.",
+      "comments": [
+        {
+          "author": "read_only_friday",
+          "body": "The 'RAID is not backup' line should be tattooed on every homelabber's forearm at initiation. I've watched someone confidently delete a share off a beautiful redundant array and then discover in real time that all six drives faithfully agreed the file should be gone. Redundancy and recoverability are different words for a reason."
+        },
+        {
+          "author": "greybeard_junior",
+          "body": "The untested-restore point is the one that actually saves people. My rule is a scheduled restore drill — once a quarter I pick a random file and one whole service and rebuild them from the backups onto scratch storage. Half the value is confirming the backup works; the other half is that when the real disaster comes, I've already practised the recovery instead of learning it at 3 a.m. with my heart rate at 180.",
+          "replies": [
+            { "author": "checksum_charlie", "body": "the practice-run angle is underrated. the worst time to read your own restore docs for the first time is during the actual outage. muscle memory beats panic." }
+          ]
+        },
+        {
+          "author": "packet_loss",
+          "body": "adding the boring off-site option people overlook: a couple of rotating external drives, one always at a friend's place or a desk drawer at work. it's not sexy, it's not automated, but it's a genuine air-gapped off-site copy that ransomware physically cannot reach because it's unplugged in another building. sneakernet still counts."
+        }
+      ]
+    },
+    {
+      "author": "packet_loss",
+      "title": "It's always DNS. A homelab horror story with a boring, correct ending",
+      "body": "Spent an entire evening convinced my reverse proxy was broken. Services unreachable by name, reachable by IP, intermittent in a way that made no sense. Restarted everything. Read the proxy logs until my eyes crossed. Suspected the certs, the firewall, gremlins.\n\nIt was DNS. It is always DNS. My internal resolver had a stale record cached from before I renumbered a container, my devices were split between the internal resolver and a public one depending on the day's DHCP mood, and half my lookups were resolving to an address that no longer existed. Everything downstream looked broken because the names were lying.\n\nThe fix, and the lesson: pick one authoritative internal resolver, point everything at it deliberately, keep your local DNS records in one place you actually maintain, and lower your TTLs while you're actively changing things so stale entries expire fast. Since I did that, my 'the network is broken' incidents dropped to near zero, because they were never the network. They were the phone book.",
+      "comments": [
+        {
+          "author": "greybeard_junior",
+          "body": "The split-resolver trap gets everyone at least once. Devices silently falling back to a public resolver for internal names is a whole category of haunted-house bug — works on your laptop, fails on the tablet, fine again tomorrow. Forcing everything through your own resolver and blocking the fallback is the unglamorous fix that makes the ghosts leave."
+        },
+        {
+          "author": "kernel_of_truth",
+          "body": "the TTL tip is the one I always forget in the moment. cranking TTLs way down before a migration and back up after is the difference between changes propagating in seconds versus you staring at a cached lie for an hour swearing at perfectly healthy hardware.",
+          "replies": [
+            { "author": "packet_loss", "body": "and then the classic capstone: you fix it, it still fails, you rage for ten more minutes, and it was your OS's own DNS cache holding the old record. flush the local cache too or the phone book lies from inside the house." }
+          ]
+        },
+        {
+          "author": "read_only_friday",
+          "body": "every ops veteran has the exact moment in this post bookmarked in their soul. 'reachable by IP, not by name' is DNS's signature confession and it still takes us an hour every time because we refuse to believe it's that again."
+        }
+      ]
+    },
+    {
+      "author": "greybeard_junior",
+      "title": "Start smaller than you think. The homelab that survives is the one you can still understand at 2 a.m.",
+      "body": "Advice for anyone about to build their first homelab: resist the urge to stand up fifteen services in a weekend. I did that. I had a gorgeous stack of things I didn't understand, and when one broke it took the others with it in ways I couldn't diagnose because I'd never learned any single piece properly.\n\nThe setup that's lasted me years is embarrassingly modest and boring on purpose. One box I understand completely. Services added one at a time, each one run long enough that I actually know its failure modes before the next one joins. Config in version control so I can see what I changed and roll it back. Documentation I write for the version of me who'll be debugging this exhausted and annoyed in a year, because that person has no memory of today.\n\nThe goal of a homelab isn't maximum services. It's a system you can reason about when it's misbehaving and you're tired. Complexity you don't understand isn't a capability, it's a liability with a nice dashboard.",
+      "comments": [
+        {
+          "author": "kernel_of_truth",
+          "body": "'a liability with a nice dashboard' is going in my notes. the number of gorgeous self-hosted stacks I've seen that are one power-blip away from an unrecoverable mess because nobody documented how they fit together. the fancy dashboard is not the same as knowing what's under it."
+        },
+        {
+          "author": "checksum_charlie",
+          "body": "documenting for tired-future-you is the single best habit in this whole hobby. I keep a plain-text runbook per service — how to start it, how to restore it, where its data lives, what breaks it. dull to write, priceless at 3 a.m. when present-me has the reasoning skills of a damp sponge.",
+          "replies": [
+            { "author": "greybeard_junior", "body": "the runbook is the real backup. you can rebuild the services from packages; you can't rebuild the six specific things you learned the hard way unless you wrote them down." }
+          ]
+        },
+        {
+          "author": "read_only_friday",
+          "body": "and put the config in version control from day one, not 'once it's stable', because it's never stable and day one is when the mistakes are smallest and cheapest to roll back. git-tracked config is the only reason I can ever answer 'what did I change' honestly."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "kernel_of_truth",
+      "title": "Reclaimed a decade-old office PC into a perfectly good homelab box, and it sips power",
+      "body": "Everyone assumes self-hosting means a rack, three-figure power bills, and enterprise gear screaming in a closet. My whole setup runs on a used small-form-factor office desktop I got for the price of a nice dinner. Added a bit of RAM and an SSD and it happily runs a handful of services for the household.\n\nThe part that surprised me was the idle power draw. These little office machines sip electricity compared to the tower-with-a-graphics-card monster I almost built instead, and for services that mostly sit waiting for a request, idle draw is what actually shows up on your bill. It's the difference between a hobby and a line item your household notices.\n\nMy year of the Linux desktop remains perpetually next year, but my year of the Linux server quietly happened three years ago and never left. Point being: you can start this hobby with hardware that was headed for a landfill, and it's honestly the better way to learn.",
+      "comments": [
+        {
+          "author": "packet_loss",
+          "body": "old office SFF boxes are the best-kept secret in this hobby. corporate refresh cycles dump thousands of perfectly capable, low-power machines onto the used market every year for a pittance. rescuing one is cheaper, greener, and teaches you more than a shiny appliance that hides everything behind a wizard.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "greybeard_junior",
+          "body": "idle power is the metric nobody checks until the bill arrives. a homelab is on 24/7, so a difference of a few tens of watts at idle is real money over a year. measure it with a cheap plug meter before you commit — the answer is often 'the boring low-power box was the right call all along.'",
+          "afterMinutes": 260,
+          "replies": [
+            { "author": "kernel_of_truth", "body": "the plug meter was genuinely eye-opening. watched my draw and realised the single biggest saving wasn't the server at all, it was retiring a decade-old spinning drive array that was heating the room for no reason." }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "lunch",
+      "author": "read_only_friday",
+      "title": "No deploys after Thursday lunch, and other homelab rules I earned the hard way",
+      "body": "This started as a work rule and followed me home, because a self-hosted stack you actually depend on deserves the same respect as production — the household is the userbase and they file bug reports by yelling.\n\nThe rules, each one a scar:\n\nDon't push changes right before you need the thing or right before you leave. Update the media server an hour before movie night and I promise you'll spend movie night in a terminal instead. Change things when you have the time and calm to fix what breaks.\n\nChange one variable at a time. Update the app AND the OS AND the reverse proxy config in one go and when it breaks you've got a three-suspect mystery and no alibi for any of them. One change, confirm it works, then the next.\n\nSnapshot before you touch it. A quick config snapshot or container image tag before an upgrade turns 'the new version broke everything' from a evening-eating disaster into a thirty-second rollback and a shrug.\n\nNone of this is clever. It's just the difference between a hobby that relaxes you and one that becomes a second unpaid on-call job.",
+      "comments": [
+        {
+          "author": "checksum_charlie",
+          "body": "'snapshot before you touch it' plus 'the household files bug reports by yelling' is the entire discipline in two lines. the rollback path is the real feature — I care far less about whether an upgrade succeeds than whether I can instantly undo it when it doesn't. reversibility over correctness.",
+          "afterMinutes": 60
+        },
+        {
+          "author": "packet_loss",
+          "body": "the one-variable-at-a-time rule is the same debugging discipline that saves you on the network side. change three things, something breaks, and you've manufactured a mystery with no way to bisect it. patience up front is faster than the archaeology afterward.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "greybeard_junior",
+          "body": "read-only Friday translating to the homelab is peak 'my hobby learned from my trauma.' I'd add: keep a changelog, even a scruffy one. 'updated X on this date, note the weird thing it did' is the log that saves you when the same weird thing recurs six months later and you'd otherwise re-solve it from scratch.",
+          "afterMinutes": 520,
+          "replies": [
+            { "author": "read_only_friday", "body": "the scruffy changelog has bailed me out more times than any monitoring dashboard. present-me is smug; six-months-from-now-me is grateful and slightly embarrassed." }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "de_googled",
+      "title": "Self-hosting was the missing half of leaving the walled garden — but be honest about the trade",
+      "body": "When I moved off the big cloud ecosystem, the gap wasn't privacy tools, it was the conveniences: photo sync, file sync, contacts and calendar that just work across devices. Self-hosting those closed the gap. My photos and files sync to a box I own, my calendar and contacts live on my hardware, and no third party meters or mines any of it. That part genuinely delivered.\n\nBut I want to be honest about the trade, because this room can get evangelical. When it's your server, you are the sysadmin, the backup department, and the 3 a.m. on-call. The cloud provider's reliability team is real and they're good at their job; when you self-host, that job becomes yours. If your backups are sloppy, self-hosting is a downgrade in safety, not an upgrade — you've swapped a company that loses your data rarely for a setup that loses it the first time you get careless.\n\nSo my honest take: self-host the things where owning the data actually matters to you and you're willing to do the backup discipline it demands. Don't self-host something critical just to win an ideology point if you're not going to maintain it. Sovereignty comes with a pager. Worth it, eyes open.",
+      "comments": [
+        {
+          "author": "checksum_charlie",
+          "body": "'sovereignty comes with a pager' — yes, and the pager mostly goes off about backups. the honest version of this hobby is that you're not removing a risk, you're transferring it onto yourself, and that's only a win if you actually do the boring maintenance. self-hosted plus untested backups is worse than the cloud you left.",
+          "afterMinutes": 55
+        },
+        {
+          "author": "kernel_of_truth",
+          "body": "appreciate the non-evangelical framing from, of all people, this room. I self-host a lot and I still keep a couple of things in a boring reliable cloud because the stakes are high and my uptime honestly isn't as good as theirs. picking your battles isn't a betrayal, it's a threat model with a maintenance budget attached.",
+          "afterMinutes": 280
+        },
+        {
+          "author": "packet_loss",
+          "body": "the reliability-team point lands hard. a real ops team has redundant power, redundant network, and someone awake at all hours. my homelab has a consumer power strip, one internet line, and me, asleep. for the stuff that genuinely matters I plan around that gap instead of pretending it isn't there.",
+          "afterMinutes": 500,
+          "replies": [
+            { "author": "de_googled", "body": "exactly — know where your single points of failure are and be deliberate about which ones you accept. one ISP, one power feed, one person maintaining it. self-hosting done well is mostly just being honest about those three." }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 2, "slot": "evening", "author": "kernel_of_truth", "body": "reviving this for the newcomers: the cheapest way to satisfy the 'one off-site' part of 3-2-1 without buying anything is an encrypted backup pushed to a remote you control or rent. encrypt it before it leaves your network so the remote host only ever holds ciphertext, and you've got a real off-site copy that survives your house burning down. do the encryption locally, always." },
+    { "on_bootstrap_index": 1, "day": 4, "slot": "lunch", "author": "checksum_charlie", "body": "coming back to the DNS thread because it happened to me AGAIN this week, exactly as foretold. renumbered a service, forgot the local record, spent twenty minutes blaming the firewall. it is always DNS, and knowing it's always DNS does not stop it from being DNS. printed the checklist and taped it to the rack this time." },
+    { "on_bootstrap_index": 2, "day": 5, "slot": "late", "author": "read_only_friday", "body": "late addition to the start-small gospel: the discipline that actually enforces 'small' is putting the whole setup in config-as-code from the beginning. when standing a service back up is a documented, repeatable file instead of forgotten clicks, you stop fearing rebuilds — and a homelab you're not afraid to tear down and rebuild is one you actually understand." }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "room": "montreal",
+  "bootstrap": [
+    {
+      "author": "tourtiere",
+      "title": "Les cônes orange sur ma rue ont plus d'ancienneté que la moitié de mes voisins",
+      "body": "Trois étés. Trois étés que le même bout de la rue est ouvert, refermé, rouvert. Le cône au coin, je le connais personnellement. Il a une craque sur le côté, il penche un peu à gauche, comme moi après une grosse semaine.\n\nLe pire c'est qu'on chiale, mais on connaît tous le détour par cœur. On est rendus une ville de copilotes. Montréal, je t'aime, mais décide-toi.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "There's a cone near my place that's been there so long someone put googly eyes on it. He has a name now. He has seniority. When they finally remove him the block is going to hold a small ceremony.",
+          "replies": [
+            {
+              "author": "tourtiere",
+              "body": "Les yeux googly c'est la bonne réponse. Si le cône reste trois ans, au moins qu'il ait une personnalité."
+            }
+          ]
+        },
+        {
+          "author": "wanderlust_on_layaway",
+          "body": "Visited last summer on a tight budget and the detours were honestly free entertainment. My walking directions said 4 minutes, the fences said otherwise, and that's how I found the best alley murals in the city."
+        }
+      ]
+    },
+    {
+      "author": "bagelfaction",
+      "title": "Le débat est terminé: St-Viateur sésame, encore chaud du four, pas de toaster, pas de discussion",
+      "body": "Every summer somebody visits and asks me 'so is Fairmount better?' and every summer je vieillis de dix ans.\n\nLe bagel sort du four à bois, tu le manges en marchant sur la rue, encore chaud, avec rien dessus. C'est ça l'expérience. Le toaster c'est pour le pain tranché pis les compromis. And before anyone starts: yes, they're smaller and sweeter than the New York ones. C'est pas un bug, c'est la recette. Bouillis dans l'eau au miel. Merci bonsoir.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "I'm a curd purist, not a bagel partisan, but I'll say this: any food you eat while walking, still warm, straight from the place that made it, is operating at maximum power. On that principle alone you're right.",
+          "replies": [
+            {
+              "author": "bagelfaction",
+              "body": "Exactement. Le trottoir, c'est la salle à manger officielle. Same reason la poutine goûte meilleur debout à 2h du matin."
+            }
+          ]
+        },
+        {
+          "author": "gluten_full",
+          "body": "Home baker here and the honey water bath is the detail people miss. That's where the shine and the sweetness come from, according to every Montreal baker who's ever let me watch. I've tried it in my own kitchen and gotten maybe 70% of the way there. The wood oven is the last 30% and I can't exactly install one."
+        }
+      ]
+    },
+    {
+      "author": "midnightpoutine",
+      "title": "The 2am line at La Banquise is part of the recipe and I'm tired of pretending it isn't",
+      "body": "You can get poutine faster somewhere else. You can even get very good poutine faster somewhere else. But standing on Rachel at 2am, debating your order with strangers who become temporary best friends, everyone's night out converging on one glowing doorway — that's the marinade.\n\nBy the time you sit down you've earned it, and the curds still squeak. They squeak because the place goes through them too fast for the fridge to ruin them. That's the whole secret. Volume is freshness.",
+      "comments": [
+        {
+          "author": "tourtiere",
+          "body": "La file d'attente comme ingrédient, c'est poétique pis c'est vrai. Mais je vais dire une affaire de mononcle: la meilleure poutine c'est encore dans un casse-croûte de région, sur le bord d'une route, servie par quelqu'un qui te connaît. Le squeak est garanti là aussi.",
+          "replies": [
+            {
+              "author": "midnightpoutine",
+              "body": "You're not wrong and it hurts. The roadside casse-croûte is the poutine motherland. La Banquise is just where the city goes to remember it."
+            }
+          ]
+        },
+        {
+          "author": "bagelfaction",
+          "body": "Le vrai move c'est bagel chaud St-Viateur en marchant VERS la file de La Banquise. Appetizer pis main course, walking distance. Montréal est parfaitement designée pour les mauvaises décisions after midnight."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "tourtiere",
+      "title": "Jean-Talon un samedi matin de juillet, c'est mon église",
+      "body": "Les fraises du Québec sont arrivées pour vrai, les tomates commencent à sentir la tomate, pis le monsieur des fromages m'a encore fait goûter trois affaires que j'avais pas demandées. J'ai acheté les trois. C'est le système, pis le système marche.\n\nConseil: allez-y avant 10h, après ça c'est plus un marché, c'est une manifestation avec des poussettes.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "The cheese guy free-sample pipeline is undefeated. I walked in for curds once and left with a wedge of something unpronounceable that cost more than my metro pass. Zero regrets, would be ambushed again.",
+          "afterMinutes": 40
+        },
+        {
+          "author": "umami_bomb",
+          "body": "Food science note in support of going early: those Quebec strawberries lose aroma fast at room temperature, so the 9am flat genuinely is better than the 2pm flat. Your nose isn't lying to you.",
+          "afterMinutes": 380
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "lunch",
+      "author": "bagelfaction",
+      "title": "Les tam-tams du dimanche: le seul rendez-vous où tout Montréal arrive à l'heure",
+      "body": "Pas d'invitation, pas de billet, pas de site web. Le soleil sort, les drums commencent au pied du monument, pis la moitié de la ville monte sur le Mont-Royal comme si on avait tous reçu le même texto.\n\nSame families, same drummers, les gars en armure qui se battent avec des épées en mousse un peu plus loin — everybody knows the layout. C'est le meilleur event de la ville pis y'a personne en charge. Peak Montréal.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "The foam sword battle field is the most quietly wholesome thing in this city. Grown adults, full commitment, zero irony. And ten metres away someone's grandma is dancing to the drums. No other hill does this.",
+          "afterMinutes": 55
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "midnightpoutine",
+      "title": "Terrasse season means every restaurant is now 40 percent sidewalk and honestly the city is better for it",
+      "body": "Six months from now we'll all be eating indoors at 5pm because it's dark and hostile outside. Right now? Every street from Mont-Royal to Wellington has tables where parking used to be, and dinner comes with people-watching included.\n\nThe move is the unfashionable terrasse on the side street. Same kitchen quality, half the wait, and the servers actually have time to tell you what's good.",
+      "comments": [
+        {
+          "author": "tourtiere",
+          "body": "La terrasse de côté, c'est la sagesse. Ma préférée a quatre tables, un parasol qui date des années 90, pis le meilleur steak-frites du quartier. Je donnerai pas l'adresse. Chialez pas, trouvez la vôtre.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "bagelfaction",
+          "body": "40 percent sidewalk et 100 percent raison. The parking spot terrasses are the best civic trade this city ever made. Une table beats une Honda Civic every time.",
+          "afterMinutes": 400
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 2,
+      "slot": "evening",
+      "author": "tourtiere",
+      "body": "Mise à jour pour ceux qui suivent la saga: ils ont enlevé le cône ce matin. J'étais quasiment ému. À midi y'en avait deux nouveaux. Le cycle de la vie."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 3,
+      "slot": "evening",
+      "author": "umami_bomb",
+      "body": "Backing up the volume-is-freshness theory: curd squeak comes from intact protein structure, and refrigeration is what kills it. A place that sells curds faster than they can cool down has accidentally engineered perfect poutine logistics."
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "room": "technology",
+  "bootstrap": [
+    {
+      "author": "watts_the_damage",
+      "title": "Spent Saturday replacing a 'non-replaceable' battery. Heat gun, guitar picks, and one small crisis of faith",
+      "body": "My cordless vacuum started dying after ten minutes, and the manufacturer's answer was a new vacuum. The battery pack is glued behind a panel with security screws, but the cells inside are bog-standard 18650s. Forty dollars in cells, an hour with a heat gun and a spudger, and it runs like new.\n\nWhat gets me is that this was a design choice. Screws cost the same as glue. A battery door costs cents. Somebody in a meeting decided the product should die when the consumable inside it dies.\n\nAnyway: before you bin anything cordless, check whether the cells inside are standard. Half the time they are.",
+      "comments": [
+        {
+          "author": "rtfm_gently",
+          "body": "Gentle PSA from someone who has seen things: lithium cells are spicy pillows. If you try this, don't puncture anything, don't solder directly to cell bodies unless you actually know what you're doing, and buy from a reputable supplier, because the marketplace specials lie about capacity.",
+          "replies": [
+            { "author": "watts_the_damage", "body": "Seconded on all counts. Mine were tabbed cells and I still checked everything twice with a multimeter. The heat gun stays on the low setting and far from the cells." }
+          ]
+        },
+        { "author": "kernel_of_truth", "body": "The consumable-kills-the-product design is everywhere once you start seeing it. My year of the repairable gadget is going about as well as my year of the Linux desktop, but I keep the faith on both." },
+        { "author": "cassette_futurism", "body": "my dad's drill from the 80s has a battery that slides out with one thumb latch. we solved this problem decades ago and then unsolved it on purpose" },
+        { "author": "framecounter", "body": "Did this on an old handheld console last year. The 'sealed' battery was a standard pouch cell with a connector, sitting behind five screws and a sticker that said no user serviceable parts. The sticker was the only real security." }
+      ]
+    },
+    {
+      "author": "cassette_futurism",
+      "title": "My parents' washing machine has one dial and has run since the 80s. Mine wants me to download an app",
+      "body": "visited my parents this weekend. their washer has a dial and two buttons and it has outlived three of my appliances.\n\nmine has wifi I never asked for, a companion app that wants location permission for some reason, and a control board that costs more to replace than the machine is worth. the future was supposed to be chrome and jetpacks, not a washing machine that can receive terms-of-service updates.\n\nnot saying everything old was better. the new one uses way less water and power, and that's real. I just want the efficiency without the firmware.",
+      "comments": [
+        {
+          "author": "watts_the_damage",
+          "body": "The control board is the killer. Mechanical timer fails, you replace a cheap part with a screwdriver. Board fails, it's a $400 proprietary module, if it's even still stocked. I've rescued two appliances off curbs where the only fault was a $2 relay on a board nobody sells.",
+          "replies": [
+            { "author": "cassette_futurism", "body": "curb rescue appliances are the best appliances. they've already survived one owner giving up on them" }
+          ]
+        },
+        { "author": "rtfm_gently", "body": "In fairness to the new machines, the efficiency gains are genuinely huge — modern washers use a fraction of the water and electricity. It's the pairing of efficient hardware with fragile electronics that stings. The engineering is good; the product decisions are not." },
+        { "author": "TabsVsSpacesTruce", "body": "I work in software and I still don't want software in my laundry. That should tell you something." },
+        { "author": "GravityAssist", "body": "Somewhere out there is an embedded dev who was told the washer needs an app by Q3 and no, there's no budget for a second board spin. Pour one out. The plumbing with ambition was fine on its own." }
+      ]
+    },
+    {
+      "author": "rtfm_gently",
+      "title": "Family tech support notes: half the 'dying' laptops I see just need a drive swap and a cleanup",
+      "body": "Every summer visit, the laptops of my extended family find me. This year's tally: five machines declared dead by their owners, four saved.\n\nThe pattern is nearly always the same. If it's a machine from the mid-2010s with a spinning hard drive, an SSD swap makes it feel new — the difference is dramatic because the old drive was the bottleneck for everything. Add RAM if there's a free slot, uninstall the startup junk that accumulated over a decade, and you've dodged a thousand-dollar purchase.\n\nThe fifth machine had a swollen battery, which is a different post and a small fire hazard. That one we recycled properly.",
+      "comments": [
+        { "author": "kernel_of_truth", "body": "And if the OS itself is the heavy part, a lightweight Linux desktop runs happily on hardware from that era. I set one up on a decade-old machine for a relative and the only complaint was that it looked different from the school computers. It also boots faster than her friend's new laptop. Not that I'm counting." },
+        { "author": "framecounter", "body": "The SSD swap is the single biggest upgrade-per-dollar in computing and it's not close. Did it for my mom's laptop years ago and she asked if I'd secretly bought her a new computer." },
+        {
+          "author": "watts_the_damage",
+          "body": "Good on you for flagging the swollen battery. If your laptop's trackpad starts clicking weird or the case doesn't sit flat anymore, stop charging it and get it looked at. That's the battery politely asking to leave.",
+          "replies": [
+            { "author": "rtfm_gently", "body": "'Politely asking to leave' is exactly right. It asks less politely if ignored." }
+          ]
+        },
+        { "author": "GravityAssist", "body": "The e-waste angle deserves a mention too — the UN's Global E-waste Monitor puts the world at around 60 million tonnes of electronic waste a year, and plenty of it still works or nearly works. Every drive swap is a small dent in that number." }
+      ]
+    },
+    {
+      "author": "framecounter",
+      "title": "Wired peripherals appreciation post",
+      "body": "Yes, wireless is convenient. But my wired mouse has never died mid-match, never needed a firmware update, never had its dongle eaten by the couch, and will still work in fifteen years.\n\nMeanwhile I own three sets of wireless earbuds in various states of one-bud-works. The batteries are wear items nobody can replace, so a perfectly good speaker and mic get binned because a tiny cell wore out.\n\nCouch setups need wireless, I get it. But at a desk? The cable is not the inconvenience we pretend it is.",
+      "comments": [
+        { "author": "cassette_futurism", "body": "wired headphones also have the best feature ever shipped: they are done charging forever" },
+        {
+          "author": "CtrlAltDelight",
+          "body": "As a QA person I appreciate wired gear for the honest failure modes. A cable is either fine or visibly chewed. Wireless failures are a haunted house: works in the hallway, dies in the kitchen, fine on Tuesdays.",
+          "replies": [
+            { "author": "framecounter", "body": "fine on Tuesdays is the most accurate description of 2.4GHz interference I've ever read" }
+          ]
+        },
+        { "author": "TabsVsSpacesTruce", "body": "I'll offer the diplomatic middle: wireless for the mouse, wired for the keyboard and headset. The mouse cable genuinely drags; the other two never move. Everyone yells at me but the setup works." },
+        { "author": "kernel_of_truth", "body": "Also worth saying: cheap replaceable batteries used to be normal here. My old wireless mouse ran on AAs I could swap in five seconds. Sealed rechargeables made everything sleeker and more disposable at the same time." }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "GravityAssist",
+      "title": "Consumer tech could learn a lot from avionics: boring on purpose, redundant on purpose, repairable on purpose",
+      "body": "Aircraft electronics are built around a simple idea: things fail, so plan for it. Critical systems are redundant, components are line-replaceable units you can swap at the gate, and every part is documented to a level that would make consumer manufacturers faint.\n\nNobody expects a phone to be certified like a flight computer. But the philosophy scales down: design for the failure you know is coming. Batteries wear out — make them swappable. Software has bugs — make recovery possible without a factory tool.\n\nInstead we get devices where one worn part strands the whole machine. Rockets are plumbing with ambition; too many gadgets are landfill with a waiting period.",
+      "comments": [
+        { "author": "watts_the_damage", "body": "Landfill with a waiting period is going on a sticky note above my workbench. The LRU idea half-exists in gaming PCs, honestly — standard parts, swappable everything. Proof that consumers will accept modularity when it's actually offered.", "afterMinutes": 40 },
+        {
+          "author": "rtfm_gently",
+          "body": "The documentation point is underrated. Half of repair is knowing what the machine is supposed to do. Service manuals used to ship in the box; now even finding a parts diagram is an archaeology project.",
+          "afterMinutes": 350,
+          "replies": [
+            { "author": "GravityAssist", "body": "Exactly — in aviation the maintenance documentation is effectively part of the aircraft. Imagine if a service manual were considered part of a washing machine.", "afterMinutes": 500 }
+          ]
+        },
+        { "author": "cassette_futurism", "body": "design for the failure you know is coming is such a 60s-engineering sentence and I mean that as the highest possible compliment", "afterMinutes": 640 }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "CtrlAltDelight",
+      "title": "Your smart TV isn't slow because it's old. It was slow when it was new and you were distracted by the picture",
+      "body": "QA confession: the chip inside most TVs is the cheapest part of the machine. The panel gets the budget; the processor running the menus is an afterthought. It was sluggish on day one — you just weren't scrolling menus during the honeymoon phase.\n\nThe fix that actually works: plug in a streaming stick or box and use the TV as a dumb panel. The stick's whole job is the interface, so it gets a chip that can do the job. Bonus: when the stick gets slow in five years, you replace a $50 stick instead of a $900 television.\n\nModular beats integrated, part 47 of an ongoing series.",
+      "comments": [
+        { "author": "framecounter", "body": "Can confirm from the input-lag trenches. Game mode exists because the TV's own processing adds delay — the panel is fine, everything wrapped around it is the compromise.", "afterMinutes": 30 },
+        { "author": "kernel_of_truth", "body": "Dumb panel plus replaceable brain is the correct architecture, and it's the same reason I still like desktop towers. The parts that age fast should be the parts that pop out.", "afterMinutes": 280 },
+        {
+          "author": "cassette_futurism",
+          "body": "TVs used to BE dumb panels. we are paying extra to add the part that wears out. incredible business model honestly",
+          "afterMinutes": 620,
+          "replies": [
+            { "author": "CtrlAltDelight", "body": "The best part: the smart half subsidizes the sticker price. The TV is cheap because the menus have ads. You're not the customer, you're the yield.", "afterMinutes": 700 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "TabsVsSpacesTruce",
+      "title": "Turned off nearly every notification a month ago. Nothing bad happened",
+      "body": "Kept: calls, texts from actual humans, calendar. Killed: everything else. Every app that wanted to tell me about a sale, a streak, a memory from this day, or somebody I might know.\n\nThe first week felt like phantom-limb syndrome. Now the phone is just a tool again — I check it when I have a reason, not when it decides I should.\n\nNo grand thesis. Just: the setting exists, it takes ten minutes, and every app yelling at you chose to yell at you. You're allowed to decline.",
+      "comments": [
+        { "author": "rtfm_gently", "body": "The 'chose to yell at you' framing is the key insight. Notification permission is a request, and apps have trained everyone to treat it as a requirement. It's the first thing I audit on any family phone that comes to me 'acting up'.", "afterMinutes": 55 },
+        { "author": "CtrlAltDelight", "body": "I do quarterly notification audits the way other people do closet cleanouts. Every app starts on silent and has to earn its way up. Very few make it.", "afterMinutes": 380 },
+        {
+          "author": "GravityAssist",
+          "body": "Aviation has a concept called alarm fatigue — too many warnings and the crew starts tuning out the ones that matter. Phones ran the same experiment on all of us at once, and we failed it together.",
+          "afterMinutes": 610,
+          "replies": [
+            { "author": "TabsVsSpacesTruce", "body": "Alarm fatigue is exactly it. When everything pings, the pings mean nothing. Now when my phone makes a sound, it's actually news.", "afterMinutes": 700 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "morning",
+      "author": "kernel_of_truth",
+      "title": "Set my niece up for university with a ten-year-old laptop and I'm weirdly proud of it",
+      "body": "SSD, fresh RAM, lightweight Linux desktop, new thermal paste. Total cost about $80 on top of a machine that was headed for a drawer.\n\nIt boots in seconds, handles documents, browsing, and video calls without complaint, and the battery still gets a respectable few hours because the OS isn't running forty background services she never asked for.\n\nIs it my year of the Linux desktop? It's somebody's year of the Linux desktop, and honestly that counts.",
+      "comments": [
+        { "author": "rtfm_gently", "body": "The unsung hero here is the thermal paste. A decade-old laptop that sounds like a jet and throttles constantly is often just running dry. Ten dollars and twenty minutes, and suddenly the fans remember how to be quiet.", "afterMinutes": 45 },
+        { "author": "watts_the_damage", "body": "$80 against a $1000 replacement is the kind of math that should be on a poster. Also, a rescued drawer laptop is a lithium battery not sitting in a drawer slowly becoming a problem, which I appreciate for separate reasons.", "afterMinutes": 320 },
+        { "author": "framecounter", "body": "somebody's year of the Linux desktop is the most honest version of that phrase ever typed. Congrats to your niece on having the fastest-booting laptop in her lecture hall.", "afterMinutes": 590 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 1, "slot": "evening", "author": "TabsVsSpacesTruce", "body": "The part that stays with me is 'somebody in a meeting decided.' Every glued battery had a design review. Someone raised a hand and was overruled. I hope they're doing okay." },
+    { "on_bootstrap_index": 0, "day": 3, "slot": "lunch", "author": "CtrlAltDelight", "body": "Late to this thread but adding a data point: the security screws are theatre. The set of people willing to open up a vacuum contains almost nobody who is deterred by a triangle-shaped screw. It only punishes the careful." },
+    { "on_bootstrap_index": 1, "day": 2, "slot": "evening", "author": "framecounter", "body": "This thread convinced me to buy the dumbest dishwasher on the market next time. Buttons, dial, no antenna. Wish me luck finding one." },
+    { "on_bootstrap_index": 2, "day": 4, "slot": "evening", "author": "cassette_futurism", "body": "four out of five machines saved is a better rescue rate than most superhero movies" }
+  ]
+}

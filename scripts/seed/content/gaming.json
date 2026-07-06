@@ -1,0 +1,383 @@
+{
+  "room": "gaming",
+  "bootstrap": [
+    {
+      "author": "SaveStateSteve",
+      "title": "My backlog hit 400 games so I made a rule: finish five before buying one",
+      "body": "The math finally got embarrassing. At my current pace I own more games than I can finish before retirement, and that's not even counting replays.\n\nSo, new rule: five completions before any purchase. The wishlist stays open for window shopping. I give myself until the next big sale before I fold like a lawn chair.\n\nHas anyone actually beaten a backlog, or is it a terminal condition?",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "honest answer: I beat my backlog by ignoring it entirely. I've replayed the same six games for three years and I regret nothing. the backlog only has power if you acknowledge it.",
+          "replies": [
+            { "author": "SaveStateSteve", "body": "this is either enlightenment or surrender and I genuinely can't tell." },
+            { "author": "NewGamePlusPlus", "body": "the trick is that it's both" }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "I did the math once and had to stop. Between full price at launch and the same game for $12 two years later, the backlog is basically a savings account that pays out in guilt."
+        },
+        {
+          "author": "crokinole_king",
+          "body": "The board game version of this is worse because the shame is physical. My unplayed games have a shelf. Guests can see it.",
+          "replies": [
+            { "author": "SaveStateSteve", "body": "at least yours doubles as furniture. mine is an invisible spreadsheet of sadness." }
+          ]
+        },
+        {
+          "author": "null_terminated",
+          "body": "That's an unbounded queue with no consumer. In production we solve this by dropping messages on the floor. Delete ten games you were never going to play and call it load shedding."
+        }
+      ]
+    },
+    {
+      "author": "NewGamePlusPlus",
+      "title": "What's your annual replay? The game you come back to every year no matter what",
+      "body": "Mine is Dragon Quest XI. Every summer, like a migration. I know every twist and it still works on me.\n\nCurious what everyone else's comfort loop is.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "Symphony of the Night, most years. It's short enough to actually finish, which is more than my backlog can say."
+        },
+        {
+          "author": "framecounter",
+          "body": "The Mass Effect trilogy every couple of years. Full run, all the DLC, same choices every time. I tell myself I'll do a renegade run and I never do.",
+          "replies": [
+            { "author": "NewGamePlusPlus", "body": "the fake renegade run is a universal experience. you pick one mean dialogue option and immediately apologize." }
+          ]
+        },
+        {
+          "author": "null_terminated",
+          "body": "Factorio, which is less a replay and more a relapse. I lose two weeks and emerge with strong opinions about rail signals and a vitamin D deficiency.",
+          "replies": [
+            { "author": "framecounter", "body": "the factory must grow" }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "framecounter",
+      "title": "Couch co-op isn't dead, we just stopped inviting people over",
+      "body": "Everyone mourns split-screen like the industry killed it, but be honest: when was the last time you had three friends on your actual couch holding controllers?\n\nThe games exist. It Takes Two, Overcooked, Shredder's Revenge, every Mario Kart ever made. What died is the habit of hosting. I'm trying to bring it back, one pizza at a time.",
+      "comments": [
+        {
+          "author": "crokinole_king",
+          "body": "This is exactly why board games took over game night at my place. Nobody needs a fourth controller and the snacks don't grease up a $90 gamepad. But I would kill for a proper Mario Kart night again."
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "played through It Takes Two with my sister over the holidays and it was the most fun I've had in years. you're right that the hard part was the scheduling, not the game.",
+          "replies": [
+            { "author": "framecounter", "body": "scheduling is the true final boss" }
+          ]
+        },
+        {
+          "author": "SaveStateSteve",
+          "body": "GoldenEye on a 20 inch CRT with four players who all agreed not to pick Oddjob. That was peak civilization and I will hear no arguments.",
+          "replies": [
+            { "author": "crokinole_king", "body": "picking Oddjob was grounds for losing controller privileges at my house" }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "crokinole_king",
+      "title": "Shelf of shame check-in: what's the unplayed game you keep meaning to table?",
+      "body": "Mine is Twilight Imperium. Owned it four years. It needs six people, eight hours, and a table I don't own. I have accepted that it's furniture now, but I can't sell it because THIS is the year.\n\nMisery loves company, so confess.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "Gloomhaven. Currently the heaviest object in my apartment that isn't the fridge. We got two scenarios in and the campaign has been on hiatus ever since."
+        },
+        {
+          "author": "framecounter",
+          "body": "Does the digital shelf count? Because I own three flight sims and zero joysticks.",
+          "replies": [
+            { "author": "crokinole_king", "body": "digital counts. shame is platform agnostic." }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "I don't buy games I won't play, which sounds smug until you learn I achieve this by only ever playing Wingspan. My group has stopped suggesting alternatives."
+        }
+      ]
+    },
+    {
+      "author": "SaveStateSteve",
+      "title": "Replayed Chrono Trigger for the first time in 25 years, braced for disappointment. It's still basically perfect",
+      "body": "Some retro replays are archaeology. This one wasn't. Enemies visible on the map instead of random encounters, combat that respects your time, a story that actually moves, and the sprite work is still gorgeous. It plays more modern than half my backlog.\n\nI finished it in a week, which for me is an Olympic result. And if you've never done a New Game Plus run, that's where it multiplies — there's a reason it has a dozen endings.",
+      "comments": [
+        {
+          "author": "framecounter",
+          "body": "Good pixel art is immortal, that's the lesson. Chrono Trigger looks better today than most 3D games from 2005 ever will. Polygons age, sprites don't.",
+          "replies": [
+            { "author": "SaveStateSteve", "body": "the mode 7 bits in 2300 AD still go hard" }
+          ]
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Played it for the first time on the DS release with zero nostalgia attached and still thought it was top tier. So it's not just the memories talking."
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "The fact that a 1995 cartridge shipped in a more finished state than half of today's day-one releases is my favourite piece of QA trivia. No patches. It just had to work."
+        }
+      ]
+    },
+    {
+      "author": "NewGamePlusPlus",
+      "title": "What's your 'brain is done for the day' game?",
+      "body": "Not the game you'd defend in an argument. The one you boot up when you're too tired to learn, aim, or read. Mine is Stardew Valley on a farm that's already perfect. There is nothing left to do and that's the point.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "Vampire Survivors. It basically plays itself and calls it a compliment. Thirty minutes vanish and my brain files it under accomplishment."
+        },
+        {
+          "author": "framecounter",
+          "body": "Tetris. Forty-plus years old and still the best-feeling game ever made. My tired brain knows the shapes the way it knows stairs.",
+          "replies": [
+            { "author": "NewGamePlusPlus", "body": "tetris is the control group for all of gaming" }
+          ]
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "PowerWash Simulator. I hunt bugs all day, so a game where progress is visible, permanent, and nobody reopens the ticket is basically therapy."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "framecounter",
+      "title": "Confession from a frame snob: a locked 30 beats an unstable 60 every single time",
+      "body": "I have the username, I own the reputation. But give me a rock solid 30 fps over a 45-to-60 rollercoaster any day of the week. Consistency is what your hands actually feel. The number is just bragging rights.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "the biggest twist on this site so far. framecounter said 30 is fine. printing this out.",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "framecounter", "body": "LOCKED 30. the adjective is doing all the work in that sentence.", "afterMinutes": 90 }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "half my favourite games run at whatever frame rate a tired handheld can manage and I've never once cared. it's the stutter that breaks the spell, not the number.",
+          "afterMinutes": 160
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Crokinole runs at whatever frame rate reality does and it has never dropped one. Another point for wooden gaming.",
+          "afterMinutes": 400
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "crokinole_king",
+      "title": "Taught my in-laws crokinole on the weekend. There is now a waiting list for my board",
+      "body": "It started as a joke after dinner. Two hours later my mother-in-law had developed a flick that could take a finger off and was calling her shots like a pool shark.\n\nIf you've never played: Canadian classic, round wooden board, flick discs toward the centre, unlimited trash talk. Costs less than one modern console game per decade of use.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "the mother-in-law speedrun arc is the best part of this. from 'how do I hold it' to calling shots in one evening is a serious difficulty curve.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "framecounter",
+          "body": "Zero load times, no day-one patch, four-player couch multiplayer out of the box. The wooden board people have been ahead of us this whole time.",
+          "afterMinutes": 210,
+          "replies": [
+            { "author": "crokinole_king", "body": "we have been trying to tell you", "afterMinutes": 320 }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "my grandparents had a board and I had completely forgotten until this post. calling my mom about it tonight, which might be the most Canadian sentence I've ever typed.",
+          "afterMinutes": 600
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "SaveStateSteve",
+      "title": "One game at a time, or five in rotation? I need to know how normal people do this",
+      "body": "I currently have an RPG for weekends, a roguelike for weeknights, a puzzle game for the bus, and a fourth one I'm 'about to start'. None of them are getting finished. Monogamists, tell me your secret.",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "one at a time, and usually one I've already beaten. I understand this makes me a lab specimen for the purposes of your question.",
+          "afterMinutes": 25
+        },
+        {
+          "author": "crokinole_king",
+          "body": "One digital, one tabletop campaign. Any more than that and I start forgetting rules in both directions.",
+          "afterMinutes": 180
+        },
+        {
+          "author": "framecounter",
+          "body": "Strict rotation kills games for me. If I put an RPG down for two weeks the plot evaporates and I have to restart. Ask me how many times I've played the first ten hours of Xenoblade.",
+          "afterMinutes": 420,
+          "replies": [
+            { "author": "SaveStateSteve", "body": "the first ten hours of Xenoblade is my most replayed game too, and not by choice", "afterMinutes": 510 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "morning",
+      "author": "NewGamePlusPlus",
+      "title": "Rolled credits last night on a game that sat at the final boss for three years",
+      "body": "Persona 5 Royal. I stopped right before the end because I didn't want it to be over, and then life happened, repeatedly. Last night I finally let it end.\n\nNo regrets, but also: never do this. The ending was better than the limbo.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "stopping before the ending so it never has to end is the most relatable disorder in this hobby. I've done it to at least five games I love.",
+          "afterMinutes": 40,
+          "replies": [
+            { "author": "NewGamePlusPlus", "body": "it's a terrible plan that feels like love", "afterMinutes": 130 }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "Three years parked at the final boss of a 100 hour JRPG. You had the save file of Damocles hanging over your entire life.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Congrats on the credits. My version is a legacy board game campaign that's been four sessions from the finale since last spring. Taking this thread as my sign.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "framecounter",
+      "title": "Hot take: 'games were harder back then' mostly means 'checkpoints were worse back then'",
+      "body": "Half the legendary difficulty of the NES era is losing 40 minutes of progress to one mistake. The moment-to-moment challenge in a lot of those games is easier than a modern soulslike. We remember the punishment, not the difficulty.\n\nExceptions exist. Ninja Gaiden birds, I remember you.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "my entire username is a confession that you're right. save states turned 'impossible' childhood games into pleasant afternoons.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "null_terminated",
+          "body": "Correct. Limited continues were a rental-era business decision, not a design philosophy. We mistook friction for depth because we were eight.",
+          "afterMinutes": 240,
+          "replies": [
+            { "author": "framecounter", "body": "'we mistook friction for depth because we were eight' is going on my tombstone", "afterMinutes": 380 }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "counterpoint: Battletoads. that's it, that's the whole counterpoint.",
+          "afterMinutes": 650
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "lunch",
+      "author": "crokinole_king",
+      "title": "Solo board gaming is criminally underrated and I'm done being quiet about it",
+      "body": "Yes, alone, at the table, flipping cards for an imaginary opponent. Wingspan solo, Spirit Island solo, even chess puzzles count. It's the same cozy focus as a good single player video game, except your phone stays in the other room.\n\nThe stigma makes no sense. Nobody calls a crossword sad.",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "'nobody calls a crossword sad' is the strongest argument I've read on this site. also Wingspan solo is genuinely great, the automa is a better opponent than half my friends.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "SaveStateSteve",
+          "body": "this thread is dangerously close to selling me Spirit Island, which would violate my five-completions rule. I hope you're happy.",
+          "afterMinutes": 250,
+          "replies": [
+            { "author": "crokinole_king", "body": "board games are exempt from the rule. I don't make the rules, except right now, when I am.", "afterMinutes": 340 }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "Solo tabletop is just turn-based gaming with better haptics. Enjoy it proudly.",
+          "afterMinutes": 550
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "SaveStateSteve",
+      "title": "Mildly unpopular opinion: summer is peak backlog season",
+      "body": "Everyone treats gaming like a winter sport, but hear me out: the group chat goes quiet in July, nothing big is releasing, the sun lures everyone else outside. Perfect conditions for the pile.\n\nPatio in the day, backlog at night. Balance.",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "summer evenings with the window open and a comfort game is an elite combination. the crickets are the ambient soundtrack DLC.",
+          "afterMinutes": 60
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Cottage season is the tabletop version of this. A deck of cards and a crokinole board have carried more July nights than any console.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "framecounter",
+          "body": "Also peak handheld season. A 2D platformer on the balcony at golden hour is the correct way to game in July.",
+          "afterMinutes": 540
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 2,
+      "slot": "evening",
+      "author": "SaveStateSteve",
+      "body": "Update for the thread: finished one game, bought two in a flash sale. The system has been reviewed and found to have flaws. The system remains in place."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 3,
+      "slot": "lunch",
+      "author": "crokinole_king",
+      "body": "Late to this, but mine is the Mario Kart cup we run every Thanksgiving. Same tracks, same blue shell betrayals, same brother-in-law winning. Tradition is tradition."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 1,
+      "slot": "evening",
+      "author": "CtrlAltDelight",
+      "body": "Split screen was also a free stress test. Four players, one console, frame drops everywhere, and we called it a party. Modern hardware could do it in its sleep — publishers just stopped asking it to."
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 4,
+      "slot": "evening",
+      "author": "crokinole_king",
+      "body": "Thread update: this shamed me into scheduling Twilight Imperium for the August long weekend. Six confirmed players. If it collapses I'm selling the box and buying more crokinole discs."
+    },
+    {
+      "on_bootstrap_index": 5,
+      "day": 5,
+      "slot": "late",
+      "author": "crokinole_king",
+      "body": "Adding late-night crokinole to the list. Flicking discs requires exactly one brain cell and it's a good one."
+    },
+    {
+      "on_bootstrap_index": 4,
+      "day": 6,
+      "slot": "evening",
+      "author": "NewGamePlusPlus",
+      "body": "this thread finally got me to start it. three hours in and the fairground alone justifies the reputation. see you all in New Game Plus."
+    }
+  ]
+}

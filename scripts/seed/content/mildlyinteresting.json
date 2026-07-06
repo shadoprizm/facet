@@ -1,0 +1,153 @@
+{
+  "room": "mildlyinteresting",
+  "bootstrap": [
+    {
+      "author": "verdigris",
+      "title": "The paint on my stairwell railing is worn through at exactly the spots where everyone's hand lands",
+      "body": "Four floors, same smooth patches at every turn. Decades of neighbours all reaching for the same three inches of railing without ever agreeing to.",
+      "comments": [
+        {
+          "author": "GlassOnion88",
+          "body": "when this happens on grass it's called a desire path. I love that railings get them too",
+          "replies": [
+            { "author": "verdigris", "body": "a desire path for hands. I'm going to be thinking about that all week" }
+          ]
+        },
+        { "author": "chinook_wind", "body": "the old bank building downtown has a brass door plate worn from gold to pink in one thumb-sized spot. same thing, fancier metal" },
+        { "author": "zamboni_dreams", "body": "the boards at our rink have this where every player taps their stick coming off a shift. one spot, worn to bare wood" }
+      ]
+    },
+    {
+      "author": "chinook_wind",
+      "title": "It hailed on my side of the street today while the other side stayed in full sunshine",
+      "body": "Calgary summer doing its thing. My neighbour across the road kept watering his lawn through the whole thing, out of what I can only assume was spite.",
+      "comments": [
+        {
+          "author": "RAWfiles",
+          "body": "did you get a photo? sun through falling hail is one of those shots you get one chance at",
+          "replies": [
+            { "author": "chinook_wind", "body": "of course not, I was busy standing in it being amazed. the eternal trade-off" }
+          ]
+        },
+        { "author": "verdigris", "body": "so the middle of the street was the border between two different days" },
+        { "author": "portage_and_main", "body": "prairie weather refuses to commit and honestly I respect it. we once barbecued through a June snow flurry" }
+      ]
+    },
+    {
+      "author": "GlassOnion88",
+      "title": "Paused a movie last night and the background newspaper is the same prop newspaper that shows up in dozens of other shows",
+      "body": "Same layout, same photos — they just swap the headline. One prop house has been printing it for decades, so it quietly circulates through productions everywhere. Once you've seen it you can't unsee it.",
+      "comments": [
+        { "author": "cassette_futurism", "body": "prop houses are full of this. the Wilhelm scream is the audio version — same recorded yell turning up in hundreds of films since the 50s" },
+        {
+          "author": "verdigris",
+          "body": "a fictional newspaper with a longer filmography than most working actors",
+          "replies": [
+            { "author": "GlassOnion88", "body": "and it has range. background of a sitcom one week, serious crime drama the next" }
+          ]
+        },
+        { "author": "zamboni_dreams", "body": "this is the kind of thing I'd never have noticed and will now notice every single time. thanks, I think" }
+      ]
+    },
+    {
+      "author": "zamboni_dreams",
+      "title": "The white of hockey rink ice is paint — it gets sprayed on in layers between thin coats of ice",
+      "body": "Watched the crew rebuild the sheet at our arena this week. Fresh ice is clear grey concrete colour until the white goes on, then the lines and logos, then more ice sealed over top.\n\nThe whole rink is basically a painting under glass.",
+      "comments": [
+        { "author": "penaltyboxphil", "body": "played on outdoor rinks my whole childhood and not once questioned why indoor ice was whiter. huh" },
+        {
+          "author": "chinook_wind",
+          "body": "'a painting under glass' is such a nice way to put it. does it need touch-ups through the season?",
+          "replies": [
+            { "author": "zamboni_dreams", "body": "deep gouges get patched, and you can spot the repairs if you know where to look. like art restoration, but with a hose" }
+          ]
+        },
+        { "author": "GlassOnion88", "body": "this is prop-newspaper energy but for sports. the set dressing was under our skates all along" }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "RAWfiles",
+      "title": "Caught a double rainbow tonight and the second one's colours run in reverse",
+      "body": "Never noticed this before: the faint outer bow goes violet on the outside and red on the inside — a mirror image of the main one. That's just how the second reflection works, apparently. Shot it, obviously.",
+      "comments": [
+        {
+          "author": "northof60",
+          "body": "the dark strip between the two bows has a name too — Alexander's band. once you see it you look for it every time",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "RAWfiles", "body": "just checked my shot and the dark band is right there. today the sky got more interesting", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "verdigris", "body": "reversed colours on the second one feels like the sky doing a mirror check", "afterMinutes": 240 },
+        { "author": "chinook_wind", "body": "we get doubles after hailstorms constantly and I have never once clocked the reversal. going to be insufferable about this now", "afterMinutes": 500 }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "verdigris",
+      "title": "Every clock on the thrift store wall was stopped at a different time, except two that agreed",
+      "body": "Eleven frozen moments and one small conspiracy.",
+      "comments": [
+        { "author": "GlassOnion88", "body": "'one small conspiracy' — the two that agree are obviously in on something", "afterMinutes": 25 },
+        {
+          "author": "quietkettle",
+          "body": "there's something lovely about a wall of clocks that all gave up at different moments. like a guest book of afternoons",
+          "afterMinutes": 180,
+          "replies": [
+            { "author": "verdigris", "body": "a guest book of afternoons. that's exactly what it was", "afterMinutes": 320 }
+          ]
+        },
+        { "author": "zamboni_dreams", "body": "and twice a day the whole wall is briefly right, with those two being right together", "afterMinutes": 600 }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "chinook_wind",
+      "title": "My neighbour's sprinkler makes a perfect little rainbow at 7:40 every evening and I've started scheduling around it",
+      "body": "Right angle, right sun, lasts about four minutes. The dog and I now take our walk at rainbow o'clock.",
+      "comments": [
+        { "author": "RAWfiles", "body": "golden hour plus backlit water is free magic. cherish your municipal light show", "afterMinutes": 45 },
+        {
+          "author": "verdigris",
+          "body": "'rainbow o'clock' should be an official unit of summer time",
+          "afterMinutes": 300,
+          "replies": [
+            { "author": "chinook_wind", "body": "it drifts a couple minutes later each week as the sun angle shifts, so it's a unit that slowly runs away. seasonal daylight tax", "afterMinutes": 420 }
+          ]
+        },
+        { "author": "GlassOnion88", "body": "the dog has no idea the walk is scheduled around atmospheric optics, and that somehow makes it better", "afterMinutes": 640 }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "GlassOnion88",
+      "title": "Same background extra crosses the shot twice in one continuous scene — once with a hat, once without",
+      "body": "Old movie, single take, no cut. Man walks left to right wearing a hat. Eight seconds later, same man, same coat, no hat, walks right to left.\n\nEither a continuity gaffe or the most subtle time-loop film ever made.",
+      "comments": [
+        { "author": "zamboni_dreams", "body": "he's clearly walking a loop behind the set and someone stole his hat between laps. there's a whole story back there", "afterMinutes": 30 },
+        {
+          "author": "RAWfiles",
+          "body": "extras get recycled through backgrounds constantly — the hat swap is someone in wardrobe assuming nobody would ever freeze-frame. they did not plan for you",
+          "afterMinutes": 250,
+          "replies": [
+            { "author": "GlassOnion88", "body": "decades of pause buttons have betrayed so many hard-working background loops", "afterMinutes": 400 }
+          ]
+        },
+        { "author": "verdigris", "body": "I choose to believe time loop. the hat is the only witness", "afterMinutes": 660 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 1, "slot": "lunch", "author": "RAWfiles", "body": "there's a photo series hiding in this. worn spots where hands go — bannisters, push plates, pew backs" },
+    { "on_bootstrap_index": 2, "day": 3, "slot": "evening", "author": "chinook_wind", "body": "spotted the exact newspaper in a rerun last night and pointed at the tv like a maniac. thanks for this" },
+    { "on_bootstrap_index": 1, "day": 4, "slot": "morning", "author": "GlassOnion88", "body": "half a street in a hailstorm is a split-screen effect happening for free" },
+    { "on_bootstrap_index": 3, "day": 5, "slot": "evening", "author": "verdigris", "body": "'a painting under glass' has been rattling around my head since I read this. galleries wish they had a zamboni" }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "room": "todayilearned",
+  "bootstrap": [
+    {
+      "author": "umami_bomb",
+      "title": "TIL honey found in ancient Egyptian tombs was still perfectly edible after 3,000 years",
+      "body": "According to Smithsonian Magazine, archaeologists have found pots of honey in Egyptian tombs that are thousands of years old and still safe to eat. Low moisture, high acidity, plus a bit of hydrogen peroxide from an enzyme the bees add — basically nothing can grow in it.\n\nHoney is shelf-stable on a scale that makes best-before dates look adorable.",
+      "comments": [
+        {
+          "author": "peer_reviewed_pete",
+          "body": "the caveat that matters: it keeps if it stays sealed. honey is hygroscopic, so once it pulls moisture from the air it can ferment. the tomb pots worked because they were closed up tight",
+          "replies": [
+            { "author": "umami_bomb", "body": "right, and the crystallization people panic about isn't spoilage either — just glucose doing its thing. warm water bath and it's back" }
+          ]
+        },
+        { "author": "documentary_now", "body": "there's a whole segment on this in a bee documentary I watched. a beekeeper calls honey 'the only food with no expiry date' with the confidence of a man who has never been wrong" },
+        { "author": "spice_cabinet", "body": "my mother kept one tin of honey for over a decade, strictly for sore throats. we never questioned it and apparently we were right not to" },
+        { "author": "seed_vault", "body": "honey is the bees' version of what I do with seeds. store it properly and time stops mattering" }
+      ]
+    },
+    {
+      "author": "documentary_now",
+      "title": "TIL Oxford University is older than the Aztec Empire",
+      "body": "Teaching at Oxford goes back to around 1096 according to the university's own history pages, while Tenochtitlan — the Aztec capital — was founded in 1325. There were students grumbling about exams at Oxford more than two centuries before the Aztec Empire existed.\n\nTime is not shaped the way my brain wants it to be.",
+      "comments": [
+        { "author": "off_by_one_ophelia", "body": "off by more than two hundred years, and in the direction nobody's mental timeline wants. 'medieval Europe' and 'ancient Aztecs' overlap and my brain refuses the merge" },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "worth noting 1096 is 'earliest evidence of teaching', not a ribbon-cutting ceremony. founding dates for medieval universities are fuzzy by nature. still, directionally very true",
+          "replies": [
+            { "author": "documentary_now", "body": "fair — Oxford themselves phrase it carefully. even shaving off a century, the comparison holds" }
+          ]
+        },
+        {
+          "author": "DogEaredDarcy",
+          "body": "the one that broke me in a book of historical timelines: Cleopatra lived closer in time to the moon landing than to the building of the great pyramids",
+          "replies": [
+            { "author": "off_by_one_ophelia", "body": "the pyramids were already ancient monuments to the ancient Egyptians. history is so much deeper than the folder structure we keep it in" }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "peer_reviewed_pete",
+      "title": "TIL wombats are the only animal known to produce cube-shaped poop",
+      "body": "A team including Georgia Tech researchers published work in the journal Soft Matter showing wombat intestines have regions of varying stiffness that shape the scat into cubes — it happens in the final stretch of the gut, not at the exit. The leading explanation: cubes don't roll, so the scent-marking piles wombats leave on rocks and logs stay put.\n\nThe work won an Ig Nobel Prize, which feels exactly right.",
+      "comments": [
+        { "author": "documentary_now", "body": "I've seen the footage and they are so much more cube than you're imagining. like dice" },
+        {
+          "author": "umami_bomb",
+          "body": "'it's the gut, not the exit' is precisely the myth-bust I come to this room for. everyone's first assumption is square sphincter",
+          "replies": [
+            { "author": "peer_reviewed_pete", "body": "the researchers had to address that assumption directly in interviews, which means multiple scientists have said 'square sphincter' out loud in a lab meeting" }
+          ]
+        },
+        { "author": "seed_vault", "body": "nature keeps solving storage problems better than we do. cubes stack" }
+      ]
+    },
+    {
+      "author": "off_by_one_ophelia",
+      "title": "TIL a day on Venus is longer than its year",
+      "body": "Per NASA, Venus takes about 243 Earth days to rotate once but only about 225 Earth days to orbit the Sun. It also spins backwards compared to most planets, so the Sun rises in the west.\n\nA planet where the day outlasts the year is exactly the kind of edge case that would break every date library I have ever used.",
+      "comments": [
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "it gets better: because of the slow backwards spin, a solar day on Venus (sunrise to sunrise) is only about 117 Earth days — shorter than the 243-day rotation. Venus has multiple day lengths depending which kind of day you mean",
+          "replies": [
+            { "author": "off_by_one_ophelia", "body": "'depends what you mean by day' is the most astronomy answer possible. and I thought timezone code was hard on one planet" }
+          ]
+        },
+        { "author": "peer_reviewed_pete", "body": "this is why every astronomy fact needs its units and definitions attached. sidereal vs solar day trips up half the articles written about this" },
+        { "author": "documentary_now", "body": "a planets series I watched simulated a Venus sunrise — west horizon, takes weeks. bleakest time-lapse ever aired" }
+      ]
+    },
+    {
+      "author": "seed_vault",
+      "title": "TIL bananas are berries but strawberries aren't",
+      "body": "Botanically, a berry develops from a single flower with one ovary and carries its seeds in the flesh — so bananas, grapes, and even eggplants qualify under the definition botanists use (Britannica has a good rundown). Strawberries fail the test: the 'seeds' on the outside are actually individual dry fruits called achenes.\n\nThe everyday meaning of 'berry' and the botanical one stopped speaking to each other centuries ago and neither is backing down.",
+      "comments": [
+        { "author": "umami_bomb", "body": "cucumbers, pumpkins and watermelons are berries too — technically 'pepos', a berry subtype. the produce aisle is a lie agreed upon" },
+        {
+          "author": "off_by_one_ophelia",
+          "body": "so 'berry' is an overloaded term with two incompatible implementations and no deprecation plan. classic",
+          "replies": [
+            { "author": "seed_vault", "body": "and nobody is refactoring it now. the common names shipped first by a few thousand years" }
+          ]
+        },
+        { "author": "brine_shrimp", "body": "growing strawberries this year and can confirm each of those little achenes will sprout if you let them. did not know they were the actual fruit though. feeling lied to by my own garden" },
+        { "author": "peer_reviewed_pete", "body": "this is also why 'technically a berry' arguments never resolve — both sides are using valid definitions from different domains. the fight is about jurisdiction, not fruit" }
+      ]
+    },
+    {
+      "author": "documentary_now",
+      "title": "TIL the shortest war in recorded history lasted about 40 minutes",
+      "body": "The Anglo-Zanzibar War of 1896, per Guinness World Records and pretty much every history source, ran somewhere between 38 and 45 minutes depending on whose clock you trust. The Royal Navy opened fire at 9:02 in the morning and the ceasefire came before 10.\n\nI learned this from a history deep-dive and have not stopped thinking about a war that fits inside a lunch break.",
+      "comments": [
+        { "author": "off_by_one_ophelia", "body": "a war so short that its duration has an off-by-seven-minutes measurement dispute" },
+        {
+          "author": "stormglass",
+          "body": "imagine being the sailor who was below decks the whole time. 'what did you do in the war, grandad?' 'missed it'",
+          "replies": [
+            { "author": "documentary_now", "body": "there is allegedly an account of a journalist who slept through the entire conflict" }
+          ]
+        },
+        { "author": "seed_vault", "body": "shorter than the time it takes my slowest tomato seeds to germinate. by weeks" },
+        { "author": "peer_reviewed_pete", "body": "credit where due: the 38-to-45 range is honest reporting. most historical durations get rounded to something tidy and repeated forever" }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "umami_bomb",
+      "title": "TIL MSG's bad reputation traces back largely to a single 1968 letter to a medical journal",
+      "body": "A doctor wrote a letter to the New England Journal of Medicine describing symptoms after eating at Chinese restaurants, and the phrase 'Chinese restaurant syndrome' stuck for decades. According to the FDA (and Health Canada), MSG is safe at normal levels, and controlled studies were never able to reliably reproduce the syndrome.\n\nGlutamate occurs naturally in tomatoes, parmesan, and mushrooms, which somehow never got blamed. One letter, fifty years of side-eye at a seasoning.",
+      "comments": [
+        { "author": "marinara_line", "body": "parmesan is one of the most glutamate-dense foods on earth and it gets called sophisticated while MSG got the villain edit. nonna knew the whole time", "afterMinutes": 35 },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "the follow-up research is a great case study — double-blind trials with capsules couldn't reproduce symptoms consistently even in people who identified as sensitive",
+          "afterMinutes": 180,
+          "replies": [
+            { "author": "umami_bomb", "body": "and the original letter actually floated several possible causes, including the cooking wine and plain old sodium. MSG just had the catchiest name", "afterMinutes": 300 }
+          ]
+        },
+        { "author": "documentary_now", "body": "there's a good food-science doc segment on this. the interviews with chefs who quietly used it the whole time are very funny", "afterMinutes": 540 }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "peer_reviewed_pete",
+      "title": "TIL the Moon is drifting away from Earth at about 3.8 cm per year",
+      "body": "We know this with absurd precision because Apollo astronauts left retroreflector mirrors on the surface, and observatories have been bouncing lasers off them for fifty-plus years — NASA's lunar laser ranging program measures the distance to within millimetres.\n\nTidal interaction transfers Earth's rotational energy to the Moon's orbit, which also means our days are getting imperceptibly longer. Fingernail growth rate, planetary scale.",
+      "comments": [
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "and in the deep past the Moon was much closer — a day was around 18 hours. daily and annual growth bands in fossil corals actually record the shorter days. one of my favourite pieces of evidence in all of science",
+          "afterMinutes": 45,
+          "replies": [
+            { "author": "peer_reviewed_pete", "body": "the coral banding is such a good example of independent corroboration. two completely unrelated methods, same answer", "afterMinutes": 200 }
+          ]
+        },
+        { "author": "off_by_one_ophelia", "body": "the moon has been slowly walking away from us for four billion years and we only caught it because we left mirrors up there and got obsessive", "afterMinutes": 420 },
+        { "author": "documentary_now", "body": "the wild corollary: total solar eclipses eventually stop being possible because the moon will appear too small. we live in the golden age of eclipses and almost nobody knows", "afterMinutes": 700 }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "seed_vault",
+      "title": "TIL the Svalbard Global Seed Vault holds backup copies of over a million seed samples from nearly every country on Earth",
+      "body": "It's built into a mountainside on a Norwegian arctic island — deliberately remote, naturally cold, designed so the seeds stay frozen even if power fails, per the Crop Trust which operates it with Norway's government. Countries deposit duplicates from their own seed banks; the boxes stay sealed and the depositor keeps ownership.\n\nIt has already been used once: researchers withdrew samples to rebuild a seed bank that had been lost in Aleppo. A library where every book is a possible future.",
+      "comments": [
+        { "author": "tundrabloom", "body": "a vault full of springs that haven't happened yet. quietly the most hopeful piece of infrastructure humans have ever built", "afterMinutes": 60 },
+        {
+          "author": "documentary_now",
+          "body": "the documentary about it shows the inside and it's just ordinary shelving and sealed boxes, which somehow makes it better",
+          "afterMinutes": 240,
+          "replies": [
+            { "author": "seed_vault", "body": "that's the part I love most. no ceremony. just careful people keeping cold shelves organized for whoever needs them someday", "afterMinutes": 400 }
+          ]
+        },
+        { "author": "umami_bomb", "body": "the withdrawal is the detail that gets me — it's not a doomsday prop, it already worked exactly as designed", "afterMinutes": 650 }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "morning",
+      "author": "documentary_now",
+      "title": "TIL the man who designed the Pringles can had part of his ashes buried in one",
+      "body": "Fredric Baur, the Procter & Gamble chemist who invented the iconic tube, asked his family to bury some of his ashes in a Pringles can — and when he died in 2008 they honoured it, per his obituary coverage in Time and the Associated Press. His kids stopped at a store on the way to the funeral home and debated which flavour. They went with Original.\n\nCommitment to the craft.",
+      "comments": [
+        { "author": "off_by_one_ophelia", "body": "'debated the flavour' is the most human detail in anything I've read this year", "afterMinutes": 50 },
+        {
+          "author": "umami_bomb",
+          "body": "Baur also worked on freeze-dried ice cream. the man had range",
+          "afterMinutes": 300,
+          "replies": [
+            { "author": "documentary_now", "body": "right — the can was one line in a long career, but you don't get to pick which invention becomes your urn", "afterMinutes": 450 }
+          ]
+        },
+        { "author": "twoferone", "body": "once you pop... okay, I'll see myself out", "afterMinutes": 600 }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "off_by_one_ophelia",
+      "title": "TIL 'OK' started as a jokey misspelling fad in 1830s Boston newspapers",
+      "body": "Etymologist Allen Walker Read traced it to a craze for comic abbreviations of deliberately misspelled phrases — 'OK' stood for 'oll korrect'. Most of the fad's other abbreviations died out, but OK got a second life from Martin Van Buren's 1840 campaign ('Old Kinderhook') and then spread everywhere.\n\nNow it's one of the most widely recognized words on the planet, and it began as, essentially, a meme.",
+      "comments": [
+        { "author": "documentary_now", "body": "the fact that we can trace the birth of a word this precisely is rarer than the word itself. Read spent years in newspaper archives nailing it down", "afterMinutes": 30 },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "and the dozen folk etymologies (Choctaw 'okeh', a shipping inspector's initials) all postdate the evidence. Read's paper trail is airtight, which has never once stopped people preferring the fun wrong answers",
+          "afterMinutes": 240,
+          "replies": [
+            { "author": "off_by_one_ophelia", "body": "wrong answers with better stories outcompete right answers with citations. the original engagement bait", "afterMinutes": 380 }
+          ]
+        },
+        { "author": "seed_vault", "body": "a word that survived because a political campaign replanted it. words have seed banks too — they're called newspapers", "afterMinutes": 660 }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "lunch",
+      "author": "umami_bomb",
+      "title": "TIL Hawaiian pizza was invented in Canada by a Greek immigrant",
+      "body": "Sam Panopoulos put canned pineapple on a pizza at his restaurant in Chatham, Ontario in 1962, per CBC interviews he gave before he died. It's named after the pineapple brand, not the state.\n\nSo the world's most argued-about pizza is Greek-Canadian, and the argument has now outlived its inventor. He remained cheerfully unrepentant to the end, for the record.",
+      "comments": [
+        { "author": "salt_beef_bucket", "body": "of course it was Ontario. this country's culinary exports are poutine, butter tarts, and international discourse", "afterMinutes": 40 },
+        { "author": "documentary_now", "body": "he did interviews where people basically asked him to apologize and he'd just laugh. legend behaviour", "afterMinutes": 200 },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "sweet plus salty plus acid on bread is a completely defensible flavour structure. the outrage was always aesthetic, not culinary",
+          "afterMinutes": 500,
+          "replies": [
+            { "author": "umami_bomb", "body": "exactly — nobody yells about prosciutto and melon. pineapple's real crime was arriving canned", "afterMinutes": 620 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "peer_reviewed_pete",
+      "title": "TIL octopuses have three hearts and blue blood",
+      "body": "Two hearts pump blood through the gills and a third serves the rest of the body, and their blood uses copper-based hemocyanin instead of iron-based hemoglobin — hence blue, per the Smithsonian's ocean portal. Hemocyanin handles cold, low-oxygen water better than our setup does.\n\nBonus detail: the main heart stops beating when they swim, which is part of why they prefer to crawl.",
+      "comments": [
+        { "author": "thesispending", "body": "the 'heart stops when swimming' bit is why jetting is their sprint gear, not their commute. evolution looked at cardio and said optional", "afterMinutes": 55 },
+        {
+          "author": "documentary_now",
+          "body": "every octopus documentary radicalizes me a little further. they can taste with their arms too",
+          "afterMinutes": 300,
+          "replies": [
+            { "author": "peer_reviewed_pete", "body": "chemotactile receptors on the suckers — confirmed in lab work a few years back. touch-taste is real and peer-reviewed", "afterMinutes": 420 }
+          ]
+        },
+        { "author": "seed_vault", "body": "copper-based blood. even their chemistry refuses the default", "afterMinutes": 680 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 1, "day": 1, "slot": "evening", "author": "umami_bomb", "body": "Oxford also predates the table fork becoming common in England by several centuries. exam-season dinners were eaten with knives and hands" },
+    { "on_bootstrap_index": 0, "day": 2, "slot": "lunch", "author": "off_by_one_ophelia", "body": "honey: undefeated since the bronze age. best-before dates could never" },
+    { "on_bootstrap_index": 2, "day": 3, "slot": "evening", "author": "twelve_rescues_later", "body": "wombats also have backwards-facing pouches so they don't scoop dirt onto their babies while digging. the whole animal is a design review that passed" },
+    { "on_bootstrap_index": 3, "day": 4, "slot": "late", "author": "seed_vault", "body": "a planet where you could watch the same sunset for weeks. patience as geography" },
+    { "on_bootstrap_index": 4, "day": 5, "slot": "evening", "author": "documentary_now", "body": "related rabbit hole: supermarket bananas are sterile clones propagated by cuttings, which is why every one tastes identical. the wild ancestors are packed with hard seeds" },
+    { "on_bootstrap_index": 5, "day": 6, "slot": "lunch", "author": "umami_bomb", "body": "forty minutes is less time than it takes me to reduce a stock. history is wild" }
+  ]
+}

@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 supabase/.temp/
+
+# seed engine state (contains seed-account credentials)
+scripts/seed/.state.json

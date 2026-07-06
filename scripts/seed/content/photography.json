@@ -1,0 +1,176 @@
+{
+  "room": "photography",
+  "bootstrap": [
+    {
+      "author": "FocalPointFran",
+      "title": "Shot a wedding in full noon sun last weekend. Here's what saved me.",
+      "body": "Ceremony at 12:30, zero cloud, couple glowing like they were under interrogation lights. Old me would have panicked. Current me walked the venue an hour early and found every patch of open shade within 50 metres of the aisle.\n\nThree things that saved the day: open shade for all the portraits (north side of the building is a giant free softbox), exposing for the dress and letting the shadows fall where they wanted, and moving the formals to the reception hall doorway where the light wrapped instead of stabbed.\n\nAlso a drunk uncle tried to direct the group photos. There is always one. He was very confident about 'everybody squint less.'",
+      "comments": [
+        {
+          "author": "LensAndLatte",
+          "body": "open shade is the answer to like 80% of 'my photos look harsh' questions. for street stuff I actually chase the hard shadows at noon, but pointing that light at a human face you like? no.",
+          "replies": [
+            {
+              "author": "FocalPointFran",
+              "body": "Exactly. Hard light is a look when the subject is a wall. When the subject is paying you, it's a complaint."
+            }
+          ]
+        },
+        {
+          "author": "RAWfiles",
+          "body": "Exposing for the highlights is the whole game. I can pull shadows up all day. A blown white dress is just gone, no slider brings that back."
+        },
+        {
+          "author": "regina_mona",
+          "body": "Try finding open shade in Saskatchewan. The nearest tree is in the next municipality. I've learned to just wait for clouds like some kind of weather sommelier."
+        }
+      ]
+    },
+    {
+      "author": "northof60",
+      "title": "Yellowknife problem: golden hour starts at 10:30 pm right now",
+      "body": "Everyone talks about golden hour like it's this precious 40-minute window. Up here in July it's more like golden two-and-a-half hours, except it happens when any reasonable person is asleep.\n\nThe light is genuinely absurd. Long, warm, side-lit everything, and it just... stays. The catch is you're out there at midnight fighting bugs the size of loonies and questioning your life choices. Worth it. Mostly.",
+      "comments": [
+        {
+          "author": "regina_mona",
+          "body": "Prairie golden hour is long too but not THAT long. Midnight side light sounds unreal. The bugs, less so."
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "meanwhile in toronto golden hour is 25 minutes and half of it is behind a condo. genuinely jealous.",
+          "replies": [
+            {
+              "author": "northof60",
+              "body": "Come up in winter, I'll trade you two hours of golden light for two hours of daylight, total."
+            }
+          ]
+        },
+        {
+          "author": "ISO_a_good_time",
+          "body": "A golden hour that long? Sounds like the sun really seized the daylight savings. I'll see myself out."
+        }
+      ]
+    },
+    {
+      "author": "LensAndLatte",
+      "title": "hot take: your phone is a real camera and gatekeeping it is boring",
+      "body": "somebody at a meetup last week asked what I shoot and when I said 'lately, mostly my phone' the temperature dropped ten degrees.\n\nthe best camera is the one you actually have when the light happens. learning to see light and build a frame is the skill. the box that records it is negotiable. I love my proper camera, but half my favourite shots this year came out of my pocket while waiting for coffee.",
+      "comments": [
+        {
+          "author": "RAWfiles",
+          "body": "Mostly agree. My one honest gripe is the computational sharpening — phone shots can look great at screen size and weirdly crunchy printed big. But for seeing practice? Phone is perfect. You shoot more, you learn faster.",
+          "replies": [
+            {
+              "author": "LensAndLatte",
+              "body": "fair, the over-processed look is real. I turn everything down where the phone lets me. but yeah, volume is the teacher."
+            }
+          ]
+        },
+        {
+          "author": "FocalPointFran",
+          "body": "I once had to grab a couple's first-look on my phone because my second body chose violence. Delivered it in the small-print package, nobody ever noticed. Told them years later and they laughed."
+        },
+        {
+          "author": "verdigris",
+          "body": "not really a photography person but I walk everywhere and started noticing how one street changes completely between morning and evening light. the phone is why I noticed at all."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "RAWfiles",
+      "title": "PSA: in bright sun, trust your histogram, not your screen",
+      "body": "Shot a whole afternoon at the beach thinking I was nailing exposure because the LCD looked fine. LCD was cranked to max brightness so I could see it in the sun. Everything was a full stop under.\n\nThe screen lies in daylight. The histogram doesn't. Turn on the highlight blinkies too — if the clouds are flashing at you, dial it back. Thirty seconds of setup, saved me from a repeat performance.",
+      "comments": [
+        {
+          "author": "FocalPointFran",
+          "afterMinutes": 45,
+          "body": "Preaching it. I teach this to every second-shooter I hire. The back screen is for checking composition and blink detection, that's it."
+        },
+        {
+          "author": "LensAndLatte",
+          "afterMinutes": 430,
+          "body": "took me embarrassingly long to learn this. one full vacation of slightly dark photos.",
+          "replies": [
+            {
+              "author": "RAWfiles",
+              "afterMinutes": 610,
+              "body": "We've all paid the tuition. Mine was a whole airshow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "lunch",
+      "author": "ISO_a_good_time",
+      "title": "Thinking about an ND filter for waterfall shots. Help me filter out the bad options.",
+      "body": "Puns aside, genuine question: I want that silky long-exposure water look for some falls near here. Is a fixed 6-stop the move, or do the variable NDs not deserve their sketchy reputation anymore? I don't want to spend good glass money on something that adds a weird X pattern to my sky.",
+      "comments": [
+        {
+          "author": "northof60",
+          "afterMinutes": 35,
+          "body": "Cheap variable NDs are where the X pattern lives. A decent fixed 6-stop plus your polarizer covers waterfalls fine. Bring a tripod, even a wobbly one beats no tripod."
+        },
+        {
+          "author": "FocalPointFran",
+          "afterMinutes": 320,
+          "body": "Fixed 6-stop, no contest. Variable NDs have gotten better at the high end but at that price you could just own two fixed ones. Also try around 1 to 2 seconds first — full silky is pretty, but a bit of texture in the water often looks more like water.",
+          "replies": [
+            {
+              "author": "ISO_a_good_time",
+              "afterMinutes": 460,
+              "body": "Two seconds it is. I'd hate for the shot to fall flat. The waterfall, however, should fall as flat as it likes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "regina_mona",
+      "title": "The prairie finally taught me to stop centring the horizon",
+      "body": "For years every landscape I took was split 50/50, sky and field, like a flag. Fine. Boring, but fine.\n\nThen one evening the clouds were doing something biblical and I just tilted up until the field was a thin strip at the bottom. Suddenly the photo was about the sky, which is what the prairie is actually about anyway. Now I decide what the picture is about first, and the horizon goes wherever that decision puts it. Low horizon for drama up top, high horizon when the land has the texture. Never the middle unless I mean it.",
+      "comments": [
+        {
+          "author": "LensAndLatte",
+          "afterMinutes": 55,
+          "body": "'never the middle unless I mean it' is the whole rule of thirds argument in one sentence honestly"
+        },
+        {
+          "author": "RAWfiles",
+          "afterMinutes": 490,
+          "body": "Prairie skies are the one subject that makes me want to drive east from the coast. A thin strip of canola under a monster storm cell is an all-timer composition."
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 1,
+      "slot": "evening",
+      "author": "northof60",
+      "body": "The advance venue walk is such underrated advice. I do the same thing for aurora spots — scout in daylight so you're not discovering the barbed wire fence at midnight."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 2,
+      "slot": "lunch",
+      "author": "regina_mona",
+      "body": "The camera that's with you also wins on honesty. Some of my favourite shots of my grandmother exist because a phone was in reach and a 'real camera' would have made her pose."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 3,
+      "slot": "evening",
+      "author": "FocalPointFran",
+      "body": "Booked a northern wedding once in late June. The couple wanted sunset photos. We got them at 11:40 pm and the dance floor was still going when we came back in. Best light of my career."
+    }
+  ]
+}

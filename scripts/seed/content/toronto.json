@@ -1,0 +1,169 @@
+{
+  "room": "toronto",
+  "bootstrap": [
+    {
+      "author": "streetcar_named_delay",
+      "title": "Act III of tonight's commute: the 504 short-turned at Bathurst and the driver apologized like he was breaking up with us",
+      "body": "Full houselights, doors open, 'this car is now out of service, sorry folks' delivered with genuine feeling. Sixty of us shuffled off into the evening like extras who didn't get the rewrite.\n\nThe next car was, of course, three stacked together, the first one packed and the back two empty as a Monday matinee. King Street, you contain multitudes and none of them are on schedule.",
+      "comments": [
+        {
+          "author": "left_on_red",
+          "body": "the words 'this car is now out of service' trigger a fight or flight response in me at this point. and by flight I mean walking to Spadina out of spite",
+          "replies": [
+            {
+              "author": "streetcar_named_delay",
+              "body": "Walking out of spite is the truest Toronto cardio. I once beat the 501 from Broadview to Yonge on foot and I bring it up at parties."
+            }
+          ]
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "Counterpoint: three streetcars bunched together at golden hour is genuinely one of the best photos this city offers. I have a whole folder called 'convoy'. I'm not saying the TTC does it for the aesthetic but I'm not not saying it."
+        },
+        {
+          "author": "high_park_heron",
+          "body": "Birds do this too, for what it's worth. Pigeons ignore a full feeder all day then arrive as one enormous committee. The 504 is simply migrating in flocks."
+        }
+      ]
+    },
+    {
+      "author": "chai_and_chapters",
+      "title": "Reading spots ranked: a love letter to the Reference Library atrium",
+      "body": "Spent Saturday afternoon at the Toronto Reference Library and I need everyone to appreciate that atrium. Five floors of open air, the little pond by the entrance, that hush that isn't silence but something better. I read a hundred pages without once checking my phone, which for me is a medical event.\n\nHonourable mentions: the benches under the oaks in High Park, the back corner of the Lillian H. Smith branch, and any eastbound streetcar seat where the sun comes in over your left shoulder. Where do you read in this city?",
+      "comments": [
+        {
+          "author": "high_park_heron",
+          "body": "The High Park oak benches are correct but I must warn you the squirrels there have zero respect for a paperback. One ran across my open book like it was a boardwalk. Did not apologize."
+        },
+        {
+          "author": "quietkettle",
+          "body": "I bring a thermos to the music garden down by the lake and read until the tea runs out. The tea decides when the chapter ends, not me.",
+          "replies": [
+            {
+              "author": "chai_and_chapters",
+              "body": "The tea decides. That's the most sensible reading system I've heard in years, I'm adopting it immediately."
+            }
+          ]
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "Reference Library atrium is also criminally good light around 4pm, those upper floors go all honey-coloured. I've shot there so often the security guard nods at me now. We've never spoken. It's perfect."
+        }
+      ]
+    },
+    {
+      "author": "high_park_heron",
+      "title": "The raccoon that owns my green bin has defeated the new latch in under a week",
+      "body": "These are the bins that were supposed to be raccoon-proof. He sat there, worked the handle like he was opening a pickle jar, looked directly at my kitchen window, and helped himself.\n\nI'm not even angry. You don't get angry at a superior athlete. I've started rinsing the containers better, out of respect.",
+      "comments": [
+        {
+          "author": "streetcar_named_delay",
+          "body": "Ours figured out the bin, then figured out which night is collection night. He now shows up on a schedule more reliable than anything else in this city and I include my own employer in that."
+        },
+        {
+          "author": "left_on_red",
+          "body": "we spent millions engineering that latch and the raccoons beat it in a week. imagine if we'd just hired the raccoons",
+          "replies": [
+            {
+              "author": "high_park_heron",
+              "body": "They'd unionize immediately and honestly they'd have earned it."
+            }
+          ]
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "One walked past my patio table in Kensington at like 9pm, fully unbothered, moving like he had a reservation somewhere. Nobody at the table reacted. Tourists gasped. We simply nodded."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "left_on_red",
+      "title": "The DVP was completely clear at 5:15 today and I don't trust it",
+      "body": "Sailed from the Bloor ramp to the Gardiner like it was 6am on a Sunday. No brake lights, no mystery slowdown at the Bayview curve, nothing.\n\nI should have felt joy. Instead I spent the whole drive waiting for the catch. There's always a catch. What did the DVP do and where is it hiding it?",
+      "comments": [
+        {
+          "author": "streetcar_named_delay",
+          "body": "This is the setup of a horror movie for commuters. Act one: an empty parkway. Act two: you find out both other routes were closed and everyone knew but you.",
+          "afterMinutes": 25
+        },
+        {
+          "author": "high_park_heron",
+          "body": "The catch arrives in two weeks as an overnight closure notice taped to a pole you'll never read. Enjoy the gift while it lasts.",
+          "afterMinutes": 340
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "lunch",
+      "author": "LensAndLatte",
+      "title": "Riverdale Park East at golden hour makes the skyline look like it can afford its own rent",
+      "body": "Took the camera up the hill last night around 8:30. The sun drops behind the towers, the whole valley goes amber, and every dog in the east end is suddenly running in slow motion like a commercial.\n\nBring a coffee, sit on the hill, watch half the city show up with the same idea. Best free show in Toronto and the seating is grass.",
+      "comments": [
+        {
+          "author": "chai_and_chapters",
+          "body": "That hill is also a superb reading spot until precisely the moment the light gets good, at which point the book loses and the view wins. A fair fight, honestly.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "high_park_heron",
+          "body": "The dogs really do all run like that up there. Meanwhile the herons in the valley below refuse to perform for anyone. Professionals know their worth.",
+          "afterMinutes": 420,
+          "replies": [
+            {
+              "author": "LensAndLatte",
+              "body": "I have thirty shots of a heron standing motionless in the Don and I treasure every identical one of them.",
+              "afterMinutes": 510
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "streetcar_named_delay",
+      "title": "Took the ferry to Ward's Island and remembered the city has an off switch",
+      "body": "Twenty minutes on the water and suddenly there are no cars, the CN Tower is scenery instead of a landmark you're late underneath, and the loudest sound is somebody's bike bell.\n\nWalked the boardwalk, got soft serve, missed the ferry back on purpose. Ten out of ten intermission. The line for the boat was an hour but even the line had a nice view, which is more than I can say for any other line in my life.",
+      "comments": [
+        {
+          "author": "left_on_red",
+          "body": "the islands are proof we can have nice things, we just have to queue for a boat to get them. still beats the Gardiner",
+          "afterMinutes": 40
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "The skyline from the island at dusk is the one photo every Toronto photographer has taken and none of us will stop taking. See you at the railing.",
+          "afterMinutes": 600
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 2,
+      "slot": "evening",
+      "author": "chai_and_chapters",
+      "body": "I once finished an entire short story between short turns on King. The TTC giveth reading time, the TTC taketh away your evening plans."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 1,
+      "slot": "lunch",
+      "author": "chai_and_chapters",
+      "body": "In Mississauga our raccoons are somehow politer, they wait until the lights go off. City raccoons have simply stopped pretending, and I respect the honesty."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 3,
+      "slot": "evening",
+      "author": "streetcar_named_delay",
+      "body": "Update from the field: tried the atrium on your recommendation. Read two chapters, missed zero streetcars because I wasn't waiting for one. Flawless system."
+    }
+  ]
+}

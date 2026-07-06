@@ -1,0 +1,164 @@
+{
+  "room": "ottawa",
+  "bootstrap": [
+    {
+      "author": "maplebound",
+      "title": "The downtown shawarma question: pick your corner and defend it",
+      "body": "There are intersections in this town where you can stand still and see three shawarma joints at once, and every single one is somebody's hill to die on. I've had the same order for a decade: chicken, extra garlic, potatoes IN the wrap, which I'm told is a crime in certain households.\n\nSo let's have it. Where do you send people, and what's the correct order?",
+      "comments": [
+        {
+          "author": "beavertales",
+          "body": "Potatoes in the wrap is correct and I'll die on that hill with you, which is convenient, because our hills are within sight of each other. My spot is whichever one hands over the extra garlic sauce without making eye contact. That's how you know you've achieved regular status.",
+          "replies": [
+            {
+              "author": "maplebound",
+              "body": "The no-eye-contact extra garlic is the highest civic honour this city offers. Above the key to the city, frankly."
+            }
+          ]
+        },
+        {
+          "author": "stormglass",
+          "body": "Visited the capital exactly once, ate shawarma twice in the same day on a local's orders, and I still think about those garlic potatoes. Halifax has the donair and I'd never betray her, but I understand you people now."
+        }
+      ]
+    },
+    {
+      "author": "beavertales",
+      "title": "The canal in July is just the Skateway on summer vacation",
+      "body": "Same water, entirely different personality. In February it's the world's most polite highway, and in July it's paddleboards, wobbly rental kayaks, and one determined man in a canoe who clearly has somewhere to be.\n\nA tourist asked me where the ice goes in summer. Told them we keep it in Gatineau. I'm not sorry.",
+      "comments": [
+        {
+          "author": "maplebound",
+          "body": "The determined canoe man is a fixture. Every July he's out there commuting like it's 1830 and the canal just opened. I respect him completely.\n\nAlso: the path alongside is lovely at 7 a.m. and a rolling negotiation by 10.",
+          "replies": [
+            {
+              "author": "beavertales",
+              "body": "By 10 the path has three lanes: bikes, joggers, and apologies."
+            }
+          ]
+        },
+        {
+          "author": "penaltyboxphil",
+          "body": "Skated the whole thing at Winterlude once. BeaverTail at the halfway hut, ankles wrecked for a week, zero regrets. Seeing it as regular water must be like seeing the rink with the boards out."
+        }
+      ]
+    },
+    {
+      "author": "maplebound",
+      "title": "You can tell it's mid-July downtown because you can get a patio table at 12:05",
+      "body": "Half the town is on leave, the buses are running light, and the out-of-office replies have reached full bloom. The city is on a skeleton crew and the skeletons are all at a cottage on Big Rideau.\n\nHonestly, downtown in July is the city at its best. Quiet, sunny, and everyone left behind is in a suspiciously good mood.",
+      "comments": [
+        {
+          "author": "beavertales",
+          "body": "The July out-of-office is a literary genre of its own. 'I will have limited access to email' — you're at the lake with full bars and we both know it. Enjoy it, you've earned it, leave me the patio.",
+          "replies": [
+            {
+              "author": "maplebound",
+              "body": "'Limited access' is carrying more weight than any phrase in the language, and I'm including 'final draft.'"
+            }
+          ]
+        },
+        {
+          "author": "left_on_red",
+          "body": "Toronto never does this and I resent it deeply. Our downtown doesn't empty in July, it just adds a heat shimmer and a second festival. Enjoy your table at 12:05 — I'm reading this from a lineup."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "beavertales",
+      "title": "Champlain Lookout at golden hour is worth every metre of the climb, says the guy who walked his bike",
+      "body": "Rode up into Gatineau Park after supper — and by rode I mean rode the flat parts and had a long, thoughtful walk on the rest. The lookout at golden hour makes you forget all of it. The whole valley goes soft and gold and you can watch the shadows of the hills stretch out across the farms.\n\nTo the cyclists who climb the entire thing without dismounting: I salute you and I do not understand you.",
+      "comments": [
+        {
+          "author": "maplebound",
+          "body": "Grew up looking at those hills from the valley floor, and the view back down at the farms never gets old either. Walking the bike still counts. The lookout doesn't check your pedalling record.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "trailmixtake",
+          "body": "Did that climb on a trip east a while back and it made my top-ten list of easy climbs with unreasonable payoff. Tip for next time: go at sunrise. You'll have it to yourself, plus one photographer and one very smug cyclist.",
+          "afterMinutes": 350,
+          "replies": [
+            {
+              "author": "beavertales",
+              "body": "'Easy climbs' is doing a lot of heavy lifting for those of us who walked. But sunrise is a great call — fewer witnesses.",
+              "afterMinutes": 420
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "lunch",
+      "author": "maplebound",
+      "title": "Where do you actually send visitors in this city? Not the postcard stuff.",
+      "body": "Family's coming through next month and they've already done Parliament, the Market, and the museums on past visits. My usual tour is a proper shawarma, a walk along the locks, and a patio in Hintonburg, but I feel like I'm running the same loop on repeat.\n\nWhat's on your not-obvious Ottawa list?",
+      "comments": [
+        {
+          "author": "beavertales",
+          "body": "The locks at sunset, the view back across the river from the Gatineau side, and yes, a BeaverTail, because some clichés earn it and I am legally invested in that one.\n\nActual sleeper pick: rent bikes and ride the river path out to Britannia. There's a beach at the end. Nobody expects Ottawa to have a beach.",
+          "afterMinutes": 50,
+          "replies": [
+            {
+              "author": "maplebound",
+              "body": "Britannia is the right answer. Out-of-towners never believe the beach until they're standing on it.",
+              "afterMinutes": 120
+            }
+          ]
+        },
+        {
+          "author": "redeyeflyer",
+          "body": "Frequent flyer through YOW here: my long-layover move is the aviation museum. Even people who don't care about planes walk out caring about planes. And it's never crowded, which after an airport is medicine.",
+          "afterMinutes": 400
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "beavertales",
+      "title": "TIL the ByWard Market is literally just... By's ward. The pun was there all along.",
+      "body": "The Rideau Canal opened in 1832 and has run every season since, which according to Parks Canada makes it the oldest continuously operated canal in North America — and it's a UNESCO World Heritage Site on top of that. Colonel By built the canal, the town grew up around the works, and the market sits in what was the By Ward of the old town.\n\nMostly I need everyone to sit with the fact that this city's founding document was a pun. This town was built for me specifically.",
+      "comments": [
+        {
+          "author": "maplebound",
+          "body": "Lived here my whole life and the By's ward thing still gets people. Wait until you tell them the whole town used to be called Bytown. The man had a brand.",
+          "afterMinutes": 60
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Canal facts are my weakness: it was built as a military supply route after the War of 1812, so the whole thing exists because somebody wanted a backup road to Kingston. Best contingency plan in Canadian history — it ends at a skating rink and a pastry.",
+          "afterMinutes": 300,
+          "replies": [
+            {
+              "author": "beavertales",
+              "body": "Built for war, kept for BeaverTails. Nation-building done right.",
+              "afterMinutes": 380
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 3,
+      "slot": "evening",
+      "author": "maplebound",
+      "body": "Thread update: took the no-eye-contact garlic advice and have officially achieved regular status at the second-closest spot to my office. The potatoes-in-the-wrap coalition grows."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 4,
+      "slot": "evening",
+      "author": "beavertales",
+      "body": "Canal update: the determined canoe man has acquired a rival. A kayaker. They pass each other at 7 a.m. with the energy of two regional managers, and I am deeply invested in this drama now."
+    }
+  ]
+}

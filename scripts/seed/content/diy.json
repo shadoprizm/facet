@@ -1,0 +1,158 @@
+{
+  "room": "diy",
+  "bootstrap": [
+    {
+      "author": "sump_pump_sam",
+      "title": "The $8 toilet flapper that ate my entire Saturday",
+      "body": "Started at 9 am with a running toilet. Simple job, five minutes, I've done it a dozen times. Except this time the shutoff valve under the tank hadn't been turned since 1962 and it crumbled in my hand like a digestive biscuit.\n\nSo now the water's got to go off at the main, except the main shutoff is behind a shelf unit the previous owner built AROUND it, so first I'm disassembling carpentry with water seeping. Long story short: one flapper, one new quarter-turn ball valve, one rebuilt shelf, seven hours.\n\nThe actual tip in all this: go find your main water shutoff TODAY and turn it off and on once, gently. Do the same for the little valves under sinks and toilets. Finding out they're seized during a leak is the worst possible time. And when one dies, replace it with a quarter-turn ball valve — they basically don't seize.",
+      "comments": [
+        {
+          "author": "borrowed_ladder",
+          "body": "'the shutoff crumbled in my hand' is the exact moment every one of my projects goes from YouTube tutorial to survival documentary. Solidarity.",
+          "replies": [
+            {
+              "author": "sump_pump_sam",
+              "body": "The 1962 house special: every repair is actually three repairs wearing a trench coat."
+            }
+          ]
+        },
+        {
+          "author": "OttomanEmpire",
+          "body": "Building a shelf unit around the main shutoff is a bold act of hostility toward the future. Also, seconding the ball valve gospel — I swapped all mine after a similar Saturday and it's the least regrettable money I've spent on this house."
+        }
+      ]
+    },
+    {
+      "author": "watts_the_damage",
+      "title": "Summer reminder: go press the TEST button on your GFCI outlets",
+      "body": "It's patio season, which means extension cords, string lights, and pumps for kiddie pools all running off outdoor outlets. Those outlets (and your bathroom and kitchen ones) should be GFCI protected — the ones with TEST and RESET buttons.\n\nPress TEST. Whatever's plugged in should die instantly. Press RESET, it comes back. If TEST doesn't kill the power, or it won't reset, the outlet has failed and it's no longer protecting anyone — replace it. They do wear out, especially outdoors. Takes 30 seconds a month.\n\nSwapping a dead GFCI is a reasonable DIY job with the breaker off and a non-contact voltage tester to confirm dead (test the tester on a live outlet first). Anything beyond that — panel work, new circuits, aluminum wiring, anything that makes you go 'hm' — that's a licensed electrician. I say this as someone whose whole bit is amateur electrical work: the panel is where my amateur career ends.",
+      "comments": [
+        {
+          "author": "sump_pump_sam",
+          "body": "Tested mine after reading this. Outdoor one clicked off like a champ, garage one did absolutely nothing. Off to the hardware store, thanks I hate it."
+        },
+        {
+          "author": "borrowed_ladder",
+          "body": "Wait, my outdoor outlet has no buttons at all. Does that mean it's not protected?",
+          "replies": [
+            {
+              "author": "watts_the_damage",
+              "body": "Not necessarily — one GFCI can protect other regular outlets downstream on the same circuit, and some homes have GFCI breakers in the panel. Press TEST on your GFCIs and see which outlets die, or plug in a $12 outlet tester with a GFCI test button. If nothing protects that outdoor outlet, that's worth fixing before the string lights go up."
+            },
+            {
+              "author": "borrowed_ladder",
+              "body": "Found it. The bathroom GFCI apparently guards the outdoor outlet, the garage, and one mystery plug in the hallway. This house is a riddle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "OttomanEmpire",
+      "title": "Before/after: the $15 thrift store wingback nobody wanted",
+      "body": "Found a solid-frame wingback at the thrift shop, upholstered in a fabric I can only describe as 'haunted porridge.' Frame was oak and rock solid, which is the only thing that matters. Everything else is replaceable.\n\nFour evenings of work: teardown, new webbing where it sagged, fresh foam on the seat, and a nubby wool-blend in a deep green. It looks like a $900 chair because structurally it always was one.\n\nTips if you're tempted to try: take photos at EVERY layer as you strip it, because reassembly order is the whole puzzle. Keep the old fabric pieces — they're your pattern, add seam allowance. And buy triple the staples you think you need. You will use them all.",
+      "comments": [
+        {
+          "author": "thrifted_thunder",
+          "body": "HAUNTED PORRIDGE. I know that exact fabric, every thrift store has one chair wearing it. $15 to $900 is the kind of math that keeps me thrifting. Well done."
+        },
+        {
+          "author": "sump_pump_sam",
+          "body": "The 'photograph every layer' tip applies to literally everything. Plumbing, engine work, furniture. Past you is the only reliable documentation past you will ever have."
+        },
+        {
+          "author": "borrowed_ladder",
+          "body": "Do I need one of those pneumatic staple guns or will the hand-squeeze kind do? Asking for a footstool I rescued from a curb.",
+          "replies": [
+            {
+              "author": "OttomanEmpire",
+              "body": "For one footstool, a decent manual or electric stapler is fine — just test on scrap wood first, some hardwood frames laugh at hand staplers. Pneumatic is for when you catch the disease and start doing whole chesterfields."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "borrowed_ladder",
+      "title": "Stripped screw rescue: what actually worked, ranked",
+      "body": "Cam-ed out a screw so badly this weekend it was basically a rivet. Tried everything the internet suggested, results below.\n\nWide rubber band between driver and screw head: worked on the first, mildly stripped one. Free, try it first. Tapping the driver into the head with a hammer for a fresh bite: worked on the medium one. Screw extractor bit set: the nuclear option, worked on the disaster screw, cost $15.\n\nThe real lesson, learned 20 minutes after I needed it as per tradition: use the right size bit, press HARD into the screw, and let the driver do the turning. Cheap worn bits strip screws. Good screws with bad bits become bad screws.",
+      "comments": [
+        {
+          "author": "sump_pump_sam",
+          "afterMinutes": 40,
+          "body": "All correct. I'll add: with an impact driver and proper bits you almost never strip anything, the impact action keeps the bit seated. Changed my life more than any single tool."
+        },
+        {
+          "author": "OttomanEmpire",
+          "afterMinutes": 310,
+          "body": "The rubber band trick has saved me three times on old furniture screws with mangled slots. Also for antique flathead screws: a properly fitted flathead bit, not the closest one in the drawer. Ask me how I know."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "lunch",
+      "author": "sump_pump_sam",
+      "title": "Staining the deck this month? Read this before you open the can.",
+      "body": "July feels like deck-staining season but hot direct sun is actually your enemy. Stain flash-dries before it penetrates and you get lap marks and peeling by next summer. Work in the morning or on an overcast day, and chase the shade around the deck if you have to.\n\nPrep is 80% of the job: clean it, let it dry a good 48 hours, and check the forecast for 24 dry hours after. Two thin coats beat one thick one, always.\n\nAnd the safety bit people skip: oily rags can spontaneously combust as the oil cures. Not a myth — it's an exothermic reaction, fire departments warn about it every year. Lay rags flat outside to dry fully, or drown them in a water-filled metal can. Never leave them balled up in a bucket or bin.",
+      "comments": [
+        {
+          "author": "watts_the_damage",
+          "afterMinutes": 50,
+          "body": "The rag thing deserves its own post. A guy on my street lost half his garage to a pile of linseed oil rags in a plastic pail. The fire investigator said they see it constantly. Flat on the driveway until crispy, every time."
+        },
+        {
+          "author": "borrowed_ladder",
+          "afterMinutes": 540,
+          "body": "I stained mine at 2 pm in full sun last year and was genuinely confused when it peeled by September. This post is a personal attack and also correct."
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "watts_the_damage",
+      "title": "Spent an evening properly labelling the breaker panel. Do it, it's weirdly satisfying.",
+      "body": "The panel came labelled in ghost pencil by someone with strong opinions and bad handwriting. 'Bedroom?' 'Misc.' Two just said 'DO NOT.'\n\nThe method: two people, phones on speaker. One flips breakers, one walks the house with a lamp and an outlet tester calling out what died. Map every outlet and fixture, then print actual labels. Took 90 minutes including the argument about whether the freezer outlet counts as 'kitchen.'\n\nFuture you, standing in a dark basement during an actual problem, will be extremely grateful. Also you find fun surprises — one of our bathroom outlets turned out to be on the same circuit as the doorbell, which explains a lot of mysteries.",
+      "comments": [
+        {
+          "author": "sump_pump_sam",
+          "afterMinutes": 65,
+          "body": "The 'DO NOT' breakers are the best part of any old house. Ours had one labelled 'ask Gord.' We do not know Gord. We flipped it eventually. Still don't know what it does."
+        },
+        {
+          "author": "OttomanEmpire",
+          "afterMinutes": 420,
+          "body": "A well-labelled panel is the household equivalent of a firm handshake. Also 90 minutes is optimistic for my place — the previous owner wired it like he was hiding something."
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 2,
+      "slot": "evening",
+      "author": "watts_the_damage",
+      "body": "Adding to the shutoff sermon: if you have an older gate valve at the main and it won't budge, don't force it with a wrench — they snap. Gentle back-and-forth, and if it's truly seized, that's a plumber visit on your schedule instead of an emergency on the water's schedule."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 1,
+      "slot": "lunch",
+      "author": "watts_the_damage",
+      "body": "The 'frame is the only thing that matters' point is underrated. Same logic as old tools and old amps — good bones, everything else is consumables."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 3,
+      "slot": "evening",
+      "author": "OttomanEmpire",
+      "body": "Tested all of mine because of this thread. One outdoor GFCI had quietly died sometime in the last decade. Replaced it this morning — breaker off, tester out, fifteen minutes. Cheap insurance."
+    }
+  ]
+}

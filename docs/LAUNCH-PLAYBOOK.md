@@ -94,12 +94,17 @@ founder). Pin a "welcome — what would you like Facet to be?" thread.
 
 ## Hard rules (what we deliberately don't do)
 
-- No fake accounts, no vote manipulation, no mass DM/cold-email blasts, no
-  cross-posting identical text to dozens of venues. Every major platform
-  detects this, and a new domain that trips spam filters is effectively dead
-  — it would cost far more than 100 users.
-- Every community post is made by a human, follows the venue's self-promotion
-  rules, and stays to answer questions.
+- **On other platforms** (Reddit, HN, PH, Mastodon…): no fake accounts, no
+  vote manipulation, no mass DM/cold-email blasts, no cross-posting identical
+  text to dozens of venues. Every major platform detects this, and a new
+  domain that trips spam filters is effectively dead — it would cost far more
+  than 100 users. Every community post there is made by a human, follows the
+  venue's self-promotion rules, and stays to answer questions.
+- **On Facet itself**: the owner decided (2026-07-05) to run seeded personas
+  to keep Rooms alive during launch — see `docs/SEED-COMMUNITY.md` for the
+  ground rules that keep it defensible (seed accounts identifiable and
+  excluded from the members KPI, no testimonials, tapered as real users
+  arrive). Day 6's "seed the destination" is now automated by that engine.
 
 ## Appendix — ready-to-paste copy
 

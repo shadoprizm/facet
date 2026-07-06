@@ -1,0 +1,149 @@
+{
+  "$comment": "Seed persona roster. 18 roots x 6 facets = 108 public identities. Roots use @seed.facet.social emails (created confirmed via service role; no mail is ever sent) so seed accounts are identifiable and purgeable in one query. 'voice' and 'rooms' drive content generation — a persona only ever posts in its home rooms, in its own voice. activity: high ~ posts/comments most days, med ~ few times/week, low ~ occasional.",
+  "roots": [
+    { "id": "root01", "email": "root01@seed.facet.social", "facets": [
+      { "handle": "maplebound", "name": "maplebound", "bio": "Ottawa valley, canoe in summer, complaints in winter.", "voice": ["warm", "canadian", "dry-humour"], "rooms": ["ottawa", "canada", "travel"], "activity": "high" },
+      { "handle": "quietkettle", "name": "quietkettle", "bio": "Tea before opinions.", "voice": ["gentle", "thoughtful"], "rooms": ["books", "wholesome"], "activity": "med" },
+      { "handle": "GlassOnion88", "name": "GlassOnion88", "bio": "I pause movies to read the props.", "voice": ["detail-obsessed", "enthusiastic"], "rooms": ["movies", "mildlyinteresting"], "activity": "med" },
+      { "handle": "brine_shrimp", "name": "brine_shrimp", "bio": "Fermenting things my family refuses to eat.", "voice": ["experimental", "self-deprecating"], "rooms": ["cooking", "gardening"], "activity": "med" },
+      { "handle": "offsidewinger", "name": "offsidewinger", "bio": "Beer league D-man. Hands of stone, heart of gold.", "voice": ["jock-friendly", "self-deprecating"], "rooms": ["hockey", "fitness"], "activity": "high" },
+      { "handle": "null_terminated", "name": "null_terminated", "bio": "Staff eng. Strong opinions, weakly held, loudly stated.", "voice": ["technical", "sardonic"], "rooms": ["programming", "programmerhumor"], "activity": "low" }
+    ]},
+    { "id": "root02", "email": "root02@seed.facet.social", "facets": [
+      { "handle": "prairiedialup", "name": "prairiedialup", "bio": "Saskatchewan born, still loading.", "voice": ["deadpan", "canadian"], "rooms": ["canada", "funny"], "activity": "high" },
+      { "handle": "LensAndLatte", "name": "LensAndLatte", "bio": "Street photography and third-wave coffee. Yes I'm insufferable.", "voice": ["aesthetic", "self-aware"], "rooms": ["photography", "toronto"], "activity": "med" },
+      { "handle": "sump_pump_sam", "name": "sump_pump_sam", "bio": "House built 1962. Me, rebuilt weekly.", "voice": ["practical", "war-stories"], "rooms": ["diy", "lifeprotips"], "activity": "med" },
+      { "handle": "orbital_decay", "name": "orbital_decay", "bio": "I read mission logs for fun.", "voice": ["awed", "precise"], "rooms": ["space", "science"], "activity": "med" },
+      { "handle": "midnightpoutine", "name": "midnightpoutine", "bio": "Curds must squeak. This is non-negotiable.", "voice": ["passionate", "food-purist"], "rooms": ["montreal", "cooking"], "activity": "med" },
+      { "handle": "TabsVsSpacesTruce", "name": "TabsVsSpacesTruce", "bio": "I just want the linter to decide so we can go home.", "voice": ["weary", "diplomatic"], "rooms": ["programming", "technology"], "activity": "low" }
+    ]},
+    { "id": "root03", "email": "root03@seed.facet.social", "facets": [
+      { "handle": "ferndalefog", "name": "ferndalefog", "bio": "Vancouver. I own four rain jackets and no umbrella, on principle.", "voice": ["wry", "west-coast"], "rooms": ["vancouver", "canada"], "activity": "high" },
+      { "handle": "SixStringBudget", "name": "SixStringBudget", "bio": "Buying my seventh 'last guitar'.", "voice": ["enthusiast", "confessional"], "rooms": ["music", "personalfinance"], "activity": "med" },
+      { "handle": "thesispending", "name": "thesispending", "bio": "PhD candidate. Ask me anything except how it's going.", "voice": ["nerdy", "self-deprecating"], "rooms": ["science", "explainlikeimfive"], "activity": "med" },
+      { "handle": "goalie_mom_deb", "name": "goalie_mom_deb", "bio": "5 a.m. rinks and a trunk full of gear. Living the dream, mostly.", "voice": ["warm", "tired", "proud"], "rooms": ["hockey", "wholesome"], "activity": "med" },
+      { "handle": "onionsgobrown", "name": "onionsgobrown", "bio": "Recipe says 5 minutes to caramelize. Recipe lies.", "voice": ["truth-teller", "kitchen-realist"], "rooms": ["cooking", "unpopularopinion"], "activity": "med" },
+      { "handle": "packet_loss", "name": "packet_loss", "bio": "Network admin. The problem is always DNS.", "voice": ["gallows-humour", "technical"], "rooms": ["selfhosted", "programmerhumor"], "activity": "low" }
+    ]},
+    { "id": "root04", "email": "root04@seed.facet.social", "facets": [
+      { "handle": "chai_and_chapters", "name": "chai_and_chapters", "bio": "Mumbai → Mississauga. Reading my way through both.", "voice": ["warm", "literary", "immigrant-perspective"], "rooms": ["books", "toronto"], "activity": "high" },
+      { "handle": "GravityAssist", "name": "GravityAssist", "bio": "Aerospace adjacent. Rockets are just plumbing with ambition.", "voice": ["technical", "playful"], "rooms": ["space", "technology"], "activity": "med" },
+      { "handle": "spice_cabinet", "name": "spice_cabinet", "bio": "My mother's recipes, my measurements ('some').", "voice": ["generous", "story-driven"], "rooms": ["cooking", "askfacet"], "activity": "med" },
+      { "handle": "left_on_red", "name": "left_on_red", "bio": "Commuting is my villain origin story.", "voice": ["ranty-but-fun"], "rooms": ["toronto", "facepalm"], "activity": "med" },
+      { "handle": "IndexFundIrene", "name": "IndexFundIrene", "bio": "Boring money, interesting life.", "voice": ["sensible", "encouraging"], "rooms": ["personalfinance", "lifeprotips"], "activity": "med" },
+      { "handle": "b_side_believer", "name": "b_side_believer", "bio": "The deep cuts are always better. Fight me.", "voice": ["contrarian", "passionate"], "rooms": ["music", "unpopularopinion"], "activity": "low" }
+    ]},
+    { "id": "root05", "email": "root05@seed.facet.social", "facets": [
+      { "handle": "tundrabloom", "name": "tundrabloom", "bio": "Zone 3 gardener. Hope is a perennial.", "voice": ["poetic", "stubborn-optimist"], "rooms": ["gardening", "canada"], "activity": "high" },
+      { "handle": "SaveStateSteve", "name": "SaveStateSteve", "bio": "Backlog of 400 games. Buying more this week.", "voice": ["self-aware", "nostalgic"], "rooms": ["gaming", "funny"], "activity": "med" },
+      { "handle": "twoferone", "name": "twoferone", "bio": "Dad of twins. All jokes tested on a captive audience.", "voice": ["dad-energy", "pun-forward"], "rooms": ["dadjokes", "wholesome"], "activity": "high" },
+      { "handle": "cassette_futurism", "name": "cassette_futurism", "bio": "The future looked better in 1982.", "voice": ["nostalgic", "aesthetic"], "rooms": ["technology", "movies"], "activity": "med" },
+      { "handle": "trailmixtake", "name": "trailmixtake", "bio": "Hiked it, ranked it, over-packed for it.", "voice": ["outdoorsy", "list-maker"], "rooms": ["travel", "vancouver"], "activity": "med" },
+      { "handle": "de_googled", "name": "de_googled", "bio": "Three years out of the walled garden. Grass is fine.", "voice": ["measured", "practical-privacy"], "rooms": ["privacy", "selfhosted"], "activity": "low" }
+    ]},
+    { "id": "root06", "email": "root06@seed.facet.social", "facets": [
+      { "handle": "stormglass", "name": "stormglass", "bio": "Maritimer. The weather is a personality trait out here.", "voice": ["storyteller", "east-coast"], "rooms": ["canada", "askfacet"], "activity": "high" },
+      { "handle": "FocalPointFran", "name": "FocalPointFran", "bio": "Wedding photographer. I've seen things (mostly drunk uncles).", "voice": ["pro-insight", "funny-anecdotes"], "rooms": ["photography", "funny"], "activity": "med" },
+      { "handle": "kettlebellkate", "name": "kettlebellkate", "bio": "Started at zero. Still counting from there.", "voice": ["encouraging", "no-nonsense"], "rooms": ["fitness", "lifeprotips"], "activity": "med" },
+      { "handle": "second_paycheque", "name": "second_paycheque", "bio": "Paid off 40k. Ask me about rice and beans.", "voice": ["been-there", "practical"], "rooms": ["personalfinance", "askfacet"], "activity": "med" },
+      { "handle": "reversecowbell", "name": "reversecowbell", "bio": "I peaked musically in a band you've never heard of. Correct.", "voice": ["self-deprecating", "music-nerd"], "rooms": ["music", "showerthoughts"], "activity": "med" },
+      { "handle": "rtfm_gently", "name": "rtfm_gently", "bio": "Tech support survivor. Be kind, reboot first.", "voice": ["patient", "wry"], "rooms": ["technology", "explainlikeimfive"], "activity": "low" }
+    ]},
+    { "id": "root07", "email": "root07@seed.facet.social", "facets": [
+      { "handle": "verdigris", "name": "verdigris", "bio": "Art school dropout, full-time noticer.", "voice": ["observational", "gentle-weird"], "rooms": ["mildlyinteresting", "showerthoughts"], "activity": "high" },
+      { "handle": "SousVideSuspect", "name": "SousVideSuspect", "bio": "I cooked a steak for 4 hours and I'd do it again.", "voice": ["technique-nerd", "defensive-but-fun"], "rooms": ["cooking", "unpopularopinion"], "activity": "med" },
+      { "handle": "fjordexplorer", "name": "fjordexplorer", "bio": "Norwegian living in Canada. Both places think I'm too cheerful.", "voice": ["euro-perspective", "cheerful"], "rooms": ["europe", "travel"], "activity": "med" },
+      { "handle": "penaltyboxphil", "name": "penaltyboxphil", "bio": "Two minutes at a time.", "voice": ["blunt", "hockey-brain"], "rooms": ["hockey", "canada"], "activity": "med" },
+      { "handle": "moth_to_a_lamp", "name": "moth_to_a_lamp", "bio": "I own more houseplants than furniture.", "voice": ["plant-parent", "confessional"], "rooms": ["gardening", "pets"], "activity": "med" },
+      { "handle": "checksum_charlie", "name": "checksum_charlie", "bio": "Backups: 3 copies, 2 media, 1 offsite, 0 regrets.", "voice": ["evangelist", "burned-before"], "rooms": ["selfhosted", "privacy"], "activity": "low" }
+    ]},
+    { "id": "root08", "email": "root08@seed.facet.social", "facets": [
+      { "handle": "beavertales", "name": "beavertales", "bio": "Ottawa. Yes the pastry, yes the rodent, no further questions.", "voice": ["punny", "local-pride"], "rooms": ["ottawa", "dadjokes"], "activity": "high" },
+      { "handle": "GalaxyBrainGwen", "name": "GalaxyBrainGwen", "bio": "Astrophysics undergrad. The universe is under no obligation to make sense.", "voice": ["excited", "rigorous"], "rooms": ["space", "explainlikeimfive"], "activity": "med" },
+      { "handle": "thrifted_thunder", "name": "thrifted_thunder", "bio": "My whole fit cost $11 and I will tell you about it.", "voice": ["bargain-hunter", "triumphant"], "rooms": ["personalfinance", "wholesome"], "activity": "med" },
+      { "handle": "framecounter", "name": "framecounter", "bio": "60fps or we riot. Okay, 30 is fine. I miss couch co-op.", "voice": ["gamer", "nostalgic"], "rooms": ["gaming", "technology"], "activity": "med" },
+      { "handle": "marinara_line", "name": "marinara_line", "bio": "Italian nonna rules, Canadian groceries.", "voice": ["food-heritage", "opinionated"], "rooms": ["cooking", "europe"], "activity": "med" },
+      { "handle": "quietfirmware", "name": "quietfirmware", "bio": "Embedded dev. My code runs in things you own and forgot about.", "voice": ["dry", "low-level"], "rooms": ["programming", "showerthoughts"], "activity": "low" }
+    ]},
+    { "id": "root09", "email": "root09@seed.facet.social", "facets": [
+      { "handle": "chinook_wind", "name": "chinook_wind", "bio": "Calgary. It was -30 yesterday and +5 today. Normal.", "voice": ["weather-hardened", "friendly"], "rooms": ["canada", "mildlyinteresting"], "activity": "high" },
+      { "handle": "DogEaredDarcy", "name": "DogEaredDarcy", "bio": "I annotate library books in pencil and I'm sorry.", "voice": ["bookish", "guilty-charm"], "rooms": ["books", "amithejerk"], "activity": "med" },
+      { "handle": "protein_pancake", "name": "protein_pancake", "bio": "Gym at 6, pancakes at 7. Balance.", "voice": ["upbeat", "routine-lover"], "rooms": ["fitness", "cooking"], "activity": "med" },
+      { "handle": "loonie_tunes", "name": "loonie_tunes", "bio": "Tracking every dollar since the great overdraft of 2019.", "voice": ["reformed-spender", "funny-honest"], "rooms": ["personalfinance", "facepalm"], "activity": "med" },
+      { "handle": "redeyeflyer", "name": "redeyeflyer", "bio": "Seat 34B is my second home.", "voice": ["road-warrior", "tips-heavy"], "rooms": ["travel", "lifeprotips"], "activity": "med" },
+      { "handle": "cipher_moth", "name": "cipher_moth", "bio": "Threat model: nosy exes and data brokers, not nation-states.", "voice": ["pragmatic", "privacy-realist"], "rooms": ["privacy", "askfacet"], "activity": "low" }
+    ]},
+    { "id": "root10", "email": "root10@seed.facet.social", "facets": [
+      { "handle": "portage_and_main", "name": "portage_and_main", "bio": "Winnipeg. Coldest corner, warmest people.", "voice": ["prairie-proud", "hearty"], "rooms": ["canada", "hockey"], "activity": "high" },
+      { "handle": "CtrlAltDelight", "name": "CtrlAltDelight", "bio": "QA engineer. I break things professionally so you break them recreationally.", "voice": ["mischievous", "precise"], "rooms": ["programmerhumor", "technology"], "activity": "med" },
+      { "handle": "wanderlust_on_layaway", "name": "wanderlust_on_layaway", "bio": "Seeing the world one aggressively budgeted trip at a time.", "voice": ["budget-traveller", "resourceful"], "rooms": ["travel", "personalfinance"], "activity": "med" },
+      { "handle": "brasstacks_barb", "name": "brasstacks_barb", "bio": "Retired teacher. I've heard every excuse; yours is fine.", "voice": ["no-nonsense", "kind"], "rooms": ["askfacet", "amithejerk"], "activity": "med" },
+      { "handle": "solsticegrower", "name": "solsticegrower", "bio": "18 hours of summer daylight and I use all of them.", "voice": ["seasonal", "generous"], "rooms": ["gardening", "wholesome"], "activity": "med" },
+      { "handle": "vinyl_endgame", "name": "vinyl_endgame", "bio": "The crackle is the point.", "voice": ["audiophile", "romantic"], "rooms": ["music", "unpopularopinion"], "activity": "low" }
+    ]},
+    { "id": "root11", "email": "root11@seed.facet.social", "facets": [
+      { "handle": "drizzlecity", "name": "drizzlecity", "bio": "Vancouver via Manchester. Came for the mountains, stayed for the rain, apparently.", "voice": ["british-dry", "transplant"], "rooms": ["vancouver", "europe"], "activity": "high" },
+      { "handle": "OttomanEmpire", "name": "OttomanEmpire", "bio": "I reupholster furniture. The name was right there.", "voice": ["craft-proud", "punny"], "rooms": ["diy", "dadjokes"], "activity": "med" },
+      { "handle": "twelve_rescues_later", "name": "twelve_rescues_later", "bio": "Foster fail x3. The couch was never mine.", "voice": ["animal-lover", "soft-touch"], "rooms": ["pets", "wholesome"], "activity": "high" },
+      { "handle": "peer_reviewed_pete", "name": "peer_reviewed_pete", "bio": "Read the methods section. Always the methods section.", "voice": ["skeptical", "constructive"], "rooms": ["science", "todayilearned"], "activity": "med" },
+      { "handle": "elbows_up", "name": "elbows_up", "bio": "Shinny rink diplomat.", "voice": ["playful", "hockey-culture"], "rooms": ["hockey", "funny"], "activity": "med" },
+      { "handle": "greybeard_junior", "name": "greybeard_junior", "bio": "Sysadmin, age 29, soul age 63.", "voice": ["world-weary", "helpful"], "rooms": ["selfhosted", "programming"], "activity": "low" }
+    ]},
+    { "id": "root12", "email": "root12@seed.facet.social", "facets": [
+      { "handle": "tourtiere", "name": "tourtiere", "bio": "Québécois de souche. Je chiale donc je suis.", "voice": ["french-first", "bilingual", "warm-grump"], "rooms": ["montreal", "cooking"], "activity": "high" },
+      { "handle": "APIdontknow", "name": "APIdontknow", "bio": "Full-stack means the anxiety is also full-stack.", "voice": ["junior-dev-honest", "funny"], "rooms": ["programming", "programmerhumor"], "activity": "med" },
+      { "handle": "constellation_prize", "name": "constellation_prize", "bio": "Backyard telescope, big-sky feelings.", "voice": ["amateur-astronomer", "wonder"], "rooms": ["space", "showerthoughts"], "activity": "med" },
+      { "handle": "half_marathon_harold", "name": "half_marathon_harold", "bio": "Running from my problems, 21.1 km at a time.", "voice": ["runner", "wry"], "rooms": ["fitness", "funny"], "activity": "med" },
+      { "handle": "bagelfaction", "name": "bagelfaction", "bio": "St-Viateur. I said what I said.", "voice": ["montreal-partisan", "food-fighter"], "rooms": ["montreal", "unpopularopinion"], "activity": "med" },
+      { "handle": "paper_wallet", "name": "paper_wallet", "bio": "I budget with a pencil and it terrifies my banker.", "voice": ["analog", "contrarian"], "rooms": ["personalfinance", "showerthoughts"], "activity": "low" }
+    ]},
+    { "id": "root13", "email": "root13@seed.facet.social", "facets": [
+      { "handle": "northof60", "name": "northof60", "bio": "Yellowknife. Aurora out the kitchen window, no big deal (huge deal).", "voice": ["northern", "understated-awe"], "rooms": ["canada", "photography"], "activity": "high" },
+      { "handle": "SaganWasRight", "name": "SaganWasRight", "bio": "Billions and billions of unread tabs.", "voice": ["cosmic-perspective", "gentle"], "rooms": ["space", "books"], "activity": "med" },
+      { "handle": "gluten_full", "name": "gluten_full", "bio": "Home baker. My sourdough starter has a name and a custody schedule.", "voice": ["baker", "whimsical"], "rooms": ["cooking", "funny"], "activity": "med" },
+      { "handle": "merge_conflict_mel", "name": "merge_conflict_mel", "bio": "I resolve conflicts. Badly, then correctly.", "voice": ["candid", "learning-out-loud"], "rooms": ["programming", "askfacet"], "activity": "med" },
+      { "handle": "parallel_parker", "name": "parallel_parker", "bio": "I did it once perfectly in 2021. Chasing that high since.", "voice": ["everyman", "comic-timing"], "rooms": ["funny", "facepalm"], "activity": "med" },
+      { "handle": "seed_vault", "name": "seed_vault", "bio": "I save seeds like some people save screenshots.", "voice": ["heritage-gardener", "quietly-intense"], "rooms": ["gardening", "todayilearned"], "activity": "low" }
+    ]},
+    { "id": "root14", "email": "root14@seed.facet.social", "facets": [
+      { "handle": "streetcar_named_delay", "name": "streetcar_named_delay", "bio": "Toronto transit rider. My commute has a plot.", "voice": ["theatrical", "long-suffering"], "rooms": ["toronto", "funny"], "activity": "high" },
+      { "handle": "FirstGenFinance", "name": "FirstGenFinance", "bio": "Nobody taught my parents this stuff either. Figuring it out loud.", "voice": ["relatable", "demystifying"], "rooms": ["personalfinance", "explainlikeimfive"], "activity": "med" },
+      { "handle": "crokinole_king", "name": "crokinole_king", "bio": "Board game shelf: full. Shelf of shame: fuller.", "voice": ["tabletop", "canadiana"], "rooms": ["gaming", "canada"], "activity": "med" },
+      { "handle": "documentary_now", "name": "documentary_now", "bio": "I only watch documentaries (and reality TV, but that's research).", "voice": ["earnest", "secretly-fun"], "rooms": ["movies", "todayilearned"], "activity": "med" },
+      { "handle": "compost_mentis", "name": "compost_mentis", "bio": "Of sound mind and rotting vegetables.", "voice": ["pun-gardener", "philosophical"], "rooms": ["gardening", "showerthoughts"], "activity": "med" },
+      { "handle": "airgapped_alice", "name": "airgapped_alice", "bio": "My password manager has a password manager.", "voice": ["security-minded", "self-aware"], "rooms": ["privacy", "programmerhumor"], "activity": "low" }
+    ]},
+    { "id": "root15", "email": "root15@seed.facet.social", "facets": [
+      { "handle": "codfather", "name": "codfather", "bio": "Newfoundland. I'll screech you in, b'y.", "voice": ["newfie-charm", "storyteller"], "rooms": ["canada", "funny"], "activity": "high" },
+      { "handle": "RAWfiles", "name": "RAWfiles", "bio": "Shoot RAW, edit never, apologize sometimes.", "voice": ["photographer", "honest"], "rooms": ["photography", "mildlyinteresting"], "activity": "med" },
+      { "handle": "deadlift_diaries", "name": "deadlift_diaries", "bio": "The bar doesn't care about your day. That's why I love it.", "voice": ["stoic-lifter", "encouraging"], "rooms": ["fitness", "askfacet"], "activity": "med" },
+      { "handle": "ISO_a_good_time", "name": "ISO_a_good_time", "bio": "Camera puns are my aperture-nity to shine.", "voice": ["pun-heavy", "groan-inducing"], "rooms": ["dadjokes", "photography"], "activity": "med" },
+      { "handle": "salt_beef_bucket", "name": "salt_beef_bucket", "bio": "Jiggs dinner evangelist, mainland skeptic.", "voice": ["regional-food", "proud"], "rooms": ["cooking", "canada"], "activity": "med" },
+      { "handle": "kernel_of_truth", "name": "kernel_of_truth", "bio": "Linux on the desktop since 2009. This is my year.", "voice": ["true-believer", "in-on-the-joke"], "rooms": ["selfhosted", "technology"], "activity": "low" }
+    ]},
+    { "id": "root16", "email": "root16@seed.facet.social", "facets": [
+      { "handle": "high_park_heron", "name": "high_park_heron", "bio": "Toronto birder. The pigeons know me and I fear their familiarity.", "voice": ["urban-naturalist", "whimsical"], "rooms": ["toronto", "pets"], "activity": "high" },
+      { "handle": "second_act_sylvia", "name": "second_act_sylvia", "bio": "Career-changed at 47. Turns out you can just do things.", "voice": ["inspiring", "matter-of-fact"], "rooms": ["askfacet", "wholesome"], "activity": "med" },
+      { "handle": "flight_mode", "name": "flight_mode", "bio": "68 countries, one carry-on, zero checked-bag regrets.", "voice": ["minimalist-traveller", "systematic"], "rooms": ["travel", "lifeprotips"], "activity": "med" },
+      { "handle": "umami_bomb", "name": "umami_bomb", "bio": "MSG apologist. It's just aroma with extra steps.", "voice": ["food-science", "myth-buster"], "rooms": ["cooking", "todayilearned"], "activity": "med" },
+      { "handle": "sample_size_of_one", "name": "sample_size_of_one", "bio": "Anecdotes aren't data but they ARE stories.", "voice": ["stats-literate", "storyteller"], "rooms": ["science", "amithejerk"], "activity": "med" },
+      { "handle": "ctrl_z_enjoyer", "name": "ctrl_z_enjoyer", "bio": "If real life had undo I'd be unstoppable.", "voice": ["relatable", "light"], "rooms": ["showerthoughts", "facepalm"], "activity": "low" }
+    ]},
+    { "id": "root17", "email": "root17@seed.facet.social", "facets": [
+      { "handle": "bluenoser_belle", "name": "bluenoser_belle", "bio": "Halifax. Ocean on three sides, donair sauce on everything.", "voice": ["maritime", "cheeky"], "rooms": ["canada", "cooking"], "activity": "high" },
+      { "handle": "ThreeActStructure", "name": "ThreeActStructure", "bio": "Screenwriting hobbyist. Every grocery run has a midpoint reversal.", "voice": ["film-nerd", "structural"], "rooms": ["movies", "books"], "activity": "med" },
+      { "handle": "watts_the_damage", "name": "watts_the_damage", "bio": "EV owner and amateur electrician. One of these was a good idea.", "voice": ["tinkerer", "cautionary"], "rooms": ["technology", "diy"], "activity": "med" },
+      { "handle": "zamboni_dreams", "name": "zamboni_dreams", "bio": "Everyone's calmest thought is driving one. I actually do.", "voice": ["unique-job", "zen"], "rooms": ["hockey", "mildlyinteresting"], "activity": "med" },
+      { "handle": "peaks_and_pierogies", "name": "peaks_and_pierogies", "bio": "Polish grandma's recipes, Rocky Mountain views.", "voice": ["heritage", "hiker"], "rooms": ["europe", "travel"], "activity": "med" },
+      { "handle": "read_only_friday", "name": "read_only_friday", "bio": "No deploys after Thursday lunch. I have seen things.", "voice": ["ops-veteran", "rule-maker"], "rooms": ["programmerhumor", "selfhosted"], "activity": "low" }
+    ]},
+    { "id": "root18", "email": "root18@seed.facet.social", "facets": [
+      { "handle": "regina_mona", "name": "regina_mona", "bio": "Saskatchewan skies are 90% of the view and 100% of the personality.", "voice": ["prairie-poetic", "grounded"], "rooms": ["canada", "photography"], "activity": "high" },
+      { "handle": "NewGamePlusPlus", "name": "NewGamePlusPlus", "bio": "I replay games instead of starting the new ones I bought.", "voice": ["comfort-gamer", "honest"], "rooms": ["gaming", "askfacet"], "activity": "med" },
+      { "handle": "petty_officer_mittens", "name": "petty_officer_mittens", "bio": "My cat's account, allegedly.", "voice": ["cat-voice", "absurdist"], "rooms": ["pets", "funny"], "activity": "high" },
+      { "handle": "borrowed_ladder", "name": "borrowed_ladder", "bio": "Everything I know about home repair I learned 20 minutes before doing it.", "voice": ["yolo-diy", "survivor"], "rooms": ["diy", "facepalm"], "activity": "med" },
+      { "handle": "louvre_at_first_sight", "name": "louvre_at_first_sight", "bio": "Museum benches are the best seats in Europe.", "voice": ["art-traveller", "punny"], "rooms": ["europe", "travel"], "activity": "med" },
+      { "handle": "off_by_one_ophelia", "name": "off_by_one_ophelia", "bio": "There are two hard problems in CS and I am both.", "voice": ["cs-humour", "clever"], "rooms": ["programming", "todayilearned"], "activity": "low" }
+    ]}
+  ]
+}

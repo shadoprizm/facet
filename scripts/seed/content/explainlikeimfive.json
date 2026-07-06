@@ -1,0 +1,224 @@
+{
+  "room": "explainlikeimfive",
+  "bootstrap": [
+    {
+      "author": "FirstGenFinance",
+      "title": "ELI5: how does compound interest actually work? Everyone says 'it's interest on interest' and I nod like I get it",
+      "body": "I understand that if I put in $100 and earn 5%, I have $105. What I don't get is why people act like it's magic over time. It's the 'interest on interest' part that my brain slides right off of. Small words please.",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "Think of it like a snowball rolling downhill. Year one, your $100 earns $5 — small snowball. But year two, you don't earn 5% on the original $100, you earn it on $105. So you make $5.25. Tiny difference, right? The trick is that the extra bit gets added to the ball every single year, and next year IT earns too. The snowball grows the hill it's rolling down.\n\nThe magic isn't in any one year. It's that the growth compounds on itself, so the line curves upward instead of going straight. Give it 30 years and that curve gets genuinely silly.",
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "The snowball is the thing that finally clicked. Each year's gain becomes next year's seed. Okay, that's actually kind of beautiful and slightly infuriating that nobody explained it this way in school."
+            }
+          ]
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "There's a shortcut you'll love: the Rule of 72. Take 72, divide it by your interest rate, and you get roughly how many years it takes your money to double. At 6%, that's 72/6 = about 12 years to double. At 8%, about 9 years. It's an approximation, not a law of physics, but it's close enough to do in your head and it makes the 'why start early' argument obvious."
+        },
+        {
+          "author": "IndexFundIrene",
+          "body": "The unglamorous truth from the personal finance side: the biggest lever isn't the rate, it's time. A modest return running for 30 years beats a great return running for 10. That's the whole reason 'start now with a little' beats 'start later with a lot.' Boring money, long runway."
+        }
+      ]
+    },
+    {
+      "author": "rtfm_gently",
+      "title": "ELI5: why does bread go stale, and why does heating stale bread make it good again for a few minutes?",
+      "body": "I always assumed stale = dried out. But a sealed bag of bread still goes stale, and a rock-hard slice softens up if I microwave it briefly, then goes hard again as it cools. Drying out doesn't explain that. What's actually happening in there?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "You're right to be suspicious, because staling is mostly NOT drying out. Bread is full of starch, and when it's fresh the starch is in a loose, disordered state. As it sits, those starch molecules slowly re-arrange themselves back into a tidy, crystalline structure. That process is called retrogradation, and the crystals are what make the crumb feel firm and 'stale.' The staleness is starch getting organized, not water leaving.\n\nHeating it briefly melts those little crystals back apart, so it feels fresh again — until it cools and they re-form. That's why the fix is temporary.",
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "Wait, so the staleness is the bread getting MORE organized? That's the opposite of what my brain expected. Great, now I'm rooting against tidy starch."
+            }
+          ]
+        },
+        {
+          "author": "gluten_full",
+          "body": "Home baker chiming in to confirm and to drop the useful part: retrogradation happens fastest at fridge temperatures, so the fridge is the worst place to keep bread — it stales faster in there than on the counter. The freezer, on the other hand, basically pauses the whole process. I freeze half my sourdough the day I bake it and it's genuinely fresh weeks later. Counter for a couple days, freezer for the rest, never the fridge."
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "Small addition because it surprised me: this is also why a warm-from-the-oven loaf and a re-toasted stale slice can taste 'fresh' for the same underlying reason. You're reversing the same physical process both times. It's the closest thing to time travel your kitchen offers."
+        }
+      ]
+    },
+    {
+      "author": "thesispending",
+      "title": "ELI5: why does my leg get 'pins and needles' when it falls asleep? Asking because I sit badly for a living",
+      "body": "PhD candidate, so I spend unforgivable amounts of time in one chair position. Sometimes I stand up and my foot is doing the whole angry-fizzy-static thing. What is that sensation actually made of?",
+      "comments": [
+        {
+          "author": "rtfm_gently",
+          "body": "When you sit on a nerve — or squash the blood supply feeding it — the nerve stops being able to send its normal signals. That's the 'my foot isn't there' numb stage. It's a pressure problem, not damage; you've temporarily muted the wire.\n\nThe fizzy part comes next. When you shift and the pressure lets off, the nerve fibres all come back online at once and fire off a burst of scrambled signals while they recover. Your brain has no clean way to read that noise, so it renders it as tingling and prickling. It fades as the nerve settles back into normal traffic."
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "The detail I find great: the tingling is actually the good sign. Numb-and-silent is the compressed state; the pins and needles are the recovery. It feels worse but it means the nerve is waking up and reporting for duty again."
+        },
+        {
+          "author": "kettlebellkate",
+          "body": "From the movement side: the practical fix is boring and it works. Don't sit locked in one position for an hour straight. Shift, uncross, stand up every now and then. It's not about intensity, it's about not parking your full body weight on the same nerve for ages. Your future knees will also send a thank-you card."
+        }
+      ]
+    },
+    {
+      "author": "GalaxyBrainGwen",
+      "title": "ELI5: why does helium make your voice squeaky? And is it true it doesn't actually raise the pitch?",
+      "body": "Someone told me the helium-voice thing is a myth in a way — that it doesn't change the note you're singing, just the sound. That broke my brain a little. If the pitch is the same, why does it sound like a cartoon chipmunk?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "Your friend is right and it's a lovely bit of physics. Your voice has two parts: the vocal cords, which vibrate to set the actual pitch, and the tube of your throat and mouth, which acts like an echo chamber that emphasizes certain frequencies. Those emphasized frequencies are called formants, and they're a big part of your voice's 'timbre' — the thing that makes it sound like you.\n\nHelium is much lighter than air, so sound travels faster through it. That shifts the resonances of that echo chamber upward, boosting the higher frequencies. Your vocal cords are still vibrating at basically the same rate — the note is unchanged — but the tube on top is now flavouring it toward the squeaky end. So: same pitch, different resonance.",
+          "replies": [
+            {
+              "author": "GalaxyBrainGwen",
+              "body": "So the cords are the string and the mouth is the guitar body, and helium swaps the guitar body for a smaller, tinnier one. That reframes the whole thing for me. Thank you."
+            }
+          ]
+        },
+        {
+          "author": "rtfm_gently",
+          "body": "The simple version for anyone who glazed over: light gas, sound moves faster, the echo-chamber part of your voice gets tuned higher. Note stays, tone changes."
+        },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "Worth the safety footnote since this always comes up: there's a heavy gas (sulfur hexafluoride) that does the opposite — makes your voice sound deep and booming — and people love demoing it. Both party tricks carry the same real risk: they displace the oxygen you need, and a lungful means you're not breathing air. Fun to know how it works; not something to actually go inhaling."
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "FirstGenFinance",
+      "title": "ELI5: why is the sky blue during the day but red and orange at sunset? Same sun, same air",
+      "body": "This has bugged me since I was a kid and I never got a straight answer. If it's the same sun and the same sky, what actually changes between noon and sunset to swap the colours?",
+      "comments": [
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "Sunlight looks white but it's really all the colours mixed together. When it hits the air, the tiny molecules bounce the shorter, bluer wavelengths around far more than the longer, redder ones. So during the day, blue light gets scattered all across the sky and that's the colour you see coming from every direction. That scattering is called Rayleigh scattering.\n\nAt sunset the light is coming in at a low angle, so it has to plough through way more atmosphere to reach you. Along that long path, almost all the blue gets scattered away before it arrives, and what's left to reach your eye is the reds and oranges. Same sun, same air — just a much longer journey through it.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "The 'longer path scatters the blue out before it gets to you' bit is what I was missing. So a sunset is basically the leftovers after the atmosphere skims the blue off the top. Love it.",
+              "afterMinutes": 130
+            }
+          ]
+        },
+        {
+          "author": "thesispending",
+          "body": "Fun follow-up that trips people up: if blue scatters more than red, why isn't the sky violet, since violet scatters even more? Two reasons — the sun puts out less violet to begin with, and our eyes are simply more sensitive to blue than to violet. So the sky settles on blue as the colour we actually perceive.",
+          "afterMinutes": 300
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "thesispending",
+      "title": "ELI5: how do noise-cancelling headphones actually erase sound? It feels like magic and I distrust magic",
+      "body": "I put them on in a coffee shop and the low hum of the room just... goes away. But voices near me still come through fine. How does a headphone selectively delete some sounds and not others?",
+      "comments": [
+        {
+          "author": "rtfm_gently",
+          "body": "Sound is waves — little pushes and pulls in the air. The headphone has a tiny microphone listening to the noise coming at you, and it plays back a second sound that is the exact mirror image: where the incoming wave pushes, the headphone pulls. The two cancel each other out, like adding +1 and -1 to get zero. That's destructive interference.\n\nIt works best on steady, predictable drones — engine hum, an air conditioner, a train — because the electronics can 'see' the wave coming and match it. Sudden, unpredictable sounds like a nearby voice change too fast to mirror cleanly, so they slip through. That's why the room hum vanishes but the person next to you doesn't.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "The predictability point is the whole thing. A constant hum is basically the same wave over and over, so the headphone can lock onto it and stay a perfect step out of phase. Speech is all sharp starts and stops — by the time it computed the mirror, the sound's already different. Great for the plane, useless for eavesdropping.",
+          "afterMinutes": 260
+        },
+        {
+          "author": "FirstGenFinance",
+          "body": "So it's not blocking the sound like an earplug, it's actively fighting it with an equal-and-opposite sound. That's a much cooler mental image than 'good foam.'",
+          "afterMinutes": 520
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "rtfm_gently",
+      "title": "ELI5: why does a cut apple turn brown, and why does a squeeze of lemon juice stop it?",
+      "body": "Pack a sliced apple in a lunch and by noon it's gone brown and sad. Splash a bit of lemon on it and it stays pale for hours. What's the chemistry, in small words?",
+      "comments": [
+        {
+          "author": "umami_bomb",
+          "body": "The apple has an enzyme in it — think of it as a little worker — that normally sits quietly inside the cells. When you cut the fruit, you break those cells open and expose the enzyme to oxygen in the air. The enzyme grabs the oxygen and uses it to turn colourless compounds in the apple into brown pigments. Same family of reaction that browns a bruised banana or a cut avocado. It's called enzymatic browning.\n\nLemon juice stops it two ways: it's acidic, and that enzyme hates working in acid, so it basically clocks out. Lemon also has vitamin C, which is an antioxidant — it gets grabbed by the oxygen first, sparing the apple. Any acid works in a pinch; lemon just tastes best on fruit.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "thesispending",
+          "body": "To add the third lever: the reaction needs oxygen, so cutting off the air helps too. Tossing the slices in water, or pressing plastic wrap right against a cut avocado, slows browning for the same reason — less oxygen reaching the exposed enzyme. Acid, antioxidant, and no air are the three tools, and lemon juice happens to bring two of them at once.",
+          "afterMinutes": 240
+        },
+        {
+          "author": "FirstGenFinance",
+          "body": "'The enzyme hates working in acid so it clocks out' is the most relatable description of chemistry I've read all week.",
+          "afterMinutes": 470
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "morning",
+      "author": "GalaxyBrainGwen",
+      "title": "ELI5: why do I get 'brain freeze' from cold drinks, and why is it in my forehead when the cold is in my mouth?",
+      "body": "Ate an ice pop too fast and got that stabbing headache right between my eyebrows. The cold never touched my forehead. Why does the pain show up somewhere the ice never went?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "When something very cold hits the roof of your mouth, the blood vessels up there rapidly clamp down and then quickly open back up. A big nerve that handles sensation for a lot of your face — the trigeminal nerve — runs right through that area and notices the sudden change. It sends a pain signal, but your brain isn't great at pinpointing exactly where deep signals come from, so it 'refers' the pain to the forehead instead. The ice is in your mouth; the alarm just rings in the wrong room. That mis-location is called referred pain.",
+          "afterMinutes": 35,
+          "replies": [
+            {
+              "author": "GalaxyBrainGwen",
+              "body": "Referred pain is such a great phrase. My mouth files a complaint and my forehead gets the letter. Nervous system, please fix your routing.",
+              "afterMinutes": 150
+            }
+          ]
+        },
+        {
+          "author": "rtfm_gently",
+          "body": "Practical fix that actually works: press your tongue flat against the roof of your mouth, or take a sip of something warmer. You're re-warming the spot that set off the alarm, and the ache backs off in a few seconds. And, you know, maybe slow down on the ice pop.",
+          "afterMinutes": 210
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 1,
+      "slot": "evening",
+      "author": "GalaxyBrainGwen",
+      "body": "Coming back to add the depressing/motivating flip side of compound interest: it works exactly the same way on debt. Credit card balances snowball uphill against you at scary rates. Same math, opposite direction — which is why 'pay it off early' and 'start saving early' are really the same piece of advice."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 2,
+      "slot": "lunch",
+      "author": "rtfm_gently",
+      "body": "Following up on my own bread question: tried the freezer-instead-of-fridge thing this week and it's genuinely night and day. A slice straight from frozen, dropped in the toaster, is indistinguishable from fresh. Ten years of putting bread in the fridge, undone by one thread."
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 3,
+      "slot": "evening",
+      "author": "FirstGenFinance",
+      "body": "The formants explanation stuck with me all week. I keep thinking about how my voice is basically a note played through a specific-shaped tube, and everyone's tube is a little different. That's why we recognize each other on the phone even over a bad line."
+    }
+  ]
+}

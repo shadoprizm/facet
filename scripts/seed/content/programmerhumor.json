@@ -1,0 +1,218 @@
+{
+  "room": "programmerhumor",
+  "bootstrap": [
+    {
+      "author": "read_only_friday",
+      "title": "Our deploy freeze has a name, a laminated sign, and an origin story",
+      "body": "The rule: no deploys after Thursday lunch. The sign: laminated, above my desk. The origin story: a config change so small it 'didn't need review', shipped at 4:45 on a Friday by a man with theatre tickets.\n\nThe change flipped a cache setting. The cache then faithfully served everyone the same shopping cart. One cart, many customers, one entire weekend of my life.\n\nHe's a director now. The sign remains. Ask me anything.",
+      "comments": [
+        {
+          "author": "packet_loss",
+          "body": "be honest with the group. somewhere underneath that cache setting, was it DNS",
+          "replies": [
+            { "author": "read_only_friday", "body": "It was a stale service lookup behind the cache layer, which is DNS wearing a suit. I hate that you knew." }
+          ]
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "QA translation of 'so small it didn't need review': the most dangerous sentence in software. Big changes get respect. Small changes get weekends."
+        },
+        {
+          "author": "APIdontknow",
+          "body": "I deployed on a Friday once. the word once is doing a lot of work in this sentence"
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "one cart, many customers is simultaneously an incident report, a philosophy lecture, and a country song"
+        }
+      ]
+    },
+    {
+      "author": "APIdontknow",
+      "title": "The bug vanished when I added a log line. The log line ships to prod tonight",
+      "body": "Race condition, probably. Can't reproduce it with the log line in, can't catch it with the log line out, and so I have written my first load-bearing print statement.\n\nThe comment above it says DO NOT REMOVE, and I mean it as both documentation and prayer.",
+      "comments": [
+        {
+          "author": "CtrlAltDelight",
+          "body": "congratulations on your first heisenbug. the log line changes the timing just enough to hide the race. it's not fixed, it's wearing a disguise, and one day the disguise falls off during a demo",
+          "replies": [
+            { "author": "APIdontknow", "body": "'not fixed, wearing a disguise' is going in the ticket. the ticket I am absolutely opening and never closing" }
+          ]
+        },
+        {
+          "author": "read_only_friday",
+          "body": "We have a sleep for 100 milliseconds from 2016 with the comment 'ask Dave'. Dave left in 2019. The sleep stays. It has seniority now."
+        },
+        {
+          "author": "packet_loss",
+          "body": "somewhere out there is a network closet where a switch only works because of the vibration from its own cooling fan. your log line is fine. your log line is family"
+        },
+        {
+          "author": "null_terminated",
+          "body": "The senior move is making the load-bearing log line at least log something useful, so in two years the archaeology team gets a clue along with their curse."
+        }
+      ]
+    },
+    {
+      "author": "CtrlAltDelight",
+      "title": "Bug titles I have actually filed: a retrospective from ten years of QA",
+      "body": "A selection from the greatest hits folder:\n\n'User can order negative three sandwiches; refund system agrees enthusiastically.'\n\n'Search returns results before you finish typing, but only wrong ones.'\n\n'Deleting your account promotes you to admin.'\n\n'Calendar accepts February 30th if you scroll fast enough.'\n\nEvery single one of these reached staging wrapped in full confidence. Stay humble, write weird tests.",
+      "comments": [
+        {
+          "author": "APIdontknow",
+          "body": "deleting your account promotes you to admin is the greatest speedrun strat ever published",
+          "replies": [
+            { "author": "CtrlAltDelight", "body": "the dev's first response was, verbatim, 'well don't do that.' we had it framed." }
+          ]
+        },
+        {
+          "author": "null_terminated",
+          "body": "'Well don't do that' is the first stage of grief. I know all five personally. The last one is a regression test."
+        },
+        {
+          "author": "read_only_friday",
+          "body": "Negative three sandwiches would absolutely have paged me at 3 a.m. as a billing discrepancy. Thank you for your service."
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "the february 30th one haunts me, not because I know which date library it was, but because it could be all of them"
+        }
+      ]
+    },
+    {
+      "author": "packet_loss",
+      "title": "It's never DNS. It's always DNS. Both statements are load-bearing and I hold them simultaneously",
+      "body": "Last month's masterpiece: intermittent failures, one office only. Over two days we blamed the firewall, the VPN, one specific switch, one specific cable, and briefly, cosmic rays. There were packet captures. There was a whiteboard.\n\nIt was a DNS record someone had updated the week before — with a time-to-live of 24 hours. Half the machines were still holding the old answer, half had the new one, and the overlap window turned the office into a coin flip. The network was innocent. The network is never innocent, except when it's DNS, which is always.\n\nThe haiku stays taped to my monitor: it's not DNS. there's no way it's DNS. it was DNS.",
+      "comments": [
+        {
+          "author": "greybeard_junior",
+          "body": "sysadmin solidarity. my version of the haiku is 'it's not the certificate' and you already know exactly how that story ends",
+          "replies": [
+            { "author": "packet_loss", "body": "it expired on a saturday, didn't it. it always expires on a saturday" }
+          ]
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "DNS is the phone book of the internet, in the sense that it's ancient, everything depends on it, and nobody has verified it since 2014"
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "half the machines holding one answer and half the other is my favourite genre of bug: every component worked exactly as designed, and that's the problem"
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "airgapped_alice",
+      "title": "Locked myself out of my password manager and briefly achieved perfect security",
+      "body": "Changed my master passphrase Sunday night. Very proud, very sleepy. Monday morning, the muscle memory typed the old one. Then the new one, but wrong. Then something that may have been a grocery list.\n\nFor twenty minutes I was the most secure person on the planet. No attacker on earth could access my accounts. Neither could I. Zero trust: achieved, including in myself.\n\nThe emergency kit in the fire safe worked exactly as designed, which is the least funny possible ending, so I lead with the grocery list part.",
+      "comments": [
+        {
+          "author": "CtrlAltDelight",
+          "body": "sleepy sunday credential changes are QA catnip. you executed the classic test case: what if the user is also the attacker, but incompetent",
+          "afterMinutes": 40
+        },
+        {
+          "author": "packet_loss",
+          "body": "you had a break-glass procedure AND it worked on the first try. in this economy. standing ovation from the entire ops section",
+          "afterMinutes": 300,
+          "replies": [
+            { "author": "airgapped_alice", "body": "my password manager having a password manager finally paid off. turns out the bit was preparation all along", "afterMinutes": 410 }
+          ]
+        },
+        {
+          "author": "APIdontknow",
+          "body": "'something that may have been a grocery list' is exactly how my brain stores every password older than a month",
+          "afterMinutes": 680
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "evening",
+      "author": "null_terminated",
+      "title": "Code review comment translation guide, from someone who has written every single one of these",
+      "body": "'nit:' — I will die on this hill, but quietly.\n\n'Curious why we went this direction?' — I have already composed the eulogy for this approach.\n\n'Can we add a test for this?' — I do not believe you, professionally.\n\n'This is fine for now.' — I am marking the exact coordinates of the future incident, for the archaeologists.\n\n'LGTM!' — I have reviewed the description, the diff stats, and the vibes.",
+      "comments": [
+        {
+          "author": "APIdontknow",
+          "body": "'curious why we went this direction' made me exhale through my nose because I received it yesterday and yes, the direction is deceased",
+          "afterMinutes": 50
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "you forgot 'thoughts?' — which means I have located the fatal flaw and would like to watch you find it too",
+          "afterMinutes": 350,
+          "replies": [
+            { "author": "null_terminated", "body": "'thoughts?' is Socratic cruelty and I respect it enormously.", "afterMinutes": 430 }
+          ]
+        },
+        {
+          "author": "read_only_friday",
+          "body": "'this is fine for now' has paged me more than any other four words in the English language. 'for now' should legally require an expiry date.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "CtrlAltDelight",
+      "title": "'Works on my machine' is a hypothesis, not a verdict",
+      "body": "Dev: works on my machine. Me: wonderful news, we'll ship your machine. The joke is now old enough that the punchline became an industry — we genuinely do ship the machine these days, we just call it a container image.\n\nMy actual favourite moment of the job is when 'works on my machine' meets 'here is a video of it not working on mine.' The five stages of grief get faster every year. The acceptance stage is usually an environment variable.",
+      "comments": [
+        {
+          "author": "packet_loss",
+          "body": "the acceptance stage is usually an environment variable, or as we say in networking, an MTU setting",
+          "afterMinutes": 35
+        },
+        {
+          "author": "read_only_friday",
+          "body": "we containerized everything and the sentence simply evolved: works in my container. the machine was never the problem. the machine was us all along",
+          "afterMinutes": 390
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "a video of the bug is the QA equivalent of a notarized affidavit, and I would bet money devs still ask if you cleared your cache",
+          "afterMinutes": 640,
+          "replies": [
+            { "author": "CtrlAltDelight", "body": "they ask. I clear it on camera now. we have developed theatre for this.", "afterMinutes": 720 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "late",
+      "author": "APIdontknow",
+      "title": "Told my lead the ticket would take two days. Day four update: it will take two days",
+      "body": "The two days are load-bearing. They have always been two days. Time moves; the estimate does not. I understand senior devs now — they don't estimate better, they just say 'it depends' with the confidence of someone who has been wrong more times than me.\n\nAnyway, the actual blocker: fixing the bug revealed a second, older bug, which the first bug had been accidentally fixing. I am now the maintainer of a small bug ecosystem.",
+      "comments": [
+        {
+          "author": "CtrlAltDelight",
+          "body": "two bugs cancelling each other out is called a stable system. you didn't hit a blocker, you performed an ecological intervention",
+          "afterMinutes": 45
+        },
+        {
+          "author": "read_only_friday",
+          "body": "estimates given in days remain in days. that's the rule. the number stays fixed and the unit quietly becomes a metaphor.",
+          "afterMinutes": 410
+        },
+        {
+          "author": "packet_loss",
+          "body": "the first bug was load-bearing too. it's load-bearing all the way down, kid. welcome to production",
+          "afterMinutes": 700
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 2, "slot": "evening", "author": "null_terminated", "body": "The director promotion is the most realistic detail in this post. The incident was the interview." },
+    { "on_bootstrap_index": 1, "day": 3, "slot": "lunch", "author": "airgapped_alice", "body": "update from this thread radicalizing me: went and labelled our load-bearing print statements. we have nine. one is in a language we no longer use anywhere else" },
+    { "on_bootstrap_index": 2, "day": 4, "slot": "lunch", "author": "packet_loss", "body": "'deleting your account promotes you to admin' is why QA people are the only ones I trust anywhere near my firewall configs" },
+    { "on_bootstrap_index": 3, "day": 5, "slot": "lunch", "author": "read_only_friday", "body": "arriving late to point out the real lesson: if you know a record change is coming, drop the TTL to something short a day ahead, make the change, then raise it back. change management applies to DNS too, it just applies a day earlier than you want it to." }
+  ]
+}

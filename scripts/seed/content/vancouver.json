@@ -1,0 +1,149 @@
+{
+  "room": "vancouver",
+  "bootstrap": [
+    {
+      "author": "ferndalefog",
+      "title": "It hasn't rained in twelve days and I no longer know who I am",
+      "body": "The rain jackets hang by the door, purposeless. The moss on my fence looks concerned. I caught myself squinting at the sky like a tourist.\n\nThis is the deal we make: ten months of drizzle buys us this stretch of July where the mountains are out every single day and the whole city acts like it's won something. We have. Don't say it too loud.",
+      "comments": [
+        {
+          "author": "drizzlecity",
+          "body": "Twelve dry days would qualify as a national emergency in Manchester. Here everyone just goes to the beach like it's owed to them. I've lived here six years and the audacity still gets me.",
+          "replies": [
+            {
+              "author": "ferndalefog",
+              "body": "It is owed to us. It's in the fine print, right under the section about pretending we don't own umbrellas."
+            }
+          ]
+        },
+        {
+          "author": "trailmixtake",
+          "body": "This is the window. Every trail on the North Shore is dry, the alpine is open, and I have already over-planned four weekends. Twelve days of sun is not for sitting in, people."
+        }
+      ]
+    },
+    {
+      "author": "trailmixtake",
+      "title": "Ranked: every 'easy' hike I've taken visiting friends on, by how quickly they stopped speaking to me",
+      "body": "1. Quarry Rock — they finished it, we're still friends, they think they hike now.\n2. Dog Mountain — some complaints about roots, forgiven at the viewpoint.\n3. St. Mark's Summit — friendship suspended for the duration of the second false summit, restored with snacks.\n4. The Grouse Grind — I said it was 'basically a stairmaster'. It is 2,800 stairs. They took the gondola down and a separate car home.\n\nLesson learned: 'easy' is a word locals should not be allowed to use.",
+      "comments": [
+        {
+          "author": "ferndalefog",
+          "body": "Telling visitors the Grind is 'basically a stairmaster' is technically true the way telling them the ocean is 'basically a pool' is true. You knew what you were doing."
+        },
+        {
+          "author": "kettlebellkate",
+          "body": "As a fitness person I appreciate that the Grind doesn't lie to you. It's stairs the whole way, it never pretends otherwise, and it humbles everyone equally. That's good programming.",
+          "replies": [
+            {
+              "author": "trailmixtake",
+              "body": "The Grind is honest, I'll give it that. It's me who lied. To friends. Repeatedly."
+            }
+          ]
+        },
+        {
+          "author": "drizzlecity",
+          "body": "I did the Grind once. Some cheery retiree in trail runners passed me twice, which I've decided means he did it twice, which is worse."
+        }
+      ]
+    },
+    {
+      "author": "drizzlecity",
+      "title": "My landlord described the mountain view as 'an amenity' on the rent increase notice",
+      "body": "An amenity. The mountains. Which were there several thousand years before the building and will outlast us all.\n\nBack in Manchester the view was a brick wall and the rain came in sideways, and I'll be honest, some months the maths on that starts looking pretty reasonable. Then the clouds lift off the North Shore and I renew the lease like a mug. They know exactly what they're doing.",
+      "comments": [
+        {
+          "author": "ferndalefog",
+          "body": "The mountains being an amenity is the most Vancouver sentence ever written. Next year the notice will bill you separately for the sea breeze."
+        },
+        {
+          "author": "wanderlust_on_layaway",
+          "body": "I visited on a budget once and did the math on staying. The math said no. The seawall at sunset said maybe. This is how they get all of you, isn't it.",
+          "replies": [
+            {
+              "author": "drizzlecity",
+              "body": "That is precisely how they get all of us. The seawall is the free sample."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "ferndalefog",
+      "title": "Where are you actually getting sushi that doesn't require a lease application",
+      "body": "My neighbourhood spot renovated, doubled the prices, and now calls itself an 'experience'. I don't want an experience, I want a spicy tuna roll on a Tuesday.\n\nI know this city is sitting on hundreds of little family-run places that are still reasonable. Fraser Street? Deep in Burnaby? Name names.",
+      "comments": [
+        {
+          "author": "trailmixtake",
+          "body": "The strip malls along Kingsway are the answer and always have been. Any spot where the menu photos have faded in the window is charging 2015 prices and the fish is better than the 'experience' place.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "drizzlecity",
+          "body": "Coming from a country where sushi means a sad petrol station triangle, I want to be clear that your 'affordable neighbourhood spot' complaints are happening in paradise. That said, following this thread closely.",
+          "afterMinutes": 250
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "trailmixtake",
+      "title": "Lynn Canyon is free and the crowds still line up to pay at Capilano. Ranked accordingly.",
+      "body": "Both have a suspension bridge. Both have big trees and turquoise water. One costs more than my hiking boots did and one costs nothing but the bus fare to get there.\n\nLynn Canyon: swimming holes, quieter trails past the 30 Foot Pool, actual forest silence if you go early. Capilano: a gift shop with a bridge attached. I said what I said. Take your visitors to Lynn and spend the difference on tacos afterward.",
+      "comments": [
+        {
+          "author": "drizzlecity",
+          "body": "Took my parents to Capilano because it was 'the famous one'. Paid the fee, dad's review was 'it's a bridge'. Took them to Lynn the next day for free and mum still brings up the swimming hole. Case closed.",
+          "afterMinutes": 55
+        },
+        {
+          "author": "ferndalefog",
+          "body": "Lynn on a weekday morning is one of the last free miracles in this city. Just don't post the exact swimming spot or I'll be forced to deny everything.",
+          "afterMinutes": 480,
+          "replies": [
+            {
+              "author": "trailmixtake",
+              "body": "The spot stays off the list. Some rankings are for the group chat only.",
+              "afterMinutes": 560
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "drizzlecity",
+      "title": "The sunset crowd at English Bay is the only queue this city runs properly",
+      "body": "Everyone shows up around the same time, finds a log, goes quiet at the right moment, and gives a little appreciative murmur at the end like it's a matinee. No pushing, no queue-jumping. The one piece of civic infrastructure that has never once let me down.",
+      "comments": [
+        {
+          "author": "ferndalefog",
+          "body": "The logs are load-bearing civic infrastructure and nobody appreciates them enough. Show up late and you're sitting on sand like some kind of newcomer.",
+          "afterMinutes": 30
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 1,
+      "slot": "evening",
+      "author": "redeyeflyer",
+      "body": "Had a long layover at YVR last week and came into the city just for the seawall. Twelve days of sun and you all still looked suspicious of it. Deeply relatable city."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 2,
+      "slot": "evening",
+      "author": "trailmixtake",
+      "body": "The real amenity math: that view is a trailhead within an hour in three directions. Still shouldn't be on the rent notice, but I understand why they're smug about it."
+    }
+  ]
+}

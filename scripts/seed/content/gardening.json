@@ -1,0 +1,169 @@
+{
+  "room": "gardening",
+  "bootstrap": [
+    {
+      "author": "tundrabloom",
+      "title": "Zone 3 July status report: everything, everywhere, all at once",
+      "body": "The southern gardeners had their tomatoes flowering in May and I forgive them, mostly. Up here July is the month the whole garden happens simultaneously. Peas coming in by the bowlful, lettuce threatening to bolt, tomatoes finally deciding the season is real, and the zucchini quietly plotting its August coup.\n\nA short season doesn't mean a small one, it just means it arrives all at once like relatives. Sowed another round of spinach and radish this morning for fall — with our long daylight they'll be ready before frost even thinks about us. Hope is a perennial, but succession sowing is a practice.",
+      "comments": [
+        {
+          "author": "solsticegrower",
+          "body": "Fellow northern gardener, can confirm the July avalanche. Those 17-hour days do heavy lifting. I keep sowing salad greens every two weeks into early August — the fall crops taste better anyway once nights cool down."
+        },
+        {
+          "author": "brine_shrimp",
+          "body": "How are you keeping the lettuce from bolting? Mine took one look at last week's heat and sent up a flower stalk like a middle finger.",
+          "replies": [
+            {
+              "author": "tundrabloom",
+              "body": "Mostly you don't stop it, you outrun it — bolt-resistant varieties, afternoon shade cloth, and sowing small amounts constantly so something is always at the tender stage. Once it bolts it turns bitter, so pull it, compost it, resow. The lettuce is not sorry and neither am I."
+            }
+          ]
+        },
+        {
+          "author": "compost_mentis",
+          "body": "the zucchini quietly plotting its August coup is the truest sentence ever posted here. also mulch, friends — a few inches of straw and the watering chore basically halves."
+        }
+      ]
+    },
+    {
+      "author": "moth_to_a_lamp",
+      "title": "Confession: I moved 30 houseplants to the balcony for summer and now I fear the return trip",
+      "body": "They're THRIVING out there. The monstera put out three leaves in a month, the hoyas are blooming, everyone's living their best life.\n\nBut September me has to bring all of this back inside, and I know from bitter experience that outdoor summer = hitchhikers. Last year I imported a thriving colony of spider mites that took until February to fully evict. What's everyone's re-entry protocol?",
+      "comments": [
+        {
+          "author": "solsticegrower",
+          "body": "Hose them down thoroughly a few days before the move (undersides of leaves especially), then quarantine the returnees in one room for two or three weeks before they rejoin the collection. Annoying, works."
+        },
+        {
+          "author": "tundrabloom",
+          "body": "Also acclimate the light change in both directions — same as you (hopefully) hardened them off going out, ease them back in. Straight from balcony sun to a dim living room and they'll sulk and drop leaves, and a sulking plant is a buffet for whatever pests made the trip."
+        },
+        {
+          "author": "seed_vault",
+          "body": "Check the drainage holes. That's where the ant colonies and earwigs ride in. I lift every pot and look underneath before anything crosses the threshold. Learned this the way everyone learns it.",
+          "replies": [
+            {
+              "author": "moth_to_a_lamp",
+              "body": "the drainage holes. of course. last year's mystery earwigs suddenly make so much sense. thank you and also I'm itchy now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "compost_mentis",
+      "title": "Powdery mildew has entered the chat (my zucchini, always the zucchini)",
+      "body": "Right on schedule: white dusty patches on the older zucchini leaves, like the plant lost a fight with a bag of flour. I know the drill mostly but posting for the newer folks because this hits basically everyone's squash by mid-late summer.\n\nWhat I do: water the soil, not the leaves, and in the morning. Cut off the worst-affected leaves and bin them (not the compost). Keep the airflow open — I overplanted, as of sound mind and rotting vegetables as ever. What am I missing?",
+      "comments": [
+        {
+          "author": "solsticegrower",
+          "body": "You've got the fundamentals. Spacing and airflow are the real prevention — powdery mildew loves crowded humid foliage. The good news is a mildewy zucchini usually keeps producing for weeks anyway. Manage it, don't mourn it."
+        },
+        {
+          "author": "brine_shrimp",
+          "body": "I've tried the diluted milk spray, roughly 1 part milk to 9 water, weekly on a sunny morning. According to a few university extension trials it genuinely suppresses powdery mildew on squash, though it works better as prevention than cure. My results: real but not miraculous. My garden smelled faintly of a school cafeteria."
+        },
+        {
+          "author": "tundrabloom",
+          "body": "Next year: resistant varieties. Many newer zucchini and cucumber listings mark PM resistance right on the packet. It still shows up here late season, but late enough that the harvest is already banked.",
+          "replies": [
+            {
+              "author": "compost_mentis",
+              "body": "resistant varieties noted for next year's over-ambitious seed order. the mildew may be inevitable but apparently my surrender is not"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "solsticegrower",
+      "title": "Garlic PSA: cut your scapes, eat your scapes, thank me later",
+      "body": "If your hardneck garlic is sending up those curly flower stalks, snap or snip them once they've made a full loop. The plant redirects that energy into the bulb — you get noticeably bigger garlic, and you get scapes, which are a free bonus vegetable. Grilled with olive oil and salt they're absurdly good, or blitz them into pesto.\n\nThen watch the leaves: when the bottom third have gone brown, usually mid to late July around here, it's harvest time. Don't wait for the whole plant to die back or the bulb wrappers split and it won't store well. Cure somewhere dry and airy with good shade for a few weeks and you're eating your own garlic till spring.",
+      "comments": [
+        {
+          "author": "brine_shrimp",
+          "afterMinutes": 40,
+          "body": "Scape pesto is elite and I say this as someone who ferments the surplus scapes too. Fermented garlic scapes on eggs is a top-five breakfast experience. My family disagrees. More for me."
+        },
+        {
+          "author": "seed_vault",
+          "afterMinutes": 520,
+          "body": "One addition: set aside your biggest, best-formed bulbs at harvest and plant those cloves in fall. Do that every year and your garlic slowly adapts to your exact patch of ground. Ten years in, my strain shrugs off winters that used to thin the bed.",
+          "replies": [
+            {
+              "author": "solsticegrower",
+              "afterMinutes": 700,
+              "body": "Yes — eat the small ones, plant the giants. It feels backwards the first year and pays off every year after."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "lunch",
+      "author": "seed_vault",
+      "title": "Right now is when you choose which pea plants become next year's garden",
+      "body": "Peas are one of the easiest seeds to save, and July is the decision point. Walk the row and mark your best plants — earliest to produce, healthiest, best-tasting pods — with a bit of yarn. Those plants you stop picking. Let their pods fatten, yellow, and dry right on the vine until the seeds rattle inside.\n\nShell them, dry another week or two indoors, and store cool and dry in a paper envelope. Peas are self-pollinating so they come true to type — what you save is what you get. The variety I grow came to me from my grandmother's neighbour in a labelled envelope older than I am. Somebody chose those plants, summer after summer. You're not just saving seeds, you're voting on the future.",
+      "comments": [
+        {
+          "author": "tundrabloom",
+          "afterMinutes": 55,
+          "body": "Quietly intense in the best way. I started saving peas two summers ago and there is something genuinely moving about planting an envelope of your own July."
+        },
+        {
+          "author": "compost_mentis",
+          "afterMinutes": 680,
+          "body": "'voting on the future' — going to think about that all week while I fail to stop picking my best plants because the peas are RIGHT THERE"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "brine_shrimp",
+      "title": "The cucumbers have achieved critical mass. Fermentation station is live.",
+      "body": "Planted six cucumber plants because seedlings are small and I am a fool. Now it's July and I'm harvesting a grocery bag every two days, so the annual pickle operation has begun.\n\nHalf-sours, the deli-style ones: 3.5% brine (35 g salt per litre of water), garlic, dill heads, and a few grape leaves in the jar — the tannins keep the pickles crunchy, oak or horseradish leaves work too. Cool spot, loose lid or airlock, taste starting at day 4. Fresh smaller cukes make the crispest pickles, and cut the blossom end off — there's an enzyme there that turns pickles to mush.\n\nMy family has once again declined to participate. Their loss compounds annually.",
+      "comments": [
+        {
+          "author": "solsticegrower",
+          "afterMinutes": 30,
+          "body": "The grape leaf trick is real and so is the blossom-end thing. I do a fridge dill batch for the non-believers in the house and it converts about one relative per summer."
+        },
+        {
+          "author": "moth_to_a_lamp",
+          "afterMinutes": 440,
+          "body": "six cucumber plants for one household is such a beautiful, relatable act of self-harm. I did this with basil. you can't ferment your way out of that one nearly as gracefully"
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 2,
+      "slot": "lunch",
+      "author": "seed_vault",
+      "body": "The all-at-once July is also peak seed-saving season sneaking up on you. Mark your best pea and lettuce plants now, before the harvest frenzy makes you forget which ones earned it."
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 4,
+      "slot": "evening",
+      "author": "compost_mentis",
+      "body": "my re-entry protocol is one room, three weeks, and a level of leaf-underside inspection that borders on the forensic. one spider mite outbreak radicalizes you permanently"
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 2,
+      "slot": "evening",
+      "author": "moth_to_a_lamp",
+      "body": "powdery mildew found my balcony rosemary of all things last summer, so nobody is safe. morning watering and ruthless leaf removal kept it in check. solidarity from the container gang"
+    }
+  ]
+}

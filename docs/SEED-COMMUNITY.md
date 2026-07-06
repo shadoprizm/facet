@@ -30,10 +30,28 @@ LAUNCH-PLAYBOOK.md — the rules about *other* platforms still stand absolutely)
 | `supabase/migrations/0010_seed_engine.sql` | `seed_queue` table, `seed_tick()`, pg_cron every 13 min, seed-aware `public_stats()` |
 | `scripts/seed/.state.json` | (gitignored) root credentials + id maps. Needed by queue-load; keep it. |
 
+## Two drip mechanisms (pick ONE — they'd double-post together)
+
+**A. Local cron (active now, no migration needed).** `scripts/seed-drip-run.ts`
+materializes the week of drip into a local queue inside `scripts/seed/.state.json`
+and publishes due items via the service role. `scripts/seed-drip-cron.sh` is
+installed in the user's crontab (`*/20 * * * *`) so it trickles out on schedule.
+Runs only while this Mac is awake; macOS may require granting **Full Disk Access
+to `/usr/sbin/cron`** (System Settings → Privacy & Security → Full Disk Access)
+for the job to fire. Stop it with `crontab -e` (delete the `seed-drip-cron` line).
+
+**B. pg_cron (always-on, needs the migration).** Apply
+`supabase/migrations/0010_seed_engine.sql`, then `seed-queue-load.ts` fills
+`seed_queue` and Postgres drains it every 13 min with no host involved. If you
+switch to this, first disable mechanism A (remove the crontab line) so content
+isn't published twice.
+
 ## Operating it
 
 ```bash
-npx tsx scripts/seed-bootstrap.ts     # safe to re-run any time
+npx tsx scripts/seed-bootstrap.ts     # roots/personas/rooms/bootstrap — safe to re-run
+npx tsx scripts/seed-drip-run.ts      # mechanism A: publish due drip items (cron calls this)
+# --- OR, for mechanism B (after applying 0010) ---
 npx tsx scripts/seed-queue-load.ts    # refuses if queue still pending; --force to append
 ```
 

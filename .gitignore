@@ -44,3 +44,4 @@ supabase/.temp/
 
 # seed engine state (contains seed-account credentials)
 scripts/seed/.state.json
+scripts/seed/.drip-cron.log

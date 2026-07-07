@@ -3,6 +3,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import { SITE_URL } from "@/lib/i18n/landing";
 
+const themeScript = `(function(){try{var t=localStorage.getItem("facet-theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}}catch(e){}})()`;
+
 // Search-engine ownership verification: set the env var for whichever
 // engine you register with and redeploy — no code change needed.
 const verification: NonNullable<Metadata["verification"]> = {};
@@ -62,7 +64,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" data-theme="dark" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-full flex-col">
         <Nav />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>

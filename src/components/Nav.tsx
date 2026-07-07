@@ -4,6 +4,7 @@ import { getActivePersona, listMyPersonas } from "@/lib/persona";
 import { isPlatformAdmin } from "@/lib/admin";
 import { signOut } from "@/lib/actions";
 import PersonaSwitcher from "./PersonaSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 export default async function Nav() {
   const supabase = await createClient();
@@ -27,7 +28,7 @@ export default async function Nav() {
   return (
     <nav
       className="sticky top-0 z-40 border-b"
-      style={{ background: "rgba(11,13,18,0.9)", borderColor: "var(--border)", backdropFilter: "blur(8px)" }}
+      style={{ background: "var(--nav-bg)", borderColor: "var(--border)", backdropFilter: "blur(8px)" }}
     >
       <div className="mx-auto flex h-14 max-w-5xl items-center gap-4 px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
@@ -78,6 +79,7 @@ export default async function Nav() {
                 </span>
               )}
             </Link>
+            <ThemeToggle />
             <PersonaSwitcher personas={personas} active={active} />
             <form action={signOut}>
               <button className="btn btn-ghost" title={`Root: ${user.email} (never shown to others)`}>
@@ -86,9 +88,12 @@ export default async function Nav() {
             </form>
           </>
         ) : (
-          <Link href="/login" className="btn btn-primary">
-            Sign in
-          </Link>
+          <>
+            <ThemeToggle />
+            <Link href="/login" className="btn btn-primary">
+              Sign in
+            </Link>
+          </>
         )}
       </div>
     </nav>

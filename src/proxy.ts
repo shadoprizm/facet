@@ -35,8 +35,9 @@ export default async function proxy(request: NextRequest) {
 
   const path = request.nextUrl.pathname;
   // Public, crawlable surface: the logged-out homepage renders a marketing
-  // landing page, /welcome/* are its localized twins, and the .txt/.xml
-  // catch-all covers robots.txt, sitemap.xml, llms.txt and the IndexNow key.
+  // landing page, /welcome/* are its localized twins, and the .txt/.xml/.html
+  // catch-all covers robots.txt, sitemap.xml, llms.txt, the IndexNow key and
+  // the Google Search Console verification file.
   const isPublic =
     path === "/" ||
     path.startsWith("/login") ||
@@ -44,7 +45,7 @@ export default async function proxy(request: NextRequest) {
     path.startsWith("/welcome") ||
     path.startsWith("/api/indexnow") ||
     path.startsWith("/api/stats") ||
-    /\.(txt|xml|webmanifest)$/.test(path);
+    /\.(txt|xml|webmanifest|html)$/.test(path);
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();

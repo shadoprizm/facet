@@ -18,12 +18,18 @@ These need a human because they require account creation. Each engine's
 verification meta tag is already plumbed: paste the token into the matching
 Vercel env var and redeploy — no code change.
 
-1. **Google Search Console** (biggest payoff, ~5 min)
-   https://search.google.com/search-console → Add property `facet.social`
-   (domain property via DNS TXT, or URL-prefix via meta tag →
-   `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`). Then **Sitemaps → submit
-   `https://facet.social/sitemap.xml`** and use *URL Inspection → Request
-   Indexing* on `/`. Google has no IndexNow — this is the only reliable path.
+1. ~~**Google Search Console**~~ — **DONE 2026-07-07.** Property added and
+   verified via the file method; `googlecc8e26327b14309f.html` serves from the
+   site root. Nothing to register.
+
+   What is still worth doing in the console, periodically rather than once:
+   the sitemap grew from 19 URLs to 513 on 2026-08-15 when Rooms and threads
+   became crawlable (migration `20260815193000_public_read`). Google re-fetches
+   sitemaps on its own schedule, so **resubmit `sitemap.xml` and check Pages →
+   Coverage** to confirm it picked up the new surface. Anything indexed before
+   2026-08-15 was crawled while every Room 307'd to `/login`, so historical
+   coverage numbers understate the site badly. Google has no IndexNow — the
+   sitemap is the only path.
 2. **Bing Webmaster Tools** (~3 min) — https://www.bing.com/webmasters →
    "Import from Google Search Console" (one click after #1), or verify via
    `NEXT_PUBLIC_BING_SITE_VERIFICATION`. Bing also powers DuckDuckGo, Ecosia,
@@ -52,8 +58,13 @@ so days 1–2 lean on communities and direct outreach.
 
 ### Day 0 (today) — infrastructure
 - [x] Public multilingual landing pages, robots, sitemap, llms.txt, IndexNow
-- [ ] Google Search Console + Bing import (items 1–2 above)
-- [ ] Apply migration `0008_public_stats.sql` (Supabase SQL editor or `supabase db push`) so `/api/stats` works
+- [x] Google Search Console — property added and verified 2026-07-07; the
+      token file `googlecc8e26327b14309f.html` is live at the site root
+      (commit c1ee9e6). Google issues that per-property, so its presence IS
+      the proof of verification. **Do not report this as outstanding.**
+- [x] Apply migration `0008_public_stats.sql` — applied by hand, so it does
+      not appear in the `supabase_migrations` table; `/api/stats` responding
+      is the proof. Same for `0010_seed_engine.sql`.
 
 ### Day 1 — the launch posts (biggest single lever)
 Post once per venue, personally, and stay in the thread answering questions

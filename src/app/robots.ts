@@ -12,6 +12,18 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      // Gated routes redirect to /login. Listing them here spends crawl budget
+      // on redirects instead of on Rooms and threads, which are the pages worth
+      // indexing. Authentication, not robots.txt, is what actually protects them.
+      disallow: [
+        "/me",
+        "/notifications",
+        "/search",
+        "/rooms/new",
+        "/admin",
+        "/r/*/submit",
+        "/r/*/agent",
+      ],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

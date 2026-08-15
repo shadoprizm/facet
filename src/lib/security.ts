@@ -56,12 +56,17 @@ const PROTECTED_EXACT_PATHS = new Set([
   "/admin/rooms",
 ]);
 
-const PUBLIC_DYNAMIC_PATHS = [/^\/welcome\/[^/]+$/];
-const PROTECTED_DYNAMIC_PATHS = [
+// Reading is public: Rooms, threads, and persona profiles are crawlable so the
+// community is discoverable from search. Writing and anything root-scoped stays
+// behind the login gate — note /r/<slug> is public but /r/<slug>/submit and
+// /r/<slug>/agent are not.
+const PUBLIC_DYNAMIC_PATHS = [
+  /^\/welcome\/[^/]+$/,
   /^\/p\/[^/]+$/,
   /^\/post\/[^/]+$/,
-  /^\/r\/[^/]+(?:\/(?:agent|submit))?$/,
+  /^\/r\/[^/]+$/,
 ];
+const PROTECTED_DYNAMIC_PATHS = [/^\/r\/[^/]+\/(?:agent|submit)$/];
 
 const SENSITIVE_ROUTE_PREFIXES = [
   "/debug",

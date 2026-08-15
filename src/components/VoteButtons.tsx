@@ -9,15 +9,40 @@ export default function VoteButtons({
   score,
   myVote,
   path,
+  signedIn = true,
 }: {
   targetType: "post" | "comment";
   targetId: string;
   score: number;
   myVote: number; // -1 | 0 | 1
   path: string;
+  /** Logged-out readers see the score but vote through the login page. */
+  signedIn?: boolean;
 }) {
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
+
+  if (!signedIn) {
+    return (
+      <span className="inline-flex items-center gap-1">
+        <a
+          href="/login"
+          className="btn btn-ghost !px-1.5 !py-0.5"
+          title="Sign in to vote"
+        >
+          ▲
+        </a>
+        <span className="min-w-6 text-center text-sm font-bold">{score}</span>
+        <a
+          href="/login"
+          className="btn btn-ghost !px-1.5 !py-0.5"
+          title="Sign in to vote"
+        >
+          ▼
+        </a>
+      </span>
+    );
+  }
 
   function cast(value: -1 | 1) {
     startTransition(async () => {

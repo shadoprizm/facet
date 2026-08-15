@@ -4,8 +4,20 @@ import type { Persona } from "@/lib/types";
 
 export const ACTIVE_PERSONA_COOKIE = "facet_persona";
 
-/** All personas belonging to the signed-in root (RLS restricts to own rows). */
+/** True when the request carries a valid session. */
+export async function isSignedIn(): Promise<boolean> {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getClaims();
+  return Boolean(data?.claims?.sub);
+}
+
+/**
+ * All personas belonging to the signed-in root (RLS restricts to own rows).
+ * Returns [] for logged-out readers: anon holds no privilege on `personas`,
+ * so querying it would raise a permission error rather than yield no rows.
+ */
 export async function listMyPersonas(): Promise<Persona[]> {
+  if (!(await isSignedIn())) return [];
   const supabase = await createClient();
   const { data } = await supabase
     .from("personas")

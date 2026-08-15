@@ -61,6 +61,10 @@ describe("classifyAppPath", () => {
     "/robots.txt",
     "/sitemap.xml",
     "/.well-known/security.txt",
+    // The community surface is crawlable: reading is public, writing is not.
+    "/p/example",
+    "/post/00000000-0000-0000-0000-000000000000",
+    "/r/security",
   ])("classifies %s as public", (pathname) => {
     expect(classifyAppPath(pathname)).toBe("public");
   });
@@ -72,9 +76,7 @@ describe("classifyAppPath", () => {
     "/rooms/new",
     "/admin",
     "/admin/flags",
-    "/p/example",
-    "/post/00000000-0000-0000-0000-000000000000",
-    "/r/security",
+    // Write and configuration paths stay gated even though /r/<slug> is open.
     "/r/security/agent",
     "/r/security/submit",
   ])("classifies %s as protected", (pathname) => {

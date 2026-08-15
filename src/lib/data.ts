@@ -19,8 +19,14 @@ export async function fetchPersonaMap(
   return new Map((data ?? []).map((p: Persona) => [p.id, p]));
 }
 
-/** Ids of the caller's own personas — used to mark "this is one of your masks". */
+/**
+ * Ids of the caller's own personas — used to mark "this is one of your masks".
+ * Empty for logged-out readers: `personas` carries the root column, so anon
+ * holds no privilege on it and querying would raise rather than return nothing.
+ */
 export async function myPersonaIds(supabase: SupabaseClient): Promise<Set<string>> {
+  const { data: claims } = await supabase.auth.getClaims();
+  if (!claims?.claims?.sub) return new Set();
   const { data } = await supabase.from("personas").select("id");
   return new Set((data ?? []).map((p: { id: string }) => p.id));
 }

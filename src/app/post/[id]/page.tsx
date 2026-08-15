@@ -1,8 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
-import { listMyPersonas } from "@/lib/persona";
+import { isSignedIn, listMyPersonas } from "@/lib/persona";
+import { SITE_URL } from "@/lib/i18n/landing";
 import { createComment, crosspost, deletePost } from "@/lib/actions";
 import PersonaBadge from "@/components/PersonaBadge";
 import VoteButtons from "@/components/VoteButtons";
@@ -12,6 +14,39 @@ import ReportButton from "@/components/ReportButton";
 import ConfirmButton from "@/components/ConfirmButton";
 import Banner from "@/components/Banner";
 import type { AgentAction, Comment, Post, Room } from "@/lib/types";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const supabase = await createClient();
+  const { data: post } = await supabase
+    .from("posts")
+    .select("title, body, status, rooms(slug, name)")
+    .eq("id", id)
+    .single();
+
+  if (!post || post.status !== "active") return { title: "Post not found" };
+
+  const room = post.rooms as unknown as { slug: string; name: string } | null;
+  const description =
+    (post.body || "").replace(/\s+/g, " ").trim().slice(0, 160) ||
+    `A discussion in r/${room?.slug ?? "facet"} on Facet.`;
+
+  return {
+    title: room ? `${post.title} — r/${room.slug}` : post.title,
+    description,
+    alternates: { canonical: `${SITE_URL}/post/${id}` },
+    openGraph: {
+      title: post.title,
+      description,
+      url: `${SITE_URL}/post/${id}`,
+      type: "article",
+    },
+  };
+}
 
 export default async function PostPage({
   params,
@@ -35,6 +70,10 @@ export default async function PostPage({
   const p = post as Post & { rooms: Room };
   const path = `/post/${id}`;
 
+  const signedIn = await isSignedIn();
+
+  // votes / override_votes carry the caller's root id and are granted to
+  // `authenticated` only — anon has no privilege, so skip rather than error.
   const [{ data: comments }, { data: actions }, { data: votes }, myPersonas, { data: rooms }] =
     await Promise.all([
       supabase
@@ -47,13 +86,15 @@ export default async function PostPage({
         .select("*")
         .eq("post_id", id)
         .order("created_at"),
-      supabase.from("votes").select("target_type, target_id, value"),
+      signedIn
+        ? supabase.from("votes").select("target_type, target_id, value")
+        : Promise.resolve({ data: [] as { target_type: string; target_id: string; value: number }[] }),
       listMyPersonas(),
       supabase.from("rooms_public").select("id, slug, name").order("slug"),
     ]);
 
   const actionIds = (actions ?? []).map((a) => a.id);
-  const { data: myOverrideRows } = actionIds.length
+  const { data: myOverrideRows } = signedIn && actionIds.length
     ? await supabase.from("override_votes").select("action_id, vote").in("action_id", actionIds)
     : { data: [] };
 
@@ -92,6 +133,7 @@ export default async function PostPage({
     myVotes: new Map((votes ?? []).map((v) => [`${v.target_type}:${v.target_id}`, v.value])),
     actionsByTarget,
     myOverrides: new Map((myOverrideRows ?? []).map((o) => [o.action_id, o.vote])),
+    signedIn,
   };
 
   const iAmAuthor = mine.has(p.author_persona_id);
@@ -132,23 +174,25 @@ export default async function PostPage({
             score={p.score}
             myVote={ctx.myVotes.get(`post:${p.id}`) ?? 0}
             path={path}
+            signedIn={signedIn}
           />
           <span className="text-xs text-[var(--muted)]">
             {p.comment_count} comments
           </span>
-          {iAmAuthor && p.status === "active" ? (
-            <form action={deletePost}>
-              <input type="hidden" name="post_id" value={p.id} />
-              <input type="hidden" name="room_slug" value={p.rooms.slug} />
-              <ConfirmButton
-                label="Delete post"
-                title="Removes your post permanently (karma already earned stays)."
-                confirmMessage="Delete this post? It will be replaced with '[removed]' and cannot be undone."
-              />
-            </form>
-          ) : (
-            <ReportButton targetType="post" targetId={p.id} backTo={path} />
-          )}
+          {signedIn &&
+            (iAmAuthor && p.status === "active" ? (
+              <form action={deletePost}>
+                <input type="hidden" name="post_id" value={p.id} />
+                <input type="hidden" name="room_slug" value={p.rooms.slug} />
+                <ConfirmButton
+                  label="Delete post"
+                  title="Removes your post permanently (karma already earned stays)."
+                  confirmMessage="Delete this post? It will be replaced with '[removed]' and cannot be undone."
+                />
+              </form>
+            ) : (
+              <ReportButton targetType="post" targetId={p.id} backTo={path} />
+            ))}
         </div>
 
         {iAmAuthor && otherPersonas.length > 0 && (
@@ -182,25 +226,45 @@ export default async function PostPage({
       </div>
 
       {threadActions.map((a) => (
-        <AgentActionCard key={a.id} action={a} myVote={ctx.myOverrides.get(a.id) ?? null} path={path} />
+        <AgentActionCard
+          key={a.id}
+          action={a}
+          myVote={ctx.myOverrides.get(a.id) ?? null}
+          path={path}
+          signedIn={signedIn}
+        />
       ))}
 
-      <form action={createComment} className="panel space-y-2 p-4">
-        <input type="hidden" name="post_id" value={id} />
-        <textarea className="input" name="body" rows={3} placeholder="Join the thread as your active persona…" required />
-        <div className="space-y-1">
-          <input
-            type="file"
-            name="image"
-            accept="image/png,image/jpeg,image/webp,image/gif"
-            className="block w-full text-xs"
-          />
-          <p className="text-xs text-[var(--muted)]">
-            Attach an image or GIF (optional) — PNG/JPEG/WebP/GIF, up to 5MB.
+      {signedIn ? (
+        <form action={createComment} className="panel space-y-2 p-4">
+          <input type="hidden" name="post_id" value={id} />
+          <textarea className="input" name="body" rows={3} placeholder="Join the thread as your active persona…" required />
+          <div className="space-y-1">
+            <input
+              type="file"
+              name="image"
+              accept="image/png,image/jpeg,image/webp,image/gif"
+              className="block w-full text-xs"
+            />
+            <p className="text-xs text-[var(--muted)]">
+              Attach an image or GIF (optional) — PNG/JPEG/WebP/GIF, up to 5MB.
+            </p>
+          </div>
+          <button className="btn btn-primary">Comment</button>
+        </form>
+      ) : (
+        <div className="panel space-y-2 p-4">
+          <p className="text-sm font-semibold">Join the conversation</p>
+          <p className="text-sm text-[var(--muted)]">
+            Facet is free to read. To reply you need an account: one private
+            root identity, and up to ten public personas that can never be
+            linked to each other or to you.
           </p>
+          <Link href="/login" className="btn btn-primary inline-block">
+            Create an account
+          </Link>
         </div>
-        <button className="btn btn-primary">Comment</button>
-      </form>
+      )}
 
       <div>
         {(childrenMap.get(null) ?? []).map((c) => (

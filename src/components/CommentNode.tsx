@@ -15,6 +15,8 @@ export type ThreadContext = {
   myVotes: Map<string, number>;
   actionsByTarget: Map<string, AgentAction[]>;
   myOverrides: Map<string, "uphold" | "override">;
+  /** False for logged-out readers: the thread renders, the write paths don't. */
+  signedIn: boolean;
 };
 
 /** Recursive threaded comment. Collapsed comments stay readable but folded. */
@@ -71,37 +73,41 @@ export default function CommentNode({
           score={comment.score}
           myVote={ctx.myVotes.get(`comment:${comment.id}`) ?? 0}
           path={ctx.path}
+          signedIn={ctx.signedIn}
         />
-        <details>
-          <summary className="cursor-pointer text-xs text-[var(--muted)]">
-            Reply
-          </summary>
-          <form action={createComment} className="mt-2 space-y-2">
-            <input type="hidden" name="post_id" value={ctx.postId} />
-            <input type="hidden" name="parent_id" value={comment.id} />
-            <textarea className="input" name="body" rows={2} placeholder="Reply as your active persona…" />
-            <input
-              type="file"
-              name="image"
-              accept="image/png,image/jpeg,image/webp,image/gif"
-              className="block w-full text-xs"
-            />
-            <button className="btn !py-1 text-xs">Reply</button>
-          </form>
-        </details>
-        {ctx.mine.has(comment.author_persona_id) && comment.status === "active" ? (
-          <form action={deleteComment}>
-            <input type="hidden" name="comment_id" value={comment.id} />
-            <input type="hidden" name="post_id" value={ctx.postId} />
-            <ConfirmButton
-              label="Delete"
-              title="Removes your comment permanently (karma already earned stays)."
-              confirmMessage="Delete this comment? It will be replaced with '[removed]' and cannot be undone."
-            />
-          </form>
-        ) : (
-          <ReportButton targetType="comment" targetId={comment.id} backTo={ctx.path} />
+        {ctx.signedIn && (
+          <details>
+            <summary className="cursor-pointer text-xs text-[var(--muted)]">
+              Reply
+            </summary>
+            <form action={createComment} className="mt-2 space-y-2">
+              <input type="hidden" name="post_id" value={ctx.postId} />
+              <input type="hidden" name="parent_id" value={comment.id} />
+              <textarea className="input" name="body" rows={2} placeholder="Reply as your active persona…" />
+              <input
+                type="file"
+                name="image"
+                accept="image/png,image/jpeg,image/webp,image/gif"
+                className="block w-full text-xs"
+              />
+              <button className="btn !py-1 text-xs">Reply</button>
+            </form>
+          </details>
         )}
+        {ctx.signedIn &&
+          (ctx.mine.has(comment.author_persona_id) && comment.status === "active" ? (
+            <form action={deleteComment}>
+              <input type="hidden" name="comment_id" value={comment.id} />
+              <input type="hidden" name="post_id" value={ctx.postId} />
+              <ConfirmButton
+                label="Delete"
+                title="Removes your comment permanently (karma already earned stays)."
+                confirmMessage="Delete this comment? It will be replaced with '[removed]' and cannot be undone."
+              />
+            </form>
+          ) : (
+            <ReportButton targetType="comment" targetId={comment.id} backTo={ctx.path} />
+          ))}
       </div>
 
       {actions.map((a) => (

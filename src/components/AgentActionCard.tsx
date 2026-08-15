@@ -19,11 +19,14 @@ export default function AgentActionCard({
   myVote,
   path,
   compact = false,
+  signedIn = true,
 }: {
   action: AgentAction;
   myVote: "uphold" | "override" | null;
   path: string;
   compact?: boolean;
+  /** Logged-out readers see the tally — the ballot needs an account. */
+  signedIn?: boolean;
 }) {
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
@@ -70,24 +73,36 @@ export default function AgentActionCard({
         </div>
       )}
       <div className="mt-2 flex items-center gap-2">
-        <button
-          className={`btn !py-1 text-xs ${myVote === "uphold" ? "btn-good" : ""}`}
-          disabled={pending || action.status !== "pending"}
-          onClick={() => cast("uphold")}
-        >
-          Uphold ({action.votes_uphold})
-        </button>
-        <button
-          className={`btn !py-1 text-xs ${myVote === "override" ? "btn-bad" : ""}`}
-          disabled={pending || action.status !== "pending"}
-          onClick={() => cast("override")}
-        >
-          Override ({action.votes_override})
-        </button>
-        {error && (
-          <span className="text-xs text-[var(--bad)]">
-            {error}
-          </span>
+        {signedIn ? (
+          <>
+            <button
+              className={`btn !py-1 text-xs ${myVote === "uphold" ? "btn-good" : ""}`}
+              disabled={pending || action.status !== "pending"}
+              onClick={() => cast("uphold")}
+            >
+              Uphold ({action.votes_uphold})
+            </button>
+            <button
+              className={`btn !py-1 text-xs ${myVote === "override" ? "btn-bad" : ""}`}
+              disabled={pending || action.status !== "pending"}
+              onClick={() => cast("override")}
+            >
+              Override ({action.votes_override})
+            </button>
+            {error && (
+              <span className="text-xs text-[var(--bad)]">
+                {error}
+              </span>
+            )}
+          </>
+        ) : (
+          <>
+            <span className="chip">Uphold {action.votes_uphold}</span>
+            <span className="chip">Override {action.votes_override}</span>
+            <a href="/login" className="text-xs text-[var(--accent)] hover:underline">
+              Sign in to vote on this decision
+            </a>
+          </>
         )}
       </div>
     </div>

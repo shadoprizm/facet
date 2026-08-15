@@ -1,13 +1,48 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
-import { getActivePersona } from "@/lib/persona";
+import { getActivePersona, isSignedIn } from "@/lib/persona";
 import { toggleSubscribe } from "@/lib/actions";
+import { SITE_URL } from "@/lib/i18n/landing";
 import PersonaBadge from "@/components/PersonaBadge";
 import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import type { Post, Room } from "@/lib/types";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const supabase = await createClient();
+  const { data: room } = await supabase
+    .from("rooms_public")
+    .select("slug, name, description")
+    .eq("slug", slug)
+    .single();
+
+  if (!room) return { title: "Room not found" };
+
+  const title = `r/${room.slug} — ${room.name}`;
+  const description =
+    room.description ||
+    `${room.name} on Facet — a community moderated by an agent its members govern.`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: `${SITE_URL}/r/${room.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/r/${room.slug}`,
+      type: "website",
+    },
+  };
+}
 
 export default async function RoomPage({
   params,
@@ -28,6 +63,7 @@ export default async function RoomPage({
   if (!room) notFound();
   const r = room as Room;
 
+  const signedIn = await isSignedIn();
   const active = await getActivePersona();
 
   const [{ data: posts }, { data: countRow }] = await Promise.all([
@@ -73,27 +109,36 @@ export default async function RoomPage({
             </p>
           </div>
           <div className="flex gap-2">
-            <form action={toggleSubscribe}>
-              <input type="hidden" name="room_id" value={r.id} />
-              <input type="hidden" name="slug" value={r.slug} />
-              <input type="hidden" name="subscribed" value={String(subscribed)} />
-              <button className={`btn ${subscribed ? "" : "btn-primary"}`}>
-                {subscribed
-                  ? `Leave as ${active?.display_name ?? ""}`
-                  : `Join as ${active?.display_name ?? "…"}`}
-              </button>
-            </form>
-            <Link href={`/r/${r.slug}/submit`} className="btn">
-              + Post
-            </Link>
+            {signedIn ? (
+              <>
+                <form action={toggleSubscribe}>
+                  <input type="hidden" name="room_id" value={r.id} />
+                  <input type="hidden" name="slug" value={r.slug} />
+                  <input type="hidden" name="subscribed" value={String(subscribed)} />
+                  <button className={`btn ${subscribed ? "" : "btn-primary"}`}>
+                    {subscribed
+                      ? `Leave as ${active?.display_name ?? ""}`
+                      : `Join as ${active?.display_name ?? "…"}`}
+                  </button>
+                </form>
+                <Link href={`/r/${r.slug}/submit`} className="btn">
+                  + Post
+                </Link>
+              </>
+            ) : (
+              <Link href="/login" className="btn btn-primary">
+                Join to post
+              </Link>
+            )}
             <Link href={`/r/${r.slug}/agent`} className="btn" title="Agent moderator log & constitution">
               🤖 Agent
             </Link>
           </div>
         </div>
         <p className="mt-2 text-xs text-[var(--muted)]">
-          Subscriptions belong to personas, not accounts — you joined (or will
-          join) this Room as a specific mask.
+          {signedIn
+            ? "Subscriptions belong to personas, not accounts — you joined (or will join) this Room as a specific mask."
+            : "Anyone can read Facet. To post or vote you need a free account — you get one private root identity and up to ten unlinkable personas."}
         </p>
       </div>
 

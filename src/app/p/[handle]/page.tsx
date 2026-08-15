@@ -1,10 +1,45 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import { myPersonaIds } from "@/lib/data";
+import { SITE_URL } from "@/lib/i18n/landing";
 import { PersonaAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
 import type { Persona, Post, Comment } from "@/lib/types";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ handle: string }>;
+}): Promise<Metadata> {
+  const { handle } = await params;
+  const supabase = await createClient();
+  const { data: persona } = await supabase
+    .from("personas_public")
+    .select("handle, display_name, bio, karma")
+    .eq("handle", handle.toLowerCase())
+    .single();
+
+  if (!persona) return { title: "Persona not found" };
+
+  const title = `${persona.display_name} (@${persona.handle}) — Facet`;
+  const description =
+    persona.bio ||
+    `@${persona.handle} on Facet — ${persona.karma} karma. A persona, not an account: Facet never reveals which root operates it.`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: `${SITE_URL}/p/${persona.handle}` },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/p/${persona.handle}`,
+      type: "profile",
+    },
+  };
+}
 
 /**
  * Public persona profile. Deliberately built ONLY from personas_public and

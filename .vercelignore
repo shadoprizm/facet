@@ -1,0 +1,24 @@
+# Deployment defense-in-depth. Vercel and Git already exclude most of these,
+# but none should ever become part of an uploaded application artifact.
+.git
+.git/**
+**/.git/**
+.env*
+**/.env*
+**/.DS_Store
+**/*.bak
+**/*.old
+**/*.orig
+**/*.save
+**/*.swp
+**/*.swo
+**/*~
+**/*.sql
+**/*.dump
+**/*.zip
+**/*.tar
+**/*.tgz
+**/*.gz
+**/*.7z
+**/*.rar
+**/*.map

@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { ACTIVE_PERSONA_COOKIE, getActivePersona } from "@/lib/persona";
 import { invokeAgent } from "@/lib/agent/invoke";
+import { safeRedirectPath } from "@/lib/security";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -93,7 +94,7 @@ export async function retirePersona(formData: FormData) {
 
 export async function switchPersona(formData: FormData) {
   const personaId = String(formData.get("persona_id"));
-  const backTo = String(formData.get("back_to") || "/");
+  const backTo = safeRedirectPath(formData.get("back_to"));
   const supabase = await createClient();
   // Ownership check: RLS means this select only finds the caller's personas.
   const { data } = await supabase
@@ -306,7 +307,7 @@ export async function banPersona(formData: FormData) {
 
 export async function createReport(formData: FormData) {
   const persona = await getActivePersona();
-  const backTo = String(formData.get("back_to") || "/");
+  const backTo = safeRedirectPath(formData.get("back_to"));
   if (!persona) fail(backTo, "Create a persona first.");
   const supabase = await createClient();
   const { error } = await supabase.rpc("create_report", {
@@ -438,7 +439,9 @@ export async function uploadPersonaAvatar(formData: FormData) {
 
 export async function uploadRoomAvatar(formData: FormData) {
   const roomId = String(formData.get("room_id"));
-  const returnTo = String(formData.get("return_to") || `/r/${formData.get("slug")}/agent`);
+  const slug = String(formData.get("slug") ?? "");
+  const fallback = /^[a-z0-9-]{2,32}$/.test(slug) ? `/r/${slug}/agent` : "/";
+  const returnTo = safeRedirectPath(formData.get("return_to"), fallback);
   const file = formData.get("avatar") as File | null;
   if (!file || file.size === 0) fail(returnTo, "Choose an image first.");
   if (file.size > MAX_AVATAR_BYTES) fail(returnTo, "Image must be under 3MB.");

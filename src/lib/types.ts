@@ -19,7 +19,6 @@ export type Room = {
   avatar_url: string | null;
   agent_config: { quorum?: number; vote_window_minutes?: number };
   created_by_persona_id: string | null;
-  created_by_root?: string;
   created_at: string;
 };
 
@@ -148,7 +147,6 @@ export type Report = {
 
 export type Notification = {
   id: string;
-  root_user_id: string;
   type: "reply" | "collapse" | "agent_flag" | "ban" | "report_resolved";
   actor_persona_id: string | null;
   room_id: string | null;

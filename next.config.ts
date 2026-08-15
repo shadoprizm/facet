@@ -1,6 +1,19 @@
 import type { NextConfig } from "next";
+import { GLOBAL_SECURITY_HEADERS } from "./src/lib/security";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: GLOBAL_SECURITY_HEADERS.map(({ key, value }) => ({
+          key,
+          value,
+        })),
+      },
+    ];
+  },
   turbopack: {
     // Pin the workspace root: a stray lockfile in $HOME confuses inference.
     root: __dirname,

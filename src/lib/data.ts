@@ -45,7 +45,7 @@ export async function searchRooms(
   if (!term) return [];
   const pat = `%${term}%`;
   const { data } = await supabase
-    .from("rooms")
+    .from("rooms_public")
     .select("*")
     .or(`slug.ilike.${pat},name.ilike.${pat},description.ilike.${pat}`)
     .order("created_at", { ascending: false })
@@ -110,7 +110,7 @@ export async function myRoomMemberships(
 
   const roomIds = [...new Set(subs.map((s) => s.room_id))];
   const [{ data: rooms }, { data: counts }] = await Promise.all([
-    supabase.from("rooms").select("*").in("id", roomIds),
+    supabase.from("rooms_public").select("*").in("id", roomIds),
     supabase.from("room_subscriber_counts").select("*").in("room_id", roomIds),
   ]);
   const roomById = new Map((rooms ?? []).map((r: Room) => [r.id, r]));

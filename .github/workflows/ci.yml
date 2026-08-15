@@ -39,16 +39,44 @@ jobs:
         env:
           SUPABASE_DB_URL: postgresql://postgres:postgres@localhost:54322/postgres
         run: |
-          # `db push` against the local stack applies everything in supabase/migrations
-          # in order. A non-zero exit means a migration won't apply on a fresh schema.
-          supabase db push --db-url "$SUPABASE_DB_URL" || \
-            psql "$SUPABASE_DB_URL" -f supabase/migrations/0001_init.sql \
-                 -f supabase/migrations/0002_functions.sql \
-                 -f supabase/migrations/0003_harden_rpc_grants.sql \
-                 -f supabase/migrations/0004_avatars_and_admin.sql \
-                 -f supabase/migrations/0005_fix_grants.sql \
-                 -f supabase/migrations/0006_hardening.sql \
-                 -f supabase/migrations/0007_fix_notification_fk.sql
+          # Apply every checked-in migration explicitly. This avoids a stale
+          # hard-coded file list silently skipping new security migrations.
+          for migration in supabase/migrations/*.sql; do
+            psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -f "$migration"
+          done
+      - name: Assert the public Data API stays least-privileged
+        env:
+          SUPABASE_DB_URL: postgresql://postgres:postgres@localhost:54322/postgres
+        run: |
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 <<'SQL'
+          do $$
+          begin
+            if has_column_privilege('authenticated', 'public.rooms', 'created_by_root', 'select') then
+              raise exception 'authenticated can read rooms.created_by_root';
+            end if;
+            if not has_table_privilege('authenticated', 'public.rooms_public', 'select') then
+              raise exception 'authenticated cannot read rooms_public';
+            end if;
+            if has_table_privilege('anon', 'public.rooms_public', 'select') then
+              raise exception 'anon can read rooms_public';
+            end if;
+            if has_function_privilege('anon', 'public.create_report(uuid,text,uuid,text,text)', 'execute') then
+              raise exception 'anon can execute create_report';
+            end if;
+            if not has_function_privilege('anon', 'public.public_stats()', 'execute') then
+              raise exception 'anon cannot execute public_stats';
+            end if;
+            if exists (
+              select 1
+              from pg_policies
+              where schemaname = 'storage'
+                and policyname in ('post_images_public_read', 'comment_images_public_read')
+            ) then
+              raise exception 'public Storage listing policy was restored';
+            end if;
+          end
+          $$;
+          SQL
       - if: always()
         name: Stop local Supabase
         run: supabase stop || true

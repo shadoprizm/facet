@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import {
   LANDING_LOCALES,
   SITE_URL,
@@ -10,7 +11,8 @@ import {
  * `/welcome/<locale>` for every other language. Pure server component —
  * no client JS, fully crawlable.
  */
-export default function Landing({ copy }: { copy: LandingCopy }) {
+export default async function Landing({ copy }: { copy: LandingCopy }) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -45,8 +47,11 @@ export default function Landing({ copy }: { copy: LandingCopy }) {
   return (
     <div lang={copy.locale} dir={copy.dir} className="mx-auto max-w-3xl">
       <script
+        nonce={nonce}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replaceAll("<", "\\u003c"),
+        }}
       />
 
       <section className="py-10 text-center">
@@ -54,11 +59,10 @@ export default function Landing({ copy }: { copy: LandingCopy }) {
         <img
           src="/facet-logo.png"
           alt="Facet"
-          className="mx-auto mb-6 h-16 w-16 rounded-2xl object-contain"
-          style={{ background: "#fff", padding: 6 }}
+          className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-white p-1.5 object-contain"
         />
         <h1 className="text-3xl font-bold sm:text-4xl">{copy.tagline}</h1>
-        <p className="mx-auto mt-4 max-w-2xl text-base" style={{ color: "var(--muted)" }}>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-[var(--muted)]">
           {copy.hero}
         </p>
         <div className="mt-6 flex items-center justify-center gap-3">
@@ -69,7 +73,7 @@ export default function Landing({ copy }: { copy: LandingCopy }) {
             {copy.signIn}
           </Link>
         </div>
-        <p className="mt-4 text-xs" style={{ color: "var(--muted)" }}>
+        <p className="mt-4 text-xs text-[var(--muted)]">
           {copy.freeNote}
         </p>
       </section>
@@ -78,20 +82,20 @@ export default function Landing({ copy }: { copy: LandingCopy }) {
         {copy.features.map((f) => (
           <div key={f.title} className="panel p-5">
             <h2 className="mb-2 font-semibold">{f.title}</h2>
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
+            <p className="text-sm text-[var(--muted)]">
               {f.body}
             </p>
           </div>
         ))}
       </section>
 
-      <nav aria-label="Languages" className="pb-10 text-center text-xs" style={{ color: "var(--muted)" }}>
+      <nav aria-label="Languages" className="pb-10 text-center text-xs text-[var(--muted)]">
         <span className="mr-2">🌐</span>
         {LANDING_LOCALES.map((l, i) => (
           <span key={l.locale}>
             {i > 0 && <span className="mx-1">·</span>}
             {l.locale === copy.locale ? (
-              <span className="font-semibold" style={{ color: "var(--text)" }}>
+              <span className="font-semibold text-[var(--text)]">
                 {l.nativeName}
               </span>
             ) : (

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { updateConstitution, resolveFlag, banPersona, uploadRoomAvatar } from "@/lib/actions";
 import { isPlatformAdmin } from "@/lib/admin";
-import { fetchPersonaMap } from "@/lib/data";
+import { fetchPersonaMap, myPersonaIds } from "@/lib/data";
 import AgentActionCard from "@/components/AgentActionCard";
 import { RoomAvatar } from "@/components/Avatar";
 import Banner from "@/components/Banner";
@@ -28,15 +28,21 @@ export default async function AgentPage({
   const sp = await searchParams;
   const supabase = await createClient();
 
-  const { data: room } = await supabase.from("rooms").select("*").eq("slug", slug).single();
+  const { data: room } = await supabase
+    .from("rooms_public")
+    .select("*")
+    .eq("slug", slug)
+    .single();
   if (!room) notFound();
-  const r = room as Room & { created_by_root: string };
+  const r = room as Room;
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  const isFounder = user?.id === r.created_by_root;
-  const admin = await isPlatformAdmin();
+  const [mine, admin] = await Promise.all([
+    myPersonaIds(supabase),
+    isPlatformAdmin(),
+  ]);
+  const isFounder = Boolean(
+    r.created_by_persona_id && mine.has(r.created_by_persona_id),
+  );
   const canManage = isFounder || admin;
 
   const [{ data: cal }, { data: actions }] = await Promise.all([
@@ -82,16 +88,16 @@ export default async function AgentPage({
         <RoomAvatar avatarUrl={r.avatar_url} size={40} />
         <div className="flex-1">
           <h1 className="text-xl font-bold">
-            🤖 Agent Moderator — <Link href={`/r/${slug}`} className="hover:underline" style={{ color: "var(--accent)" }}>r/{slug}</Link>
+            🤖 Agent Moderator — <Link href={`/r/${slug}`} className="hover:underline text-[var(--accent)]">r/{slug}</Link>
           </h1>
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
-            This agent reads every post and comment against the Room's
+          <p className="text-sm text-[var(--muted)]">
+            This agent reads every post and comment against the Room&apos;s
             constitution. Every action it takes is voteable; overrides move the
             thresholds below. It never bans — hard calls go to the human queue.
           </p>
           {canManage && (
             <details className="mt-2">
-              <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+              <summary className="cursor-pointer text-xs text-[var(--accent)]">
                 Change Room avatar
               </summary>
               <form action={uploadRoomAvatar} className="mt-2 flex flex-wrap items-center gap-2">
@@ -100,7 +106,7 @@ export default async function AgentPage({
                 <input type="hidden" name="return_to" value={`/r/${slug}/agent`} />
                 <input type="file" name="avatar" accept="image/png,image/jpeg,image/webp,image/gif" required className="text-xs" />
                 <button className="btn !py-1 text-xs">Upload</button>
-                <span className="w-full text-xs" style={{ color: "var(--muted)" }}>
+                <span className="w-full text-xs text-[var(--muted)]">
                   PNG/JPEG/WebP/GIF, up to 3MB.
                 </span>
               </form>
@@ -118,12 +124,12 @@ export default async function AgentPage({
                 const val = Number(calibration?.[key] ?? def);
                 const drifted = Math.abs(val - def) > 0.001;
                 return (
-                  <tr key={key} className="border-t" style={{ borderColor: "var(--border)" }}>
-                    <td className="py-1.5" style={{ color: "var(--muted)" }}>{label}</td>
+                  <tr key={key} className="border-t border-[var(--border)]">
+                    <td className="py-1.5 text-[var(--muted)]">{label}</td>
                     <td className="py-1.5 text-right font-mono font-bold">
                       {val.toFixed(2)}
                       {drifted && (
-                        <span className="ml-1 text-xs" style={{ color: val > def ? "var(--warn)" : "var(--good)" }}>
+                        <span className={`ml-1 text-xs ${val > def ? "text-[var(--warn)]" : "text-[var(--good)]"}`}>
                           (default {def}{val > def ? ", relaxed by overrides" : ", tightened by upholds"})
                         </span>
                       )}
@@ -133,18 +139,18 @@ export default async function AgentPage({
               })}
             </tbody>
           </table>
-          <h3 className="mt-4 text-sm font-bold" style={{ color: "var(--muted)" }}>
+          <h3 className="mt-4 text-sm font-bold text-[var(--muted)]">
             LEARNING HISTORY
           </h3>
           {history.length === 0 && (
-            <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
-              No adjustments yet — the community hasn't resolved any votes.
+            <p className="mt-1 text-xs text-[var(--muted)]">
+              No adjustments yet — the community hasn&apos;t resolved any votes.
             </p>
           )}
-          <ul className="mt-1 space-y-1 text-xs" style={{ color: "var(--muted)" }}>
+          <ul className="mt-1 space-y-1 text-xs text-[var(--muted)]">
             {history.map((h, i) => (
               <li key={i}>
-                {new Date(h.at).toLocaleString()} — <b style={{ color: h.outcome === "overridden" ? "var(--bad)" : "var(--good)" }}>{h.outcome}</b>{" "}
+                {new Date(h.at).toLocaleString()} — <b className={h.outcome === "overridden" ? "text-[var(--bad)]" : "text-[var(--good)]"}>{h.outcome}</b>{" "}
                 → {h.param} now {Number(h.new_value).toFixed(2)}
               </li>
             ))}
@@ -161,11 +167,11 @@ export default async function AgentPage({
               <button className="btn">Amend constitution</button>
             </form>
           ) : (
-            <pre className="mt-2 whitespace-pre-wrap font-mono text-xs" style={{ color: "var(--muted)" }}>
+            <pre className="mt-2 whitespace-pre-wrap font-mono text-xs text-[var(--muted)]">
               {r.constitution || "(unwritten — the agent falls back to platform defaults)"}
             </pre>
           )}
-          <p className="mt-2 text-xs" style={{ color: "var(--muted)" }}>
+          <p className="mt-2 text-xs text-[var(--muted)]">
             Directives: <code>agent.strictness: relaxed|normal|strict</code> scales sensitivity;{" "}
             <code>agent.forbid: term, term</code> makes the agent nudge on those terms. Prose shapes
             topic-drift detection and is quoted in nudges.
@@ -174,8 +180,8 @@ export default async function AgentPage({
       </div>
 
       {flagged.length > 0 && (
-        <div className="panel p-5" style={{ borderColor: "rgba(251,191,36,0.4)" }}>
-          <h2 className="font-bold" style={{ color: "var(--warn)" }}>
+        <div className="panel panel-warning p-5">
+          <h2 className="font-bold text-[var(--warn)]">
             🚩 Human review queue ({flagged.length})
           </h2>
           <div className="mt-2 space-y-3">
@@ -183,15 +189,15 @@ export default async function AgentPage({
               const c = a.target_id ? flaggedCommentMap.get(a.target_id) : undefined;
               const author = c ? personaMap.get(c.author_persona_id) : undefined;
               return (
-                <div key={a.id} className="rounded-lg border p-3" style={{ borderColor: "var(--border)" }}>
+                <div key={a.id} className="rounded-lg border p-3 border-[var(--border)]">
                   <p className="text-sm">{a.reason}</p>
                   {c && (
-                    <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+                    <p className="mt-1 text-xs text-[var(--muted)]">
                       “{c.body.slice(0, 140)}” — @{author?.handle ?? "?"}
                     </p>
                   )}
                   {a.post_id && (
-                    <Link href={`/post/${a.post_id}`} className="text-xs hover:underline" style={{ color: "var(--accent)" }}>
+                    <Link href={`/post/${a.post_id}`} className="text-xs hover:underline text-[var(--accent)]">
                       view thread →
                     </Link>
                   )}
@@ -226,12 +232,12 @@ export default async function AgentPage({
       )}
 
       <div>
-        <h2 className="mb-2 font-bold" style={{ color: "var(--muted)" }}>
+        <h2 className="mb-2 font-bold text-[var(--muted)]">
           ACTION LOG
         </h2>
         {(actions ?? []).length === 0 && (
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
-            The agent hasn't needed to act in this Room yet.
+          <p className="text-sm text-[var(--muted)]">
+            The agent hasn&apos;t needed to act in this Room yet.
           </p>
         )}
         {((actions ?? []) as AgentAction[]).map((a) => (
@@ -242,7 +248,7 @@ export default async function AgentPage({
               path={`/r/${slug}/agent`}
             />
             {a.post_id && (
-              <Link href={`/post/${a.post_id}`} className="ml-1 text-xs hover:underline" style={{ color: "var(--accent)" }}>
+              <Link href={`/post/${a.post_id}`} className="ml-1 text-xs hover:underline text-[var(--accent)]">
                 view thread →
               </Link>
             )}

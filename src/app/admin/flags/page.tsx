@@ -74,12 +74,12 @@ export default async function AdminFlagsPage({
     <div className="space-y-4">
       <Banner error={sp.error} />
       <h1 className="text-xl font-bold">🚩 Global flag queue</h1>
-      <p className="text-sm" style={{ color: "var(--muted)" }}>
-        Every Room's agent escalations, in one place — no need to hunt through
-        each Room's own agent page.
+      <p className="text-sm text-[var(--muted)]">
+        Every Room&apos;s agent escalations, in one place — no need to hunt through
+        each Room&apos;s own agent page.
       </p>
       {rows.length === 0 && (
-        <p className="text-sm" style={{ color: "var(--muted)" }}>
+        <p className="text-sm text-[var(--muted)]">
           Nothing pending review.
         </p>
       )}
@@ -88,12 +88,12 @@ export default async function AdminFlagsPage({
         const author = c ? personaMap.get(c.author_persona_id) : undefined;
         return (
           <div key={a.id} className="panel p-4">
-            <div className="text-xs" style={{ color: "var(--muted)" }}>
+            <div className="text-xs text-[var(--muted)]">
               r/{a.rooms?.slug ?? "?"} · {new Date(a.created_at).toLocaleString()}
             </div>
             <p className="mt-1 text-sm">{a.reason}</p>
             {c && (
-              <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+              <p className="mt-1 text-xs text-[var(--muted)]">
                 &ldquo;{c.body.slice(0, 160)}&rdquo; — @{author?.handle ?? "?"}
               </p>
             )}
@@ -130,7 +130,7 @@ export default async function AdminFlagsPage({
           <h2 className="pt-4 text-lg font-bold">
             📢 User reports ({reports.length})
           </h2>
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
+          <p className="text-sm text-[var(--muted)]">
             Reports filed by members. One report per root per target — deduped
             like votes.
           </p>
@@ -145,16 +145,16 @@ export default async function AdminFlagsPage({
             const reporter = reportPersonaMap.get(r.reporter_persona_id);
             return (
               <div key={r.id} className="panel p-4">
-                <div className="text-xs" style={{ color: "var(--muted)" }}>
+                <div className="text-xs text-[var(--muted)]">
                   r/{r.room_slug} · {r.category} · {new Date(r.created_at).toLocaleString()}
                 </div>
                 {r.reason && (
-                  <p className="mt-1 text-xs italic" style={{ color: "var(--muted)" }}>
+                  <p className="mt-1 text-xs italic text-[var(--muted)]">
                     “{r.reason.slice(0, 200)}”
                   </p>
                 )}
                 {(c || p) && (
-                  <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+                  <p className="mt-1 text-xs text-[var(--muted)]">
                     {p && <span>post “{p.title.slice(0, 100)}” — </span>}
                     {c && <span>“{c.body.slice(0, 160)}” — </span>}
                     @{author?.handle ?? "?"} · reported by @{reporter?.handle ?? "?"}

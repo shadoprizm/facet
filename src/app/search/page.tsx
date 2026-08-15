@@ -15,8 +15,7 @@ function FacetChip({ p, mine = false }: { p: Persona; mine?: boolean }) {
   return (
     <Link
       href={`/p/${p.handle}`}
-      className="chip hover:brightness-125"
-      style={mine ? { color: "var(--good)", borderColor: "var(--good)" } : undefined}
+      className={`chip hover:brightness-125 ${mine ? "chip-good" : ""}`}
     >
       <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={14} />
       {p.display_name}
@@ -46,7 +45,7 @@ export default async function SearchPage({
     <div className="space-y-6">
       <Banner error={error} />
       <form action="/search" className="panel flex items-center gap-2 p-2">
-        <span className="pl-2 text-lg" style={{ color: "var(--muted)" }}>
+        <span className="pl-2 text-lg text-[var(--muted)]">
           ⌕
         </span>
         <input
@@ -64,11 +63,11 @@ export default async function SearchPage({
         <div className="space-y-6">
           {/* -------------------------------------------------- rooms */}
           <section className="space-y-2">
-            <h2 className="text-sm font-bold" style={{ color: "var(--muted)" }}>
+            <h2 className="text-sm font-bold text-[var(--muted)]">
               ROOMS ({rooms.length})
             </h2>
             {rooms.length === 0 && (
-              <p className="text-sm" style={{ color: "var(--muted)" }}>
+              <p className="text-sm text-[var(--muted)]">
                 No rooms match “{query}”.
               </p>
             )}
@@ -84,18 +83,17 @@ export default async function SearchPage({
                     r/{room.slug}
                     {myRoomIds.has(room.id) && (
                       <span
-                        className="chip"
-                        style={{ color: "var(--good)", borderColor: "var(--good)" }}
+                        className="chip chip-good"
                       >
                         joined
                       </span>
                     )}
                   </div>
-                  <div className="truncate text-xs" style={{ color: "var(--muted)" }}>
+                  <div className="truncate text-xs text-[var(--muted)]">
                     {room.name}
                     {room.description ? ` · ${room.description}` : ""}
                   </div>
-                  <div className="text-xs" style={{ color: "var(--muted)" }}>
+                  <div className="text-xs text-[var(--muted)]">
                     {room.subscribers} subscriber{room.subscribers === 1 ? "" : "s"}
                   </div>
                 </div>
@@ -105,11 +103,11 @@ export default async function SearchPage({
 
           {/* -------------------------------------------------- facets */}
           <section className="space-y-2">
-            <h2 className="text-sm font-bold" style={{ color: "var(--muted)" }}>
+            <h2 className="text-sm font-bold text-[var(--muted)]">
               FACETS ({personas.length})
             </h2>
             {personas.length === 0 && (
-              <p className="text-sm" style={{ color: "var(--muted)" }}>
+              <p className="text-sm text-[var(--muted)]">
                 No facets match “{query}”.
               </p>
             )}
@@ -122,7 +120,7 @@ export default async function SearchPage({
                 <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={36} />
                 <div className="min-w-0 flex-1">
                   <div className="font-semibold">{p.display_name}</div>
-                  <div className="truncate text-xs" style={{ color: "var(--muted)" }}>
+                  <div className="truncate text-xs text-[var(--muted)]">
                     @{p.handle} · {p.karma} karma
                     {p.bio ? ` · ${p.bio}` : ""}
                   </div>
@@ -136,21 +134,21 @@ export default async function SearchPage({
       {/* ---------------------------------------------------- my communities */}
       <section className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-bold" style={{ color: "var(--muted)" }}>
+          <h2 className="text-sm font-bold text-[var(--muted)]">
             YOUR ROOMS ({memberships.length})
           </h2>
-          <Link href="/rooms/new" className="text-sm" style={{ color: "var(--accent)" }}>
+          <Link href="/rooms/new" className="text-sm text-[var(--accent)]">
             + create
           </Link>
         </div>
-        <p className="text-xs" style={{ color: "var(--muted)" }}>
+        <p className="text-xs text-[var(--muted)]">
           Every Room you belong to across all your facets — subscriptions live on
           personas, not your account.
         </p>
         {memberships.length === 0 && (
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
+          <p className="text-sm text-[var(--muted)]">
             None of your facets have joined a Room yet. Search above or{" "}
-            <Link href="/" className="hover:underline" style={{ color: "var(--accent)" }}>
+            <Link href="/" className="hover:underline text-[var(--accent)]">
               browse the latest
             </Link>
             .
@@ -164,13 +162,13 @@ export default async function SearchPage({
                 <Link href={`/r/${room.slug}`} className="font-semibold hover:underline">
                   r/{room.slug}
                 </Link>
-                <div className="truncate text-xs" style={{ color: "var(--muted)" }}>
+                <div className="truncate text-xs text-[var(--muted)]">
                   {room.name} · {subscribers} subscriber{subscribers === 1 ? "" : "s"}
                 </div>
               </div>
             </div>
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
-              <span className="text-xs" style={{ color: "var(--muted)" }}>
+              <span className="text-xs text-[var(--muted)]">
                 joined as
               </span>
               {facets.map((p) => (

@@ -20,7 +20,11 @@ export default async function RoomPage({
   const sp = await searchParams;
   const supabase = await createClient();
 
-  const { data: room } = await supabase.from("rooms").select("*").eq("slug", slug).single();
+  const { data: room } = await supabase
+    .from("rooms_public")
+    .select("*")
+    .eq("slug", slug)
+    .single();
   if (!room) notFound();
   const r = room as Room;
 
@@ -61,10 +65,10 @@ export default async function RoomPage({
           <RoomAvatar avatarUrl={r.avatar_url} size={48} />
           <div className="flex-1">
             <h1 className="text-xl font-bold">r/{r.slug}</h1>
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
+            <p className="text-sm text-[var(--muted)]">
               {r.name} — {r.description}
             </p>
-            <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+            <p className="mt-1 text-xs text-[var(--muted)]">
               {countRow?.subscribers ?? 0} subscribers · founded {new Date(r.created_at).toLocaleDateString()}
             </p>
           </div>
@@ -87,7 +91,7 @@ export default async function RoomPage({
             </Link>
           </div>
         </div>
-        <p className="mt-2 text-xs" style={{ color: "var(--muted)" }}>
+        <p className="mt-2 text-xs text-[var(--muted)]">
           Subscriptions belong to personas, not accounts — you joined (or will
           join) this Room as a specific mask.
         </p>
@@ -96,7 +100,7 @@ export default async function RoomPage({
       <div className="space-y-3">
         {(posts ?? []).map((post: Post) => (
           <div key={post.id} className="panel p-4">
-            <div className="flex items-center gap-2 text-xs" style={{ color: "var(--muted)" }}>
+            <div className="flex items-center gap-2 text-xs text-[var(--muted)]">
               <PersonaBadge persona={personaMap.get(post.author_persona_id)} mine={mine.has(post.author_persona_id)} />
               {post.crossposted_from_post_id && <span className="chip">cross-post</span>}
               · {new Date(post.created_at).toLocaleString()}
@@ -104,13 +108,13 @@ export default async function RoomPage({
             <Link href={`/post/${post.id}`} className="mt-1 block font-semibold hover:underline">
               {post.title}
             </Link>
-            <div className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+            <div className="mt-1 text-xs text-[var(--muted)]">
               {post.score} points · {post.comment_count} comments
             </div>
           </div>
         ))}
         {(posts ?? []).length === 0 && (
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
+          <p className="text-sm text-[var(--muted)]">
             No posts yet. Be the first voice in this Room.
           </p>
         )}

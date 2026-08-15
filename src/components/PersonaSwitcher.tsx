@@ -38,7 +38,7 @@ export default function PersonaSwitcher({
       >
         <PersonaAvatar avatarUrl={active.avatar_url} avatarColor={active.avatar_color} size={16} />
         <span className="max-w-32 truncate">{active.display_name}</span>
-        <span style={{ color: "var(--muted)" }}>▾</span>
+        <span className="text-[var(--muted)]">▾</span>
       </button>
 
       {open && (
@@ -46,7 +46,7 @@ export default function PersonaSwitcher({
           className="panel absolute right-0 z-50 mt-2 w-64 p-2"
           onMouseLeave={() => setOpen(false)}
         >
-          <div className="px-2 py-1 text-xs" style={{ color: "var(--muted)" }}>
+          <div className="px-2 py-1 text-xs text-[var(--muted)]">
             Wearing the mask of…
           </div>
           {activePersonas.map((p) => (
@@ -60,18 +60,17 @@ export default function PersonaSwitcher({
                 <PersonaAvatar avatarUrl={p.avatar_url} avatarColor={p.avatar_color} size={20} />
                 <span className="flex-1 truncate">
                   {p.display_name}
-                  <span className="block text-xs" style={{ color: "var(--muted)" }}>
+                  <span className="block text-xs text-[var(--muted)]">
                     @{p.handle} · {p.karma} karma
                   </span>
                 </span>
-                {p.id === active.id && <span style={{ color: "var(--good)" }}>✓</span>}
+                {p.id === active.id && <span className="text-[var(--good)]">✓</span>}
               </button>
             </form>
           ))}
           <a
             href="/me"
-            className="mt-1 block rounded-lg px-2 py-2 text-sm hover:bg-white/5"
-            style={{ color: "var(--accent)" }}
+            className="mt-1 block rounded-lg px-2 py-2 text-sm text-[var(--accent)] hover:bg-white/5"
           >
             + Manage personas
           </a>

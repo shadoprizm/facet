@@ -5,7 +5,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   await requireAdmin();
   return (
     <div className="space-y-4">
-      <nav className="flex flex-wrap gap-2 border-b pb-3" style={{ borderColor: "var(--border)" }}>
+      <nav className="flex flex-wrap gap-2 border-b pb-3 border-[var(--border)]">
         <Link href="/admin" className="btn !py-1 text-xs">
           Dashboard
         </Link>

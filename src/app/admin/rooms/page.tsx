@@ -15,7 +15,7 @@ export default async function AdminRoomsPage({
   const sp = await searchParams;
   const supabase = await createClient();
   const [{ data: rooms }, { data: counts }] = await Promise.all([
-    supabase.from("rooms").select("*").order("created_at", { ascending: false }),
+    supabase.from("rooms_public").select("*").order("created_at", { ascending: false }),
     supabase.from("room_subscriber_counts").select("*"),
   ]);
   const countMap = new Map((counts ?? []).map((c) => [c.room_id, c.subscribers]));
@@ -34,12 +34,12 @@ export default async function AdminRoomsPage({
                   r/{r.slug}
                 </Link>
                 {r.removed_at && (
-                  <span className="chip" style={{ color: "var(--bad)", borderColor: "var(--bad)" }}>
+                  <span className="chip chip-bad">
                     removed
                   </span>
                 )}
               </div>
-              <div className="text-xs" style={{ color: "var(--muted)" }}>
+              <div className="text-xs text-[var(--muted)]">
                 {r.name} · {countMap.get(r.id) ?? 0} subscribers
               </div>
             </div>
@@ -55,7 +55,7 @@ export default async function AdminRoomsPage({
           </div>
 
           <details className="mt-3">
-            <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+            <summary className="cursor-pointer text-xs text-[var(--accent)]">
               Rename or remove
             </summary>
             <div className="mt-2 flex flex-wrap items-center gap-2">

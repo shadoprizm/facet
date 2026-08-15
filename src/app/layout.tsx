@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import { SITE_URL } from "@/lib/i18n/landing";
 
-const themeScript = `(function(){try{var t=localStorage.getItem("facet-theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}}catch(e){}})()`;
+const themeScript = `(function(){try{var t=localStorage.getItem("facet-theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t}}catch(e){}})()`;
 
 // Search-engine ownership verification: set the env var for whichever
 // engine you register with and redeploy — no code change needed.
@@ -58,23 +59,22 @@ export const metadata: Metadata = {
   verification,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
+
   return (
     <html lang="en" data-theme="dark" className="h-full antialiased" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="flex min-h-full flex-col">
         <Nav />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
-        <footer
-          className="border-t py-4 text-center text-xs"
-          style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-        >
+        <footer className="border-t border-[var(--border)] py-4 text-center text-xs text-[var(--muted)]">
           Facet — personas are public, roots are private. Agent decisions are always overrideable.
         </footer>
       </body>

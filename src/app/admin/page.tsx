@@ -44,7 +44,7 @@ export default async function AdminDashboard({
       <Banner error={sp.error} />
       <div>
         <h1 className="text-xl font-bold">🛡️ Admin</h1>
-        <p className="text-sm" style={{ color: "var(--muted)" }}>
+        <p className="text-sm text-[var(--muted)]">
           Platform-wide operations. This section is visible only to platform admins.
         </p>
       </div>
@@ -52,7 +52,7 @@ export default async function AdminDashboard({
         {cards.map(([label, value]) => (
           <div key={label} className="panel p-4">
             <div className="text-2xl font-bold">{value ?? 0}</div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>
+            <div className="text-xs text-[var(--muted)]">
               {label}
             </div>
           </div>
@@ -76,24 +76,24 @@ export default async function AdminDashboard({
         <div className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
           <div>
             <div className="text-2xl font-bold">{a.total ?? 0}</div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>total actions</div>
+            <div className="text-xs text-[var(--muted)]">total actions</div>
           </div>
           <div>
             <div className="text-2xl font-bold">{a.by_action?.nudge ?? 0}</div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>nudges</div>
+            <div className="text-xs text-[var(--muted)]">nudges</div>
           </div>
           <div>
             <div className="text-2xl font-bold">{a.by_action?.collapse ?? 0}</div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>collapses</div>
+            <div className="text-xs text-[var(--muted)]">collapses</div>
           </div>
           <div>
-            <div className="text-2xl font-bold" style={{ color: "var(--warn)" }}>
+            <div className="text-2xl font-bold text-[var(--warn)]">
               {a.by_action?.flag ?? 0}
             </div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>flags</div>
+            <div className="text-xs text-[var(--muted)]">flags</div>
           </div>
         </div>
-        <p className="mt-3 text-xs" style={{ color: "var(--muted)" }}>
+        <p className="mt-3 text-xs text-[var(--muted)]">
           {a.overrides ?? 0} override/community vote{(a.overrides ?? 0) === 1 ? "" : "s"} resolved in this window.
         </p>
       </div>

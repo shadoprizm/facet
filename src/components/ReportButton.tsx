@@ -17,8 +17,7 @@ export default function ReportButton({
   return (
     <details>
       <summary
-        className="cursor-pointer text-xs"
-        style={{ color: "var(--bad)" }}
+        className="cursor-pointer text-xs text-[var(--bad)]"
         title="Send this to a human moderator"
       >
         🚩 Report

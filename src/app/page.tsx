@@ -34,7 +34,7 @@ export default async function HomePage({
   const active = await getActivePersona();
 
   const [{ data: rooms }, { data: posts }, { data: counts }] = await Promise.all([
-    supabase.from("rooms").select("*").order("created_at", { ascending: false }).limit(30),
+    supabase.from("rooms_public").select("*").order("created_at", { ascending: false }).limit(30),
     supabase
       .from("posts")
       .select("*, rooms(slug, name)")
@@ -67,8 +67,8 @@ export default async function HomePage({
         <div className="space-y-3">
           {(posts ?? []).map((post: Post & { rooms: Pick<Room, "slug" | "name"> }) => (
             <div key={post.id} className="panel p-4">
-              <div className="flex items-center gap-2 text-xs" style={{ color: "var(--muted)" }}>
-                <Link href={`/r/${post.rooms?.slug}`} className="font-bold hover:underline" style={{ color: "var(--accent)" }}>
+              <div className="flex items-center gap-2 text-xs text-[var(--muted)]">
+                <Link href={`/r/${post.rooms?.slug}`} className="font-bold hover:underline text-[var(--accent)]">
                   r/{post.rooms?.slug}
                 </Link>
                 · <PersonaBadge persona={personaMap.get(post.author_persona_id)} mine={mine.has(post.author_persona_id)} />
@@ -83,18 +83,17 @@ export default async function HomePage({
                   <img
                     src={post.image_url}
                     alt=""
-                    className="max-h-64 w-auto max-w-full rounded-lg border"
-                    style={{ borderColor: "var(--border)" }}
+                    className="max-h-64 w-auto max-w-full rounded-lg border border-[var(--border)]"
                   />
                 </Link>
               )}
-              <div className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+              <div className="mt-1 text-xs text-[var(--muted)]">
                 {post.score} points · {post.comment_count} comments · {new Date(post.created_at).toLocaleString()}
               </div>
             </div>
           ))}
           {(posts ?? []).length === 0 && (
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
+            <p className="text-sm text-[var(--muted)]">
               Nothing here yet. Create a Room and start the first thread.
             </p>
           )}
@@ -103,10 +102,10 @@ export default async function HomePage({
 
       <aside className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="font-bold" style={{ color: "var(--muted)" }}>
+          <h2 className="font-bold text-[var(--muted)]">
             ROOMS
           </h2>
-          <Link href="/rooms/new" className="text-sm" style={{ color: "var(--accent)" }}>
+          <Link href="/rooms/new" className="text-sm text-[var(--accent)]">
             + create
           </Link>
         </div>
@@ -117,12 +116,12 @@ export default async function HomePage({
               <div className="flex items-center gap-2 font-semibold">
                 r/{room.slug}
                 {subscribedRoomIds.has(room.id) && (
-                  <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
+                  <span className="chip chip-good">
                     joined
                   </span>
                 )}
               </div>
-              <div className="text-xs" style={{ color: "var(--muted)" }}>
+              <div className="text-xs text-[var(--muted)]">
                 {room.name} · {countMap.get(room.id) ?? 0} subscriber{(countMap.get(room.id) ?? 0) === 1 ? "" : "s"}
               </div>
             </div>

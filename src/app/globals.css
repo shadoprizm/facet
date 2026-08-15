@@ -104,6 +104,62 @@ body {
   color: var(--muted);
 }
 
+.chip-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chip-good {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.chip-bad {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.chip-warn {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.btn-good {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.btn-bad {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.panel-agent-action {
+  border-color: rgba(139, 92, 246, 0.35);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.panel-warning {
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.banner-error {
+  border-color: rgba(248, 113, 113, 0.5);
+  color: var(--bad);
+}
+
+.banner-success {
+  border-color: rgba(52, 211, 153, 0.5);
+  color: var(--good);
+}
+
+.identity-gradient-text {
+  background: linear-gradient(135deg, #818cf8, #c084fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .theme-toggle {
   position: relative;
   display: inline-grid;

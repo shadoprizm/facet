@@ -31,7 +31,7 @@ export default async function AdminAdminsPage({
             <div className="text-sm font-semibold">
               {a.email} {a.root_user_id === meId && <span className="chip">you</span>}
             </div>
-            <div className="text-xs" style={{ color: "var(--muted)" }}>
+            <div className="text-xs text-[var(--muted)]">
               admin since {new Date(a.created_at).toLocaleDateString()}
             </div>
           </div>

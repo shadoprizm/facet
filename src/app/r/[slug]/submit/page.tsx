@@ -15,7 +15,11 @@ export default async function SubmitPage({
   const { slug } = await params;
   const sp = await searchParams;
   const supabase = await createClient();
-  const { data: room } = await supabase.from("rooms").select("*").eq("slug", slug).single();
+  const { data: room } = await supabase
+    .from("rooms_public")
+    .select("*")
+    .eq("slug", slug)
+    .single();
   if (!room) notFound();
   const r = room as Room;
   const active = await getActivePersona();
@@ -25,15 +29,15 @@ export default async function SubmitPage({
       <Banner error={sp.error} />
       <h1 className="text-xl font-bold">New post in r/{r.slug}</h1>
       {active ? (
-        <p className="text-sm" style={{ color: "var(--muted)" }}>
+        <p className="text-sm text-[var(--muted)]">
           Posting as{" "}
-          <b style={{ color: "var(--text)" }}>
+          <b className="text-[var(--text)]">
             {active.display_name} (@{active.handle})
           </b>{" "}
-          — switch masks in the nav bar if this isn't the voice you want here.
+          — switch masks in the nav bar if this isn&apos;t the voice you want here.
         </p>
       ) : (
-        <p className="text-sm" style={{ color: "var(--bad)" }}>
+        <p className="text-sm text-[var(--bad)]">
           You need a persona to post — create one under “Manage personas”.
         </p>
       )}
@@ -43,7 +47,7 @@ export default async function SubmitPage({
         <input className="input" name="title" placeholder="Title" maxLength={200} required />
         <textarea className="input" name="body" placeholder="Text (optional)" rows={6} />
         <div className="space-y-1">
-          <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
+          <label className="text-xs font-medium text-[var(--muted)]">
             Image (optional)
           </label>
           <input
@@ -52,15 +56,15 @@ export default async function SubmitPage({
             accept="image/png,image/jpeg,image/webp,image/gif"
             className="block w-full text-xs"
           />
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
+          <p className="text-xs text-[var(--muted)]">
             PNG/JPEG/WebP/GIF, up to 5MB.
           </p>
         </div>
         <button className="btn btn-primary w-full" disabled={!active}>
           Post
         </button>
-        <p className="text-xs" style={{ color: "var(--muted)" }}>
-          The Room Agent will read this against the Room's constitution the
+        <p className="text-xs text-[var(--muted)]">
+          The Room Agent will read this against the Room&apos;s constitution the
           moment it lands.
         </p>
       </form>

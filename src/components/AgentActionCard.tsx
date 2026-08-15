@@ -38,28 +38,22 @@ export default function AgentActionCard({
 
   const statusChip =
     action.status === "pending" ? (
-      <span className="chip" style={{ color: "var(--warn)", borderColor: "var(--warn)" }}>
+      <span className="chip chip-warn">
         community vote open
       </span>
     ) : action.status === "overridden" ? (
-      <span className="chip" style={{ color: "var(--bad)", borderColor: "var(--bad)" }}>
+      <span className="chip chip-bad">
         overridden — agent recalibrated
       </span>
     ) : (
-      <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
+      <span className="chip chip-good">
         upheld
       </span>
     );
 
   return (
-    <div
-      className="panel my-2 p-3"
-      style={{
-        borderColor: "rgba(139,92,246,0.35)",
-        background: "rgba(99,102,241,0.06)",
-      }}
-    >
-      <div className="flex flex-wrap items-center gap-2 text-xs" style={{ color: "var(--accent-2)" }}>
+    <div className="panel panel-agent-action my-2 p-3">
+      <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--accent-2)]">
         <span>{ICONS[action.action_type]}</span>
         <span className="font-bold uppercase tracking-wide">
           Room Agent · {action.action_type}
@@ -71,29 +65,27 @@ export default function AgentActionCard({
       </div>
       <p className="mt-1.5 text-sm">{action.reason}</p>
       {!compact && (
-        <div className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+        <div className="mt-1 text-xs text-[var(--muted)]">
           trigger: {action.trigger_param} · {new Date(action.created_at).toLocaleString()}
         </div>
       )}
       <div className="mt-2 flex items-center gap-2">
         <button
-          className="btn !py-1 text-xs"
+          className={`btn !py-1 text-xs ${myVote === "uphold" ? "btn-good" : ""}`}
           disabled={pending || action.status !== "pending"}
           onClick={() => cast("uphold")}
-          style={myVote === "uphold" ? { borderColor: "var(--good)", color: "var(--good)" } : {}}
         >
           Uphold ({action.votes_uphold})
         </button>
         <button
-          className="btn !py-1 text-xs"
+          className={`btn !py-1 text-xs ${myVote === "override" ? "btn-bad" : ""}`}
           disabled={pending || action.status !== "pending"}
           onClick={() => cast("override")}
-          style={myVote === "override" ? { borderColor: "var(--bad)", color: "var(--bad)" } : {}}
         >
           Override ({action.votes_override})
         </button>
         {error && (
-          <span className="text-xs" style={{ color: "var(--bad)" }}>
+          <span className="text-xs text-[var(--bad)]">
             {error}
           </span>
         )}

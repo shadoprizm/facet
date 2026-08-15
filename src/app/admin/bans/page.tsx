@@ -22,7 +22,7 @@ export default async function AdminBansPage({
 
       <div className="panel p-5">
         <h2 className="font-bold">Platform-ban a root (by persona handle)</h2>
-        <p className="text-xs" style={{ color: "var(--muted)" }}>
+        <p className="text-xs text-[var(--muted)]">
           Resolves the handle to its root account and bans every persona under
           it, platform-wide — this is the enforcement path the &ldquo;root is
           known only to the platform&rdquo; design exists for.
@@ -35,11 +35,11 @@ export default async function AdminBansPage({
       </div>
 
       <div>
-        <h2 className="mb-2 font-bold" style={{ color: "var(--muted)" }}>
+        <h2 className="mb-2 font-bold text-[var(--muted)]">
           PLATFORM BANS
         </h2>
         {((platformBans ?? []) as PlatformBanRow[]).length === 0 && (
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
+          <p className="text-sm text-[var(--muted)]">
             None.
           </p>
         )}
@@ -47,7 +47,7 @@ export default async function AdminBansPage({
           <div key={b.root_user_id} className="panel mb-2 flex items-center justify-between p-3">
             <div>
               <div className="text-sm font-semibold">{b.email}</div>
-              <div className="text-xs" style={{ color: "var(--muted)" }}>
+              <div className="text-xs text-[var(--muted)]">
                 {b.reason} · {new Date(b.created_at).toLocaleString()}
               </div>
             </div>
@@ -60,11 +60,11 @@ export default async function AdminBansPage({
       </div>
 
       <div>
-        <h2 className="mb-2 font-bold" style={{ color: "var(--muted)" }}>
+        <h2 className="mb-2 font-bold text-[var(--muted)]">
           ROOM BANS
         </h2>
         {((roomBans ?? []) as RoomBanRow[]).length === 0 && (
-          <p className="text-sm" style={{ color: "var(--muted)" }}>
+          <p className="text-sm text-[var(--muted)]">
             None.
           </p>
         )}
@@ -74,7 +74,7 @@ export default async function AdminBansPage({
               <div className="text-sm font-semibold">
                 @{b.banned_handle ?? "?"} in r/{b.room_slug}
               </div>
-              <div className="text-xs" style={{ color: "var(--muted)" }}>
+              <div className="text-xs text-[var(--muted)]">
                 {b.root_email} · {b.reason} · {new Date(b.created_at).toLocaleString()}
               </div>
             </div>

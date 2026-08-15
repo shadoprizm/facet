@@ -35,14 +35,13 @@ export default function CommentNode({
     <img
       src={comment.image_url}
       alt=""
-      className="mt-2 max-h-80 w-auto max-w-full rounded-lg border"
-      style={{ borderColor: "var(--border)" }}
+      className="mt-2 max-h-80 w-auto max-w-full rounded-lg border border-[var(--border)]"
     />
   ) : null;
 
   const body = comment.collapsed ? (
     <details className="mt-1">
-      <summary className="cursor-pointer text-sm" style={{ color: "var(--warn)" }}>
+      <summary className="cursor-pointer text-sm text-[var(--warn)]">
         🫧 Collapsed by the Room Agent — {comment.collapse_reason ?? "under review"} (click to read anyway)
       </summary>
       {comment.body && <p className="mt-2 whitespace-pre-wrap text-sm opacity-70">{comment.body}</p>}
@@ -56,11 +55,8 @@ export default function CommentNode({
   );
 
   return (
-    <div
-      className={depth > 0 ? "mt-3 border-l-2 pl-4" : "mt-3"}
-      style={depth > 0 ? { borderColor: "var(--border)" } : {}}
-    >
-      <div className="flex flex-wrap items-center gap-2 text-xs" style={{ color: "var(--muted)" }}>
+    <div className={depth > 0 ? "mt-3 border-l-2 border-[var(--border)] pl-4" : "mt-3"}>
+      <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--muted)]">
         <PersonaBadge
           persona={ctx.personaMap.get(comment.author_persona_id)}
           mine={ctx.mine.has(comment.author_persona_id)}
@@ -77,7 +73,7 @@ export default function CommentNode({
           path={ctx.path}
         />
         <details>
-          <summary className="cursor-pointer text-xs" style={{ color: "var(--muted)" }}>
+          <summary className="cursor-pointer text-xs text-[var(--muted)]">
             Reply
           </summary>
           <form action={createComment} className="mt-2 space-y-2">

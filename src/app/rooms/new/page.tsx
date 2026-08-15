@@ -18,7 +18,7 @@ export default async function NewRoomPage({
     <div className="mx-auto max-w-2xl space-y-4">
       <Banner error={params.error} />
       <h1 className="text-xl font-bold">Found a Room</h1>
-      <p className="text-sm" style={{ color: "var(--muted)" }}>
+      <p className="text-sm text-[var(--muted)]">
         Every Room gets an AI Agent Moderator on day one. Its behaviour is
         governed by the constitution you write below — plain-language values,
         plus optional <code>agent.strictness</code> and <code>agent.forbid</code>{" "}

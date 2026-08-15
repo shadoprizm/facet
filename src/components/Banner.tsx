@@ -11,12 +11,11 @@ export default function Banner({
   if (!e && !n) return null;
   return (
     <div
-      className="panel mb-4 px-4 py-3 text-sm"
-      style={
+      className={`panel mb-4 px-4 py-3 text-sm ${
         e
-          ? { borderColor: "rgba(248,113,113,0.5)", color: "var(--bad)" }
-          : { borderColor: "rgba(52,211,153,0.5)", color: "var(--good)" }
-      }
+          ? "banner-error"
+          : "banner-success"
+      }`}
     >
       {e ?? n}
     </div>

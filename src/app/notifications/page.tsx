@@ -6,12 +6,12 @@ import Banner from "@/components/Banner";
 import { PersonaAvatar } from "@/components/Avatar";
 import type { Notification } from "@/lib/types";
 
-const LABELS: Record<Notification["type"], { icon: string; verb: string; color: string }> = {
-  reply: { icon: "💬", verb: "replied to you", color: "var(--accent)" },
-  collapse: { icon: "🫧", verb: "your comment was collapsed by the agent", color: "var(--warn)" },
-  agent_flag: { icon: "🚩", verb: "your content was flagged for review", color: "var(--bad)" },
-  ban: { icon: "⛔", verb: "you were banned from a Room", color: "var(--bad)" },
-  report_resolved: { icon: "✓", verb: "your report was resolved", color: "var(--good)" },
+const LABELS: Record<Notification["type"], { icon: string; verb: string; colorClass: string }> = {
+  reply: { icon: "💬", verb: "replied to you", colorClass: "text-[var(--accent)]" },
+  collapse: { icon: "🫧", verb: "your comment was collapsed by the agent", colorClass: "text-[var(--warn)]" },
+  agent_flag: { icon: "🚩", verb: "your content was flagged for review", colorClass: "text-[var(--bad)]" },
+  ban: { icon: "⛔", verb: "you were banned from a Room", colorClass: "text-[var(--bad)]" },
+  report_resolved: { icon: "✓", verb: "your report was resolved", colorClass: "text-[var(--good)]" },
 };
 
 export default async function NotificationsPage({
@@ -24,7 +24,9 @@ export default async function NotificationsPage({
 
   const { data: rows } = await supabase
     .from("notifications")
-    .select("*")
+    .select(
+      "id, type, actor_persona_id, room_id, post_id, comment_id, payload, read, created_at",
+    )
     .order("created_at", { ascending: false })
     .limit(50);
   const notifs = (rows ?? []) as Notification[];
@@ -42,7 +44,7 @@ export default async function NotificationsPage({
         <h1 className="text-xl font-bold">
           Notifications
           {unread > 0 && (
-            <span className="chip ml-2" style={{ color: "var(--accent)", borderColor: "var(--accent)" }}>
+            <span className="chip chip-accent ml-2">
               {unread} unread
             </span>
           )}
@@ -55,7 +57,7 @@ export default async function NotificationsPage({
       </div>
 
       {notifs.length === 0 && (
-        <p className="text-sm" style={{ color: "var(--muted)" }}>
+        <p className="text-sm text-[var(--muted)]">
           No notifications yet. You&apos;ll see replies, agent actions on your
           content, and bans here.
         </p>
@@ -73,25 +75,25 @@ export default async function NotificationsPage({
             <span className="text-lg">{meta.icon}</span>
             {actor && <PersonaAvatar avatarUrl={actor.avatar_url} avatarColor={actor.avatar_color} size={28} />}
             <div className="min-w-0 flex-1">
-              <div className="text-sm" style={{ color: n.read ? "var(--muted)" : "var(--text)" }}>
+              <div className={`text-sm ${n.read ? "text-[var(--muted)]" : "text-[var(--text)]"}`}>
                 {actor && <span className="font-semibold">@{actor.handle} </span>}
-                <span style={{ color: meta.color }}>{meta.verb}</span>
+                <span className={meta.colorClass}>{meta.verb}</span>
               </div>
               {n.type === "collapse" && (n.payload as { reason?: string }).reason && (
-                <p className="mt-1 text-xs italic" style={{ color: "var(--muted)" }}>
+                <p className="mt-1 text-xs italic text-[var(--muted)]">
                   &ldquo;{(n.payload as { reason: string }).reason.slice(0, 160)}&rdquo;
                 </p>
               )}
               {n.type === "ban" && (n.payload as { reason?: string }).reason && (
-                <p className="mt-1 text-xs" style={{ color: "var(--muted)" }}>
+                <p className="mt-1 text-xs text-[var(--muted)]">
                   Reason: {(n.payload as { reason: string }).reason}
                 </p>
               )}
-              <div className="mt-0.5 text-xs" style={{ color: "var(--muted)" }}>
+              <div className="mt-0.5 text-xs text-[var(--muted)]">
                 {new Date(n.created_at).toLocaleString()}
               </div>
             </div>
-            {!n.read && <span className="mt-1 h-2 w-2 shrink-0 rounded-full" style={{ background: "var(--accent)" }} />}
+            {!n.read && <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />}
           </div>
         );
         return (

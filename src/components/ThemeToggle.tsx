@@ -9,7 +9,6 @@ function currentTheme(): Theme {
 
 function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme;
-  document.documentElement.style.colorScheme = theme;
 
   try {
     localStorage.setItem(STORAGE_KEY, theme);

@@ -26,7 +26,9 @@ export default async function PostPage({
 
   const { data: post } = await supabase
     .from("posts")
-    .select("*, rooms(*)")
+    .select(
+      "*, rooms(id, slug, name, description, constitution, agent_config, created_by_persona_id, created_at, avatar_url, removed_at)",
+    )
     .eq("id", id)
     .single();
   if (!post) notFound();
@@ -47,7 +49,7 @@ export default async function PostPage({
         .order("created_at"),
       supabase.from("votes").select("target_type, target_id, value"),
       listMyPersonas(),
-      supabase.from("rooms").select("id, slug, name").order("slug"),
+      supabase.from("rooms_public").select("id, slug, name").order("slug"),
     ]);
 
   const actionIds = (actions ?? []).map((a) => a.id);
@@ -102,8 +104,8 @@ export default async function PostPage({
       <Banner error={sp.error} notice={sp.notice} />
 
       <div className="panel p-5">
-        <div className="flex items-center gap-2 text-xs" style={{ color: "var(--muted)" }}>
-          <Link href={`/r/${p.rooms.slug}`} className="font-bold hover:underline" style={{ color: "var(--accent)" }}>
+        <div className="flex items-center gap-2 text-xs text-[var(--muted)]">
+          <Link href={`/r/${p.rooms.slug}`} className="font-bold hover:underline text-[var(--accent)]">
             r/{p.rooms.slug}
           </Link>
           · <PersonaBadge persona={personaMap.get(p.author_persona_id)} mine={iAmAuthor} />
@@ -120,8 +122,7 @@ export default async function PostPage({
           <img
             src={p.image_url}
             alt=""
-            className="mt-3 max-h-[32rem] w-auto max-w-full rounded-lg border"
-            style={{ borderColor: "var(--border)" }}
+            className="mt-3 max-h-[32rem] w-auto max-w-full rounded-lg border border-[var(--border)]"
           />
         )}
         <div className="mt-3 flex flex-wrap items-center gap-4">
@@ -132,7 +133,7 @@ export default async function PostPage({
             myVote={ctx.myVotes.get(`post:${p.id}`) ?? 0}
             path={path}
           />
-          <span className="text-xs" style={{ color: "var(--muted)" }}>
+          <span className="text-xs text-[var(--muted)]">
             {p.comment_count} comments
           </span>
           {iAmAuthor && p.status === "active" ? (
@@ -152,7 +153,7 @@ export default async function PostPage({
 
         {iAmAuthor && otherPersonas.length > 0 && (
           <details className="mt-3">
-            <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+            <summary className="cursor-pointer text-xs text-[var(--accent)]">
               Cross-post this with another of your personas
             </summary>
             <form action={crosspost} className="mt-2 flex flex-wrap items-center gap-2">
@@ -172,7 +173,7 @@ export default async function PostPage({
                 ))}
               </select>
               <button className="btn !py-1 text-xs">Cross-post</button>
-              <span className="w-full text-xs" style={{ color: "var(--muted)" }}>
+              <span className="w-full text-xs text-[var(--muted)]">
                 The community will see the new post under that mask, labelled as a cross-post — but never that both masks are you.
               </span>
             </form>
@@ -194,7 +195,7 @@ export default async function PostPage({
             accept="image/png,image/jpeg,image/webp,image/gif"
             className="block w-full text-xs"
           />
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
+          <p className="text-xs text-[var(--muted)]">
             Attach an image or GIF (optional) — PNG/JPEG/WebP/GIF, up to 5MB.
           </p>
         </div>

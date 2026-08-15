@@ -33,8 +33,7 @@ export default function VoteButtons({
       <button
         onClick={() => cast(1)}
         disabled={pending}
-        className="btn btn-ghost !px-1.5 !py-0.5"
-        style={{ color: myVote === 1 ? "var(--good)" : "var(--muted)" }}
+        className={`btn btn-ghost !px-1.5 !py-0.5 ${myVote === 1 ? "!text-[var(--good)]" : ""}`}
         title="Upvote"
       >
         ▲
@@ -43,14 +42,13 @@ export default function VoteButtons({
       <button
         onClick={() => cast(-1)}
         disabled={pending}
-        className="btn btn-ghost !px-1.5 !py-0.5"
-        style={{ color: myVote === -1 ? "var(--bad)" : "var(--muted)" }}
+        className={`btn btn-ghost !px-1.5 !py-0.5 ${myVote === -1 ? "!text-[var(--bad)]" : ""}`}
         title="Downvote"
       >
         ▼
       </button>
       {error && (
-        <span className="text-xs" style={{ color: "var(--bad)" }} title={error}>
+        <span className="text-xs text-[var(--bad)]" title={error}>
           {error.length > 60 ? error.slice(0, 60) + "…" : error}
         </span>
       )}

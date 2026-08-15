@@ -13,8 +13,7 @@ export default async function LoginPage({
       <div className="space-y-4">
         <div className="flex items-center gap-3">
           <span
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl"
-            style={{ background: "#fff" }}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/facet-mark.png" alt="Facet" className="h-8 w-8 object-contain" />
@@ -24,23 +23,17 @@ export default async function LoginPage({
         <h1 className="text-4xl font-extrabold">
           One root.
           <br />
-          <span
-            style={{
-              background: "linear-gradient(135deg,#818cf8,#c084fc)",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
+          <span className="identity-gradient-text">
             Many masks.
           </span>
         </h1>
-        <p style={{ color: "var(--muted)" }}>
+        <p className="text-[var(--muted)]">
           Your root identity verifies you exist and keeps you accountable — but
           it is never shown to anyone. In public you speak through{" "}
-          <b style={{ color: "var(--text)" }}>personas</b>: separate names,
+          <b className="text-[var(--text)]">personas</b>: separate names,
           karma, and histories for each side of you.
         </p>
-        <ul className="space-y-2 text-sm" style={{ color: "var(--muted)" }}>
+        <ul className="space-y-2 text-sm text-[var(--muted)]">
           <li>◆ Karma is per-persona. Never merged, never gamed.</li>
           <li>◆ Every Room is tended by an AI agent bound by a community constitution.</li>
           <li>◆ Any agent decision can be overridden by community vote — and the agent learns.</li>
@@ -68,7 +61,7 @@ export default async function LoginPage({
           <button className="btn w-full">Email me a magic link</button>
         </form>
 
-        <p className="text-xs" style={{ color: "var(--muted)" }}>
+        <p className="text-xs text-[var(--muted)]">
           Your email is your root identity. It is used only for verification
           and abuse enforcement — other users can never see it or link your
           personas together.

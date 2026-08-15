@@ -26,15 +26,11 @@ export default async function Nav() {
   const unreadCount = (unread as { count?: number }).count ?? 0;
 
   return (
-    <nav
-      className="sticky top-0 z-40 border-b"
-      style={{ background: "var(--nav-bg)", borderColor: "var(--border)", backdropFilter: "blur(8px)" }}
-    >
+    <nav className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--nav-bg)] backdrop-blur-[8px]">
       <div className="mx-auto flex h-14 max-w-5xl items-center gap-4 px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
           <span
-            className="inline-flex h-7 w-7 items-center justify-center rounded-lg"
-            style={{ background: "#fff" }}
+            className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/facet-mark.png" alt="" className="h-5 w-5 object-contain" />
@@ -72,8 +68,7 @@ export default async function Nav() {
               🔔
               {unreadCount > 0 && (
                 <span
-                  className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-bold text-white"
-                  style={{ background: "var(--bad)" }}
+                  className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--bad)] px-1 text-[10px] font-bold text-white"
                 >
                   {unreadCount > 9 ? "9+" : unreadCount}
                 </span>

@@ -26,7 +26,7 @@ export default async function MePage({
 
       <div className="panel p-5">
         <h1 className="text-xl font-bold">Your identity tree</h1>
-        <p className="mt-1 text-sm" style={{ color: "var(--muted)" }}>
+        <p className="mt-1 text-sm text-[var(--muted)]">
           Root: <b>{user?.email}</b> — verified, private, enforceable. Nobody
           on Facet can see it or connect the personas below to each other.
         </p>
@@ -34,11 +34,11 @@ export default async function MePage({
 
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-3">
-          <h2 className="font-bold" style={{ color: "var(--muted)" }}>
+          <h2 className="font-bold text-[var(--muted)]">
             PERSONAS ({personas.filter((p) => p.status === "active").length} active)
           </h2>
           {personas.length === 0 && (
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
+            <p className="text-sm text-[var(--muted)]">
               No personas yet — create your first mask to start posting.
             </p>
           )}
@@ -53,12 +53,12 @@ export default async function MePage({
                     </Link>
                     {p.status === "retired" && <span className="chip">retired</span>}
                     {active?.id === p.id && (
-                      <span className="chip" style={{ color: "var(--good)", borderColor: "var(--good)" }}>
+                      <span className="chip chip-good">
                         wearing
                       </span>
                     )}
                   </div>
-                  <div className="text-xs" style={{ color: "var(--muted)" }}>
+                  <div className="text-xs text-[var(--muted)]">
                     @{p.handle} · {p.karma} karma
                   </div>
                 </div>
@@ -85,14 +85,14 @@ export default async function MePage({
               </div>
               {p.status === "active" && (
                 <details className="mt-2">
-                  <summary className="cursor-pointer text-xs" style={{ color: "var(--accent)" }}>
+                  <summary className="cursor-pointer text-xs text-[var(--accent)]">
                     Change avatar image
                   </summary>
                   <form action={uploadPersonaAvatar} className="mt-2 flex flex-wrap items-center gap-2">
                     <input type="hidden" name="persona_id" value={p.id} />
                     <input type="file" name="avatar" accept="image/png,image/jpeg,image/webp,image/gif" required className="text-xs" />
                     <button className="btn !py-1 text-xs">Upload</button>
-                    <span className="w-full text-xs" style={{ color: "var(--muted)" }}>
+                    <span className="w-full text-xs text-[var(--muted)]">
                       PNG/JPEG/WebP/GIF, up to 3MB. Falls back to the colour dot until you upload one.
                     </span>
                   </form>
@@ -107,7 +107,7 @@ export default async function MePage({
           <input className="input" name="handle" placeholder="handle (a-z, 0-9, _)" pattern="[a-z0-9_]{3,24}" required />
           <input className="input" name="display_name" placeholder="display name" maxLength={48} required />
           <textarea className="input" name="bio" placeholder="bio (optional)" rows={2} />
-          <div className="flex items-center gap-2 text-sm" style={{ color: "var(--muted)" }}>
+          <div className="flex items-center gap-2 text-sm text-[var(--muted)]">
             colour
             <select name="avatar_color" className="input !w-auto">
               {COLORS.map((c) => (
@@ -118,7 +118,7 @@ export default async function MePage({
             </select>
           </div>
           <button className="btn btn-primary w-full">Create persona</button>
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
+          <p className="text-xs text-[var(--muted)]">
             Limit: 3 new personas per 24 h, 10 active total. Each persona has
             its own karma, subscriptions, and history — they are never merged.
           </p>

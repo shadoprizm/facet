@@ -19,6 +19,7 @@ Facet (facet.social) — a Reddit-like forum with two core ideas:
 - [2026-07-03] Admin backend is the deliberate root-visibility exception (`admin_lookup_persona`), gated by `platform_admins` table + `is_platform_admin()` RPC, re-checked server-side on every page/action.
 - [2026-07-03] Trust boundary (MVP): `record_agent_action` is callable by any authenticated session because the agent runs in-request. Acceptable for demo; production would use a service key / Edge Function.
 - [2026-07-03] Security-definer views (`personas_public`, `room_subscriber_counts`) are intentionally flagged by Supabase linter — they are the hiding mechanism.
+- [2026-07-08] Seed persona/room avatars use absolute Supabase Storage public URLs, not relative `/seed/...` app paths. (Reason: DB updates can hit prod before a frontend deploy includes matching static files.)
 
 ## Architecture map
 - `src/proxy.ts` — Next 16 proxy: session refresh + login gate.

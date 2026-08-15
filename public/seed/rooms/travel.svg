@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>travel room image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <circle cx="129" cy="153" r="86" fill="#fff" opacity=".13"/>
+  <circle cx="369" cy="413" r="132" fill="#000" opacity=".12"/>
+  <path d="M0 383c75-42 153-59 235-51 113 11 186-17 277-78v258H0Z" fill="#854d0e" opacity=".2"/>
+  <g opacity=".95"><g stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M256 109c64 0 116 52 116 116 0 88-116 178-116 178S140 313 140 225c0-64 52-116 116-116Z"/><circle cx="256" cy="224" r="39"/></g></g>
+  <rect x="64" y="64" width="384" height="384" rx="62" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/>
+</svg>

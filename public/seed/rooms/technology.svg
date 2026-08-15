@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>technology room image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <circle cx="123" cy="140" r="86" fill="#fff" opacity=".13"/>
+  <circle cx="375" cy="384" r="132" fill="#000" opacity=".12"/>
+  <path d="M0 383c75-42 153-59 235-51 113 11 186-17 277-78v258H0Z" fill="#65a30d" opacity=".2"/>
+  <g opacity=".95"><g stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="147" y="128" width="218" height="256" rx="26"/><path d="M184 196h144M184 256h144M184 316h144"/><path d="M205 196h1M205 256h1M205 316h1"/></g></g>
+  <rect x="64" y="64" width="384" height="384" rx="62" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/>
+</svg>

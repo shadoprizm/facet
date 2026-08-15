@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>music room image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <circle cx="116" cy="139" r="86" fill="#fff" opacity=".13"/>
+  <circle cx="437" cy="377" r="132" fill="#000" opacity=".12"/>
+  <path d="M0 383c75-42 153-59 235-51 113 11 186-17 277-78v258H0Z" fill="#ea580c" opacity=".2"/>
+  <g opacity=".95"><g stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M190 318V151l158-32v167"/><circle cx="162" cy="329" r="40"/><circle cx="320" cy="296" r="40"/></g></g>
+  <rect x="64" y="64" width="384" height="384" rx="62" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/>
+</svg>

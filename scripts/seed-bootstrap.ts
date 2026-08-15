@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /**
  * Community seed bootstrap — creates the seed roots (@seed.facet.social),
  * their personas, the room catalog, subscriptions, and backfills the
@@ -18,7 +17,7 @@
  */
 
 import { createClient } from "@supabase/supabase-js";
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
+import { chmodSync, readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { randomBytes } from "node:crypto";
 import path from "node:path";
 
@@ -48,7 +47,10 @@ const state: {
 } = existsSync(statePath)
   ? JSON.parse(readFileSync(statePath, "utf8"))
   : { roots: {}, personas: {}, rooms: {}, bootstrapPosts: {}, seededRooms: [] };
-const saveState = () => writeFileSync(statePath, JSON.stringify(state, null, 2));
+const saveState = () => {
+  writeFileSync(statePath, JSON.stringify(state, null, 2), { mode: 0o600 });
+  chmodSync(statePath, 0o600);
+};
 
 const now = () => Date.now();
 const rand = (a: number, b: number) => a + Math.random() * (b - a);
@@ -59,6 +61,13 @@ const HOUR = 3600_000, MIN = 60_000;
 const PALETTE = ["#6366f1", "#ef4444", "#f59e0b", "#10b981", "#06b6d4", "#8b5cf6",
   "#ec4899", "#84cc16", "#f97316", "#14b8a6", "#a855f7", "#0ea5e9", "#e11d48", "#65a30d"];
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const seedAssetName = (s: string) => s.toLowerCase().replace(/[^a-z0-9_-]+/g, "-");
+const storagePublicUrl = (bucket: string, key: string) =>
+  `${URL.replace(/\/$/, "")}/storage/v1/object/public/${bucket}/${key}`;
+const personaAvatarUrl = (handle: string) =>
+  storagePublicUrl("seed-persona-avatars", `${seedAssetName(handle)}.svg`);
+const roomAvatarUrl = (slug: string) =>
+  storagePublicUrl("seed-room-avatars", `${seedAssetName(slug)}.svg`);
 
 type Facet = { handle: string; name: string; bio: string; rooms: string[]; activity: string };
 const allFacets: (Facet & { rootId: string })[] = personasCfg.roots.flatMap(
@@ -92,8 +101,9 @@ async function main() {
   // the create_persona RPC's 3-per-24h rate limit doesn't apply to us and the
   // RPC has no other side effects)
   console.log("== personas");
-  const { data: existingPersonas } = await db.from("personas").select("id, handle");
+  const { data: existingPersonas } = await db.from("personas").select("id, handle, avatar_url");
   const handleToId = new Map((existingPersonas ?? []).map((p) => [p.handle, p.id]));
+  const handleToAvatar = new Map((existingPersonas ?? []).map((p) => [p.handle, p.avatar_url]));
   const launch = new Date("2026-07-03T22:00:00Z").getTime();
   const toInsert = allFacets
     .filter((f) => !handleToId.has(lc(f.handle)))
@@ -103,20 +113,37 @@ async function main() {
       display_name: f.name,
       bio: f.bio,
       avatar_color: PALETTE[hash(f.handle) % PALETTE.length],
+      avatar_url: personaAvatarUrl(f.handle),
       created_at: iso(rand(launch, now() - 2 * HOUR)),
     }));
   if (toInsert.length) {
-    const { data, error } = await db.from("personas").insert(toInsert).select("id, handle");
+    const { data, error } = await db.from("personas").insert(toInsert).select("id, handle, avatar_url");
     if (error) throw new Error(`personas insert: ${error.message}`);
-    for (const p of data!) handleToId.set(p.handle, p.id);
+    for (const p of data!) {
+      handleToId.set(p.handle, p.id);
+      handleToAvatar.set(p.handle, p.avatar_url);
+    }
     console.log(`  + ${toInsert.length} personas`);
   }
+  let personaAvatarsUpdated = 0;
   for (const f of allFacets) state.personas[lc(f.handle)] = handleToId.get(lc(f.handle))!;
+  for (const f of allFacets) {
+    const handle = lc(f.handle);
+    const wanted = personaAvatarUrl(handle);
+    if (handleToAvatar.get(handle) === wanted) continue;
+    const { error } = await db.from("personas")
+      .update({ avatar_url: wanted })
+      .eq("id", state.personas[handle]);
+    if (error) throw new Error(`persona avatar ${handle}: ${error.message}`);
+    handleToAvatar.set(handle, wanted);
+    personaAvatarsUpdated++;
+  }
+  if (personaAvatarsUpdated) console.log(`  ~ ${personaAvatarsUpdated} persona avatars updated`);
   saveState();
 
   // ---------- 3. rooms (backdated over the launch window, founder = a regular)
   console.log("== rooms");
-  const { data: existingRooms } = await db.from("rooms").select("id, slug, created_at");
+  const { data: existingRooms } = await db.from("rooms").select("id, slug, created_at, avatar_url");
   const roomBySlug = new Map((existingRooms ?? []).map((r) => [r.slug, r]));
   const newRooms = roomsCfg.rooms.filter((r: { slug: string }) => !roomBySlug.has(r.slug));
   let t = launch + 30 * MIN;
@@ -130,18 +157,31 @@ async function main() {
     t += step;
     const { data, error } = await db.from("rooms").insert({
       slug: r.slug, name: r.name, description: r.description,
+      avatar_url: roomAvatarUrl(r.slug),
       created_by_persona_id: founderId,
       created_by_root: rootOfHandle.get(lc(founder.handle))
         ? state.roots[rootOfHandle.get(lc(founder.handle))!].id
         : Object.values(state.roots)[0].id,
       created_at: createdAt,
-    }).select("id, slug, created_at").single();
+    }).select("id, slug, created_at, avatar_url").single();
     if (error) throw new Error(`room ${r.slug}: ${error.message}`);
     roomBySlug.set(r.slug, data!);
     await db.from("agent_calibration").insert({ room_id: data!.id });
     await db.from("room_subscriptions").insert({ persona_id: founderId, room_id: data!.id });
     console.log(`  + r/${r.slug} (founder ${founder.handle})`);
   }
+  let roomAvatarsUpdated = 0;
+  for (const r of roomsCfg.rooms) {
+    const row = roomBySlug.get(r.slug);
+    if (!row) continue;
+    const wanted = roomAvatarUrl(r.slug);
+    if (row.avatar_url === wanted) continue;
+    const { error } = await db.from("rooms").update({ avatar_url: wanted }).eq("id", row.id);
+    if (error) throw new Error(`room avatar ${r.slug}: ${error.message}`);
+    roomBySlug.set(r.slug, { ...row, avatar_url: wanted });
+    roomAvatarsUpdated++;
+  }
+  if (roomAvatarsUpdated) console.log(`  ~ ${roomAvatarsUpdated} room avatars updated`);
   for (const [slug, r] of roomBySlug) state.rooms[slug] = r.id;
   saveState();
 

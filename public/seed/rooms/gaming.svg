@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>gaming room image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <circle cx="154" cy="89" r="86" fill="#fff" opacity=".13"/>
+  <circle cx="407" cy="400" r="132" fill="#000" opacity=".12"/>
+  <path d="M0 383c75-42 153-59 235-51 113 11 186-17 277-78v258H0Z" fill="#854d0e" opacity=".2"/>
+  <g opacity=".95"><g stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M136 225c10-40 29-60 58-60h124c29 0 48 20 58 60l22 87c8 31-24 54-48 34l-54-44h-80l-54 44c-24 20-56-3-48-34Z"/><path d="M177 248h65M210 216v65M315 231h1M349 267h1"/></g></g>
+  <rect x="64" y="64" width="384" height="384" rx="62" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/>
+</svg>

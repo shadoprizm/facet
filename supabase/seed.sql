@@ -32,18 +32,27 @@ begin
     'email', v_user::text, now(), now(), now()
   );
 
-  insert into public.personas (root_user_id, handle, display_name, avatar_color, bio)
-  values (v_user, 'aurora_polaris', 'Aurora', '#ec4899', 'Chasing lights and long trails.')
+  insert into public.personas (root_user_id, handle, display_name, avatar_color, avatar_url, bio)
+  values (
+    v_user, 'aurora_polaris', 'Aurora', '#ec4899',
+    '/seed/personas/aurora_polaris.svg',
+    'Chasing lights and long trails.'
+  )
   returning id into v_aurora;
 
-  insert into public.personas (root_user_id, handle, display_name, avatar_color, bio)
-  values (v_user, 'grumpy_badger', 'Grumpy Badger', '#f59e0b', 'Here to disagree, politely-ish.')
+  insert into public.personas (root_user_id, handle, display_name, avatar_color, avatar_url, bio)
+  values (
+    v_user, 'grumpy_badger', 'Grumpy Badger', '#f59e0b',
+    '/seed/personas/grumpy_badger.svg',
+    'Here to disagree, politely-ish.'
+  )
   returning id into v_badger;
 
-  insert into public.rooms (slug, name, description, constitution, created_by_persona_id, created_by_root)
+  insert into public.rooms (slug, name, description, constitution, avatar_url, created_by_persona_id, created_by_root)
   values (
     'trailtalk', 'Trail Talk', 'Hiking, backpacking, and the outdoors.',
     E'Be excellent to each other. Debate ideas, not people.\nStay on topic — trails, gear, and the outdoors.\nAssume good faith until proven otherwise.\n\nagent.strictness: normal\nagent.forbid: crypto',
+    '/seed/rooms/trailtalk.svg',
     v_aurora, v_user
   ) returning id into v_room;
 

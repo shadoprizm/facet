@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>protein_pancake avatar</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <circle cx="49" cy="42" r="42" fill="#fff" opacity=".13"/>
+  <circle cx="213" cy="206" r="70" fill="#000" opacity=".12"/>
+  <path d="M42 239c13-39 44-62 86-62s73 23 86 62Z" fill="#4338ca"/>
+  <path d="M101 176c11 15 43 15 54 0v32c-14 15-40 15-54 0Z" fill="#b5754d"/>
+  <ellipse cx="128" cy="119" rx="54" ry="60" fill="#c98255"/>
+  <ellipse cx="78" cy="126" rx="12" ry="17" fill="#c17d52"/>
+  <ellipse cx="178" cy="126" rx="12" ry="17" fill="#c17d52"/>
+  <path d="M73 112c5-39 29-62 58-62 30 0 54 22 59 61-14-13-31-20-52-22-21-2-43 4-65 23Z" fill="#171717"/><path d="M77 115c7-17 23-28 47-31-7 11-21 22-47 31Z" fill="#414141" opacity=".75"/>
+  <g fill="#111827">
+    <circle cx="108" cy="123" r="5"/>
+    <circle cx="149" cy="123" r="5"/>
+  </g>
+  <path d="M128 128c-4 7-6 13-6 18 4 3 9 3 14 0" fill="none" stroke="#996341" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  <path d="M114 153c9 4 20 4 29 0" fill="none" stroke="#7f1d1d" stroke-width="5" stroke-linecap="round"/>
+  <g fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round"><circle cx="108" cy="121" r="15"/><circle cx="148" cy="121" r="15"/><path d="M123 121h10"/></g>
+  <path d="M85 103c15-9 28-10 40-4M139 99c12-5 25-3 38 6" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  <path d="M67 241c9-21 24-38 45-48l16 27 16-27c21 10 36 27 45 48Z" fill="#fff" opacity=".1"/>
+</svg>

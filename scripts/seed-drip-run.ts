@@ -20,7 +20,7 @@
  */
 
 import { createClient } from "@supabase/supabase-js";
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
+import { chmodSync, readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import path from "node:path";
 
 const root = path.join(__dirname, "..");
@@ -36,7 +36,10 @@ const contentDir = path.join(seedDir, "content");
 const statePath = path.join(seedDir, ".state.json");
 if (!existsSync(statePath)) { console.error("Run seed-bootstrap.ts first."); process.exit(1); }
 const state = JSON.parse(readFileSync(statePath, "utf8"));
-const save = () => writeFileSync(statePath, JSON.stringify(state, null, 2));
+const save = () => {
+  writeFileSync(statePath, JSON.stringify(state, null, 2), { mode: 0o600 });
+  chmodSync(statePath, 0o600);
+};
 
 const personasCfg = JSON.parse(readFileSync(path.join(seedDir, "personas.json"), "utf8"));
 type Facet = { handle: string; rooms: string[] };

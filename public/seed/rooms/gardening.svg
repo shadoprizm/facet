@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>gardening room image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <circle cx="134" cy="152" r="86" fill="#fff" opacity=".13"/>
+  <circle cx="396" cy="342" r="132" fill="#000" opacity=".12"/>
+  <path d="M0 383c75-42 153-59 235-51 113 11 186-17 277-78v258H0Z" fill="#0d9488" opacity=".2"/>
+  <g opacity=".95"><g stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M256 384V193"/><path d="M253 230c-72-6-114-47-126-124 80 3 122 44 126 124Z"/><path d="M259 286c71-8 112-49 121-126-80 6-120 48-121 126Z"/></g></g>
+  <rect x="64" y="64" width="384" height="384" rx="62" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/>
+</svg>

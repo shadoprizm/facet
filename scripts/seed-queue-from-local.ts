@@ -11,7 +11,7 @@
  */
 
 import { createClient } from "@supabase/supabase-js";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { chmodSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 
 const root = path.join(__dirname, "..");
@@ -25,7 +25,10 @@ const db = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,
 const statePath = path.join(root, "scripts", "seed", ".state.json");
 if (!existsSync(statePath)) { console.error("no .state.json"); process.exit(1); }
 const state = JSON.parse(readFileSync(statePath, "utf8"));
-const save = () => writeFileSync(statePath, JSON.stringify(state, null, 2));
+const save = () => {
+  writeFileSync(statePath, JSON.stringify(state, null, 2), { mode: 0o600 });
+  chmodSync(statePath, 0o600);
+};
 
 type QItem = {
   key: string; kind: "post" | "comment" | "vote"; roomSlug: string; authorHandle: string;

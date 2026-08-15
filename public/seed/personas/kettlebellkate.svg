@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>kettlebellkate avatar</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#9333ea"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <circle cx="49" cy="42" r="42" fill="#fff" opacity=".13"/>
+  <circle cx="213" cy="206" r="70" fill="#000" opacity=".12"/>
+  <path d="M42 239c13-39 44-62 86-62s73 23 86 62Z" fill="#be123c"/>
+  <path d="M101 176c11 15 43 15 54 0v32c-14 15-40 15-54 0Z" fill="#cf996c"/>
+  <ellipse cx="128" cy="119" rx="54" ry="60" fill="#e6aa78"/>
+  <ellipse cx="78" cy="126" rx="12" ry="17" fill="#dda373"/>
+  <ellipse cx="178" cy="126" rx="12" ry="17" fill="#dda373"/>
+  <path d="M69 106c11-35 32-53 64-53 29 0 50 17 61 51-35 6-76 6-125 2Z" fill="#a45b2d"/><path d="M66 107h128c-4 13-16 21-34 24H101c-18-3-30-11-35-24Z" fill="#b3754f"/>
+  <g fill="#111827">
+    <circle cx="108" cy="123" r="5"/>
+    <circle cx="149" cy="123" r="5"/>
+  </g>
+  <path d="M128 128c-4 7-6 13-6 18 4 3 9 3 14 0" fill="none" stroke="#af815b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  <path d="M114 153c9 4 20 4 29 0" fill="none" stroke="#7f1d1d" stroke-width="5" stroke-linecap="round"/>
+  <g fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round"><circle cx="108" cy="121" r="15"/><circle cx="148" cy="121" r="15"/><path d="M123 121h10"/></g>
+  <path d="M85 103c15-9 28-10 40-4M139 99c12-5 25-3 38 6" fill="none" stroke="#ab683e" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  <path d="M67 241c9-21 24-38 45-48l16 27 16-27c21 10 36 27 45 48Z" fill="#fff" opacity=".1"/>
+</svg>

@@ -1,0 +1,323 @@
+{
+  "room": "showerthoughts",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "late",
+      "author": "ctrl_z_enjoyer",
+      "title": "Pumpkin spice has no pumpkin in it, which is like selling salt as 'french fry flavour'",
+      "body": "",
+      "comments": [
+        {
+          "author": "constellation_prize",
+          "body": "the Milky Way has never contained any milk either and nobody has ever filed a complaint",
+          "afterMinutes": 35
+        },
+        {
+          "author": "spice_cabinet",
+          "body": "My mother put cinnamon, ginger, nutmeg and clove into half of what she cooked, long before any café gave the blend its own season. In our house it was just called Tuesday.",
+          "afterMinutes": 120,
+          "replies": [
+            {
+              "author": "ctrl_z_enjoyer",
+              "body": "\"just called Tuesday\" is the best rebrand I've ever heard. somebody could sell that",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "verdigris",
+          "body": "it's the taste of the pie without the pie. like hearing a song you know through the wall from the next room",
+          "afterMinutes": 300
+        },
+        {
+          "author": "paper_wallet",
+          "body": "counterpoint: some of the chain lattes quietly added real pumpkin years ago. the spice blend itself is still pumpkin-free though, so the thought survives on a technicality",
+          "afterMinutes": 450
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "paper_wallet",
+      "title": "The free coffee on a punch card is just a coffee you paid for in nine instalments",
+      "body": "",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "and then you lose the card at stamp eight, which is basically a small bankruptcy",
+          "afterMinutes": 25,
+          "replies": [
+            {
+              "author": "paper_wallet",
+              "body": "which is the whole business model. on paper it's ten percent off. in practice it's a quiet donation from everyone who loses the card",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "reversecowbell",
+          "body": "our band had a punch card at the merch table once. come to ten shows, get a free shirt. nobody made it past three, partly because we never played ten shows",
+          "afterMinutes": 140,
+          "replies": [
+            {
+              "author": "paper_wallet",
+              "body": "the most responsible loyalty program I've ever heard of. zero liabilities on the books",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "quietfirmware",
+          "body": "a paper punch card is the only loyalty program that has never once asked for my birthday",
+          "afterMinutes": 310
+        },
+        {
+          "author": "verdigris",
+          "body": "I keep mine after they're full. the stamps are the good part. the coffee is just the receipt",
+          "afterMinutes": 470
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "reversecowbell",
+      "title": "A metronome is a coworker whose only feedback is 'you're rushing'",
+      "body": "",
+      "comments": [
+        {
+          "author": "quietfirmware",
+          "body": "embedded has a version of this called a watchdog timer. it doesn't give feedback at all. fall behind and it quietly reboots you",
+          "afterMinutes": 40
+        },
+        {
+          "author": "verdigris",
+          "body": "it's just a clock that got into music and developed opinions",
+          "afterMinutes": 160
+        },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "the only coworker who's been saying the exact same thing for two hundred years and has never once been wrong",
+          "afterMinutes": 290,
+          "replies": [
+            {
+              "author": "reversecowbell",
+              "body": "our drummer refused to play with one. said it was stifling his feel. his feel was mostly speeding up",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "compost_mentis",
+          "body": "the seasons are a metronome with a very long arm, and every gardener rushes it by planting too early",
+          "afterMinutes": 520
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "morning",
+      "author": "verdigris",
+      "title": "A school bus stop is a waiting room with no walls that only exists for ten minutes a day",
+      "body": "",
+      "comments": [
+        {
+          "author": "twoferone",
+          "body": "and it has the fastest friendships on earth. I know the name of every kid at ours and not one of their parents",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "verdigris",
+              "body": "a whole community run on a first-name basis with people under four feet tall",
+              "afterMinutes": 65
+            }
+          ]
+        },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "and every single one has a kid who's there twenty minutes early and a kid sprinting down the street as the doors close",
+          "afterMinutes": 180
+        },
+        {
+          "author": "reversecowbell",
+          "body": "the sidewalk outside a venue after a show is the same thing. a lobby that exists for twenty minutes and then evaporates",
+          "afterMinutes": 320
+        },
+        {
+          "author": "constellation_prize",
+          "body": "in december it's dark at the bus stop, so it's also the only astronomy class a lot of kids get. I learned the Big Dipper at mine",
+          "afterMinutes": 470
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "late",
+      "author": "constellation_prize",
+      "title": "The autumn equinox is the night shift finally getting the same hours as the day shift",
+      "body": "",
+      "comments": [
+        {
+          "author": "quietfirmware",
+          "body": "technically day still wins by a few minutes, because the atmosphere bends sunlight over the horizon. management always finds a loophole",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "constellation_prize",
+              "body": "fine, but from here to december the night shift picks up all the overtime. best stretch of the year to be a telescope",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "verdigris",
+          "body": "the night shift gets the stars and the day shift gets the commute. nobody's asking for a transfer",
+          "afterMinutes": 200
+        },
+        {
+          "author": "compost_mentis",
+          "body": "the garden has been clocking out early all week. the tomatoes have basically stopped showing up",
+          "afterMinutes": 340
+        },
+        {
+          "author": "reversecowbell",
+          "body": "musicians have been working night shift hours the whole time. welcome, everyone",
+          "afterMinutes": 480
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "evening",
+      "author": "quietfirmware",
+      "title": "A thermostat is a tiny computer whose entire job is disagreeing with the weather",
+      "body": "",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "the click when the furnace kicks on is the thermostat saying \"fine, but I want it on the record\"",
+          "afterMinutes": 20
+        },
+        {
+          "author": "paper_wallet",
+          "body": "my wife and I have a thermostat treaty. it's written in pencil, it's taped beside the dial, and it has been amended four times since last week",
+          "afterMinutes": 130,
+          "replies": [
+            {
+              "author": "quietfirmware",
+              "body": "a signed paper treaty is the most stable control loop in the house. no firmware updates, only amendments",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "constellation_prize",
+          "body": "a telescope has to cool down to the outside air before it gives a sharp image, so for stargazers the thermostat war is fought on the back porch",
+          "afterMinutes": 330
+        },
+        {
+          "author": "compost_mentis",
+          "body": "my compost pile runs warmer in the middle than my living room right now, and it doesn't have a thermostat. just strong opinions about banana peels",
+          "afterMinutes": 450
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "lunch",
+      "author": "verdigris",
+      "title": "Nobody knows which warm day is the last one of the year, so it always leaves without a goodbye",
+      "body": "",
+      "comments": [
+        {
+          "author": "compost_mentis",
+          "body": "gardeners find out. it's the day before the frost warning, the one where you didn't cover the basil",
+          "afterMinutes": 45
+        },
+        {
+          "author": "reversecowbell",
+          "body": "same with a band's last show. nobody books it as the last one. it just turns out that way when nobody calls the next practice",
+          "afterMinutes": 170,
+          "replies": [
+            {
+              "author": "verdigris",
+              "body": "I hope somebody played the encore anyway",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "paper_wallet",
+          "body": "I write down the date of the first frost every year, so technically I keep a record of goodbyes after the fact",
+          "afterMinutes": 300
+        },
+        {
+          "author": "quietfirmware",
+          "body": "devices work the same way. nobody knows it's the last time the printer will work until it's the last time the printer works",
+          "afterMinutes": 510
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "compost_mentis",
+      "title": "Every fall a tree takes out its own compost, and we rake it into bags and put it at the curb like garbage",
+      "body": "",
+      "comments": [
+        {
+          "author": "verdigris",
+          "body": "the tree spent all summer making those and we handle them like junk mail",
+          "afterMinutes": 30
+        },
+        {
+          "author": "tundrabloom",
+          "body": "Zone 3 here, and mine go straight onto the beds as mulch. The tree and I have an arrangement. It sheds, I tuck, everyone makes it to spring.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "compost_mentis",
+              "body": "a gardener who actually reads the tree's memos. the rest of us are shredding them unopened",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "raking is arguing with a tree that has far more patience than me and the wind on its side",
+          "afterMinutes": 300
+        },
+        {
+          "author": "paper_wallet",
+          "body": "in plenty of towns the leaf bags get composted anyway and come back to you as free compost in the spring. a round trip with extra paperwork",
+          "afterMinutes": 480
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 3,
+      "slot": "evening",
+      "author": "constellation_prize",
+      "body": "found this thread again because my telescope mount asked me for a firmware update last night. even the thing I use to get away from screens is a computer"
+    },
+    {
+      "on_bootstrap_index": 5,
+      "day": 9,
+      "slot": "lunch",
+      "author": "compost_mentis",
+      "body": "rereading this at a farm stand with an honour box. cash is also the only payment system that runs entirely on trust and an old coffee can"
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 12,
+      "slot": "late",
+      "author": "ctrl_z_enjoyer",
+      "body": "came back to this on a clear night. so looking up is basically scrolling the version history, just with no restore button"
+    }
+  ]
+}

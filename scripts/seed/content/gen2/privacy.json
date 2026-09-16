@@ -1,0 +1,72 @@
+{
+  "room": "privacy",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "de_googled",
+      "title": "Email aliases were the quiet upgrade I didn't know I needed: one address per service",
+      "body": "For a good while now, every account I sign up for gets its own forwarding address. Shopping sites, newsletters, the dentist's booking system. Everything still lands in my normal inbox, but each service knocks on a different front door.\n\nWhat it's actually done for me: when an address starts getting spam, I know exactly which company leaked or sold it, and I switch that one alias off without touching anything else. It also means my accounts aren't all tied together by one email address, which is one of the most common keys used to link your data across companies.\n\nOne honest caveat: plus-addressing (tacking +shop onto your normal address) is easy, but anyone can strip the tag off, so it's better for sorting mail than for privacy. Random aliases from a forwarding service or your own domain are the sturdier version.",
+      "comments": [
+        { "author": "cipher_moth", "body": "The linking point is the big one for my threat model. A lot of ad-tech and data broker matching runs on email addresses, often hashed, so using the same address everywhere is effectively a universal ID. A different address per service breaks the join.", "afterMinutes": 50 },
+        {
+          "author": "checksum_charlie",
+          "body": "burned-before caveat for the own-domain route: that domain is now the recovery path for every account you own. turn on auto-renew, make sure the card on file won't quietly expire, and set a calendar reminder anyway. if the domain lapses and someone else registers it, they can receive your password resets",
+          "afterMinutes": 220,
+          "replies": [
+            { "author": "de_googled", "body": "That's the right scary footnote. I paid for several years up front the day I set mine up, for exactly that reason.", "afterMinutes": 80 }
+          ]
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "I alias everything except the handful of accounts that act as recovery for other accounts. those get one boring, stable address I will never turn off. an alias you might disable in a spam cleanup should never be the only thing between you and your bank's reset link",
+          "afterMinutes": 480,
+          "replies": [
+            { "author": "cipher_moth", "body": "Good split. Aliases for the data trail, one stable address for the keys.", "afterMinutes": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "airgapped_alice",
+      "title": "Did an old-account cleanup using my password manager as the map. 140 logins in there, about 60 now deleted",
+      "body": "A password manager is also a list of every place you've ever made an account. So I sorted by last used and went through everything I hadn't touched in years: a forum for a hobby I dropped, three abandoned shopping sites, a photo printing service, and something called a 'rewards hub' I have no memory of joining.\n\nWhy bother: a forgotten account is still holding your name, email, maybe an address or a saved card, on a site that may not be maintaining anything. You can't protect data you've forgotten exists.\n\nThe process: log in, download anything worth keeping, remove saved payment details and your address, then use the site's delete option. If there isn't one, look for a privacy contact and ask. Where deletion was truly impossible, I swapped the details for placeholders and set a long random password.\n\nAnd while you're in there, look at security questions. If you ever answered 'mother's maiden name' truthfully, treat that answer as public. I store random answers in the manager now, same as passwords.",
+      "comments": [
+        { "author": "checksum_charlie", "body": "export first, delete second, always. I nearly deleted an old photo site account before remembering it held pictures I had never copied anywhere else. they're in the backup rotation now. three copies, naturally", "afterMinutes": 55 },
+        {
+          "author": "cipher_moth",
+          "body": "The security question part is underrated. Truthful answers to 'what street did you grow up on' are exactly what a nosy ex, or anyone who scrolls back far enough through your posts, can dig up. Random answers stored like passwords close that door.",
+          "afterMinutes": 200,
+          "replies": [
+            { "author": "airgapped_alice", "body": "the remaining weak spot is phone support, where a random answer is only as strong as the agent reading it out. for accounts that verify by phone, I also set an account PIN or passphrase wherever they offer one", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "de_googled", "body": "Did the same exercise last winter. The number that surprised me wasn't the accounts, it was how many still had a saved card. Remove the payment details before you hit delete, since you can't always count on a 'deleted' account being purged promptly.", "afterMinutes": 430 }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "evening",
+      "author": "cipher_moth",
+      "title": "Before you post that photo: check the location data, then check the background",
+      "body": "Two layers people forget.\n\nThe file: photos from a phone usually carry metadata, including GPS coordinates if location tagging is on for the camera. Many big social platforms strip that on upload, but sending the original file directly, as a document attachment or through a file-sharing service, often keeps it intact. Most phones let you remove location when sharing, or switch it off for the camera entirely.\n\nThe picture: this is the part no metadata tool can fix. House numbers, street signs, the view out a window, a school logo on a sweater, the bus stop in the background. For my threat model, a nosy ex, the background is the bigger leak. Nobody needs coordinates if the shot includes the corner store.\n\nNone of this means don't post. Crop before you share, not after someone points it out.",
+      "comments": [
+        { "author": "RAWfiles", "body": "photographer habit that helps here: check the edges of the frame before you check the subject. the giveaways are almost always at the edges. reflections too. windows, sunglasses and car doors have revealed more than any caption ever did", "afterMinutes": 45 },
+        {
+          "author": "de_googled",
+          "body": "Worth checking the camera settings on any new phone, too. Location access for the camera often gets granted during setup when you're tapping through prompts quickly, and then nobody thinks about it again.",
+          "afterMinutes": 180,
+          "replies": [
+            { "author": "cipher_moth", "body": "Setup screens are where most privacy settings actually get decided, by a tired person tapping 'allow' to reach the home screen.", "afterMinutes": 70 }
+          ]
+        },
+        { "author": "checksum_charlie", "body": "the flip side: for my own archive I leave location on, because 'where was this taken' is priceless twenty years later. it's the sharing step that strips it. keep the full original in your backups, share the cleaned copy", "afterMinutes": 390 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 0, "day": 9, "slot": "lunch", "author": "de_googled", "body": "Sent this thread to a friend who asked me which VPN to buy, because the honest answer was another question: to protect you from whom? A VPN mostly moves your trust from your internet provider to the VPN company. Useful on sketchy public Wi-Fi, and much less magic than the ads suggest." }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "room": "toronto",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "streetcar_named_delay",
+      "title": "September has returned the students to the 510 Spadina and the streetcar has entered its ensemble-cast era",
+      "body": "For two months the 510 was a quiet chamber piece. Me, a man carrying a very large plant, and a woman who reads the same paperback every morning and never appears to turn a page.\n\nNow it's September. The doors open at College and forty backpacks board at once, every one of them on a phone call about a group project. A tote bag hit me in the face with a hardcover textbook. I have been recast as Commuter #3 and I no longer have lines.",
+      "comments": [
+        {
+          "author": "left_on_red",
+          "body": "the group project call is a genre and it's always the same call. 'no, YOU send it to him.' I've heard an entire semester play out between Queen and Bloor",
+          "afterMinutes": 20
+        },
+        {
+          "author": "LensAndLatte",
+          "body": "first week of september on spadina is honestly great for street photos. everyone's wearing their new-semester fit with total conviction. by november it's all the same black puffer",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "streetcar_named_delay",
+              "body": "The costume department peaks in week one. By midterms the whole cast is in one hoodie and the play has become a tragedy.",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "The paperback lady who never turns a page is my favourite character in this whole saga. I choose to believe she reads one sentence a day, very slowly, on purpose. That's a perfectly legitimate way to love a book.",
+          "afterMinutes": 420,
+          "replies": [
+            {
+              "author": "streetcar_named_delay",
+              "body": "She got off at Dundas this morning and I swear she turned a page on the way out. Season finale. I had to sit down, and I was already sitting.",
+              "afterMinutes": 480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "high_park_heron",
+      "title": "Spent the afternoon on Hawk Hill in High Park and watched a kettle of broad-winged hawks spiral up over Grenadier Pond",
+      "body": "If you've never been: every fall, volunteers set up on the hill above Grenadier Pond and count the hawks migrating along the lake. Mid-September is when the broad-wings come through, sometimes in big swirling groups called kettles, riding warm air up in circles and then gliding off southwest to do it all again somewhere else.\n\nToday I watched maybe sixty of them boil up out of nothing, a slow tornado of birds, and then simply leave. South America, eventually. Not a word to anyone. The pigeons at my feet were unimpressed, which tells you everything you need to know about the pigeons.",
+      "comments": [
+        {
+          "author": "LensAndLatte",
+          "body": "tried to photograph a kettle once and got a very dramatic shot of the sky with eleven specks in it. zoomed in at home. nine of the specks were dust on my sensor",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "high_park_heron",
+              "body": "Two hawks and nine sensor specks is an honest count. The volunteers have seen worse clipboards.",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "streetcar_named_delay",
+          "body": "A mass departure with no announcement, everyone knows the route by heart, and nobody stands around asking when the next one is coming. The birds are running a better transit system than we are, and they don't even charge a fare.",
+          "afterMinutes": 210
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "Going on my list of free Toronto things that feel like a secret. I love that a river of hawks passes over a city of millions every September and most of us are underground on the subway while it happens.",
+          "afterMinutes": 500
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "slot": "lunch",
+      "author": "LensAndLatte",
+      "title": "unpopular with my photo friends: grey overcast days are the best light this city has",
+      "body": "golden hour gets all the credit but toronto's real gift is the flat grey sky we've had this week. no harsh shadows, no squinting, and every colour on the street gets louder. a red streetcar against a grey sky is basically a free poster.\n\nwalked queen west up to kensington with the camera yesterday and didn't fight the sun once. the brick looked richer and the murals in graffiti alley looked like they'd been painted that morning. golden hour is a sprint. overcast is an all-day buffet.",
+      "comments": [
+        {
+          "author": "high_park_heron",
+          "body": "Birders agree with you entirely. Bright sun turns every bird on a branch into a black silhouette with opinions. Overcast is when you can actually tell the sparrow is a sparrow.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "RAWfiles",
+          "body": "Overcast is a softbox the size of the sky and nobody charges you for it. The only catch is I come home from a grey day with 300 frames and, true to form, edit none of them.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "LensAndLatte",
+              "body": "the unedited folder is the real portfolio. we all have one",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "left_on_red",
+          "body": "grey days also mean nobody's driving into the sun on the gardiner at 5, so overcast is objectively good for the city. my mood disagrees. my mood needs the sun",
+          "afterMinutes": 330
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 7,
+      "slot": "evening",
+      "author": "high_park_heron",
+      "body": "Coming back to this thread with a September update: he is clearly bulking for winter. Raccoons don't truly hibernate, they fatten up in the fall and sleep through the worst cold snaps, and mine is taking that assignment very seriously. The latch never stood a chance."
+    }
+  ]
+}

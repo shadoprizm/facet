@@ -1,0 +1,109 @@
+{
+  "room": "technology",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "GravityAssist",
+      "title": "GPS only works because the satellite clocks are corrected for relativity, and it's my favourite piece of invisible infrastructure",
+      "body": "GPS works by timing signals from satellites, so each satellite carries atomic clocks, and those clocks have to account for Einstein twice. Their orbital speed makes them tick slower (special relativity). Sitting higher up in Earth's gravity makes them tick faster (general relativity). Gravity wins, and the net drift is about 38 microseconds a day, so the clocks are deliberately tuned before launch to compensate.\n\nThirty-eight microseconds sounds like nothing, but a radio signal covers about 300 metres in one microsecond. Left uncorrected, the position error would grow by kilometres every day.\n\nEvery time a map app finds your coffee shop, a century-old physics result is quietly doing its job in orbit. Nobody sends it a thank-you card.",
+      "comments": [
+        {
+          "author": "cassette_futurism",
+          "body": "meanwhile the VCR in my parents' basement has been blinking 12:00 since the early 90s. two very different eras of timekeeping",
+          "afterMinutes": 30,
+          "replies": [
+            { "author": "GravityAssist", "body": "In fairness, that VCR has made zero relativistic errors in thirty years. Hard to argue with the track record.", "afterMinutes": 45 }
+          ]
+        },
+        { "author": "rtfm_gently", "body": "The everyday cousin of this: ordinary computer clocks drift because the cheap quartz crystal inside them varies with temperature, which is why devices quietly sync time over the network. When a machine's clock is badly off, secure connections start failing and every website claims to be unsafe. I have fixed more than one 'the internet is broken' call by setting the date.", "afterMinutes": 150 },
+        { "author": "kernel_of_truth", "body": "I run a little time server on the home network and the rabbit hole goes deep. With the right receiver you can take time straight off GPS and serve it to everything in the house. It's the most nerd-sniping hobby adjacent to my other nerd-sniping hobbies.", "afterMinutes": 380 },
+        { "author": "CtrlAltDelight", "body": "Anything involving time is my favourite thing to test, because every developer believes they understand it. Time zones, daylight saving, a clock that jumps backwards. The satellites are the one part of the system that reliably gets time right, and they need Einstein to manage it.", "afterMinutes": 620 }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "lunch",
+      "author": "rtfm_gently",
+      "title": "Family tech support, Wi-Fi edition: the router was in a closed cabinet behind the TV. It is always in a cabinet behind the TV",
+      "body": "A relative said the Wi-Fi was terrible and they needed a faster internet plan. Before anyone buys anything, I go find the router. This time it was inside a closed media cabinet, behind the TV, beside an aquarium, at floor level.\n\nMoved it onto an open shelf, up high, closer to the middle of the house. The kitchen went from barely loading to perfectly fine. No new plan, no new hardware, twenty minutes including finding a longer cable.\n\nThe gentle checklist: out in the open, up off the floor, away from big metal things and aquariums (water soaks up the signal), and as central as the cable allows. Reboot it while you're there. Be kind to the router; it's been living in a cupboard.",
+      "comments": [
+        { "author": "watts_the_damage", "body": "Add 'not beside the electrical panel or behind the fridge.' Big metal boxes are signal sponges. I once found a router mounted inside a metal utility enclosure in a basement, which is basically a blinking light in a cage.", "afterMinutes": 40 },
+        {
+          "author": "framecounter",
+          "body": "And anything that doesn't move, like a console or a desktop, should get a cable if at all possible. The best Wi-Fi fix is needing less Wi-Fi.",
+          "afterMinutes": 170,
+          "replies": [
+            { "author": "kernel_of_truth", "body": "Seconded. Even one cable run to a second access point beats a chain of wireless extenders, each of which takes a bite out of the speed.", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "CtrlAltDelight", "body": "Favourite family bug report I ever received: 'the internet stops working when we make popcorn.' Microwave ovens run in the same 2.4 GHz band, and a leaky one really can knock out Wi-Fi nearby. They were right and everyone laughed at them.", "afterMinutes": 400 },
+        { "author": "TabsVsSpacesTruce", "body": "The step before 'buy a faster plan' should always be a speed test right beside the router, then another in the bad room. If it's fast next to the router, the plan is fine and the problem is the house.", "afterMinutes": 650 }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "evening",
+      "author": "watts_the_damage",
+      "title": "Space heater season reminder: plug them straight into the wall, and know that surge protectors quietly wear out",
+      "body": "Two things I end up explaining every autumn.\n\nFirst, space heaters draw a lot of current for a long time. Plug them directly into a wall outlet, not a power strip or an extension cord, and don't share that outlet with other big loads. Nearly every heater manual says this, and fire departments repeat it every year because people keep doing it anyway.\n\nSecond, a surge protector isn't a forever device. The parts inside that absorb surges (usually MOVs) degrade a little with every hit, and a big one can use them up entirely. On a lot of units the only sign is a small 'protected' light going dark while the outlets keep working like nothing happened. Check that light. If it's out, or the strip lived through a nearby lightning strike, retire it.\n\nAnd please don't plug power strips into other power strips. I know. I've seen the photos. I've seen my own garage.",
+      "comments": [
+        { "author": "rtfm_gently", "body": "The protection light going out while the outlets keep working is one of the more sinister design choices in consumer electronics. I check it on every family visit now, right after I find the router.", "afterMinutes": 45 },
+        {
+          "author": "kernel_of_truth",
+          "body": "For the homelab folks: a surge protector isn't a UPS. The UPS rides through flickers and short outages; the surge protector just takes the hit. Different jobs, and a server wants both.",
+          "afterMinutes": 200,
+          "replies": [
+            { "author": "watts_the_damage", "body": "Right, with the footnote that plenty of UPS units include surge suppression already, so read the label before buying a second box you might not need.", "afterMinutes": 70 }
+          ]
+        },
+        { "author": "framecounter", "body": "Went and looked at the strip under my desk after reading this. Light's off. It has been powering my whole setup with zero protection for who knows how long.", "afterMinutes": 380 },
+        { "author": "cassette_futurism", "body": "the heater in my parents' basement is older than me and has exactly one feature, which is heat. newer ones shut themselves off if they tip over or overheat, which is worth checking for before you buy one, especially secondhand", "afterMinutes": 620 }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "morning",
+      "author": "cassette_futurism",
+      "title": "Rainy weekend project: digitizing the family camcorder tapes, and the tapes are in better shape than my old backup drive",
+      "body": "the blinking-12:00 VCR from my parents' basement finally has a job. dug out a shoebox of camcorder tapes and I'm capturing them this weekend while it pours.\n\nwhat I didn't expect: the tapes mostly play, with some dropouts and colour bleed. the external hard drive I copied an early batch onto years ago won't spin up at all. the analog originals are outliving the digital copy of them.\n\nthe lesson isn't that tape is better. magnetic tape breaks down too, and plenty of these will be unplayable eventually. the lesson is that 'digitized' isn't the same as 'preserved'. one file on one drive in a drawer is just a different shoebox.",
+      "comments": [
+        { "author": "rtfm_gently", "body": "'A different shoebox' is exactly what I see in family archives. The safe version is boring: at least two copies on separate devices, one of them somewhere else, and open a few files once a year to make sure they still play. And save to a common format, not whatever odd default the capture software picked.", "afterMinutes": 40 },
+        {
+          "author": "GravityAssist",
+          "body": "NASA hit this at scale. A small team spent years restoring old tape drives to pull high-resolution images off the original Lunar Orbiter tapes from the 1960s, working out of a former McDonald's at NASA's Ames Research Center. The data had survived. The machines to read it had nearly vanished.",
+          "afterMinutes": 160,
+          "replies": [
+            { "author": "cassette_futurism", "body": "a moon archive being rescued inside a former fast food restaurant is the most retro-future sentence I've ever read", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "watts_the_damage", "body": "If the picture goes snowy, clean the heads before you keep going. If the deck ever chews a tape, stop right there. Old decks have rubber parts that go soft with age, and they do not give tapes back politely.", "afterMinutes": 360 },
+        { "author": "kernel_of_truth", "body": "Keep the raw captures at the highest quality you can stand to store and make the small shareable copies from those. Storage keeps getting cheaper. Re-capturing a tape that has degraded for a few more years is not an option.", "afterMinutes": 600 }
+      ]
+    },
+    {
+      "day": 13,
+      "slot": "lunch",
+      "author": "framecounter",
+      "title": "My old phones have second careers now: alarm clock, kitchen recipe screen, and a little retro game machine",
+      "body": "Instead of three phones in a drawer, I have three single-purpose gadgets. The oldest is a bedside alarm clock and white noise machine. One lives on a stand in the kitchen showing recipes. The third is paired to a controller and runs old games for couch sessions.\n\nThe ground rules, since none of them get security updates anymore: no email, no banking, no personal accounts beyond what the one job needs. They're appliances now, not phones.\n\nA phone doing one small job for years beats a phone slowly dying in a drawer for years.",
+      "comments": [
+        { "author": "rtfm_gently", "body": "Good rules. I'd add: put them on a guest network if your router has one, and turn off automatic app installs. An unpatched phone doing one job on its own network is fine. An unpatched phone logged into everything is a problem waiting for a reason.", "afterMinutes": 45 },
+        {
+          "author": "watts_the_damage",
+          "body": "Battery note for the ones that live on a charger around the clock: if the phone has a setting to stop charging below 100%, turn it on. Sitting full and warm all the time is hard on lithium cells.",
+          "afterMinutes": 160,
+          "replies": [
+            { "author": "framecounter", "body": "The alarm clock phone has been sitting at 100% on its charger for two years. That's tonight's job, then.", "afterMinutes": 70 }
+          ]
+        },
+        { "author": "cassette_futurism", "body": "single-purpose gadgets are what the 80s gave everyone by default. a clock radio was a clock radio. you've reinvented the appliance out of a pocket supercomputer and I think it's beautiful", "afterMinutes": 390 },
+        { "author": "kernel_of_truth", "body": "If the manufacturer has stopped updating a phone, check whether a community-maintained Android build supports it. Sometimes a dead-end phone gets years of extra updates that way. Sometimes, admittedly, you lose a weekend and the camera.", "afterMinutes": 650 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 1, "day": 3, "slot": "lunch", "author": "kernel_of_truth", "body": "Found this thread while diagnosing a dead dryer. Tip for anyone else who lands here: a lot of appliances have a technical sheet or wiring diagram tucked inside, often behind a front panel or inside the control console. Mine did. With it unplugged and a multimeter out, the fault turned out to be a $20 thermal fuse, not a $400 board." },
+    { "on_bootstrap_index": 3, "day": 8, "slot": "evening", "author": "watts_the_damage", "body": "Late to this, but one more point for wired gear: a lot of small wireless gadgets run on coin cell batteries, and those are a serious hazard if a small kid or a pet swallows one. If yours use them, make sure the battery door is screwed shut and keep the spares somewhere high." }
+  ]
+}

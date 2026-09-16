@@ -1,0 +1,97 @@
+{
+  "room": "montreal",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "midnightpoutine",
+      "title": "Poutine season officially opens the first night you need a hoodie on the walk home",
+      "body": "Summer poutine is survival food. You eat it at 2am because the night demands it. Fall poutine is a different thing entirely. It's 9 degrees, the steam comes off the box like a little weather system when you open it, and the gravy stays hot all the way to the last fry instead of going lukewarm in the humidity.\n\nFirst hoodie night of the year, standing on the sidewalk with a fork. Best forty-five seconds of September. Not taking questions.",
+      "comments": [
+        {
+          "author": "tourtiere",
+          "body": "D'accord avec toi pour une fois. La poutine en plein été, c'est un acte de courage. En septembre, c'est un droit acquis. Le premier soir de coton ouaté, ça devrait être un congé férié.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "bagelfaction",
+          "body": "Hoodie poutine, c'est la meilleure poutine, aucun débat. Mais le vrai signe de l'automne, c'est quand tu commandes une large, tu te dis que tu vas en laisser, pis tu la finis pareil parce qu'il fait frette pis ton corps pense que l'hiver s'en vient. Le corps sait des affaires.",
+          "afterMinutes": 240
+        },
+        {
+          "author": "salt_beef_bucket",
+          "body": "Chips, dressing and gravy is our cousin to this back home, and you're right on the money. It pretends to be an anytime food but it was built for a cold night and a sidewalk.",
+          "afterMinutes": 480,
+          "replies": [
+            {
+              "author": "midnightpoutine",
+              "body": "Chips, dressing and gravy has my full respect. Different province, same philosophy.",
+              "afterMinutes": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "tourtiere",
+      "title": "Aux pommes à Rougemont: j'ai rempli un sac, mangé trois pommes entre les rangées, pis acheté une tarte en partant comme si j'avais rien cueilli",
+      "body": "Tradition de septembre chez nous. On va à Rougemont, on s'obstine dans l'auto à savoir quel verger est le meilleur, on se trompe de rang, pis on finit au même verger que l'année passée.\n\nLes McIntosh sont prêtes, les Cortland aussi. Ma femme cueille comme une professionnelle. Moi, je cueille une pomme, j'en mange une. Je cueille une pomme, j'en mange une. En sortant, le monsieur a regardé notre sac à moitié plein, m'a regardé moi, pis il a rien dit. Il savait.\n\nOn a quand même acheté une tarte pis du cidre. Cueillir, c'est une chose. Faire une tarte un dimanche soir, c'en est une autre.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "Pick one, eat one is the only honest way to go apple picking. And the cider stands on the drive home are a trap I walk into every single year. Last time I came back with a bottle of ice cider I absolutely did not need and absolutely finished.",
+          "afterMinutes": 40
+        },
+        {
+          "author": "gluten_full",
+          "body": "Baker question: any idea which apples went into the orchard pie? Cortland is my favourite for pies because the slices hold their shape and are slow to brown once cut, while McIntosh cooks down soft and saucy. Half and half gets you both, and I'd bet that's what the orchard does.",
+          "afterMinutes": 300,
+          "replies": [
+            {
+              "author": "tourtiere",
+              "body": "Aucune idée, je pose pas de questions à une tarte. Mais ma femme fait moitié-moitié à la maison, exactement comme tu dis. Je vais lui montrer ça pis elle va être insupportable pour la semaine.",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "slot": "morning",
+      "author": "bagelfaction",
+      "title": "Protip de septembre: une douzaine de bagels chauds dans ton manteau, c'est la meilleure chaufferette en ville",
+      "body": "7h du matin, 8 degrés, je sors de chez St-Viateur avec le sac serré contre moi comme un bébé. Chauffage instantané. Tu marches jusqu'au métro avec le sésame qui te réchauffe les côtes pis l'odeur du four à bois qui te suit comme un chien fidèle.\n\nOui, the Fairmount people will tell me their bagels are warm too. Sure. Mais un meilleur bagel donne une meilleure chaleur. C'est de la thermodynamique de base, je l'expliquerai pas deux fois.",
+      "comments": [
+        {
+          "author": "midnightpoutine",
+          "body": "Hand warmer theory confirmed, but the pro move is keeping them in the paper bag inside the coat, not loose. Otherwise you're finding sesame in your pockets until February. Ask me how I know.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "redeyeflyer",
+          "body": "Frequent flyer confirming the export version: a bag of fresh sesame in the overhead bin on an early flight out of YUL, and the whole row turns around like you smuggled a campfire on board. Worth it every single time.",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "bagelfaction",
+              "body": "C'est pas de la contrebande, c'est de la diplomatie culturelle. Tu fais rayonner Montréal à 30 000 pieds.",
+              "afterMinutes": 60
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 6,
+      "slot": "evening",
+      "author": "midnightpoutine",
+      "body": "Found this thread again because the googly-eyed cone on my block showed up this week wearing a little knitted scarf. Nobody has claimed responsibility. The whole street has adopted him, and after everything he's been through he's earned some fall wear."
+    }
+  ]
+}

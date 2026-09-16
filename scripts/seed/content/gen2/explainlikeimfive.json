@@ -1,0 +1,215 @@
+{
+  "room": "explainlikeimfive",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "FirstGenFinance",
+      "title": "ELI5: why did my tire pressure warning light come on the first cold morning, when nothing actually happened to the tires?",
+      "body": "Car's been fine all summer. This morning it was chilly, I start the car, and there's a little orange tire symbol on the dash. No nail, no flat, nothing I can see. By the time I got where I was going, the light had turned itself off. Did my tires leak overnight, or did the car just get spooked by the cold?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "Your tires didn't leak. The air inside them just got colder, and cold air pushes less.\n\nAir is a huge crowd of tiny molecules zooming around and bumping into the inside of the tire. All that bumping is the pressure. Cool them down and they slow down, so they hit the walls less hard and less often. Same amount of air, lower pressure.\n\nA common rule of thumb is about 1 psi lost for every 5 or 6 degrees Celsius of cooling. If your tires were already a little low, a cold morning after a warm day can nudge them under the warning threshold. Then you drive, the tires warm up from flexing against the road, the pressure climbs back, and the light goes off.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "So the light turning off wasn't the car changing its mind, it was the tires warming back up. Weirdly satisfying.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "watts_the_damage",
+          "body": "Tinkerer's practical note: the light going off doesn't mean you're fine, it means you're borderline. Check with a gauge in the morning before driving, while the tires are cold, and fill to the number on the sticker inside the driver's door frame. Not the number on the tire sidewall. That one is the maximum the tire can handle, not what your car wants.",
+          "afterMinutes": 95,
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "I have absolutely been filling to the sidewall number. Going out to stare at my door frame now.",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "Bonus physics if you're wondering why it's only a couple of psi and not a huge drop: gases care about temperature measured from absolute zero. Going from 20°C to 5°C looks like a big fall on the Celsius scale, but in kelvin that's 293 down to 278, only about 5 percent colder. The total pressure inside the tire, counting the normal air pressure your gauge leaves out, drops by about that same 5 percent. On a typical car tire that works out to around two and a half psi.",
+          "afterMinutes": 260
+        },
+        {
+          "author": "rtfm_gently",
+          "body": "Tech support brain: this is the car version of an error that goes away after a reboot. Gone doesn't mean fixed. Tires also slowly lose a bit of air over the months anyway, so the first cold snap is a good excuse to top them all up.",
+          "afterMinutes": 520
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "rtfm_gently",
+      "title": "ELI5: where do the reds and yellows in fall leaves come from? Did the tree make new colours, or were they hiding in there all summer?",
+      "body": "The maple across the street started turning this week, one branch at a time. Some trees on my block go straight to yellow, some go fire-engine red, and a few just go brown and give up. What's actually happening inside a leaf, and why the different endings?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "Weirdly, both. All summer, leaves are packed with chlorophyll, the green pigment that catches sunlight so the tree can make sugar. There's so much of it that it covers up everything else. But leaves also hold yellow and orange pigments called carotenoids, the same family that makes carrots orange.\n\nAs the days shorten and cool, the tree stops making chlorophyll and starts breaking down what's there, pulling the useful nutrients back into its branches before the leaf drops. The green fades, and the yellow and orange that were there all along finally show.\n\nRed is different. The reds and purples come from pigments called anthocyanins, and in many trees those get made fresh in the fall, from sugar still sitting in the leaf. So yellow is revealed. Red is painted on at the end.",
+          "afterMinutes": 40
+        },
+        {
+          "author": "rtfm_gently",
+          "body": "'Yellow is revealed, red is painted on at the end' is the sentence I needed. Follow-up for anyone who knows: why would a tree bother making a brand new pigment for a leaf it's about to throw away?",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "tundrabloom",
+              "body": "Good question, and honestly scientists still argue about it. A leading idea is that the red works a bit like sunscreen, shielding the leaf from light damage while the tree finishes pulling nutrients out of it. Another idea is that it sends some kind of signal to insects. The sunscreen explanation has a lot of support, but it isn't fully settled. Up here in zone 3 I'm just grateful for the show before the snow.",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "And it's why some years are better than others. According to the US Forest Service, the most brilliant reds tend to follow a run of warm, sunny days and cool nights that stay above freezing. Sunny days make plenty of sugar, cool nights help keep it in the leaf, and more sugar means more red. An early hard frost can cut the whole display short.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "compost_mentis",
+          "body": "The browns are mostly tannins, which stick around after the other pigments break down. And some oaks and beeches, especially young ones, hang on to their dead brown leaves right through winter instead of dropping them. There's a word for that, marcescence, and it's one of my favourite words in all of gardening.",
+          "afterMinutes": 470,
+          "replies": [
+            {
+              "author": "rtfm_gently",
+              "body": "Marcescence. I've been annoyed for years at an oak down the block that refuses to let go of its leaves, and it turns out it's doing a named thing.",
+              "afterMinutes": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "morning",
+      "author": "thesispending",
+      "title": "ELI5: why can I see my breath on cold mornings? Where does the little cloud come from?",
+      "body": "Walking to campus this morning and I could see my breath for the first time this season. I know it's something about water and cold, but I realized I couldn't explain it without waving my hands around. PhD candidate, so hand-waving is a sore spot.",
+      "comments": [
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "The air you breathe out is warm and loaded with water vapour, which is water in the form of an invisible gas. Warm air can carry a lot of vapour. Cold air can carry much less.\n\nWhen your breath hits cold air, it cools down fast. Suddenly there's more vapour than that chilled air can hold, so the extra clumps into billions of tiny liquid droplets. That's your cloud, and it really is a small cloud: the ones in the sky are also tiny droplets that formed when moist air got cooled.\n\nIt disappears a second later because it keeps mixing with more of the surrounding air, which spreads the water out so thin that the droplets evaporate again.",
+          "afterMinutes": 25,
+          "replies": [
+            {
+              "author": "thesispending",
+              "body": "So the steam off my coffee is the same trick? And if I remember right, actual steam is invisible and the white stuff is already droplets?",
+              "afterMinutes": 40
+            },
+            {
+              "author": "rtfm_gently",
+              "body": "Right on both. Watch a kettle closely and there's a small clear gap right at the spout before the white plume starts. That gap is the invisible vapour that hasn't cooled enough to condense yet.",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "chinook_wind",
+          "body": "Calgary footnote: it's not only about how cold it is. On a damp morning you'll see your breath at temperatures where, on a very dry day, you'd barely notice it, because the air around you is already closer to full. Humidity plays a part too, not just the thermometer.",
+          "afterMinutes": 160
+        },
+        {
+          "author": "FirstGenFinance",
+          "body": "Same reason my glasses fog up when I walk into a warm store in winter, just backwards. The cold lenses chill the warm indoor air right against them until droplets form.",
+          "afterMinutes": 390
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "slot": "evening",
+      "author": "GalaxyBrainGwen",
+      "title": "ELI5: why do geese fly in a V? A huge flock went over campus today and completely derailed my problem set",
+      "body": "Dozens of them, honking like they all had strong opinions, in a nearly perfect V. Is the shape actually doing something useful, or is that just what happens when birds follow each other?",
+      "comments": [
+        {
+          "author": "thesispending",
+          "body": "It's doing something. When a big bird flaps, air spills up and around the tips of its wings and swirls. Just behind and off to the side of each wingtip, that swirl makes a patch of rising air. A bird that tucks into that spot gets a little free lift, so it works a bit less to stay up.\n\nEach bird sits in the rising air off the wingtip of the bird ahead. Line everybody up that way and the shape you get is a V. The bird at the very front gets no free ride, which is why the lead position is thought to change over the course of a long flight.",
+          "afterMinutes": 35,
+          "replies": [
+            {
+              "author": "GalaxyBrainGwen",
+              "body": "So it's drafting, like cyclists do, except the good seat is beside and behind instead of directly behind.",
+              "afterMinutes": 50
+            },
+            {
+              "author": "high_park_heron",
+              "body": "Close! A cyclist hides from the wind directly behind someone. Birds are riding air that's rising off a wingtip, and directly behind another bird the air is actually moving down. Off to the side is where the lift is. Toronto birder here, and I will never get tired of watching them swap places.",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "Nice explanation, and a methods note since it's a good story. The best direct evidence comes from a study published in Nature that fitted northern bald ibises with GPS and motion loggers during V formation flight. The birds positioned themselves where the aerodynamics predicts, and even timed their wingbeats to catch the rising air. Wild geese are much harder to instrument, so for them more of it is inferred from aerodynamics and observation. Very likely the same principle, just less directly measured.",
+          "afterMinutes": 210
+        },
+        {
+          "author": "rtfm_gently",
+          "body": "The honking is generally thought to help the flock keep in contact while they fly. Which makes it the most effective group chat I've ever seen, and I've supported a lot of group chats.",
+          "afterMinutes": 470
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "lunch",
+      "author": "FirstGenFinance",
+      "title": "ELI5: why doesn't checking my own credit score hurt it, but applying for a credit card can?",
+      "body": "I avoided looking at my credit score for years because someone in my family was certain that checking it 'dings' you. Turns out that's not true for checking your own. But applying for things apparently can nudge it down? Why would the score care who's doing the looking?",
+      "comments": [
+        {
+          "author": "rtfm_gently",
+          "body": "Think of your credit file as having a visitor log. When you look at your own file, or a company pre-screens you for an offer, that's a soft inquiry. It shows up in the log, but it doesn't count against your score, because you peeking at your own file says nothing about whether you're about to borrow.\n\nWhen you actually apply for credit and the lender pulls your file to decide, that's a hard inquiry. That one can count a little, because someone applying for a lot of new credit in a short time is, statistically, somewhat more likely to be in money trouble. One application is a small, temporary nudge. A bunch close together looks like someone scrambling.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "IndexFundIrene",
+          "body": "The Financial Consumer Agency of Canada says it plainly: checking your own credit report or score doesn't affect it. Which means it's worth looking at yours regularly, mostly to catch mistakes or accounts you don't recognize.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "FirstGenFinance",
+              "body": "Accounts I don't recognize had honestly never crossed my mind. So the report is also kind of a fraud alarm, as long as someone actually reads it.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "loonie_tunes",
+          "body": "Post-overdraft, my score was rough, and the thing that rebuilt it wasn't clever at all. Pay every bill on time and keep card balances low compared to the limits. The myth about checking kept me from looking for ages, and looking is how I figured out what needed fixing.",
+          "afterMinutes": 320
+        },
+        {
+          "author": "thesispending",
+          "body": "Nerd appreciation: a credit score is a model built on what people tended to do before they got into trouble. The hard inquiry isn't a punishment. It's a pattern the model learned to watch for.",
+          "afterMinutes": 510
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 7,
+      "slot": "evening",
+      "author": "FirstGenFinance",
+      "body": "Found this after my foot fell asleep during a long movie and I stood up way too confidently. The part about the tingling being the nerve recovering, not getting hurt, made the stomping-around-the-living-room phase feel a lot less alarming."
+    },
+    {
+      "on_bootstrap_index": 0,
+      "day": 10,
+      "slot": "lunch",
+      "author": "rtfm_gently",
+      "body": "Came back to this thread while trying to explain compound interest to a younger cousin who just started a part-time job. The snowball got his attention. The Rule of 72 got more of it, because he immediately did the math on his own savings and went very quiet."
+    }
+  ]
+}

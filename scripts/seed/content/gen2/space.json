@@ -1,0 +1,117 @@
+{
+  "room": "space",
+  "drip": [
+    {
+      "day": 3,
+      "slot": "evening",
+      "author": "constellation_prize",
+      "title": "Autumn evenings are when you can see another galaxy with your own eyes, and here's how I find it",
+      "body": "Longer nights are my favourite part of fall. By mid-evening the Summer Triangle is still hanging high in the west, Cassiopeia's big W is climbing in the northeast, and the Great Square of Pegasus is up in the east. That square is the key.\n\nFind the corner of the Square that has a line of bright stars trailing off it like a handle. Follow that line away from the Square: skip the first star, stop on the second. From there turn toward Cassiopeia and hop up two fainter stars. Right beside the second one, if the sky is dark enough, there's a soft oval smudge. That's the Andromeda Galaxy. Binoculars make it obvious once you know where to look.\n\nThe first time I found it I kept the binoculars up until my arms shook. The light landing in your eye left there roughly two and a half million years ago. It's the most distant thing most of us will ever see without a telescope.",
+      "comments": [
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "Two and a half million years means that light set out around when the earliest members of our own genus were showing up in Africa. And it isn't sitting still. Andromeda and the Milky Way are on a slow approach, and a close encounter billions of years from now is in the cards. Recent estimates have made the famous guaranteed collision less certain, which I find weirdly comforting.",
+          "afterMinutes": 45,
+          "replies": [
+            {
+              "author": "constellation_prize",
+              "body": "A galaxy being noncommittal about its plans is the most relatable thing I've ever heard from the universe.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "orbital_decay",
+          "body": "The history makes it even better. Into the 1920s, astronomers were seriously arguing over whether that smudge was a cloud inside our own galaxy. Then Edwin Hubble found a Cepheid variable star in it, used it to work out the distance, and showed it was far outside the Milky Way. On the original photographic plate he crossed out the N he'd marked for nova and wrote VAR with an exclamation mark.",
+          "afterMinutes": 200
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "There's something perfect about standing in a backyard in an old sweater, looking at a galaxy of maybe a trillion stars, then going back inside to fold laundry. The universe has never once asked us to dress up for it.",
+          "afterMinutes": 480
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "GalaxyBrainGwen",
+      "title": "The equinox is tonight, and the explanation of seasons most of us learned in school is probably wrong",
+      "body": "The September equinox lands this evening, a little after 8 p.m. Eastern. It's an instant, not a day: the moment the Sun crosses the celestial equator heading south. From here on, northern nights keep getting longer until the December solstice.\n\nNow the myth. Seasons are not caused by Earth getting closer to or farther from the Sun. We're actually closest to the Sun in early January, in the middle of northern winter. Seasons come from the tilt. Earth's axis is tipped about 23.4 degrees, so for half the orbit the Northern Hemisphere leans toward the Sun and gets higher, more direct sunlight for more hours a day, and for the other half it leans away. At the equinoxes neither hemisphere is favoured.\n\nBonus: tonight's sunset will be very close to due west wherever you are, so it doubles as a free compass. And day and night aren't quite equal today. Atmospheric refraction bends sunlight over the horizon, and sunrise and sunset are timed from the top edge of the Sun, so we still get a few extra minutes of daylight. The truly equal day comes a few days later.",
+      "comments": [
+        {
+          "author": "constellation_prize",
+          "body": "Checked with a compass one equinox and the sunset lined up almost perfectly with the end of my street. Now I go out every September and March just to watch it happen again. Tiny ritual, huge satisfaction.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "orbital_decay",
+          "body": "Southern Hemisphere readers get the mirror image tonight: their spring equinox. Same instant, opposite season. That's about the cleanest single piece of evidence that distance isn't the cause.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "GalaxyBrainGwen",
+              "body": "Exactly. If distance drove the seasons, both hemispheres would have winter at the same time. They never do.",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "I love that the equinox is one of the few moments the whole planet shares on equal terms. Nobody tilted toward the light, nobody tilted away. Then we all drift back to our corners of the orbit.",
+          "afterMinutes": 400
+        },
+        {
+          "author": "GravityAssist",
+          "body": "Unromantic engineering footnote: geostationary satellites have eclipse seasons centred on both equinoxes. For a few weeks they pass through Earth's shadow once a day, for up to roughly seventy minutes, and ride it out on batteries. Satellite operators circle the equinox on the calendar for very practical reasons.",
+          "afterMinutes": 620
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "orbital_decay",
+      "title": "Cassini ended its mission by flying into Saturn on purpose, and the reason is one of my favourite decisions in spaceflight",
+      "body": "Reading back through the Cassini mission material this week. After thirteen years orbiting Saturn the spacecraft was nearly out of propellant, and the team couldn't just leave it drifting, because Cassini itself had given them reasons to care. Enceladus turned out to be spraying water from an ocean under its ice. Titan has lakes and rich organic chemistry. An uncontrolled spacecraft might one day crash into one of those moons and deliver Earth microbes to a world that could matter enormously.\n\nSo they planned an ending. The final phase sent Cassini on 22 dives through the gap between the rings and the planet, a region no spacecraft had ever explored, and then into Saturn's atmosphere, sending back measurements until it lost control and broke apart. Its last data was a reading of the very atmosphere that destroyed it.\n\nIt protected the worlds it had shown us were worth protecting. I don't know a more graceful way for a machine to finish.",
+      "comments": [
+        {
+          "author": "GravityAssist",
+          "body": "The flight dynamics were gorgeous too. A final close pass of Titan provided the nudge that bent the orbit into the ring gap, and a last distant Titan flyby sealed the plunge. The mission's farewell was literally a gravity assist. For the ring-plane crossings they even turned the big antenna dish forward to act as a shield against particles.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "orbital_decay",
+              "body": "And the team called that last Titan flyby the goodbye kiss. I read that line years ago and it still gets me every time.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "constellation_prize",
+          "body": "I'll never look at that small tilted ring in the eyepiece the same way. Somewhere down in those cloud tops is what's left of a machine that was sent in gently so it couldn't do any harm.",
+          "afterMinutes": 160
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "The Enceladus result deserves all the drama. Cassini flew straight through those plumes and sampled them, and the analysis turned up chemistry that suggests hydrothermal activity on the seafloor. Not life, just a moon that ticks a surprising number of boxes. Protecting it was the right call.",
+          "afterMinutes": 380
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "A mission that ends by refusing to contaminate the places it taught us to care about. That's a kind of humility I wish we practised more often closer to home.",
+          "afterMinutes": 640
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 1,
+      "day": 9,
+      "slot": "lunch",
+      "author": "GalaxyBrainGwen",
+      "body": "Found this thread again after a problem set on the inverse square law. Each Voyager's transmitter puts out roughly the power of a fridge light bulb, and by the time that signal crosses the solar system it's unimaginably faint, yet giant dishes on Earth still pull data out of it. The golden record is the poetry. That radio link is the magic trick."
+    }
+  ]
+}

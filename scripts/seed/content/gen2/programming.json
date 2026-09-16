@@ -1,0 +1,138 @@
+{
+  "room": "programming",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "morning",
+      "author": "merge_conflict_mel",
+      "title": "Quarterly planning wants week estimates for work nobody on my team has done before. How do you estimate the unknown without lying?",
+      "body": "planning season is here and I've been handed three epics and a spreadsheet with a column called 'weeks'. one of them is moving a service onto a message queue none of us have ever run in production. my honest estimate is 'between two weeks and forever' and that doesn't fit in the cell.\n\nlast quarter I gave single numbers, everyone anchored on the optimistic end, and I spent a good chunk of August explaining why. what do people who are actually good at this do differently? specifically for work with real unknowns, not 'add a field to a form'.",
+      "comments": [
+        {
+          "author": "null_terminated",
+          "body": "Stop estimating the unknown and estimate the investigation instead. 'Two weeks to build a throwaway prototype against the real queue, then I'll give you a range I can defend' is an honest answer. A planning process that can't accept that is asking you to lie in a spreadsheet.",
+          "afterMinutes": 40,
+          "replies": [
+            { "author": "merge_conflict_mel", "body": "'estimate the investigation' is so obvious now that someone said it out loud. pitching the spike as its own line item this afternoon", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "greybeard_junior", "body": "Give a range, attach a confidence, and write the assumptions right next to the number. 'Three to six weeks, assuming the existing consumers don't need changes.' When an assumption breaks, everyone can see why the date moved. A bare number just makes you look wrong.", "afterMinutes": 180 },
+        {
+          "author": "TabsVsSpacesTruce",
+          "body": "The part nobody teaches: the people asking usually need a decision, not a number. Ask what the estimate is for. 'Can we promise this to a customer by January' and 'which of these three do we start first' need wildly different precision, and the second one is much cheaper to answer.",
+          "afterMinutes": 330,
+          "replies": [
+            { "author": "null_terminated", "body": "This. Half of all estimation pain is answering a precision question nobody actually asked.", "afterMinutes": 60 }
+          ]
+        },
+        { "author": "quietfirmware", "body": "In embedded we pad for what's outside our control first: board revisions, part lead times, the one test rig the whole team shares. The code is rarely the long pole. Go looking for the waiting in your plan. Nobody estimates waiting, and it's usually most of the calendar.", "afterMinutes": 600 },
+        { "author": "APIdontknow", "body": "bookmarking this. my current method is guessing how long a senior would take and multiplying by however nervous I feel that day", "afterMinutes": 810 }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "evening",
+      "author": "null_terminated",
+      "title": "If you can't name it, you don't understand it yet. Naming is design work, not a cosmetic pass at the end",
+      "body": "Staff engineer opinion, delivered at volume: when I can't come up with a good name for a function, I stop and look at what it does, because nine times out of ten it does two things. processAndSave. validateOrCreate. handleData. The 'and' is the design flaw introducing itself.\n\nSame goes for modules. A file called utils or helpers or common is an admission that nobody decided where that code belongs. Those files only grow. I have never once watched one shrink.\n\nMy review rule: if a name needs a comment to explain what it means, fix the name. If no honest name fits, fix the design. Renaming is the cheapest refactoring tool you have, and people save it for last.",
+      "comments": [
+        {
+          "author": "APIdontknow",
+          "body": "our utils folder has a subfolder called utils. I wish I was making this up. someone before me looked at the junk drawer and decided it needed a smaller junk drawer inside it",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "null_terminated", "body": "That's not a folder, that's a sediment layer. Somebody could date the codebase by it.", "afterMinutes": 50 }
+          ]
+        },
+        {
+          "author": "quietfirmware",
+          "body": "Counterpoint from the hardware side: sometimes the correct name is the ugly one. Register and pin names come straight from the vendor datasheet and I keep them exactly as written, cryptic abbreviations and all, because the next person will search the datasheet for that exact string. A nicer name breaks the one lookup that matters.",
+          "afterMinutes": 150,
+          "replies": [
+            { "author": "null_terminated", "body": "Fair, and I'd count that as a deliberate naming decision, which is the whole point. Matching the source of truth beats being pretty.", "afterMinutes": 120 }
+          ]
+        },
+        { "author": "TabsVsSpacesTruce", "body": "The biggest naming win on my team wasn't in code. We sat down with the product folks and wrote a one-page glossary so 'account', 'customer' and 'user' each meant exactly one thing. A shocking number of our bugs were two people using the same word for two different tables.", "afterMinutes": 400 },
+        { "author": "off_by_one_ophelia", "body": "the other famous hard problem is cache invalidation, and I've started to suspect most cache bugs are naming bugs too. nobody on the team agrees on what 'fresh' means", "afterMinutes": 700 }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "quietfirmware",
+      "title": "Five boolean flags make thirty-two possible states, and you only meant to have five",
+      "body": "Reviewed some code this week that tracked a network connection with isConnecting, isConnected, isRetrying, hasError and isClosed. Five flags. Two to the fifth is thirty-two combinations, and five of them are meaningful. The other twenty-seven aren't impossible, they're just untested. One of them showed up in a support ticket.\n\nIn firmware we'd write this as an explicit state machine out of habit: one variable holding one state, a table of which transitions are allowed, and anything else is a fault you log. It's more typing up front. It's far less 'how is it connected and closed at the same time' later.\n\nIf your language has enums or tagged unions, this costs almost nothing. The flags are the expensive version. They just send the invoice later.",
+      "comments": [
+        { "author": "null_terminated", "body": "'Make illegal states unrepresentable' is the whole idea in four words, and it's the refactor with the best ratio of effort to deleted bugs that I know of.", "afterMinutes": 45 },
+        {
+          "author": "APIdontknow",
+          "body": "this describes every loading screen I have ever built. isLoading, isError and data all truthy at once, so the spinner, the error message and the results all show up together like a little festival",
+          "afterMinutes": 120,
+          "replies": [
+            { "author": "quietfirmware", "body": "One state at a time is exactly what cancels the festival. The festival would need a permit, and the permit is a transition table.", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "greybeard_junior", "body": "From the ops side, explicit states also make logs readable. 'Transitioned RETRYING to CLOSED after 5 attempts' tells me a story. Five flags flipping in some order tells me nothing unless I replay the whole thing in my head.", "afterMinutes": 340 },
+        {
+          "author": "merge_conflict_mel",
+          "body": "genuine question: where's the line? two flags feels fine to me, and I've watched someone pull in a whole state machine library for what was basically a toggle",
+          "afterMinutes": 560,
+          "replies": [
+            { "author": "quietfirmware", "body": "If the flags are truly independent, keep them. Two independent flags really do have four valid states. The smell is when some combinations are nonsense. That's when they want to become one variable.", "afterMinutes": 80 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "slot": "lunch",
+      "author": "greybeard_junior",
+      "title": "Every feature flag needs an owner and a removal date, or it turns into permanent config nobody understands",
+      "body": "Audited our feature flags this week. Just under two hundred. About a third were fully rolled out and had been for ages, which means the 'off' path is dead code that still compiles, still gets read, and still confuses people. A dozen belonged to people who no longer work here. Two were flags that controlled other flags.\n\nFlags are great. Dark launches, gradual rollouts, a kill switch at 2 a.m. But every flag doubles the number of ways the system can be configured, and nobody tests all of them.\n\nWhat we do now: a flag gets an owner and a removal date the day it's created, and removing it is part of finishing the feature, not a cleanup task for some quiet week that never arrives.",
+      "comments": [
+        { "author": "CtrlAltDelight", "body": "QA perspective: 'every flag doubles it' is literal. Ten independent flags is 1,024 possible configurations. We test the handful production actually runs and hope about the rest.", "afterMinutes": 50 },
+        {
+          "author": "null_terminated",
+          "body": "The canonical horror story is the trading firm that reused an old flag for new code. The deploy missed one of its servers, the repurposed flag woke up long-dead logic on that machine, and they lost more than $400 million in about 45 minutes. The SEC's write-up is worth reading. Never recycle a flag.",
+          "afterMinutes": 200,
+          "replies": [
+            { "author": "greybeard_junior", "body": "That write-up is required reading on my team now. The dead code wasn't even the scariest part. A manual deploy quietly skipping one server was.", "afterMinutes": 150 }
+          ]
+        },
+        { "author": "TabsVsSpacesTruce", "body": "We tried a weekly reminder about expired flags. Within a month everyone had muted it. What stuck was making flag removal a sub-task on the original feature ticket, so the feature simply isn't done until the flag is gone.", "afterMinutes": 420 },
+        {
+          "author": "APIdontknow",
+          "body": "question from the back: how do you remove a flag when you're not totally sure the off path is dead? I'm scared of deleting the one that's secretly holding something up",
+          "afterMinutes": 700,
+          "replies": [
+            { "author": "greybeard_junior", "body": "Check whether anything has evaluated it to 'off' recently, if your flag system records that. If nothing has in a month or so, remove the off path in its own small PR so reverting it is trivial.", "afterMinutes": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "APIdontknow",
+      "title": "I've been added as a reviewer on a senior dev's pull request. What am I actually allowed to comment on?",
+      "body": "my lead added me to a PR from someone with about fifteen more years of experience than me. it's big, it's clean, and I understand maybe 70% of it.\n\nmy instinct is to click approve and hide. but my lead presumably added me for a reason. can a junior actually push back on something? is 'I don't understand this part' a legit review comment, or am I just announcing my ignorance permanently in git history?",
+      "comments": [
+        {
+          "author": "null_terminated",
+          "body": "As the senior in this scenario: please comment. If you can't follow a section, that's a real finding about the code, not about you. The next person reading it at 2 a.m. is more likely to be at your level than mine.",
+          "afterMinutes": 30,
+          "replies": [
+            { "author": "APIdontknow", "body": "okay that reframe helps a lot. the code has to make sense to the next reader, and today I am the next reader", "afterMinutes": 60 }
+          ]
+        },
+        { "author": "merge_conflict_mel", "body": "phrase it as a question and it always lands fine. 'what happens here if the list is empty?' is a great review comment even when the answer is 'handled further down'. also, for your anxiety: review comments live in the PR tool, not in git history", "afterMinutes": 160 },
+        { "author": "greybeard_junior", "body": "Things a junior can review as well as anyone: are there tests for the failure cases, do the log messages make sense, are the error messages useful to a human, does the description match what the diff actually does. You don't need fifteen years to spot a missing null check.", "afterMinutes": 380 },
+        { "author": "off_by_one_ophelia", "body": "also you're allowed to approve with a comment. 'looks good, one question about the retry logic' isn't blocking anyone, it's just paying attention in writing", "afterMinutes": 590 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 3, "day": 4, "slot": "evening", "author": "null_terminated", "body": "Coming back to this after onboarding two new people this month. What worked better than my own advice above: pairing on a real, small bug in their first week. They drove, I narrated why the code looks the way it does. Faster than any architecture tour I've ever given." },
+    { "on_bootstrap_index": 1, "day": 10, "slot": "lunch", "author": "APIdontknow", "body": "found this thread at 11 p.m. searching 'undo rebase help'. reflog got back a whole afternoon of commits I was sure I'd destroyed. 'nothing is gone, it's just unlabelled' is the only reason I didn't delete the folder and start over" }
+  ]
+}

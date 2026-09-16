@@ -1,0 +1,114 @@
+{
+  "room": "usa",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "flight_mode",
+      "title": "Asked for a pop in Atlanta and the server asked what kind of Coke. The soda, pop, coke map is real",
+      "body": "I said pop because that's what comes out of my mouth. She said 'sure hon, what kind of Coke?' I said Sprite. She wrote it down like that was a perfectly normal sentence, and in that part of the country it is.\n\nThe rough map: soda in the Northeast and California, pop across the Midwest and the Northwest, coke through much of the South. On every road trip now I try to catch the exact county where it flips.",
+      "comments": [
+        {
+          "author": "redeyeflyer",
+          "body": "St. Louis is the one that breaks my brain. Surrounded by pop territory and the city mostly says soda anyway. It's an island. I've been corrected in both directions in the same airport.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "flight_mode",
+              "body": "An island of soda in a sea of pop. That's going straight into my notes for the next drive through.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "portage_and_main",
+          "body": "Canadian ruling from Winnipeg: it's pop, it has always been pop, and anyone here who says soda is either from away or hiding something. We're happy to share the word with the Midwest. They've earned it, they know what a real winter is.",
+          "afterMinutes": 200
+        },
+        {
+          "author": "documentary_now",
+          "body": "Linguists have been mapping this for decades, and the Harvard Dialect Survey maps are the ones everyone has seen. It also covers whether you say y'all, how many syllables you give caramel, and a dozen other things you never knew were regional. I lost an entire evening to it and regret nothing.",
+          "afterMinutes": 400
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "redeyeflyer",
+      "title": "Connected through a college town on a football Saturday and the entire airport was wearing the same colour",
+      "body": "Every gate agent, every barista, a pilot's lanyard, a toddler in a jersey down to her knees. The departures board might as well have been a scoreboard. At one point the whole terminal cheered at a TV and the man next to me hugged a total stranger, who hugged him right back, because they were both in orange.\n\nI've been through a lot of airports on a lot of Saturdays. Nothing I've seen in pro sports matches the way an entire college town turns into one team for an afternoon.",
+      "comments": [
+        {
+          "author": "flight_mode",
+          "body": "Routing tip for anyone passing through: check the home game schedule before booking anything into a college town on a fall Saturday. Hotel rates jump, rental cars disappear, and the Sunday morning flight out is every alumnus in the state wearing sunglasses indoors.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "redeyeflyer",
+              "body": "Learned that one the hard way. Paid game-day rates for a motel whose best feature was a parking lot full of tailgaters who kindly fed me.",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "penaltyboxphil",
+          "body": "Hockey guy trying to wrap my head around a 100,000 seat stadium for a university team. Some of those buildings hold more people than the towns they're in. The biggest crowd I ever played for was a beer league final and somebody's mom.",
+          "afterMinutes": 220
+        },
+        {
+          "author": "wanderlust_on_layaway",
+          "body": "Budget angle nobody asked for: you don't need the giant stadium to get the one-colour experience. A small-college game or a Friday night high school game costs about the price of a sandwich, and the marching band alone is worth the ticket.",
+          "afterMinutes": 500
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "evening",
+      "author": "wanderlust_on_layaway",
+      "title": "Budget road trip through Michigan's Upper Peninsula: the pasty is a full meal, a hand warmer, and a history lesson",
+      "body": "Drove across the Mackinac Bridge into the UP and immediately understood why the Yoopers aren't in any hurry to share it. Great Lakes on three sides, the maples just starting to turn, and a pasty shop in what felt like every town.\n\nA pasty is a hand pie of beef, potato, onion and rutabaga, and one of them was lunch and most of dinner for less than a fast food combo. Cheapest good food of the trip. Miners Castle at sunset was worth the whole drive on its own.",
+      "comments": [
+        {
+          "author": "umami_bomb",
+          "body": "The pasty came to the UP with Cornish miners who went over to work the copper and iron mines in the 1800s. A sealed crust kept lunch warm for hours underground, and the story goes that the thick crimped edge was a handle for dirty hands. Heritage food that's also clever engineering.",
+          "afterMinutes": 35,
+          "replies": [
+            {
+              "author": "wanderlust_on_layaway",
+              "body": "A lunch that doubles as a thermos. No wonder it survived. Frugal food always outlasts fancy food.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "drizzlecity",
+          "body": "As a Brit I have to ask the important question: gravy or ketchup? Because I've heard rumours, and I'm not sure Cornwall is emotionally ready.",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "wanderlust_on_layaway",
+              "body": "Both were on offer. I went gravy. The woman at the counter nodded like I'd passed some kind of test, and the guy behind me went ketchup without blinking. Peaceful coexistence.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "maplebound",
+          "body": "The Canadian side of Superior does the same thing in the fall: huge lake, hills going red, nobody around. Paddled out of Agawa Bay years ago and I still think about the colour of that water. Adding the pasty route to the someday list.",
+          "afterMinutes": 420
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 8,
+      "slot": "lunch",
+      "author": "chinook_wind",
+      "body": "Found this after losing a brisket argument at a backyard barbecue. Alberta position: we've got the beef, Texas has the patience. Every brisket I've attempted at home has mostly taught me how little patience I have."
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "room": "books",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "quietkettle",
+      "title": "The first cold evening always sends me to the same shelf. What's on your autumn pile?",
+      "body": "I needed a second blanket last night, which in my house is the official start of reading season. Persuasion comes down every autumn without fail. Anne walking out through the fading fields, quietly aching and pretending not to, is exactly the mood.\n\nThis year I've added Something Wicked This Way Comes, which I somehow never read. Bradbury writes October like he's homesick for it.\n\nWhat goes on your pile when the evenings close in?",
+      "comments": [
+        {
+          "author": "chai_and_chapters",
+          "body": "Rebecca, always. The fog, the house, the second Mrs de Winter who never even gets a first name. Perfect for a grey afternoon when you want to feel slightly haunted but not actually scared.",
+          "afterMinutes": 50,
+          "replies": [
+            {
+              "author": "quietkettle",
+              "body": "the narrator never getting her own name is such a quiet cruelty. I'd forgotten that. it's going back on the pile.",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "DogEaredDarcy",
+          "body": "The Haunting of Hill House, reread every October with all the lights on like a sensible adult. That opening paragraph is the best first page in horror and my copy has it underlined in three different pencils.",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "SaganWasRight",
+              "body": "three pencils means three separate years of being unsettled by the same paragraph. that's not a habit, that's a relationship.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "The Night Circus. A circus that only opens after dark, all black and white tents and bonfire light. I've tried reading it in other seasons and it doesn't work. It needs the early dusk.",
+          "afterMinutes": 400
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "morning",
+      "author": "DogEaredDarcy",
+      "title": "PSA: never read the introduction to a classic before the actual book",
+      "body": "Picked up a lovely edition of Tess of the d'Urbervilles, opened to the introduction like a good student, and the scholar who wrote it cheerfully gave away the ending in the second paragraph. In an essay about 'the machinery of fate.' The machinery of fate was him.\n\nI have learned this lesson with other classics and apparently I will keep learning it forever.\n\nDo you read them first, last, or never? Has one ever ruined a book for you?",
+      "comments": [
+        {
+          "author": "quietkettle",
+          "body": "Always last. I think of an introduction as the conversation you have with a friend after the film, not the trailer before it. The one exception is a note on the translation, which can help before you start.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "DogEaredDarcy",
+              "body": "'the conversation after the film' is exactly it. I'm writing that inside the cover of every classic I own. in pencil, obviously.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "Gentle dissent. For older books from far away, the introduction sometimes gives you the context you need to even catch the jokes. I read the intro to The Tale of Genji first and was grateful. I just keep one hand over the plot paragraphs.",
+          "afterMinutes": 170,
+          "replies": [
+            {
+              "author": "DogEaredDarcy",
+              "body": "one hand over the plot paragraphs is a real technique and I respect it. my hands have never been that disciplined",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "Science books have the same problem in the foreword. Some admirer tells you the most exciting idea in the book before chapter one gets its chance. I skip forewords on principle now and go back for them at the end.",
+          "afterMinutes": 360
+        },
+        {
+          "author": "ThreeActStructure",
+          "body": "It's the trailer problem, only worse, because at least a trailer is trying to get you into the seat. An introduction is written for someone who has already read the book, and nobody warns the first-timer. It's a spoiler with footnotes.",
+          "afterMinutes": 720
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "chai_and_chapters",
+      "title": "Translated fiction deserves a much bigger shelf. Here's where I'd start yours",
+      "body": "My translated-fiction shelf is the one I push on people most, and the one they're most nervous about, as if a translator standing between you and the author is a wall instead of a bridge.\n\nA few to start: The Housekeeper and the Professor by Yoko Ogawa, about math and memory, and somehow the gentlest book I own. Convenience Store Woman by Sayaka Murata, short, funny and quietly sharp. And Tomb of Sand by Geetanjali Shree, translated from Hindi by Daisy Rockwell, which plays with language so joyfully that I can't imagine the work the translation took.\n\nWhat's your best translated read? Name the translator if you remember. They earned it.",
+      "comments": [
+        {
+          "author": "quietkettle",
+          "body": "The Housekeeper and the Professor is a book I lend out and never get back, and I've stopped minding. A memory that only lasts eighty minutes is such a small, devastating idea. Stephen Snyder translated it, and you can feel how carefully every sentence was set down.",
+          "afterMinutes": 60
+        },
+        {
+          "author": "DogEaredDarcy",
+          "body": "Beartown by Fredrik Backman, translated from Swedish. A small hockey town, and I went in thinking 'I don't care about hockey' and came out having cared about hockey more than at any point in my life. I don't remember the translator's name, which feels rude, because the dialogue is perfect.",
+          "afterMinutes": 200,
+          "replies": [
+            {
+              "author": "chai_and_chapters",
+              "body": "Beartown is proof that a good translation doesn't feel translated. also, welcome to hockey. the whole country has been waiting for you.",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "Solaris by Stanisław Lem. A whole planet that might be thinking, and a handful of scientists on a research station who can't understand it no matter how many books they write about it. The older English edition was translated from the French translation, not the Polish, which is its own little first-contact problem.",
+          "afterMinutes": 380,
+          "replies": [
+            {
+              "author": "ThreeActStructure",
+              "body": "A translation of a translation is the most Solaris thing possible. The whole book is about a signal that arrives too distorted to read.",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "evening",
+      "author": "SaganWasRight",
+      "title": "Finished Endurance and now I want every book about people surviving somewhere impossibly cold",
+      "body": "Alfred Lansing's Endurance, about Shackleton's expedition. The ship gets crushed in the pack ice and the crew simply keeps going: months camped on the floes, a small-boat crossing of open ocean, and a march over the mountains of South Georgia at the end.\n\nI read it under a blanket with a hot drink and felt slightly ridiculous about it. Cozy season plus polar hardship is apparently my ideal reading climate.\n\nWhat else belongs on this shelf? Fiction welcome.",
+      "comments": [
+        {
+          "author": "chai_and_chapters",
+          "body": "Frankenstein, oddly. People forget it opens and closes in the Arctic, with a ship stuck in the ice, and the whole story is being told to a freezing explorer who wants to go further north.",
+          "afterMinutes": 45,
+          "replies": [
+            {
+              "author": "SaganWasRight",
+              "body": "I completely forgot the frame happens in the ice. a man who wants to reach the pole listening to a man who reached too far. that's a pairing.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "DogEaredDarcy",
+          "body": "The Worst Journey in the World by Apsley Cherry-Garrard. The title is not an exaggeration. Three men haul sledges through the Antarctic winter dark to collect penguin eggs, and I put a sweater on while reading it in a warm room.",
+          "afterMinutes": 190,
+          "replies": [
+            {
+              "author": "SaganWasRight",
+              "body": "through the polar night, for penguin eggs, for science. that might be the most human sentence on the entire shelf.",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "ThreeActStructure",
+          "body": "The Terror by Dan Simmons. The lost Franklin expedition, two ships locked in the ice, and something out on the ice hunting them. It's long, but the dread comes in like a slow tide.",
+          "afterMinutes": 400
+        },
+        {
+          "author": "quietkettle",
+          "body": "Arctic Dreams by Barry Lopez, if you'd like the cold without quite so much suffering. Slow, careful writing about light and animals and the people who've made lives up there. I read it a chapter a night and it felt like a long exhale.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "evening",
+      "author": "ThreeActStructure",
+      "title": "Novels told entirely in letters, diaries and documents. Spooky season says start with Dracula",
+      "body": "Epistolary novels are a structure nerd's dream, because the author has to tell the whole story using only things characters would plausibly write down. Every gap between documents is doing work.\n\nDracula is the obvious October pick: journals, letters, newspaper clippings, even a ship's log, and you end up assembling the monster out of paperwork. The dread comes from you knowing more than any single writer does.\n\nWhat else pulls this off?",
+      "comments": [
+        {
+          "author": "DogEaredDarcy",
+          "body": "The Guernsey Literary and Potato Peel Pie Society. All letters, very cozy, and then the parts about the occupation sneak up on you. I kept a cast list of letter-writers in the margins, and for once I'm not sorry.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "ThreeActStructure",
+              "body": "A cast list in the margins is the correct way to read an epistolary novel. The form hands you the paperwork, so do the filing.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "84, Charing Cross Road, which isn't a novel at all. It's real letters between a New York writer and a London bookshop across about twenty years. Short, funny, all about loving books across an ocean, and I cried at a letter from a bookshop, of all things.",
+          "afterMinutes": 170,
+          "replies": [
+            {
+              "author": "quietkettle",
+              "body": "the last letters in that one undo me every time. a friendship built out of book orders, and one of the truest in print.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "World War Z isn't letters, but it's built from interviews and does the same trick. No single voice knows the whole story, so you assemble it yourself, and the form makes a ridiculous premise feel like history.",
+          "afterMinutes": 360
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 3,
+      "day": 5,
+      "slot": "evening",
+      "author": "DogEaredDarcy",
+      "body": "Update from attempt number five, since this thread talked me into it: I got through the Cetology chapter by reading it as 'the tedium is thematic', exactly as prescribed. I'm about halfway now and irritated by how good it's getting."
+    },
+    {
+      "on_bootstrap_index": 2,
+      "day": 12,
+      "slot": "lunch",
+      "author": "SaganWasRight",
+      "body": "Found this thread again to report that my brother-in-law, the 1 a.m. potato texter, has moved on to Project Hail Mary and now asks me for 'more books where a guy solves problems with math.' I've created a monster and I couldn't be prouder."
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "room": "gaming",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "NewGamePlusPlus",
+      "title": "Which games feel like autumn to you? Not horror, just the sweater-weather ones",
+      "body": "First evening I needed a hoodie indoors, my brain went straight to Night in the Woods. Orange leaves, a small town where nothing is going right, everyone a bit sad and funny about it. It's the most October game I own and I didn't even plan the timing.\n\nWhat's on your seasonal shelf? Horror can have its own thread, I'm after the cozy-melancholy stuff.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "Stardew in fall, but specifically the first fall of a save, when you're still broke and the whole valley goes orange. it's a mood you only get once per farm.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "the broke first fall is the real one. by year three the farm is a spreadsheet with a pumpkin on it",
+              "afterMinutes": 65
+            }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "Life is Strange. Set in October in a little coastal town, and the soundtrack is basically an acoustic guitar looking out a rainy window. I put it on for the music as much as the story.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "crokinole_king",
+              "body": "That describes my entire October, minus the rewinding time part.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Tabletop answer: anything with a harvest in it. Agricola comes out at my place the week the leaves turn. Scrambling to feed your family before winter hits different when it's actually getting cold outside.",
+          "afterMinutes": 330
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "Costume Quest. You go door to door trick-or-treating and in battle every kid turns into a giant version of their costume. Short, sweet, and it ends before it wears out its welcome, which from me is the highest praise a game can get.",
+          "afterMinutes": 560,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "short, kind, and seasonal is my entire checklist. adding it.",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "crokinole_king",
+      "title": "Twilight Imperium finally hit the table. Full report from a very long day",
+      "body": "For anyone who remembers me confessing that it had become furniture: we played it. Six players, a borrowed folding table, a slow cooker full of chili, first turn at ten in the morning.\n\nWe did not finish. Around hour nine two people had to head home, so we called it for whoever was ahead on points. Nobody was mad, which I'm told is not how this game usually ends.\n\nVerdict: incredible, exhausting, and not happening again until spring at the earliest. The box goes back on the shelf with honour this time instead of shame.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "nine hours and no winner is the most honest review a board game has ever gotten. also 'with honour this time' made me look over at Gloomhaven and feel something.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "crokinole_king",
+              "body": "Gloomhaven is watching you. It has always been watching you.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "my group would have staged a mutiny by hour two and gone back to Wingspan. genuine respect for making it to the chili.",
+          "afterMinutes": 140
+        },
+        {
+          "author": "framecounter",
+          "body": "How long was the rules teach? Every Twilight Imperium story I hear has a rules explanation longer than most movies.",
+          "afterMinutes": 300,
+          "replies": [
+            {
+              "author": "crokinole_king",
+              "body": "Just under two hours, with a laminated cheat sheet I made myself. The cheat sheet is now my proudest possession.",
+              "afterMinutes": 35
+            }
+          ]
+        },
+        {
+          "author": "null_terminated",
+          "body": "A nine-hour job that never reached its exit condition and still got marked successful. You've accidentally reinvented enterprise software.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "morning",
+      "author": "framecounter",
+      "title": "Got a free CRT off the classifieds. Duck Hunt works again and I'm unreasonably emotional",
+      "body": "Twenty-inch tube TV, one previous owner, weighs about as much as a bar fridge. The listing said 'must take today' and I have never moved faster in my life.\n\nThe reason I wanted one: light guns. The NES Zapper can't read a modern flat panel because it depends on the timing of a CRT drawing the picture. Hooked up the old NES and the dog laughed at me for real misses instead of technical ones.\n\nAlso scanlines. Old sprites look the way they were drawn to look. I'm keeping it forever. My back has filed an objection.",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "'the dog laughed at me for real misses' is the most wholesome sentence I've read this week. also the bar fridge comparison is generous, I helped a friend move one once and we both aged.",
+          "afterMinutes": 25
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "the scanline thing is real. that pixel art was drawn for a soft glowing tube, not a razor sharp panel. sprites look a bit unfinished on new TVs because in a way they are",
+          "afterMinutes": 120,
+          "replies": [
+            {
+              "author": "framecounter",
+              "body": "Exactly. The artists were painting with the blur. Filters get close, but the tube just does it for free.",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Duck Hunt in my cousin's basement, where the house rule was you could hold the Zapper right up against the screen if you were under ten. We were all under ten. Nobody ever missed.",
+          "afterMinutes": 400,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "the point-blank strategy. banned in competitive play, legal in every basement in the country",
+              "afterMinutes": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "evening",
+      "author": "SaveStateSteve",
+      "title": "I found a loophole in my own backlog rule and it's called 'games under five hours'",
+      "body": "The rule is five completions before any purchase. The rule says nothing about how long those games have to be.\n\nSo I sorted the backlog by length and went on a spree. A Short Hike in one evening. What Remains of Edith Finch in another. Gris over the weekend. Three completions in six days. The past version of me who wrote the rule is furious, and the present version has something in the cart.\n\nThis is either cheating or the system working as designed. Either way I need two more short ones.",
+      "comments": [
+        {
+          "author": "framecounter",
+          "body": "Textbook exploit, and the dev team, meaning also you, should have caught it in testing. Portal. Three or four hours and there isn't a wasted minute.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "Inside. about four hours to beat and it lives in your head for a month afterward, so arguably you're getting a long game at a short game's rate",
+          "afterMinutes": 160,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "a long game disguised as a short game is exactly the loophole-inside-a-loophole I was hoping for",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "As a QA engineer I'm obligated to log this as a bug. As a person I'm marking it 'works as intended' and closing the ticket.",
+          "afterMinutes": 420,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "ticket closed. nobody reopen it.",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Tabletop equivalent is counting every round of Love Letter as its own completion. By that math I've finished forty games this month.",
+          "afterMinutes": 600
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "lunch",
+      "author": "NewGamePlusPlus",
+      "title": "My partner asked to try 'one of your games.' I have exactly one shot at this",
+      "body": "She's never played much beyond puzzle games on her phone, and she's curious because apparently I look 'annoyingly content' on the couch. I don't want to scare her off with a 60 hour RPG, but I don't want to hand her something patronizing either.\n\nShortlist so far: Stardew, Unpacking, Portal 2 co-op. What game actually took for someone in your life?",
+      "comments": [
+        {
+          "author": "crokinole_king",
+          "body": "Go through the table first. Nobody feels watched at a board game, and if she likes Carcassonne she'll probably like half the cozy video games out there. Same brain, fewer buttons.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "we've played Wingspan roughly two hundred times, so the table has been thoroughly stress tested",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "SaveStateSteve",
+          "body": "Unpacking. No fail state, no timer, and the story sneaks up on you through what's in the boxes. My mom played it start to finish and she still calls every video game 'the Mario'.",
+          "afterMinutes": 140
+        },
+        {
+          "author": "framecounter",
+          "body": "Portal 2 co-op is great, but only if you can keep your hands off her controller. Watching someone spend four minutes on a puzzle you solved in ten seconds is a test of character most of us fail.",
+          "afterMinutes": 260,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "I have already failed this exact test over a crossword. noted.",
+              "afterMinutes": 90
+            }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "update: we started Unpacking last night. she spent a solid ten minutes deciding where one potted plant should live, then asked if we could keep going tomorrow. I'm trying very hard to play it cool.",
+          "afterMinutes": 1100
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "slot": "evening",
+      "author": "crokinole_king",
+      "title": "Co-op board games for the friend who takes losing personally",
+      "body": "Every group has one. Ours flipped a Monopoly board once and we don't talk about it.\n\nWhat's fixed it at my table is co-op games, where everyone wins or loses together and the only villain is the box. Pandemic, The Crew, Forbidden Island for newer players. Nobody can sulk at you when the disease wins.\n\nWhat's worked for your group? Bonus points for anything under an hour.",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "Hanabi, if your group can handle quiet. you can't see your own cards, so everyone else has to give you clues, and it turns the sore loser into the person working hardest to help",
+          "afterMinutes": 45
+        },
+        {
+          "author": "SaveStateSteve",
+          "body": "counterpoint: co-op doesn't cure the sore loser, it turns him into the quarterback. now instead of sulking he tells everyone what to play on their own turn. you've just moved the problem.",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "crokinole_king",
+              "body": "Which is exactly why The Crew is on the list. You aren't allowed to talk freely about your hand. The quarterback is gagged by the rulebook.",
+              "afterMinutes": 40
+            },
+            {
+              "author": "framecounter",
+              "body": "hidden information remains the only known cure for quarterbacking",
+              "afterMinutes": 95
+            }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "Video game version: Overcooked. Co-op didn't calm anyone down at my place, it just aimed the yelling at the onions instead of each other. Which, honestly, is progress.",
+          "afterMinutes": 420
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "evening",
+      "author": "framecounter",
+      "title": "The sound effects that are permanently burned into my brain",
+      "body": "Heard a phone notification yesterday that was close enough to the Zelda secret-found jingle that I actually turned around looking for a hidden door.\n\nOthers living rent-free: the Metal Gear alert when a guard spots you, the Resident Evil save room music, and the GameCube startup, which I will defend as the best boot sound ever made. What can you still hear with your eyes closed?",
+      "comments": [
+        {
+          "author": "SaveStateSteve",
+          "body": "the Final Fantasy victory fanfare. I have hummed it after finishing my taxes, after a clean parallel park, and after opening a stubborn jar. it's the universal sound of accomplishment.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "save room music is the right call. it's the one place a horror game lets you breathe, so your whole body learns that song means safe. I still unclench a little when I hear it out of context",
+          "afterMinutes": 110,
+          "replies": [
+            {
+              "author": "framecounter",
+              "body": "Pavlov would have loved Resident Evil.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "crokinole_king",
+          "body": "The clack of a disc off a peg, followed by the silence while everyone watches it roll into the ditch. Not a video game sound. It still counts.",
+          "afterMinutes": 380,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "the ditch silence is the tabletop version of a game over screen",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "CtrlAltDelight",
+          "body": "And the GameCube startup had a hidden variant: hold Z while it boots and you get a much goofier version. An easter egg in the boot sequence. Somebody on that team was having fun.",
+          "afterMinutes": 650
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "lunch",
+      "author": "SaveStateSteve",
+      "title": "Horror games for someone who plays horror games through their fingers",
+      "body": "October's almost here and I want to join in, but I'm a coward. I bought Alien: Isolation ages ago and have spent more time hiding in lockers than actually progressing.\n\nLooking for creepy over jump-scary. Atmosphere good, being chased bad. What worked for the other scaredy cats?",
+      "comments": [
+        {
+          "author": "NewGamePlusPlus",
+          "body": "Dredge. you're a fisherman, the days are relaxing, and then night falls and the sea starts getting wrong. but you can always just head back to port before dark. it's horror with a curfew",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "horror with a curfew is precisely my difficulty setting",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "framecounter",
+          "body": "Return of the Obra Dinn. Not scary exactly, but you're alone on a ghost ship working out what happened to every soul aboard, and the atmosphere is thick. Nothing chases you. It's just dread and a notebook.",
+          "afterMinutes": 170
+        },
+        {
+          "author": "crokinole_king",
+          "body": "Betrayal at House on the Hill. Horror is a lot less scary when your friends are right there at the table, even if one of them is about to turn into the monster.",
+          "afterMinutes": 360
+        },
+        {
+          "author": "null_terminated",
+          "body": "Inscryption. It starts as a card game in a creepy cabin and I will not say what it becomes. Cowards welcome, but read absolutely nothing about it first.",
+          "afterMinutes": 720,
+          "replies": [
+            {
+              "author": "SaveStateSteve",
+              "body": "'read absolutely nothing about it first' is somehow the scariest thing in this thread",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 1,
+      "day": 4,
+      "slot": "evening",
+      "author": "framecounter",
+      "body": "Found this thread again because I just started the Mass Effect run, and I swore this would finally be the renegade playthrough. Lasted until the first shopkeeper. Paragon forever, apparently."
+    },
+    {
+      "on_bootstrap_index": 4,
+      "day": 6,
+      "slot": "lunch",
+      "author": "NewGamePlusPlus",
+      "body": "coming back to report: finished Chrono Trigger, then started New Game Plus immediately like the username demands. letting you take on the final boss early for a different ending is one of the most generous ideas a game has ever had."
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 10,
+      "slot": "evening",
+      "author": "SaveStateSteve",
+      "body": "Gloomhaven check-in, since this thread keeps finding me: we played scenario three on the weekend. That's a fifty percent increase in progress. At this rate the campaign wraps up around my retirement, which lines up nicely with the rest of the backlog."
+    }
+  ]
+}

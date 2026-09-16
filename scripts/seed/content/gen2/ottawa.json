@@ -1,0 +1,99 @@
+{
+  "room": "ottawa",
+  "drip": [
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "beavertales",
+      "title": "September in Ottawa: the jacket comes to work with you but it doesn't actually do anything",
+      "body": "Six degrees at the bus stop this morning. Twenty-four by lunch. My jacket has spent the whole week riding the bus in, hanging on the back of a chair all day, and riding the bus home again.\n\nIt's basically on secondment. Shows up every day, no actual duties, gone by spring. I respect it. It's a good jacket.",
+      "comments": [
+        {
+          "author": "maplebound",
+          "body": "The official Ottawa answer is a fleece vest, which is a jacket that has committed to nothing. I wear mine from mid-September until the first snow. It knows it isn't a real jacket and it's at peace with that.",
+          "afterMinutes": 35,
+          "replies": [
+            {
+              "author": "beavertales",
+              "body": "The vest is a jacket on a four-day week. Honestly it's living the dream.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "left_on_red",
+          "body": "toronto version: same weather, except the jacket also has to survive a subway platform that feels like a sauna year round. there is no correct layer. there's just suffering in stages",
+          "afterMinutes": 240
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "evening",
+      "author": "maplebound",
+      "title": "Squeezed in one more evening paddle on the canal before the boating season wraps up",
+      "body": "Put in at Dow's Lake after work and paddled toward downtown while the light went. The trees along Colonel By are just starting to turn, there were maybe four other boats on the water, and the whole city was doing its commute on the pathways without once looking down at us.\n\nThe canal closes to boats after Thanksgiving, then they drop the water and we all stand around waiting for it to freeze into the Skateway. I like knowing I got one more in.",
+      "comments": [
+        {
+          "author": "beavertales",
+          "body": "Did you see the canoe man? Last I checked, he and the kayaker had reached some kind of truce where they nod at each other now. Took them all summer. Diplomacy in this town moves at exactly the speed of paddling.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "maplebound",
+              "body": "No sign of him, but a canoe passed me at a pace I'd describe as late for a briefing. I'm choosing to believe.",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "trailmixtake",
+          "body": "Adding 'paddle through the middle of a capital city at dusk' to the list. Not many cities let you do that without a permit and a lecture. Does it get busy on weekends, or is it mostly commuters watching from the path?",
+          "afterMinutes": 300,
+          "replies": [
+            {
+              "author": "maplebound",
+              "body": "Summer weekends it's a floating traffic jam of rental kayaks. September weeknights it's yours. That's the trick to most of this town, really.",
+              "afterMinutes": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "lunch",
+      "author": "beavertales",
+      "title": "Cold rain Saturday, so I did a pho crawl down Somerset. No regrets and almost no puns",
+      "body": "First properly grey, cold, sideways-rain day of the fall, and this city only has one sensible response: walk down Somerset through Chinatown and go into whichever pho place has the most fogged-up windows. Fogged windows mean the broth has been on since dawn. That's science. Or at least it's my science.\n\nHad two bowls at two different spots. My wife asked if I was okay. I told her I was pho-ine. Twenty-two years and she still lets me finish the sentence, which is love.",
+      "comments": [
+        {
+          "author": "maplebound",
+          "body": "Fogged-up windows is a real metric and I've been using it for years without having the words for it. Also, two bowls is just one bowl and a second opinion. Perfectly reasonable.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "umami_bomb",
+          "body": "Your science holds up better than you'd think. The long simmer is what pulls gelatin out of the bones, which is where that lip-sticking body comes from, and the charred onion and ginger at the start are doing the aroma work. A place that started its broth at dawn is a place that respects the process.",
+          "afterMinutes": 260,
+          "replies": [
+            {
+              "author": "beavertales",
+              "body": "'A place that respects the process' is going on a little sign over my stove. My wife will have thoughts.",
+              "afterMinutes": 80
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 5,
+      "slot": "lunch",
+      "author": "maplebound",
+      "body": "Came back to this one for the September sequel: everyone's back from the lake, the buses are full again, and that same patio at 12:05 now comes with a wait, a heat lamp, and a fleece vest on every chair."
+    }
+  ]
+}

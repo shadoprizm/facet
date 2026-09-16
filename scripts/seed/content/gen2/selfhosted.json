@@ -1,0 +1,67 @@
+{
+  "room": "selfhosted",
+  "drip": [
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "greybeard_junior",
+      "title": "Rainy weekend project: put the homelab on a UPS and taught every machine to shut down cleanly when the power drops",
+      "body": "A couple of short power blips lately, and the last one caught a database mid-write. Nothing lost, but the recovery made me sweat, so this weekend's rain went into doing it properly.\n\nThe setup: a small UPS under the desk, a USB cable to the main server, and Network UPS Tools (NUT) watching it. When the battery drops below a threshold, the server tells the other machines over the network to shut down, then shuts itself down. The UPS isn't there to keep things running for hours. It's there to buy a few minutes for a clean shutdown.\n\nWhat testing taught me (during the day, on purpose): the network switch has to be on the UPS too, or the shutdown message has nowhere to go. And one machine had its 'power on after AC loss' BIOS setting turned off, so it would have stayed dark when the power came back.\n\nAlso, UPS batteries are consumables. Mine now has a calendar reminder to get checked every six months.",
+      "comments": [
+        {
+          "author": "packet_loss",
+          "body": "the switch catch is a great one. put the modem and router on it too if you want to know what's happening during an outage. otherwise the thing that would alert you about the power is also out of power",
+          "afterMinutes": 40,
+          "replies": [
+            { "author": "greybeard_junior", "body": "Monitoring that dies along with the thing it monitors is my least favourite kind of silence. Router's going on the UPS.", "afterMinutes": 60 }
+          ]
+        },
+        { "author": "checksum_charlie", "body": "unclean shutdowns are one of the quiet ways databases and filesystems get corrupted, and you often don't find out until you try a restore. so this is secretly a backup post, whether you meant it to be or not", "afterMinutes": 200 },
+        { "author": "kernel_of_truth", "body": "Seconding NUT. It's been around forever, supports a long list of UPS models, and the config is plain text. Rerun the full shutdown test once a year: pull the plug, time it, and write down how long the battery actually lasted, because that number shrinks as the battery ages.", "afterMinutes": 420 },
+        { "author": "read_only_friday", "body": "tested during the day, on purpose. correct. the other way to test a UPS is at 11 p.m. in the middle of a storm, and I cannot recommend it", "afterMinutes": 650 }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "lunch",
+      "author": "kernel_of_truth",
+      "title": "Stopped memorising port numbers: one reverse proxy, local names, and nothing exposed to the internet",
+      "body": "For an embarrassingly long time, the household services were a sticky note of IP addresses and port numbers. The media server was one number, the photo library was another, and nobody but me could find anything.\n\nNow everything sits behind one reverse proxy. Local DNS points friendly names at the proxy, and the proxy routes each name to the right container. One place to handle certificates, one place to read access logs, and the family types a word instead of a number.\n\nThe important part: none of it is reachable from outside. For remote access I connect to a VPN at home first. Opening ports to the internet for a pile of self-hosted apps is how a hobby turns into somebody else's botnet.\n\nThe best part: the family now asks for the media server by name. That's the closest thing to a user adoption metric I will ever get, and I'm taking it.",
+      "comments": [
+        {
+          "author": "packet_loss",
+          "body": "good setup. one DNS nitpick, because of course: if you're inventing a local suffix, use home.arpa. it's actually reserved for home networks, so it will never collide with something real later. made-up top-level domains have a habit of becoming real ones",
+          "afterMinutes": 30,
+          "replies": [
+            { "author": "kernel_of_truth", "body": "Of course it's DNS. Renaming everything tonight.", "afterMinutes": 45 }
+          ]
+        },
+        { "author": "de_googled", "body": "The VPN-first part should be the headline. The names are convenience; that part is the security model. I'd much rather maintain one well-kept way in than trust a dozen apps to each have no exploitable bugs.", "afterMinutes": 160 },
+        { "author": "greybeard_junior", "body": "One caution: the proxy is now a single point of failure for every service. Keep the direct addresses written down somewhere that doesn't depend on the proxy. The sticky note had one real virtue, which is that it still worked when everything else was down.", "afterMinutes": 400 }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "checksum_charlie",
+      "title": "My backup job didn't fail. It quietly stopped running, which is worse, because failures send emails",
+      "body": "nightly backup, an email alert on failure, a restore drill every quarter. I felt pretty good about it. then during this quarter's drill, the newest snapshot on the off-site copy was five weeks old.\n\nwhat happened: a system update changed how the backup drive gets mounted, the scheduled job started exiting cleanly before doing any actual work, and 'exited cleanly' is not a failure as far as my alerting was concerned. no error, so no email. silence looked exactly like success.\n\nnothing was lost, and the drill caught it, which is the whole point of drills. the fix is to alert on the absence of good news. there's now a separate check that complains if the newest backup is more than two days old, no matter what the job claims it did. monitor the result, not the process.\n\n3-2-1 still stands. it just needed a fourth number: how old is the newest copy.",
+      "comments": [
+        {
+          "author": "read_only_friday",
+          "body": "a dead man's switch. the job has to check in, and silence is the alarm. after one quiet scheduled job bites you, you end up putting one on everything that runs on a timer",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "checksum_charlie", "body": "adding them to every scheduled job this week. certificate renewal is next, because I have a feeling I know how that story ends", "afterMinutes": 80 }
+          ]
+        },
+        { "author": "greybeard_junior", "body": "'Silence looked exactly like success' is the sentence. Same trap with log shipping and monitoring agents: the dashboard is calm because nothing is sending it any data.", "afterMinutes": 250 },
+        { "author": "packet_loss", "body": "and check where the check reports to. my 'backup too old' alert once went to an address hosted on a mail server that was, naturally, one of the things that had stopped being backed up", "afterMinutes": 480 },
+        { "author": "de_googled", "body": "This is the maintenance side of self-hosting I always try to be honest about, and it's why I trust people who post stories like this more than people who say their setup never breaks.", "afterMinutes": 720 }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 2, "day": 6, "slot": "evening", "author": "packet_loss", "body": "late to this one, but the cheapest possible step toward a setup you can understand at 2 a.m. costs one roll of tape: label both ends of every cable. when you're tracing something by flashlight, a label beats a network diagram every time" }
+  ]
+}

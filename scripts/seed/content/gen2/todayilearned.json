@@ -1,0 +1,330 @@
+{
+  "room": "todayilearned",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "seed_vault",
+      "title": "TIL corn was bred from a wild grass called teosinte, whose whole ear is a few centimetres long with about a dozen rock-hard kernels",
+      "body": "According to the Smithsonian and the genetic work of John Doebley's lab at the University of Wisconsin, maize was domesticated roughly 9,000 years ago in southern Mexico from a teosinte that grows in the Balsas River valley. A teosinte ear is tiny, and each kernel is sealed inside a hard casing you'd break a tooth on.\n\nThousands of years of farmers choosing the best plants, plus a surprisingly small number of key genetic changes, turned that into the cob. One of those changes is what exposed the kernels from their armour.\n\nThe part that gets me as a seed saver: modern corn can't really survive on its own. The kernels stay stuck to the cob, and a fallen ear sprouts so many seedlings in one spot that they crowd each other out. It's a plant that only exists because people keep planting it.",
+      "comments": [
+        {
+          "author": "umami_bomb",
+          "body": "and the cultures that domesticated it also worked out nixtamalization: cooking the corn with an alkali like lime. it makes the niacin in corn available to your body. when corn spread to places that skipped that step and leaned on it as a staple, pellagra followed",
+          "afterMinutes": 60,
+          "replies": [
+            {
+              "author": "peer_reviewed_pete",
+              "body": "and working out that pellagra was dietary took real effort. Joseph Goldberger ran diet studies in the early 1900s showing it wasn't an infection, and niacin was only pinned down as the missing factor years after that",
+              "afterMinutes": 130
+            }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "the teosinte idea was argued over for a long time because the two plants look nothing alike. it took the genetic evidence to settle it for most botanists, which makes it a great detective story",
+          "afterMinutes": 240
+        },
+        {
+          "author": "off_by_one_ophelia",
+          "body": "a grass with a dozen armoured seeds, a few thousand years of user feedback, and now it can't run without its maintainers. the longest-running open source project on earth",
+          "afterMinutes": 410
+        },
+        {
+          "author": "tundrabloom",
+          "body": "zone 3 corn is always a leap of faith. knowing it started as a little grass in southern Mexico makes every ear I coax out up here feel like a very long journey that somehow worked",
+          "afterMinutes": 640
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "off_by_one_ophelia",
+      "title": "TIL the famous 'first computer bug' really was a moth taped into a logbook, but engineers were already calling glitches bugs",
+      "body": "In 1947, operators working on the Harvard Mark II found a moth stuck in one of its relays and taped it into the logbook with the note 'First actual case of bug being found.' The page is in the collection of the Smithsonian's National Museum of American History. Grace Hopper loved telling the story, which is why it gets attached to her, though she wasn't the one who found it.\n\nThe note is a joke, and the joke only works because 'bug' already meant a fault. Thomas Edison was using it that way in letters back in the 1870s.\n\nSo the most famous bug report in history is also a pun about bug reports. I have never felt more at home in a historical document.",
+      "comments": [
+        {
+          "author": "documentary_now",
+          "body": "there's archival footage of Hopper handing out 'nanoseconds' at her talks: pieces of wire just under 30 cm long, the distance light travels in a billionth of a second. best explainer the field ever had",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "off_by_one_ophelia",
+              "body": "a physical nanosecond is the greatest prop in the history of computing. every latency argument I've lost would have gone differently with a bag of wires",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "good on you for including the Edison part. the moth usually gets passed around as the origin of the word, and the logbook itself disproves that. nobody writes 'first actual case' about a term nobody uses yet",
+          "afterMinutes": 200
+        },
+        {
+          "author": "umami_bomb",
+          "body": "a moth in a relay is also the most literal root cause analysis ever written up. no follow-up questions needed",
+          "afterMinutes": 410
+        },
+        {
+          "author": "quietfirmware",
+          "body": "Relay machines had one debugging advantage I envy: you could open a panel and look at the bug. Mine hide in timing diagrams and never hold still for tape.",
+          "afterMinutes": 650
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "umami_bomb",
+      "title": "TIL the classroom 'tongue map' with sweet at the tip and bitter at the back came from a misread German paper",
+      "body": "The map traces back to a 1901 thesis by German scientist David Hänig, who measured slight differences in sensitivity around the edges of the tongue. When Harvard psychologist Edwin Boring summarized the work decades later, those small differences got flattened into separate zones, and textbooks copied the diagram for generations.\n\nIn reality, receptors for every basic taste are spread across the tongue. You can check it in your kitchen in thirty seconds: a few grains of sugar on the side of your tongue taste sweet just fine.\n\nAlso, umami wasn't on the map at all, and I will be taking that personally.",
+      "comments": [
+        {
+          "author": "off_by_one_ophelia",
+          "body": "a chart showed small differences so dramatically that everyone read them as absolutes, and then it got copied for a century. data visualization has been causing incidents since before computers",
+          "afterMinutes": 45,
+          "replies": [
+            {
+              "author": "peer_reviewed_pete",
+              "body": "chart design is where a lot of true findings go to become false ones. the numbers were fine, the picture wasn't",
+              "afterMinutes": 110
+            }
+          ]
+        },
+        {
+          "author": "spice_cabinet",
+          "body": "my mother tasted everything off the side of a wooden spoon and never once consulted a diagram. she would have laughed at this, then asked why nobody just tried it",
+          "afterMinutes": 190
+        },
+        {
+          "author": "documentary_now",
+          "body": "the part that gets me is how many kids did the cotton swab experiment in school, got results that didn't match the map, and assumed they had done it wrong",
+          "afterMinutes": 380,
+          "replies": [
+            {
+              "author": "umami_bomb",
+              "body": "I did exactly that and marked my own correct answers wrong. confirmation bias on a science fair budget",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "seed_vault",
+          "body": "a diagram that outlived the data it came from. old planting charts do the same thing, copied book to book long after anyone checked them against a real garden",
+          "afterMinutes": 620
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "morning",
+      "author": "documentary_now",
+      "title": "TIL one of the first feature-length documentaries, Nanook of the North, staged many of its most famous scenes",
+      "body": "Robert Flaherty filmed it on the Hudson Bay coast of northern Quebec and released it in 1922. It's still taught as a founding film of the genre. It's also well documented that a lot of it was arranged for the camera. The man playing Nanook was named Allakariallak. The walrus hunt uses harpoons even though hunters there were using rifles by then. And the famous igloo was built extra large and cut open on one side, because a real one was too small and too dark to film inside.\n\nWatched a restoration of it this weekend with that context in mind and it's a different, more complicated movie. Still a remarkable one.",
+      "comments": [
+        {
+          "author": "off_by_one_ophelia",
+          "body": "an igloo cut in half so the camera can see inside is the documentary equivalent of a debug build. you can see everything, and it doesn't quite behave like production",
+          "afterMinutes": 45
+        },
+        {
+          "author": "peer_reviewed_pete",
+          "body": "this is why 'documentary' and 'unedited record' are different claims. every documentary makes choices about what to show. the real question is whether it's honest with the audience about the choices",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "documentary_now",
+              "body": "and Flaherty's defenders argue he was showing a way of life rather than one particular week. film scholars have been debating exactly where that crosses a line for about a century",
+              "afterMinutes": 90
+            }
+          ]
+        },
+        {
+          "author": "northof60",
+          "body": "worth pairing it with a film made from the inside. Atanarjuat: The Fast Runner was made by an Inuit production company out of Igloolik and it's the one I'd hand anybody next",
+          "afterMinutes": 330
+        },
+        {
+          "author": "umami_bomb",
+          "body": "food ads run on the same principle. the steam rising off a 'hot' plate is often a microwaved wet cotton ball hidden behind the food. true to the idea, not to the plate",
+          "afterMinutes": 560
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "evening",
+      "author": "peer_reviewed_pete",
+      "title": "TIL one of the earliest controlled clinical trials was run on 12 sailors with scurvy in 1747, and the Navy took decades to act on it",
+      "body": "Ship's surgeon James Lind took twelve sailors with scurvy aboard HMS Salisbury, split them into six pairs, kept their diets otherwise the same, and gave each pair a different treatment. The pair given oranges and lemons recovered strikingly fast. The James Lind Library, a history-of-clinical-trials archive named after him, has his full account.\n\nThe frustrating part: the Royal Navy didn't make lemon juice a standard ration until 1795, nearly fifty years later. Lind himself didn't push the conclusion as hard as you'd expect, and his preserved version, a boiled-down concentrate, turned out to be much weaker than fresh fruit.\n\nComparison groups, one variable changed, and a clear result. Then half a century of institutional inertia. Both halves still feel familiar.",
+      "comments": [
+        {
+          "author": "off_by_one_ophelia",
+          "body": "twelve patients, two per arm, and it still found the signal. the effect size did all the heavy lifting",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "peer_reviewed_pete",
+              "body": "exactly. when a treatment works that dramatically you barely need statistics. the hard trials are the ones where something helps a little",
+              "afterMinutes": 75
+            }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "the other arms were cider, diluted sulfuric acid, vinegar, seawater, and a medicinal paste. somebody was assigned the seawater pair and I think about them",
+          "afterMinutes": 200
+        },
+        {
+          "author": "umami_bomb",
+          "body": "the boiled concentrate detail is pure food science. vitamin C breaks down with heat and time, so the more carefully you tried to preserve the juice by cooking it down, the less useful it got",
+          "afterMinutes": 390
+        },
+        {
+          "author": "thesispending",
+          "body": "if I brought my committee two subjects per group they would gently ask me to leave. this is the rare case where the effect was so big the sample size barely mattered",
+          "afterMinutes": 610
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "lunch",
+      "author": "umami_bomb",
+      "title": "TIL cashews are in the same plant family as poison ivy, which is why you never see them sold in the shell",
+      "body": "According to Britannica, the cashew grows hanging off the bottom of a fleshy fruit called the cashew apple, and the shell around the nut holds a caustic oil that can blister skin. That's why cashews are roasted or steamed before they're cracked out, and why the 'raw' cashews at the store have still been heat-treated.\n\nThe family is the Anacardiaceae, which also includes mangoes and pistachios. Mango skin contains some of the same irritant as poison ivy, so people who react badly to one sometimes react to the other.\n\nBotany keeps seating delicious things next to villains.",
+      "comments": [
+        {
+          "author": "peer_reviewed_pete",
+          "body": "and the cashew apple isn't botanically the fruit. it's a swollen stalk. the actual fruit is the kidney-shaped bit hanging underneath with the seed inside. the everyday names are wrong in both directions again",
+          "afterMinutes": 40
+        },
+        {
+          "author": "brine_shrimp",
+          "body": "the cashew apples bruise and spoil so fast they barely travel, so you almost never see them outside places that grow them. in Goa they ferment and distil them into a spirit called feni, which is the correct response to a fruit nobody can ship",
+          "afterMinutes": 110
+        },
+        {
+          "author": "seed_vault",
+          "body": "a seed that grows outside its own fruit and wears armour that burns. of all the ways plants protect the next generation, this one is among the least subtle",
+          "afterMinutes": 300
+        },
+        {
+          "author": "documentary_now",
+          "body": "so the raw ones aren't raw, the nut is a seed, and the apple is a stem. every word on that bag is doing something",
+          "afterMinutes": 520,
+          "replies": [
+            {
+              "author": "umami_bomb",
+              "body": "the only fully honest word on the package is 'cashews'",
+              "afterMinutes": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "late",
+      "author": "documentary_now",
+      "title": "TIL the Hollywood sign originally read 'Hollywoodland' and was an ad for a housing development",
+      "body": "Per the Hollywood Sign Trust, it went up in 1923 to promote a real estate development in the hills above Los Angeles. It was lit with thousands of light bulbs and was only meant to stand for about a year and a half.\n\nIt stayed. In 1949 the Hollywood Chamber of Commerce took it over, repaired it, and dropped the 'LAND', leaving just the name of the district.\n\nThe most famous landmark of the film industry is a leftover billboard nobody took down. I've been watching a documentary about old Los Angeles and this is my whole weekend now.",
+      "comments": [
+        {
+          "author": "cassette_futurism",
+          "body": "and the letters up there now aren't the originals either. the old sign had fallen apart by the late 70s and was rebuilt with donors sponsoring individual letters. Alice Cooper paid for an O in memory of Groucho Marx",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "documentary_now",
+              "body": "a rock star sponsoring a letter in memory of Groucho Marx is the most old-Hollywood sentence I've ever read",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "off_by_one_ophelia",
+          "body": "temporary structure, intended lifespan eighteen months, still in service a century later. every developer's 'quick fix' dreams of this career",
+          "afterMinutes": 80
+        },
+        {
+          "author": "seed_vault",
+          "body": "an ad that outlived what it was advertising. hope the development sold a few houses at least",
+          "afterMinutes": 260
+        },
+        {
+          "author": "GlassOnion88",
+          "body": "now I have to go through old films looking for background shots where the full 'Hollywoodland' is visible. there have to be some and I will find them",
+          "afterMinutes": 520
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "peer_reviewed_pete",
+      "title": "TIL for over a century the kilogram was defined as the mass of one particular metal cylinder kept in a vault near Paris",
+      "body": "The International Prototype of the Kilogram, a platinum-iridium cylinder held by the International Bureau of Weights and Measures (BIPM) in Sèvres, was the kilogram from 1889 until the SI was redefined in the late 2010s. Every scale in the world traced back to it through a chain of official copies.\n\nThe problem: when the copies were compared with the original over the decades, they drifted apart by tens of micrograms, and there was no way to say which one was really changing, because by definition the prototype couldn't. Today the kilogram is defined by fixing the value of the Planck constant, so a lab with the right equipment can realize it without a trip to the vault.\n\nA standard with no independent way to check itself. The methods section on that one was rough.",
+      "comments": [
+        {
+          "author": "off_by_one_ophelia",
+          "body": "a global constant stored as a mutable object in one location, with the replicas slowly drifting out of sync. this is a distributed systems incident report",
+          "afterMinutes": 25,
+          "replies": [
+            {
+              "author": "peer_reviewed_pete",
+              "body": "no consensus algorithm, just very careful people with gloves and a schedule",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "GravityAssist",
+          "body": "The Kibble balance that replaced it is one of my favourite machines. It balances the weight of a test mass against an electromagnetic force measured through electrical quantities tied to the Planck constant. Extremely fussy, extremely beautiful.",
+          "afterMinutes": 90
+        },
+        {
+          "author": "umami_bomb",
+          "body": "every kitchen scale I have ever owned ultimately answered to a cylinder in France and I find that oddly comforting",
+          "afterMinutes": 300,
+          "replies": [
+            {
+              "author": "seed_vault",
+              "body": "keep one reference, lock it away, check the working copies against it now and then. I know that system. mine just sprouts",
+              "afterMinutes": 150
+            }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "the vault famously needed three separate keys, held by three different officials, just to open it. somebody please make the documentary",
+          "afterMinutes": 560
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 4,
+      "day": 3,
+      "slot": "evening",
+      "author": "umami_bomb",
+      "body": "found this thread after a dinner argument about tomatoes. the US Supreme Court actually ruled on it in the 1890s, in Nix v. Hedden: tomatoes counted as vegetables for import tariffs, while the court openly admitted they're botanically fruit. jurisdiction, as someone said above"
+    },
+    {
+      "on_bootstrap_index": 1,
+      "day": 7,
+      "slot": "lunch",
+      "author": "off_by_one_ophelia",
+      "body": "came back to this thread with a new one for the timeline folder: Nintendo was founded in the 1880s, making playing cards, while the Ottoman Empire was still around. same broken mental model, different decade"
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 9,
+      "slot": "evening",
+      "author": "peer_reviewed_pete",
+      "body": "back here after going down a day-length hole. Mercury is the other strange one: it rotates three times for every two orbits, so one sunrise-to-sunrise day there lasts about 176 Earth days, which is two of its 88-day years"
+    }
+  ]
+}

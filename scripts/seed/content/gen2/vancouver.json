@@ -1,0 +1,116 @@
+{
+  "room": "vancouver",
+  "drip": [
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "drizzlecity",
+      "title": "Nobody warned me about the crow commute",
+      "body": "Six years here and somehow I'd never been outside at the right time in the right spot. Walking home through East Van this evening, the sky went dark with crows. Not a few. Thousands. One long ragged river of them, all flying east, all apparently late for something.\n\nBack home a crow is a bloke standing on a bin. Here it's a daily migration with a timetable. I stood on the pavement with my mouth open like a tourist, and a crow on a lamppost looked at me like I was the odd one.",
+      "comments": [
+        {
+          "author": "ferndalefog",
+          "body": "They're headed for the big roost out by Still Creek in Burnaby. Thousands of them every night, more as it gets toward winter, and in the morning they all fly back into the city for their day jobs.",
+          "afterMinutes": 25,
+          "replies": [
+            {
+              "author": "drizzlecity",
+              "body": "So they sleep in Burnaby and commute into Vancouver for work. Even the crows got priced out.",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "high_park_heron",
+          "body": "Toronto birder, deeply jealous. Crows gather in huge communal roosts outside the nesting season, for safety and warmth and probably gossip, and the numbers keep building through the fall. By midwinter your river of crows is going to be even bigger.",
+          "afterMinutes": 200
+        },
+        {
+          "author": "trailmixtake",
+          "body": "Added to my ranked list of free Vancouver spectacles. Currently number two, behind the English Bay sunset and ahead of watching a visitor try to open an umbrella on the seawall in a headwind.",
+          "afterMinutes": 480,
+          "replies": [
+            {
+              "author": "drizzlecity",
+              "body": "Number two feels right. The sunset had a head start.",
+              "afterMinutes": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "morning",
+      "author": "ferndalefog",
+      "title": "The rain came back overnight and all four jackets have been formally returned to active duty",
+      "body": "Woke up at 4 to the sound of it on the window and felt the whole city exhale. The air smells like cedar and wet pavement again. The moss on my fence looks relieved. So am I, frankly.\n\nJacket rotation for the season: the light shell for drizzle, the medium one for showers, the long one for sideways, and the heavy one I refuse to discuss until November. Still no umbrella. Umbrellas are for visitors and people who've given up.",
+      "comments": [
+        {
+          "author": "drizzlecity",
+          "body": "Four jackets is amateur hour where I'm from. In Manchester you had one coat and simply stayed damp from October to May. You lot have turned rain into a wardrobe.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "ferndalefog",
+              "body": "A wardrobe and a personality. We've had a lot of indoor time to think about it.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "umami_bomb",
+          "body": "Food-science tangent: that smell is partly geosmin, a compound made by soil bacteria, and human noses can pick it up at absurdly low concentrations. It's the same compound that makes beets taste earthy. So your whole city currently smells faintly of beets, and I mean that as a compliment.",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "ferndalefog",
+              "body": "I will never be able to unsmell the beets now. Thanks for that.",
+              "afterMinutes": 90
+            }
+          ]
+        },
+        {
+          "author": "trailmixtake",
+          "body": "Trail report for anyone heading out this weekend: North Shore roots go from grippy to greased in exactly one rainfall. Quarry Rock will humble you on the way down. Bring the poles and respect the roots.",
+          "afterMinutes": 240
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "lunch",
+      "author": "trailmixtake",
+      "title": "The free Capilano: salmon are climbing the fish ladder at the hatchery and it costs exactly nothing",
+      "body": "Yes, I know my stance on the paid bridge. This is the other Capilano. Capilano River Regional Park, same river, no ticket booth, and a hatchery with viewing windows right onto the fish ladder.\n\nWent this morning after the rain and watched coho fling themselves up the steps one after another like they'd read a motivational poster. Then walked up to the Cleveland Dam for the view. Ranked: salmon 10/10, dam 8/10, the dad explaining salmon to his kid completely wrong but with total confidence, 11/10.",
+      "comments": [
+        {
+          "author": "drizzlecity",
+          "body": "My dad would love this one. 'It's a bridge' was his entire review of the other place, but fish climbing a staircase is precisely his kind of entertainment. Booking it for their next visit.",
+          "afterMinutes": 45
+        },
+        {
+          "author": "ferndalefog",
+          "body": "The Lions from the top of that dam on a clear day after rain is one of the best free views on the North Shore. Don't tell anyone. Again.",
+          "afterMinutes": 260,
+          "replies": [
+            {
+              "author": "trailmixtake",
+              "body": "The dam view goes in the group chat with the swimming hole. Some rankings stay private.",
+              "afterMinutes": 50
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 8,
+      "slot": "evening",
+      "author": "drizzlecity",
+      "body": "Came across this one again tonight with the rain properly settled in, and it reads like a historical document now. Twelve dry days. The moss has made a full recovery and so, apparently, has everyone's sense of grievance."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "room": "programmerhumor",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "lunch",
+      "author": "read_only_friday",
+      "title": "The Q4 planning deck has a slide called 'Stability and tech debt'. It's the same slide as Q3. And Q2. It has version history now",
+      "body": "I checked. The slide was created three planning cycles ago and has been copied forward every quarter with the same four bullets and the same hopeful little arrow pointing up and to the right.\n\nIt has survived two reorgs, a rebrand, and the person who made it. At this point it isn't a plan, it's heritage. I'm proposing we give it a plaque.",
+      "comments": [
+        { "author": "CtrlAltDelight", "body": "If the arrow hasn't moved in three quarters, that's not a roadmap. That's a screenshot.", "afterMinutes": 25 },
+        {
+          "author": "null_terminated",
+          "body": "Tech debt paydown is scheduled for the quarter after this one. It always is. It's the only item in software with a perfect record of being next.",
+          "afterMinutes": 140,
+          "replies": [
+            { "author": "read_only_friday", "body": "Next quarter is a real place. It's where all our good intentions live, rent free, with a lovely view of the backlog.", "afterMinutes": 90 }
+          ]
+        },
+        { "author": "packet_loss", "body": "we had a ticket titled 'replace the core switches' that sat in the backlog so long the switches died of old age first. replaced them in a panic that weekend. ticket closed as done. technically on the roadmap", "afterMinutes": 330 },
+        { "author": "APIdontknow", "body": "can confirm this slide also exists at my company. I'm starting to think there's only one copy and every company rents it for planning season", "afterMinutes": 600 }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "packet_loss",
+      "title": "We named our servers after the planets. Then we needed a ninth server",
+      "body": "it was a lovely scheme. mercury was the little utility box, jupiter was the big database host, earth ran the stuff people actually used. everyone knew which was which. eight servers, eight planets, perfect.\n\nthen we needed a ninth. the meeting about whether it could be called pluto took longer than buying the hardware. half the team said it isn't a planet, the other half said it was when they learned it, and one guy wanted ceres out of spite.\n\nit's called pluto. it is the least reliable machine in the rack. people say this proves something.",
+      "comments": [
+        {
+          "author": "null_terminated",
+          "body": "This is why the cattle crowd uses numbers. Nobody holds a meeting about web-09. Nobody grieves web-09 either, which is the point.",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "packet_loss", "body": "web-09 has never once sparked joy. pluto sparks something. mostly alerts", "afterMinutes": 70 }
+          ]
+        },
+        { "author": "CtrlAltDelight", "body": "So the naming scheme shipped with a hard limit of eight and nobody filed a bug. I would have flagged that in design review and been told 'we'll never need nine.' You needed nine.", "afterMinutes": 190 },
+        { "author": "airgapped_alice", "body": "ours were named after cheeses. there is nothing like saying 'camembert is down and gouda is degraded' on an incident call with a straight face at 3 a.m.", "afterMinutes": 420 },
+        {
+          "author": "read_only_friday",
+          "body": "Moons. You go to moons. Jupiter alone gets you dozens of hostnames and nobody can argue about whether Ganymede counts.",
+          "afterMinutes": 700,
+          "replies": [
+            { "author": "packet_loss", "body": "don't. someone will ask whether a moon can stay up when its planet goes down, and suddenly we're modelling service dependencies with orbital mechanics", "afterMinutes": 110 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "slot": "lunch",
+      "author": "CtrlAltDelight",
+      "title": "Meet my test user. She has broken more signup forms than any attacker I've ever read about",
+      "body": "Her name is Zoë O'Brien-Nakamura. Her middle name is just the letter J. Her address has a unit number in front of the street number and a postal code with a space in it. Her email address has a plus sign in it.\n\nShe is, as far as anyone can tell, a completely normal person. Forms hate her. She has been told her name contains invalid characters by a company whose own name has an apostrophe in it.\n\nEvery QA person has a user like this. Introduce yours.",
+      "comments": [
+        {
+          "author": "APIdontknow",
+          "body": "she broke our signup this morning. the apostrophe got escaped twice and her welcome email now greets 'Zoë O&#39;Brien-Nakamura'. she deserved better",
+          "afterMinutes": 50,
+          "replies": [
+            { "author": "CtrlAltDelight", "body": "Double escaping is her signature move. She's always very polite about it.", "afterMinutes": 60 }
+          ]
+        },
+        { "author": "airgapped_alice", "body": "from the security side: if an apostrophe breaks your form, please do not fix it by banning apostrophes. the apostrophe was the canary. the real bug is wherever user input is being glued straight into a query or a template", "afterMinutes": 180 },
+        { "author": "packet_loss", "body": "mine is a device hostname with an underscore in it. not valid in a hostname by the rules, extremely common in the wild anyway, breaks something new every single time", "afterMinutes": 400 },
+        {
+          "author": "read_only_friday",
+          "body": "Ours is a customer whose surname is Null. Not the value. The name. Every report he appears in has a polite blank where he should be.",
+          "afterMinutes": 650,
+          "replies": [
+            { "author": "APIdontknow", "body": "I need to go check what our system does with a Mr. Null and I already know I won't like the answer", "afterMinutes": 90 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "late",
+      "author": "APIdontknow",
+      "title": "Searched an error message and the top result was my own unanswered question from last year",
+      "body": "same error, same library, same stack trace. there I was, one year younger, asking strangers for help with exactly this. zero answers. one upvote, which I now strongly suspect was also me.\n\nthe worst part is I clearly fixed it back then, because that project shipped. I just never went back to post how. no notes, no comment in the code, nothing. I have been betrayed by the one developer who knew everything I know.\n\nanyway, fixed it again, and this time I answered my own question. for the next version of me.",
+      "comments": [
+        {
+          "author": "null_terminated",
+          "body": "The fifteen-year version: you find your own answer, marked accepted, with a hundred upvotes, and slowly realize it's wrong.",
+          "afterMinutes": 40,
+          "replies": [
+            { "author": "APIdontknow", "body": "that's so much worse. at least mine was only unhelpful by omission", "afterMinutes": 55 }
+          ]
+        },
+        { "author": "CtrlAltDelight", "body": "Answering your own question is the most senior thing in this post. Future you is a stakeholder and past you ignored the requirements.", "afterMinutes": 210 },
+        { "author": "airgapped_alice", "body": "my version: searched the internal wiki for a config problem and found a page I wrote, titled 'how to fix this', whose entire content was 'ask me'", "afterMinutes": 460 },
+        { "author": "read_only_friday", "body": "we have a wiki page called 'Things we fixed once'. it is the most visited page on the entire wiki. nothing on the roadmap has ever been read that many times.", "afterMinutes": 720 }
+      ]
+    },
+    {
+      "day": 13,
+      "slot": "lunch",
+      "author": "airgapped_alice",
+      "title": "Reported the real benefits enrolment email as phishing. Security team gave me a gold star. HR did not",
+      "body": "in my defence: it came from an outside domain I'd never seen, it had a deadline in the subject line, it asked me to 'verify my details' through a link, and it said URGENT twice. every box on our own training slide, ticked.\n\nit was the real open enrolment email, sent through the benefits vendor. I was not the only one who reported it. apparently a lot of us passed the training.\n\nHR's follow-up began with 'This is NOT a phishing email', which, and I say this with love, is exactly what a phishing email would say.",
+      "comments": [
+        {
+          "author": "CtrlAltDelight",
+          "body": "This is a legitimate bug report against HR. The email failed acceptance criteria that the company wrote itself.",
+          "afterMinutes": 30,
+          "replies": [
+            { "author": "airgapped_alice", "body": "next year I'm filing it with reproduction steps and a screenshot of the training slide", "afterMinutes": 45 }
+          ]
+        },
+        { "author": "read_only_friday", "body": "Our phishing simulation once got forwarded to the whole company by someone asking 'is this legit??', and forty people clicked the link to check. Completion rates on the follow-up training were excellent.", "afterMinutes": 170 },
+        { "author": "packet_loss", "body": "honestly the real finding is whoever approved a third party sending urgent 'verify your details' mail to every employee from a domain nobody recognizes. that decision is the phishing simulation", "afterMinutes": 390 },
+        {
+          "author": "null_terminated",
+          "body": "Training people to distrust exactly this email, then sending exactly this email, is a very expensive way to build character.",
+          "afterMinutes": 640,
+          "replies": [
+            { "author": "airgapped_alice", "body": "character: built. benefits: eventually enrolled, over the phone, after verifying the phone number independently", "afterMinutes": 70 }
+          ]
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    { "on_bootstrap_index": 1, "day": 4, "slot": "evening", "author": "APIdontknow", "body": "update on the load-bearing log line, for anyone who finds this: someone swapped out our logging library and the bug came back the same afternoon. we finally caught it. two requests were sharing a cache entry. the old print statement now lives on as a comment above the fix, like a memorial plaque" },
+    { "on_bootstrap_index": 0, "day": 9, "slot": "evening", "author": "packet_loss", "body": "came back to this thread because someone at work just proposed a 'tiny' firewall rule change for 4:30 on a friday. read them the one-cart story out loud. the change is now scheduled for tuesday morning" }
+  ]
+}

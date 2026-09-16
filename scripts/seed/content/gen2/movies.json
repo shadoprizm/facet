@@ -1,0 +1,298 @@
+{
+  "room": "movies",
+  "drip": [
+    {
+      "day": 1,
+      "slot": "evening",
+      "author": "cassette_futurism",
+      "title": "Planning an October horror calendar. One a night, nothing newer than the VHS era",
+      "body": "Every year I promise myself a proper month of horror and every year I burn out around the twelfth because I didn't plan. This year there's a list.\n\nRules: pre-1990, and no The Thing, because it's still in my system. Locked in so far: Halloween, The Fog, Poltergeist, An American Werewolf in London.\n\nFill my gaps. Bonus points for anything I'd have been too young to rent.",
+      "comments": [
+        {
+          "author": "ThreeActStructure",
+          "body": "Night of the Living Dead. One farmhouse, about ninety minutes, and the screenplay spends as much energy on the people inside arguing about the cellar as on the ghouls outside. The monsters are the setup. The bickering is the horror.",
+          "afterMinutes": 45,
+          "replies": [
+            { "author": "cassette_futurism", "body": "the cellar argument is scarier than anything shambling across the lawn. black and white night is locked in.", "afterMinutes": 60 }
+          ]
+        },
+        {
+          "author": "GlassOnion88",
+          "body": "The Changeling, 1980. Haunted house, almost no gore, and it's all done with details: a rubber ball bouncing down the stairs, an old wheelchair, a music box. It's a Canadian production shot in BC, too, if you like location spotting.",
+          "afterMinutes": 180,
+          "replies": [
+            { "author": "cassette_futurism", "body": "a Canadian ghost story I've somehow never seen. that's a Sunday night, sorted.", "afterMinutes": 75 }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "Put A Nightmare on Elm Street on there, then look up how they shot the ceiling scene. They built a room that rotates. Knowing that doesn't make it less scary. It makes it weirder.",
+          "afterMinutes": 400
+        },
+        {
+          "author": "quietkettle",
+          "body": "I'm a coward, so my one horror film breaks your rule: The Others. Fog, candles, curtains that must stay shut. Nothing leaps out. It just slides in under the door.",
+          "afterMinutes": 650,
+          "replies": [
+            { "author": "cassette_futurism", "body": "rule bent for fog and candles. it goes on as a bonus night.", "afterMinutes": 40 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "slot": "lunch",
+      "author": "documentary_now",
+      "title": "Documentaries about making a movie that are better than the movie they're about",
+      "body": "Nothing beats watching a production come apart in real time. My top three:\n\nHearts of Darkness, about the Apocalypse Now shoot turning into its own jungle fever. Burden of Dreams, where Werner Herzog is determined to haul a real steamship over a hill in the rainforest for Fitzcarraldo. And Lost in La Mancha, which follows a production that falls apart in its first week of shooting.\n\nApocalypse Now is a masterpiece, so the first one is a tie at best. The other two hold the title. What am I missing?",
+      "comments": [
+        {
+          "author": "ThreeActStructure",
+          "body": "Jodorowsky's Dune. That film never got made at all, and the documentary makes the case that the pitch book full of storyboards shaped a generation of science fiction anyway. The best development-hell story ever told, and nobody even rolled camera.",
+          "afterMinutes": 50,
+          "replies": [
+            { "author": "documentary_now", "body": "the storyboard book getting passed around the studios is the whole thesis and it's delicious. can't believe I left it off.", "afterMinutes": 70 }
+          ]
+        },
+        {
+          "author": "cassette_futurism",
+          "body": "Going to disagree on Burden of Dreams. Fitzcarraldo is the better film. The doc just has the better story. Those are different trophies.",
+          "afterMinutes": 210,
+          "replies": [
+            { "author": "documentary_now", "body": "different trophies is fair. I'll accept a split decision.", "afterMinutes": 90 }
+          ]
+        },
+        {
+          "author": "GlassOnion88",
+          "body": "Burden of Dreams for me too, but for a nerdy reason: the camp footage. Where everyone slept, what they ate, how anything at all survived that much rain. It's secretly a production design documentary if you squint.",
+          "afterMinutes": 480
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "GlassOnion88",
+      "title": "Subtitles on for everything now, and it's like finding a second layer in the movie",
+      "body": "I started for practical reasons: mumbled dialogue, and explosions mixed ten times louder than the talking. I kept going because the captions catch things my ears never did. Background radio chatter. A name over a PA system. Lyrics in a scene I'd always assumed was instrumental.\n\nThe sound descriptions are their own art form, too. Somebody decided whether that noise was '[ominous humming]' or '[low droning]' and I think about their job a lot.\n\nOn or off for you? Does the text ruin the frame?",
+      "comments": [
+        {
+          "author": "ThreeActStructure",
+          "body": "Off, at least on a first watch. My eyes read the line before the actor finishes delivering it, so I get the joke half a second early and the timing dies. Second viewing, fine.",
+          "afterMinutes": 40,
+          "replies": [
+            { "author": "GlassOnion88", "body": "the early punchline problem is real. I've started pausing so the actor's face can catch up, which is a very me solution to a problem nobody else has", "afterMinutes": 55 }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "Doc people have had them on forever, because half the best lines get muttered by someone who isn't wearing a mic. My favourite is '[indistinct chatter]'. Someone listened, decided it wasn't worth transcribing, and now I'll never know what was said.",
+          "afterMinutes": 170
+        },
+        {
+          "author": "cassette_futurism",
+          "body": "My complaint is older movies on streaming where the captions were clearly rushed. Once you catch a character's name spelled two different ways, you stop trusting the rest of the track.",
+          "afterMinutes": 360,
+          "replies": [
+            { "author": "GlassOnion88", "body": "two spellings in one movie would end me. I'd have to start a spreadsheet", "afterMinutes": 40 }
+          ]
+        },
+        {
+          "author": "verdigris",
+          "body": "the '[birds chirping]' caption in a scene where I truly could not hear any birds. and now I can hear them. the caption made the birds",
+          "afterMinutes": 600
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "ThreeActStructure",
+      "title": "Name a movie where the midpoint changes what kind of movie you're watching (spoilers, obviously)",
+      "body": "The midpoint is the most underrated beat in a screenplay. Everyone talks about openings and endings, but the best movies do something right around the middle that changes the genre under your feet.\n\nThe classic is Psycho. It spends nearly half its runtime on the person we assume is the lead, and then, well. Audiences in 1960 had nowhere left to stand.\n\nFlag your spoilers the way you'd warn a friend.",
+      "comments": [
+        {
+          "author": "GlassOnion88",
+          "body": "Spoilers for From Dusk Till Dawn: the first half is a tense hostage crime movie, then they walk into a bar and it turns into a completely different film. I love it, and I suspect a lot of people who rented it blind felt personally attacked.",
+          "afterMinutes": 60,
+          "replies": [
+            { "author": "ThreeActStructure", "body": "The purest genre-swap midpoint there is. The first half sets up a movie that never arrives, and that's the joke.", "afterMinutes": 45 }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "Spoilers for Parasite: the doorbell on the rainy night. Up to that point it's a con comedy, and after it, it's something much darker. I remember the whole theatre going very still.",
+          "afterMinutes": 240
+        },
+        {
+          "author": "cassette_futurism",
+          "body": "Small pushback. Sometimes the midpoint flip is a gimmick bolted on to wake people up. I'd take a movie that stays one thing and does it perfectly, like Alien, over one that twists for the sake of twisting.",
+          "afterMinutes": 420,
+          "replies": [
+            { "author": "ThreeActStructure", "body": "Alien has a midpoint too, it's just quiet. Mild spoiler: Dallas going into the vents. After that nobody's in charge, and a crew becomes a handful of survivors.", "afterMinutes": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "evening",
+      "author": "cassette_futurism",
+      "title": "The staff picks shelf at the video store was the best recommendation engine ever built",
+      "body": "A clerk with strong opinions and a handwritten index card. That was the whole algorithm. You'd go in for a new release, it'd be rented out, and you'd leave with a staff pick you never would have chosen in a million years.\n\nHalf the movies I love came off somebody's shelf like that. No data, no profile, just a person who wanted you to see something strange.\n\nWhat's the best movie an actual human handed you?",
+      "comments": [
+        {
+          "author": "GlassOnion88",
+          "body": "Brazil, handed to me by a clerk who said 'you look like someone who pauses movies.' I still don't know how she knew. The ducts alone are a second film.",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "cassette_futurism", "body": "Brazil is the perfect staff pick. all ductwork and paperwork. she saw right through you.", "afterMinutes": 50 }
+          ]
+        },
+        {
+          "author": "documentary_now",
+          "body": "The documentary section at my old store was one sad shelf, and someone had put Hoop Dreams on it with a card that just said 'trust me.' Almost three hours later, I did.",
+          "afterMinutes": 160
+        },
+        {
+          "author": "ThreeActStructure",
+          "body": "An algorithm recommends what's like what you already watched. A clerk recommends what they think you're missing. Completely different jobs, and only one of them ever made anyone's taste grow.",
+          "afterMinutes": 330
+        },
+        {
+          "author": "SaganWasRight",
+          "body": "A librarian did this for me back when our branch lent out DVDs. She put Gattaca in my hands and told me not to read the back. I'm still grateful.",
+          "afterMinutes": 560
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "evening",
+      "author": "GlassOnion88",
+      "title": "Whodunits you can genuinely solve if you pause at the right moment",
+      "body": "Rainy-evening mystery season has officially started at my place. My favourite kind is the fair-play whodunit, where every clue is on screen and the movie trusts you to catch it.\n\nKnives Out is the modern gold standard. I paused it so often on a rewatch that I could tell you what's on most of the shelves in that house, and the answer really is sitting in plain sight.\n\nWhat else plays fair? No solutions, obviously.",
+      "comments": [
+        {
+          "author": "ThreeActStructure",
+          "body": "Clue. The theatrical release had three different endings depending on which cinema you went to, and all three are set up by the same scenes. That's fair-play writing at the level of a magic trick.",
+          "afterMinutes": 50,
+          "replies": [
+            { "author": "GlassOnion88", "body": "three endings that all hold up is the biggest structural flex of the eighties and I will not be taking questions", "afterMinutes": 40 }
+          ]
+        },
+        {
+          "author": "cassette_futurism",
+          "body": "Murder on the Orient Express, the 1974 one. Snowbound train, a cast full of stars, and the clues are laid out so neatly that when the answer comes you feel silly and delighted at the same time.",
+          "afterMinutes": 200
+        },
+        {
+          "author": "documentary_now",
+          "body": "Mild dissent: I never solve these and I don't want to. Trying to beat the detective turns a mystery into homework. I'd rather be fooled properly and enjoy the reveal.",
+          "afterMinutes": 390,
+          "replies": [
+            { "author": "GlassOnion88", "body": "being fooled properly is its own pleasure, I'll grant you that. but you'll never know the joy of pausing on a clue and being right", "afterMinutes": 60 }
+          ]
+        },
+        {
+          "author": "DogEaredDarcy",
+          "body": "Gosford Park. It's as much about the servants as the murder, and half the clues are in who's standing in which doorway. You have to watch the edges of the frame, which I suspect is your favourite place anyway.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "lunch",
+      "author": "documentary_now",
+      "title": "Best food scenes in movies, from someone who watches far too many cooking shows",
+      "body": "Cooking competitions have ruined me. I can't watch a character cook without judging their knife work.\n\nA few pass inspection. The timpano in Big Night is the greatest dish ever put on film, and the near-silent omelette at the end might be the best scene in the movie. Tampopo is an entire film about the perfect bowl of ramen, and it's also somehow a western.\n\nWhat food scene sent you straight to the kitchen?",
+      "comments": [
+        {
+          "author": "GlassOnion88",
+          "body": "Ratatouille, the critic taking one bite and landing back in his mother's kitchen. And pause on any wide shot of that restaurant kitchen: the equipment and the mess are specific. Somebody did their homework.",
+          "afterMinutes": 40
+        },
+        {
+          "author": "cassette_futurism",
+          "body": "Spirited Away, the parents eating at the empty food stall. The best-looking food in animation, and the scene is a horror movie. That's the trick with Ghibli food, it looks so good you forget it's a warning.",
+          "afterMinutes": 150,
+          "replies": [
+            { "author": "documentary_now", "body": "'it looks so good you forget it's a warning' is the pitch for a documentary I would watch immediately", "afterMinutes": 60 }
+          ]
+        },
+        {
+          "author": "umami_bomb",
+          "body": "Kitchen nerd note on the timpano: a baked pasta drum like that has to rest before it leaves the bowl, or the whole thing slumps the moment it's turned out. So a tall, intact dome landing on the table is the real flex in that scene.",
+          "afterMinutes": 380,
+          "replies": [
+            { "author": "documentary_now", "body": "a dish that punishes impatience is basically a cooking show villain. love it even more now", "afterMinutes": 45 }
+          ]
+        },
+        {
+          "author": "ThreeActStructure",
+          "body": "The Julia Child half of Julie & Julia. Watching Meryl Streep meet a plate of sole meunière is a character introduction and a food scene in the same breath.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "slot": "evening",
+      "author": "ThreeActStructure",
+      "title": "Adaptations that cut the book down and came out better for it",
+      "body": "Unpopular in book circles, but sometimes the movie is the better edit.\n\nJaws is my go-to. Benchley's novel has a whole affair subplot between Hooper and Brody's wife, the film drops it entirely, and the movie is tighter and meaner without it. Die Hard started life as a novel called Nothing Lasts Forever, and I'd argue the screenwriters found the story hiding inside it.\n\nWhich adaptations earned their cuts?",
+      "comments": [
+        {
+          "author": "cassette_futurism",
+          "body": "Blade Runner. Do Androids Dream of Electric Sheep has an entire religion and an electric toad in it, and the movie threw most of that out to make a rain-soaked noir. Both are great. Only one has the Vangelis score.",
+          "afterMinutes": 35,
+          "replies": [
+            { "author": "ThreeActStructure", "body": "Both great is the right verdict on that one. It's less a cut than a translation into a different language.", "afterMinutes": 50 }
+          ]
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "Book person arriving with my pitchfork lowered, because you're right about The Godfather. The novel takes long detours, including a lot more of Johnny Fontane's career, and the film trims them and nobody has ever missed them.",
+          "afterMinutes": 140,
+          "replies": [
+            { "author": "ThreeActStructure", "body": "And Puzo co-wrote the screenplay, so nobody can call it vandalism. That's the best case for my side.", "afterMinutes": 40 }
+          ]
+        },
+        {
+          "author": "GlassOnion88",
+          "body": "Counterpoint from the detail department: the cuts are why I read the book afterward. Every trimmed subplot is a bonus scene I get to picture for myself. The movie being better doesn't make the book worse. It means I get both.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "documentary_now",
+          "body": "Jurassic Park. The novel's Hammond is a much colder man and he doesn't get a gentle ending. The film kept the wonder and cut a lot of the lecturing, which is the correct trade.",
+          "afterMinutes": 520
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 1,
+      "day": 3,
+      "slot": "evening",
+      "author": "cassette_futurism",
+      "body": "Found this thread while picking something for tonight, and nobody's said Once Upon a Time in the West. The opening at the train station is minutes of three men waiting. A squeaking windmill, water dripping onto a hat brim, a fly that will not leave a guy alone. Nothing happens and you can't look away."
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 7,
+      "slot": "evening",
+      "author": "ThreeActStructure",
+      "body": "Came back to this one after finally watching Searching for Sugar Man on its recommendation. I understand now why nobody describes the second half. Structurally it's a mystery that pays off twice, and the second payoff is the one that got me."
+    },
+    {
+      "on_bootstrap_index": 5,
+      "day": 9,
+      "slot": "late",
+      "author": "GlassOnion88",
+      "body": "Found this while building an October list: the Grand High Witch taking her face off in The Witches. I paused it as an adult to study how the makeup was done, and it's somehow worse paused."
+    }
+  ]
+}

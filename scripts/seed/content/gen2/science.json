@@ -1,0 +1,112 @@
+{
+  "room": "science",
+  "drip": [
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "sample_size_of_one",
+      "title": "Cold weather doesn't give you a cold. But cold season lining up with fall isn't a coincidence either.",
+      "body": "Every September someone in my family announces that going outside with wet hair is how you catch a cold, and every September I manage to bite my tongue for about four minutes. So here's the careful version.\n\nColds are caused by viruses, most often rhinoviruses. Being chilly doesn't create a virus out of nothing. If you're not already carrying one and nobody around you is, you can go out with soaking wet hair and stay healthy, just uncomfortable.\n\nBut the seasonal pattern is real, and a few things plausibly stack up to cause it. People crowd indoors with the windows shut. Kids go back to school, swap germs with hundreds of other kids, and carry them home. Researchers in Canada have documented a sharp spike in children's asthma flare-ups, often linked to cold viruses, a couple of weeks after school starts each September. And lab work has found that rhinovirus copies itself better at slightly cooler temperatures, like the inside of your nose, possibly because some antiviral defences work less well there.\n\nSo the cold air isn't the cause, but it may not be completely innocent either. My family will not be receiving this nuance.",
+      "comments": [
+        {
+          "author": "peer_reviewed_pete",
+          "body": "Good write-up, and here's the study that keeps 'not completely innocent' honest. Researchers at the Common Cold Centre at Cardiff University had volunteers sit with their bare feet in cold water for twenty minutes, while a control group sat the same way with dry feet. Over the following days, noticeably more of the chilled group reported cold symptoms. One proposed explanation is that chilling constricts blood vessels in the nose and lets an infection some people were already carrying take hold.\n\nThe methods caveats matter, though: it was a modest-sized study, the symptoms were self-reported, and nobody confirmed actual infections in a lab. Interesting, not settled.",
+          "afterMinutes": 40,
+          "replies": [
+            {
+              "author": "sample_size_of_one",
+              "body": "This is exactly the kind of result that gets flattened in a headline. 'Chilling may trigger symptoms in some people already carrying something' is a very different claim from 'cold gives you colds.' Though I'll admit it makes my family slightly right, which I will be keeping to myself.",
+              "afterMinutes": 35
+            }
+          ]
+        },
+        {
+          "author": "thesispending",
+          "body": "The cooler-nose result is one of my favourite cases of a mechanism landing next to folk wisdom sideways. The grandparents said bundle up or you'll catch cold. The lab says a cooler nose may be a slightly worse bouncer. Not the same claim, but not unrelated. Worth saying that most of that evidence comes from cells in a dish, not people walking around outside, so it's a plausible mechanism rather than a closed case.",
+          "afterMinutes": 220
+        },
+        {
+          "author": "orbital_decay",
+          "body": "Same shape as a lot of good science stories. The folk explanation gets the timing right and the cause wrong, and the real cause turns out to be several smaller things stacked up: crowding, school calendars, virus biology. No single villain, which is less satisfying and more true.",
+          "afterMinutes": 480
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "orbital_decay",
+      "title": "The equinox is today, and it isn't actually a day of equal daylight and darkness",
+      "body": "The equinox lands today by Canadian clocks, and every year it gets described as the day when daylight and darkness are twelve hours each. Close, but look up today's sunrise and sunset for almost anywhere in Canada and you'll find a little more than twelve hours of daylight. Somewhere around ten extra minutes in the south, more the farther north you go.\n\nTwo reasons, and I love both. First, sunrise and sunset are defined by the top edge of the Sun meeting the horizon, not its centre, so you get a sliver of extra daylight at each end. Second, the atmosphere bends sunlight coming in at a low angle, which lifts the Sun's image a little. When you watch the Sun sitting right on the horizon, the actual Sun is already geometrically below it.\n\nPut those together and the day of truly equal daylight and darkness arrives a few days after the fall equinox. It even has a name, the equilux, though almost nobody uses it.\n\nThe equinox itself isn't really a day at all. It's a precise instant: the moment the Sun's path crosses the celestial equator, heading south. Everything else is our atmosphere and our definitions getting in the way, which somehow makes it better.",
+      "comments": [
+        {
+          "author": "peer_reviewed_pete",
+          "body": "Appreciate the definitions being right for once. Small addition in the same spirit: how much the atmosphere bends light near the horizon depends on temperature and pressure, so published sunrise and sunset times assume a standard average. On an unusually cold or odd-weather day, the real moment can be off from the table by a little.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "northof60",
+          "body": "Yellowknife data point for the 'farther north' part: the Sun climbs out of the horizon here at a shallow slant, so the extra daylight at the equinox is noticeably bigger than down south. And the days are shrinking fast right now. You can feel the evenings closing in from one week to the next.",
+          "afterMinutes": 180,
+          "replies": [
+            {
+              "author": "orbital_decay",
+              "body": "That's the other lovely bit of geometry. Around the equinoxes, day length changes faster than at any other time of year, and faster the farther north you are. Most of southern Canada is losing roughly three to four minutes of daylight a day this week. Up where you are, it's more like six.",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "GalaxyBrainGwen",
+          "body": "Equinox bonus: this is one of the two times a year the Sun rises almost due east and sets almost due west, from pretty much anywhere on Earth. Good week to find out which way your street actually runs.",
+          "afterMinutes": 310
+        },
+        {
+          "author": "sample_size_of_one",
+          "body": "Equilux is a great word to bring to dinner. It's short, it sounds made up, and it's real. Also a tidy example of a statement being true under one definition and false under the everyday one.",
+          "afterMinutes": 520
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "slot": "evening",
+      "author": "peer_reviewed_pete",
+      "title": "The five-second rule has actually been tested in a lab, and the answer is more interesting than yes or no",
+      "body": "Dropped a slice of apple on the kitchen floor this afternoon, picked it up, and then went down a rabbit hole about whether I'd just committed a crime.\n\nFood scientists at Rutgers tested this properly a while back. They coated different surfaces, stainless steel, ceramic tile, wood and carpet, with a harmless relative of Salmonella, then dropped different foods on them for set times ranging from under a second to five minutes, and measured how much bacteria moved over.\n\nThe short version: some transfer happens essentially instantly, so five seconds isn't a real safety line. Longer contact generally meant more transfer, so time isn't meaningless either. Moisture mattered a lot. Watermelon picked up the most, gummy candy the least. And carpet transferred less than tile or steel, which surprised plenty of people, probably because less of the food actually touches the surface.\n\nWhat I like is the design: lots of repetitions across several surfaces, foods and contact times. The answer came out as 'it depends on wet versus dry and on the surface' rather than a single number, which is what honest answers usually look like.",
+      "comments": [
+        {
+          "author": "sample_size_of_one",
+          "body": "Carpet winning is the result that breaks everyone's intuition. It feels dirtier, and it may well be dirtier overall, but less of what's there jumps onto a dry snack. The question you ask decides the answer you get.",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "peer_reviewed_pete",
+              "body": "Exactly, and that's the part the headlines flattened. They didn't find that carpet is safer. They found that carpet transferred less in this setup, with this bacterium, onto these foods.",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "thesispending",
+          "body": "Also a reminder that the real variable is what's on the floor to begin with. A reasonably clean kitchen floor and a bus shelter floor are not the same experiment, and no timing rule fixes the second one.",
+          "afterMinutes": 170
+        },
+        {
+          "author": "umami_bomb",
+          "body": "Food science footnote from the cooking side: the watermelon result is basically the whole story. Moisture is the bridge bacteria cross. A dry cracker on a dry counter and a cut piece of melon on a wet one are very different situations.",
+          "afterMinutes": 360
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 0,
+      "day": 8,
+      "slot": "evening",
+      "author": "sample_size_of_one",
+      "body": "Found my way back to this thread after reading that lakes 'turn over' in the fall, and it's the same anomaly doing a second job. As autumn cools the surface water toward 4°C, it becomes as dense as or denser than the water underneath and sinks, and with some help from the wind the whole lake mixes top to bottom before the ice comes. That's how oxygen from the surface gets down to the deep water for the winter. The fish get a refuge and a refill."
+    }
+  ]
+}

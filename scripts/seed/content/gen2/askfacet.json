@@ -1,0 +1,389 @@
+{
+  "room": "askfacet",
+  "drip": [
+    {
+      "day": 0,
+      "slot": "evening",
+      "author": "stormglass",
+      "title": "What's the small thing that tells you summer is officially over?",
+      "body": "For me it's the morning I reach for the wool socks without thinking about it. No calendar, no equinox, just my feet making the call. Happened today. The dog noticed before I did.\n\nWhat's yours?",
+      "comments": [
+        {
+          "author": "spice_cabinet",
+          "body": "The morning my daughter stops arguing about a jacket and just puts it on. That's the equinox in our house. Also the first afternoon I make chai at four o'clock instead of only in the morning.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "merge_conflict_mel",
+          "body": "the office turns the AC up the exact week it gets cold outside. every single year. the desk hoodie comes back out and stays until june",
+          "afterMinutes": 85,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "building HVAC runs on a calendar from the other hemisphere. it's the only explanation that fits the evidence",
+              "afterMinutes": 40
+            }
+          ]
+        },
+        {
+          "author": "deadlift_diaries",
+          "body": "The chalk stops clumping. Summer in a garage gym is like training inside a mouth. Then one crisp morning the bar is cold in your hands and everything feels ten percent heavier and a hundred percent better.",
+          "afterMinutes": 210
+        },
+        {
+          "author": "second_act_sylvia",
+          "body": "The school bus goes past my window at 7:40 again. Nobody in my house is on it, and I still check the clock by it like it's the town bell.",
+          "afterMinutes": 380
+        },
+        {
+          "author": "brasstacks_barb",
+          "body": "The tomato plants start giving me a look that says they're done, and I pretend not to see it for two more weeks. Also book club moves off my porch and back indoors, and everyone suddenly remembers they own cardigans.",
+          "afterMinutes": 600,
+          "replies": [
+            {
+              "author": "stormglass",
+              "body": "Pretending not to see it for two more weeks is exactly how we treat the first frost warning out here. Denial is a regional skill.",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "slot": "lunch",
+      "author": "merge_conflict_mel",
+      "title": "what's a piece of advice you followed way too long before realizing it was bad?",
+      "body": "mine: \"say yes to everything early in your career.\" i said yes to so many things that i became the person who owns the printer. i am a developer. i own the printer. people bring me toner questions in the hallway\n\nwhat did you follow for too long",
+      "comments": [
+        {
+          "author": "second_paycheque",
+          "body": "\"Build your credit by using the card.\" I heard the first half, skipped the part about paying it off, and built forty thousand dollars of credit in the wrong direction.",
+          "afterMinutes": 25
+        },
+        {
+          "author": "stormglass",
+          "body": "\"Get out ahead of the weather.\" My father swore by it, and I drove into more storms trying to beat them than I'd ever have met by sitting still. Some days the right answer is to stay put and let it blow by.",
+          "afterMinutes": 110
+        },
+        {
+          "author": "deadlift_diaries",
+          "body": "\"No pain, no gain.\" Took me years and one very cranky shoulder to learn that the goal is effort, not pain. Hard and hurting are different sensations, and learning to tell them apart is most of the sport.",
+          "afterMinutes": 260,
+          "replies": [
+            {
+              "author": "merge_conflict_mel",
+              "body": "\"hard and hurting are different sensations\" is going on a sticky note by my monitor for reasons that have nothing to do with lifting",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "cipher_moth",
+          "body": "\"Change your passwords every month.\" Did it faithfully for years, which in practice meant every password was the same word with the month stuck on the end. Very secure, provided the attacker had never seen a calendar.",
+          "afterMinutes": 420
+        },
+        {
+          "author": "brasstacks_barb",
+          "body": "\"Don't smile before Christmas.\" Every new teacher hears it. I followed it my whole first year and had the worst-behaved class of my career. The next September I smiled on day one and never looked back.",
+          "afterMinutes": 640,
+          "replies": [
+            {
+              "author": "second_act_sylvia",
+              "body": "I got the office version at my old job: \"never let them see you sweat.\" Turns out people trust you more once they've seen you sweat a little.",
+              "afterMinutes": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "slot": "morning",
+      "author": "second_paycheque",
+      "title": "What do you still do the cheap way even though you could afford the nice version now?",
+      "body": "The debt is paid off and I still cut my own hair with clippers in the bathroom. Could I pay someone? Yes. Would it look better? Honestly unclear. But four years of rice and beans rewired something, and now the clippers feel like a small victory lap every three weeks.\n\nWhat's your holdover?",
+      "comments": [
+        {
+          "author": "spice_cabinet",
+          "body": "Every takeout container and every glass jar gets washed and kept. My cupboard looks exactly like my mother's in Mumbai, which I swore would never happen. I could buy matching storage. I will not. The yogurt tubs have earned their place.",
+          "afterMinutes": 40
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "I only buy games on deep sale, even the ones I'm excited about. By the time the price drops I've usually decided to replay something I already own, so the system saves money twice.",
+          "afterMinutes": 120
+        },
+        {
+          "author": "IndexFundIrene",
+          "body": "Coffee at home, every morning. It stopped being a sacrifice years ago. I just like my kitchen better than a lineup. Most of the cheap habits that stick aren't really about the money anymore, they're about choosing them on purpose.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "deadlift_diaries",
+          "body": "My home setup is still a secondhand rack in the garage and plates I bought off a guy for cash. I could replace all of it with shiny new gear. Two hundred pounds is two hundred pounds either way.",
+          "afterMinutes": 480
+        },
+        {
+          "author": "brasstacks_barb",
+          "body": "I reuse wrapping paper and tissue paper. My grandchildren tease me every Christmas while I smooth last year's tissue flat on the table. The joke's on them: some of it is the same tissue their parents unwrapped presents from.",
+          "afterMinutes": 720,
+          "replies": [
+            {
+              "author": "second_paycheque",
+              "body": "Multigenerational tissue paper is the strongest frugal flex in this thread and it isn't close.",
+              "afterMinutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "slot": "evening",
+      "author": "NewGamePlusPlus",
+      "title": "What did you collect as a kid, and do you still have any of it?",
+      "body": "Found a shoebox at my mom's place last weekend holding every game manual from every game I owned as a kid. Not the games. Just the manuals. Apparently I decided those were the valuable part. I read three of them sitting on her floor and lost an hour.\n\nWhat was your thing?",
+      "comments": [
+        {
+          "author": "stormglass",
+          "body": "Sea glass. Kept a pickle jar of it on my bedroom windowsill, sorted by colour, with the blue pieces in their own little tin like crown jewels. The jar's on my kitchen windowsill now. Still sorted. The blue is still separate.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "merge_conflict_mel",
+          "body": "erasers shaped like food. i had around forty. the pizza one smelled like pizza, which in hindsight is not a smell an eraser should have",
+          "afterMinutes": 140,
+          "replies": [
+            {
+              "author": "NewGamePlusPlus",
+              "body": "the scented eraser generation remembers. mine was a strawberry one that got confiscated because i kept sniffing it during spelling tests",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "cipher_moth",
+          "body": "Keys. Any key I found. Old padlock keys, a mystery car key off the sidewalk, a tiny one that probably opened a diary. A kid with forty keys and zero locks. In hindsight the origin story was right there.",
+          "afterMinutes": 250
+        },
+        {
+          "author": "second_act_sylvia",
+          "body": "Stamps, because my grandfather did. I didn't care about the stamps. I cared about sitting beside him with the little tweezers while he told me where each country was. He left me the albums. I haven't added a stamp in forty years and they're the first thing I'd carry out of a fire.",
+          "afterMinutes": 400
+        },
+        {
+          "author": "spice_cabinet",
+          "body": "Toy cars, which scandalized my aunties because they were supposedly for boys. Twelve of them live in my daughter's room now, and she treats them with a care I never once did.",
+          "afterMinutes": 560
+        },
+        {
+          "author": "deadlift_diaries",
+          "body": "Hockey cards, which I traded badly and constantly. One binder survived and it's a museum of bad deals. There's a card in there I got for a juice box and it's still the one I'm proudest of.",
+          "afterMinutes": 700
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "slot": "lunch",
+      "author": "spice_cabinet",
+      "title": "What's a word or saying that only makes sense inside your family?",
+      "body": "In our house \"some\" is a unit of measure, as you all know by now. But the better one is \"Bombay-sized,\" which my father uses for any portion that is obviously too big for one person and which he will nevertheless finish. My daughter says it now. She has never lived in Bombay.\n\nWhat's yours?",
+      "comments": [
+        {
+          "author": "brasstacks_barb",
+          "body": "\"Doing a Gerald.\" My late husband's uncle Gerald once left a family picnic to buy ice and came back three hours later with a canoe. Anyone in our family who goes out on a small errand and comes home with a large unrelated purchase has done a Gerald.",
+          "afterMinutes": 45,
+          "replies": [
+            {
+              "author": "spice_cabinet",
+              "body": "Doing a Gerald is going straight into our vocabulary. My father does a Gerald at every hardware store he has ever entered.",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "\"Did you save first?\" Anyone in my family about to do something risky, like telling grandma they dyed their hair, gets asked it. My mom says it now and she has never played a video game in her life.",
+          "afterMinutes": 150
+        },
+        {
+          "author": "stormglass",
+          "body": "In our family, anything done in a hurry is \"a Saturday fix.\" It'll hold till Monday and not one minute longer. Nobody remembers who said it first. All of us say it about our own work, usually while doing one.",
+          "afterMinutes": 310
+        },
+        {
+          "author": "second_paycheque",
+          "body": "\"Is it a want or a Wednesday?\" Wednesday was grocery day growing up, so Wednesday things were the necessary ones. It was my mum's way of asking if you really needed something. I still mutter it in stores and nobody around me knows why.",
+          "afterMinutes": 490
+        },
+        {
+          "author": "merge_conflict_mel",
+          "body": "\"toaster rule.\" as a kid i tried to get stuck toast out with a fork while the toaster was plugged in. nothing happened, luckily. but now whenever anyone in my family is about to do something obviously dumb, someone says \"toaster rule\" and you're supposed to stop and unplug whatever you're doing, literally or otherwise",
+          "afterMinutes": 700,
+          "replies": [
+            {
+              "author": "deadlift_diaries",
+              "body": "The fact that it became a rule and not just a story tells me it needed legislation.",
+              "afterMinutes": 65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "slot": "evening",
+      "author": "cipher_moth",
+      "title": "What's a habit that sounds paranoid but has actually saved you at least once?",
+      "body": "Mine: I take a photo of where I parked. Every time, including places I've parked a hundred times. People laugh. Then a parking garage with six identical levels ate forty minutes of a friend's evening while I walked straight to my car.\n\nNot looking for security tips here. Just the odd little rituals that paid off.",
+      "comments": [
+        {
+          "author": "stormglass",
+          "body": "Full tank of gas before any storm, even a small one. Got snowed in for two days once and ours was the only car on the road that could get out for milk and bread for three houses.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "brasstacks_barb",
+          "body": "A pencil in my coat pocket, always. Thirty-one years of students without one. I've since used it to sign for a delivery, write down a licence plate for a woman whose car got bumped in a lot, and once to fix a stranger's broken zipper pull.",
+          "afterMinutes": 120
+        },
+        {
+          "author": "second_act_sylvia",
+          "body": "I read anything important out loud before I send it. Sounds silly. It caught the time my goodbye email to my entire old office said \"I'm so glad to be leaving you\" and was supposed to finish \"in such good hands.\"",
+          "afterMinutes": 280,
+          "replies": [
+            {
+              "author": "cipher_moth",
+              "body": "reading it out loud is basically a second reviewer who happens to live in your mouth. very underrated control",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "deadlift_diaries",
+          "body": "I check the collars on both ends of the bar every set, warm-ups included. Watched plates slide off someone else's bar once and miss a guy's foot by about an inch. Not my bar, but it's been my ritual ever since.",
+          "afterMinutes": 450
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "I keep a manual save separate from the autosave in every game. Autosave has betrayed me exactly twice and it doesn't get a third chance.",
+          "afterMinutes": 620,
+          "replies": [
+            {
+              "author": "merge_conflict_mel",
+              "body": "this is just version control with more dragons and i fully respect it",
+              "afterMinutes": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "slot": "lunch",
+      "author": "deadlift_diaries",
+      "title": "What's the most useful thing someone said to you right after you messed up?",
+      "body": "Missed my third attempt at a meet once, a weight I'd hit in training a dozen times. Walked off the platform furious. An old judge stopped me by the chalk bowl and said, \"The bar didn't get heavier, you got faster.\" Meaning I'd rushed my setup. He was right. I've thought about it before every heavy single since.\n\nWho said the right thing to you at the worst moment?",
+      "comments": [
+        {
+          "author": "brasstacks_barb",
+          "body": "My first principal, after I lost my temper and sent half a class to the office. She didn't scold me. She said, \"You're allowed one of those a year. Make it count.\" I rationed it for three decades. Some years I didn't use it at all.",
+          "afterMinutes": 35
+        },
+        {
+          "author": "merge_conflict_mel",
+          "body": "took down production for eleven minutes in my first year. my lead messaged \"congrats, you're a real developer now. write down what happened while it's fresh.\" no blame, just homework. i still have that doc",
+          "afterMinutes": 140,
+          "replies": [
+            {
+              "author": "deadlift_diaries",
+              "body": "Same logic as a training log. A missed lift is only wasted if you never work out why you missed it.",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "second_paycheque",
+          "body": "When I finally told a friend the full number I owed, I was braced for a lecture. She said, \"Okay. Now it has a number, and numbers go down.\" That was it. It's the most useful sentence anyone's ever said to me about money.",
+          "afterMinutes": 300
+        },
+        {
+          "author": "spice_cabinet",
+          "body": "The first time my mother trusted me with the biryani pot, I burned the bottom black. She scooped off the top, served it to twelve people, and told me quietly, \"The bottom was for the pot.\" Nobody else ever knew.",
+          "afterMinutes": 470
+        },
+        {
+          "author": "second_act_sylvia",
+          "body": "My driving instructor, after I failed my first road test at 43: \"Good. Now you know what the test looks like.\" I passed the second one.",
+          "afterMinutes": 650
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "second_act_sylvia",
+      "title": "What's something you almost didn't do that turned out to matter a lot?",
+      "body": "I almost skipped the information session for the program I eventually retrained through. It was raining, I was tired, and I'd already talked myself out of it twice. I went in because I'd already paid for parking. That's the entire reason. Eight dollars of parking changed the direction of my life.\n\nWhat almost didn't happen for you?",
+      "comments": [
+        {
+          "author": "stormglass",
+          "body": "Nearly didn't answer the phone the night a friend called about a spare spot at a kitchen party in Lunenburg. I was in my pyjamas. Met half the people I still call friends in that kitchen.",
+          "afterMinutes": 50
+        },
+        {
+          "author": "NewGamePlusPlus",
+          "body": "Almost skipped my sister's board game night because I was \"too tired to learn a new game.\" That was the night I learned Wingspan. My whole group has regretted it since.",
+          "afterMinutes": 160
+        },
+        {
+          "author": "cipher_moth",
+          "body": "Almost didn't reply when a friend of a friend asked for help getting an ex out of her accounts. I didn't know her and I was busy. It turned into a long friendship and, honestly, the reason I care about any of this stuff.",
+          "afterMinutes": 330
+        },
+        {
+          "author": "brasstacks_barb",
+          "body": "Almost turned down my first teaching job because it was in a town I'd never heard of. Thirty-one years. Nearly everyone I love, I met because of a posting I nearly said no to.",
+          "afterMinutes": 500,
+          "replies": [
+            {
+              "author": "second_act_sylvia",
+              "body": "A posting you nearly said no to, and then a whole life. That's the thing about big doors. From the outside they look exactly like small ones.",
+              "afterMinutes": 120
+            }
+          ]
+        },
+        {
+          "author": "chai_and_chapters",
+          "body": "Almost didn't sign up for a library card our first week in Mississauga because I was shy about my accent. The librarian handed me a novel on the way out that I still reread. I've been reading my way around this city ever since.",
+          "afterMinutes": 720
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 1,
+      "day": 2,
+      "slot": "evening",
+      "author": "deadlift_diaries",
+      "body": "Stumbled onto this thread looking for something else entirely. Showed up late to a meet once and told the director a train had parked across the only road into town. He said trains don't park. I showed him the photo of the train, parked, with a line of cars behind it. He let me weigh in."
+    },
+    {
+      "on_bootstrap_index": 3,
+      "day": 7,
+      "slot": "lunch",
+      "author": "second_paycheque",
+      "body": "Late to this one, but mine is a library copy of a frugal-living book I've borrowed so often the librarian just hands it over now. Every fall when the heating bill shows up, I reread the grocery chapter. It has never told me anything new. That's the comfort."
+    },
+    {
+      "on_bootstrap_index": 5,
+      "day": 13,
+      "slot": "lunch",
+      "author": "NewGamePlusPlus",
+      "body": "Adding a late entry because it just happened to me: I learned embarrassingly recently that the little tabs on the ends of a plastic wrap box push in to hold the roll in place. Decades of that roll leaping out at me. The box had the answer the whole time."
+    }
+  ]
+}

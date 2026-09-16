@@ -1,0 +1,112 @@
+{
+  "room": "facepalm",
+  "drip": [
+    {
+      "day": 3,
+      "slot": "evening",
+      "author": "borrowed_ladder",
+      "title": "Took every window screen out to clean them before winter. Now none of them fit anywhere",
+      "body": "Eleven windows. Eleven screens. Pulled them all out this morning, hosed them down on the lawn, felt extremely responsible about it.\n\nDid not label a single one. They are all almost the same size. Not the same size. Almost. I have now spent longer trying screens in windows than I spent cleaning them, and there's one screen that fits nowhere, which means either I've lost my mind or it belongs to a different house.",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "the one that fits nowhere is from a window you haven't found yet. check the basement",
+          "afterMinutes": 30,
+          "replies": [
+            {
+              "author": "borrowed_ladder",
+              "body": "there is a tiny window in the basement above the laundry sink. I forgot it existed. the screen fits perfectly. I hate this house and its secrets",
+              "afterMinutes": 45
+            }
+          ]
+        },
+        {
+          "author": "parallel_parker",
+          "body": "hosing all eleven down at the same time is the part that gets me. you had eleven separate chances to write a number on one",
+          "afterMinutes": 120
+        },
+        {
+          "author": "loonie_tunes",
+          "body": "look at it this way, it was a free chore. a free chore that eats an entire saturday is still technically free. that's how I justify most of my weekends",
+          "afterMinutes": 310
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "lunch",
+      "author": "loonie_tunes",
+      "title": "Froze my credit card in a block of ice to stop impulse buying. My browser had the number saved the whole time",
+      "body": "Very proud of this one for about a week. Card in a yogurt tub full of water, tub in the freezer, big speech to my partner about removing temptation at the source.\n\nThen I bought a sweater at 11pm on a Tuesday without once thinking about the freezer, because the checkout page filled the card in for me. The card is still in the ice. It's fine. It's doing great. It hasn't bought anything.",
+      "comments": [
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "the card was never the weak point. the card was a decoy",
+          "afterMinutes": 35
+        },
+        {
+          "author": "parallel_parker",
+          "body": "\"it hasn't bought anything\" is the proudest anyone has ever sounded about a yogurt tub",
+          "afterMinutes": 140,
+          "replies": [
+            {
+              "author": "loonie_tunes",
+              "body": "it's the most financially responsible member of this household and it isn't close",
+              "afterMinutes": 60
+            }
+          ]
+        },
+        {
+          "author": "airgapped_alice",
+          "body": "you locked the building and left the password on a sticky note by the door. genuinely this is how a lot of real breaches happen. delete the saved card and the ice finally becomes load-bearing",
+          "afterMinutes": 320
+        },
+        {
+          "author": "second_paycheque",
+          "body": "been there. cut up a card with great ceremony once and then remembered it was saved in three different shopping apps. the scissors were symbolic. the apps were not",
+          "afterMinutes": 560
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "evening",
+      "author": "parallel_parker",
+      "title": "Wore my new fall jacket on the first cold morning and got two compliments. The size sticker was still on the sleeve",
+      "body": "The long strip. The one that goes M M M M M M all the way down the arm. I wore it to get coffee, then through an entire meeting where I gestured a lot.\n\nTwo people said they liked the jacket. Neither mentioned the sticker. I'm choosing to believe they were being kind and not that they thought it was a design choice.",
+      "comments": [
+        {
+          "author": "left_on_red",
+          "body": "the gesturing is what makes it. you were pointing at slides with a label running down your arm like a walking clearance rack",
+          "afterMinutes": 40
+        },
+        {
+          "author": "borrowed_ladder",
+          "body": "they saw it. the compliment was cover. I once wore a shirt inside out to the hardware store and the guy helping me said he liked the stitching",
+          "afterMinutes": 160,
+          "replies": [
+            {
+              "author": "parallel_parker",
+              "body": "complimenting the stitching is a warning shot. that man was trying to save you and you walked right past it",
+              "afterMinutes": 50
+            }
+          ]
+        },
+        {
+          "author": "ctrl_z_enjoyer",
+          "body": "on the bright side everyone at work now knows your size, which is basically networking",
+          "afterMinutes": 350
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 2,
+      "day": 5,
+      "slot": "evening",
+      "author": "loonie_tunes",
+      "body": "found this thread while pricing out a plumber versus doing it myself. I have booked the plumber. the line in my budget notebook is labelled \"the cat saw it\""
+    }
+  ]
+}

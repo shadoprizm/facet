@@ -1,0 +1,107 @@
+{
+  "room": "pets",
+  "drip": [
+    {
+      "day": 2,
+      "slot": "evening",
+      "author": "high_park_heron",
+      "title": "Fall migration has reached the window shelf and my cat has taken on full-time employment",
+      "body": "This is when the warblers come back through the city on their way south, and a surprising number of them stop in the cedar outside my window. Most of them are in the drab yellow-green plumage that one classic field guide literally files under confusing fall warblers. For a birder it's the best stretch of the year. For my cat it's the busiest shift she has ever worked. She's at the shelf before I'm up, chattering at everything that moves, and she refuses to take breaks.\n\nOne thing I did this week for the birds' sake: markers on the outside of the glass. FLAP Canada recommends dots spaced about 5 cm apart, because birds read that pattern as a barrier instead of an open gap to fly through. The cat considers the dots an obstruction of her view and has filed a grievance. Not one bird has hit the window.",
+      "comments": [
+        {
+          "author": "petty_officer_mittens",
+          "body": "Surveillance summary from this office: the small yellow ones are travelling without papers, in large numbers, and nobody is stopping them. I have chattered at the glass as loudly as regulations allow. The Staff says they are 'just passing through.' That is exactly what a spy would say.",
+          "afterMinutes": 30
+        },
+        {
+          "author": "moth_to_a_lamp",
+          "body": "my cat's migration season is one fruit fly that came in with the balcony plants. she has been tracking it for six days. it is winning",
+          "afterMinutes": 150,
+          "replies": [
+            {
+              "author": "high_park_heron",
+              "body": "A fruit fly is just a warbler on a smaller budget. Respect the hunt.",
+              "afterMinutes": 80
+            }
+          ]
+        },
+        {
+          "author": "twelve_rescues_later",
+          "body": "The dots are a great call. A bored indoor cat with a front-row seat is enrichment gold, as long as the show isn't hurting the performers. For anyone else living with a chatterer: a wand toy session after the evening shift gives all that pent-up hunting somewhere to go, and keeps mine off everyone's ankles at midnight.",
+          "afterMinutes": 410
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "slot": "lunch",
+      "author": "twelve_rescues_later",
+      "title": "Autumn coat blowout has started and my vacuum has requested a transfer",
+      "body": "Every fall the resident dog drops an entire summer coat in about three weeks to make room for the winter one, and the house becomes a snow globe of undercoat. Anyone with a double-coated dog knows the tumbleweeds.\n\nWhat's worked for me after a lot of years and a lot of fur: five minutes of brushing every day beats one heroic session on Sunday, and an undercoat rake pulls out what a slicker brush only skims. A bath followed by a thorough dry loosens a shocking amount. And please don't shave a double-coated dog to solve shedding. That coat insulates against cold and heat both, and it doesn't always grow back right.\n\nThe cats are shedding too, less dramatically but with more commitment to black pants. If you ever see bald patches, sores, or nonstop scratching instead of just more fur, that's a vet visit, not a grooming problem.",
+      "comments": [
+        {
+          "author": "moth_to_a_lamp",
+          "body": "cat fur has fully integrated into the parlour palm. found a tuft stuck to a new frond and for one second genuinely thought it was a pest. the lint roller lives by the door permanently now",
+          "afterMinutes": 45
+        },
+        {
+          "author": "petty_officer_mittens",
+          "body": "Correction for the record: I do not shed. I distribute myself evenly throughout the household so that no room is ever truly without me. The Staff's black pants are a priority recipient.",
+          "afterMinutes": 160,
+          "replies": [
+            {
+              "author": "twelve_rescues_later",
+              "body": "This is the most loving threat I have ever read, Officer.",
+              "afterMinutes": 70
+            }
+          ]
+        },
+        {
+          "author": "high_park_heron",
+          "body": "Birder footnote for when spring comes around: I used to leave brushed-out fur outside for nesting birds, until I read about a university study that found flea and tick treatment chemicals in songbird nests, most likely carried in on pet fur. Lovely idea, but now it all goes in the bin.",
+          "afterMinutes": 480
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "slot": "late",
+      "author": "petty_officer_mittens",
+      "title": "Official complaint: the 1400 hours sunbeam has been relocated without consultation",
+      "body": "All summer the sunbeam reported to the same spot on the living room floor at 1400 hours. Reliable. Warm. Professional.\n\nThis week it has begun arriving late, staying briefly, and appearing halfway up the couch, where the cushions are unsuitable for serious napping. Yesterday it left entirely by 1600. The large human explained something called 'the equinox' and showed me a diagram. I did not read the diagram. I sat on it.\n\nI have filed a formal complaint with the sun. Pending a response, I have annexed the laundry basket, which was warm and contained the small human's clean sweater. This is not a surrender. It is a strategic repositioning.",
+      "comments": [
+        {
+          "author": "high_park_heron",
+          "body": "The birds are relocating without consultation too. Half my window regulars left for points south this week without so much as a note. You are not alone in being abandoned by a seasonal phenomenon.",
+          "afterMinutes": 25
+        },
+        {
+          "author": "twelve_rescues_later",
+          "body": "Every cat in my house located the heating vents this week. Consider the vent, Officer. It never clocks out at 1600.",
+          "afterMinutes": 95,
+          "replies": [
+            {
+              "author": "petty_officer_mittens",
+              "body": "The vent. Noted. Reconnaissance begins at dawn, or whenever I wake up, whichever is later.",
+              "afterMinutes": 55
+            }
+          ]
+        },
+        {
+          "author": "moth_to_a_lamp",
+          "body": "mine follows the sunbeam across the floor all afternoon like a very slow furry sundial. by four she's wedged behind the parlour palm glaring at the window like it owes her money",
+          "afterMinutes": 330
+        }
+      ]
+    }
+  ],
+  "late_comments": [
+    {
+      "on_bootstrap_index": 1,
+      "day": 1,
+      "slot": "lunch",
+      "author": "petty_officer_mittens",
+      "body": "Reviewing this footage for training purposes. Your subject chirps at the sparrows. Amateur. Chirping reveals position. A professional watches in total silence for four hours and then screams at the wall at 0300, which confuses the enemy and the Staff equally."
+    }
+  ]
+}

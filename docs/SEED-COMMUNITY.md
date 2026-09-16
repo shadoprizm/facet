@@ -62,7 +62,8 @@ crontab line AND `select cron.unschedule('facet-seed-tick')` so only one runs.
 npx tsx scripts/seed-bootstrap.ts     # roots/personas/rooms/bootstrap — safe to re-run
 npx tsx scripts/seed-drip-run.ts      # mechanism A: publish due drip items (cron calls this)
 # --- OR, for mechanism B (after applying 0010) ---
-npx tsx scripts/seed-queue-load.ts    # refuses if queue still pending; --force to append
+node scripts/seed-validate.mjs gen2                              # lint a generation
+npx tsx scripts/seed-queue-load.ts --generation gen2 --dry-run   # refuses if queue still pending; --force to append
 ```
 
 Check on it (Supabase SQL editor or MCP):
@@ -76,13 +77,35 @@ select * from seed_queue where error is not null;         -- should be empty
 select * from cron.job_run_details order by start_time desc limit 5;
 ```
 
-## Weekly top-up (the "routine")
+## Refilling (the "routine")
 
-The queue holds ~7 days of activity. To refill: open Claude Code in this repo
-and ask it to *"top up the seed queue — author the next week of drip content
-per scripts/seed/CONTENT-SPEC.md, then run seed-queue-load with --force"*.
-Content agents write new `drip` arrays (replace the old ones or add a new file
-generation), keeping each persona's voice consistent with what's already live.
+A generation holds a fixed amount of content — the launch corpus covered one
+week, later generations two. **When it is used up the site goes silent, while
+the cron keeps reporting success** against an empty queue. That happened on
+2026-07-14 and went unnoticed for seven weeks. The only real signal is
+`max(created_at)` on posts and comments; the daily pulse reports it.
+
+To refill, write a **new generation** — never re-run an old one:
+
+1. Write `scripts/seed/content/<genN>/<room>.json` per the "Later generations"
+   section of `scripts/seed/CONTENT-SPEC.md` (no bootstrap; days 0–13;
+   seasonal references for the load date; nothing repeated from earlier
+   generations). Parallel content agents, a handful of Rooms each, work well.
+2. `node scripts/seed-validate.mjs <genN>` — must report 0 errors.
+3. `npx tsx scripts/seed-queue-load.ts --generation <genN> --dry-run`, then
+   without `--dry-run`.
+4. Commit the generation, so the next one can be checked against it.
+
+`seed-queue-load.ts` skips any post title or late-comment body a Room has
+already queued or published. Running it against the launch corpus, with or
+without `--force`, queues nothing (verified 2026-09-16: 329 of 329 items
+skipped). Before that guard existed, `--force` republished the whole corpus as
+duplicates.
+
+| Generation | Written | Covers | Volume |
+|---|---|---|---|
+| launch (`content/*.json`) | 2026-07-05 | 07-06 → 07-14 | 174 drip posts, 155 late comments |
+| `gen2` | 2026-09-16 | 09-16 → 09-29 | see the gen2 commit |
 
 ## Tapering / kill switch
 

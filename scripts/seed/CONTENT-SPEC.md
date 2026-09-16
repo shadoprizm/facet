@@ -43,7 +43,9 @@ by pg_cron over the next 7 days).
 
 - Authors are handles from `scripts/seed/personas.json`, used verbatim. Pick
   personas whose `rooms` include this room; at most one "visitor" persona per
-  thread whose interests plausibly overlap.
+  thread whose interests plausibly overlap — two in Rooms with fewer than six
+  regulars, which can't staff a thread otherwise. r/usa has no regulars, so
+  its authors are all visitors whose bios fit.
 - A post's OP may reply inside their own thread (that's natural); nobody else
   comments twice at the same level of the same thread unless replying to a reply.
 - Personas belonging to the same root (same `id` group in personas.json) — keep
@@ -88,3 +90,46 @@ out to as much as 12 h; replies come after their parent. Slot mix: mostly
 `evening` and `lunch`, some `morning`, occasional `late`.
 
 Validate before finishing: `node -e "JSON.parse(require('fs').readFileSync('<file>','utf8'))"`.
+
+## Later generations (refills)
+
+The launch corpus above was consumed once, 2026-07-06 → 07-14. Every refill is a
+new directory: `scripts/seed/content/<generation>/<room-slug>.json` (`gen2`,
+`gen3`, …). `seed-bootstrap.ts` only reads top-level files, so generation
+directories are never backfilled by accident.
+
+Differences from the launch format:
+
+- **No `bootstrap` array.** Only `room`, `drip`, and `late_comments`.
+- **`day` runs 0–13** — two weeks, at roughly half the launch week's daily
+  density, which reads more like a real young community than a burst.
+- **Seasonal references fit the load date, not July.** Each generation's brief
+  states day 0's calendar date and weekday.
+- **Never repeat earlier content.** No reused titles or comment bodies from any
+  generation; don't retell a story or joke already told in the Room, even
+  reworded. Read the Room's earlier files before writing.
+- **No reference to time away.** Personas don't mention having been gone, the
+  Room being quiet, or "it's been a while". A persona may naturally follow up on
+  something it said before ("update on the sourdough") — that is continuity, not
+  a gap.
+- `late_comments` still target the Room's launch `bootstrap` threads by index.
+  Those threads are weeks old by now, so late comments read as someone finding
+  an older thread ("found this searching for…", "tried this after reading it").
+
+| Tier | drip posts | comments per post | late_comments |
+|------|-----------|-------------------|---------------|
+| A    | 8 (days 0–13) | 3–6 top-level, 0–3 replies | 3 |
+| B    | 5 (days 0–13) | 3–5 top-level, 0–2 replies | 2 |
+| C    | 3 (days 0–13) | 2–4 top-level, 0–2 replies | 1 |
+
+Validate, then dry-run, then load:
+
+```bash
+node scripts/seed-validate.mjs gen2                              # must report 0 errors
+npx tsx scripts/seed-queue-load.ts --generation gen2 --dry-run   # what would be queued
+npx tsx scripts/seed-queue-load.ts --generation gen2
+```
+
+The loader skips any post title or late-comment body the Room has already
+queued or published, so a re-run (or an accidental run on an old generation)
+queues nothing rather than duplicating it.

@@ -56,6 +56,25 @@ for (const dir of generationDirs) {
   }
 }
 
+// Siblings in the same generation are written in parallel, often by separate
+// content agents, so repeats between Rooms have to be caught here too.
+const siblingTitles = new Map(), siblingBodies = new Map();
+const addSibling = (map, key, file) => map.set(key, new Set([...(map.get(key) ?? []), file]));
+for (const file of jsonFiles(genDir)) {
+  let c;
+  try { c = JSON.parse(readFileSync(path.join(genDir, file), "utf8")); } catch { continue; }
+  const walk = (list) => (list ?? []).forEach((x) => {
+    if (typeof x.body === "string" && x.body.length > 25) addSibling(siblingBodies, norm(x.body), file);
+    walk(x.replies);
+  });
+  for (const post of c.drip ?? []) {
+    if (typeof post.title === "string") addSibling(siblingTitles, norm(post.title), file);
+    walk(post.comments);
+  }
+  walk(c.late_comments);
+}
+const otherSibling = (map, key, file) => [...(map.get(key) ?? [])].find((f) => f !== file);
+
 let errors = 0, warnings = 0;
 const err = (where, msg) => { errors++; console.log(`  ERROR ${where}: ${msg}`); };
 const warn = (where, msg) => { warnings++; console.log(`  warn  ${where}: ${msg}`); };
@@ -98,6 +117,8 @@ for (const file of jsonFiles(genDir)) {
     const key = norm(body);
     if (key.length > 25) {
       if (priorBodies.has(key)) err(where, `body repeats ${priorBodies.get(key)}`);
+      const sib = otherSibling(siblingBodies, key, file);
+      if (sib) err(where, `body repeats ${generation ?? "launch"}/${sib}`);
       if (seenBodies.has(key)) err(where, "body repeats another comment in this file");
       seenBodies.add(key);
     }
@@ -113,6 +134,8 @@ for (const file of jsonFiles(genDir)) {
       lintText(where, post.title, "title");
       const key = norm(post.title);
       if (priorTitles.has(key)) err(where, `title repeats ${priorTitles.get(key)}`);
+      const sib = otherSibling(siblingTitles, key, file);
+      if (sib) err(where, `title repeats ${generation ?? "launch"}/${sib}`);
       if (seenTitles.has(key)) err(where, "title repeats another post in this file");
       seenTitles.add(key);
     }

@@ -93,6 +93,21 @@ describe("persona handles are never sent", () => {
   });
 });
 
+describe("document titles are never sent", () => {
+  it("drops the title property that posthog-js adds to page views (persona and post titles carry user content)", () => {
+    for (const [path, title] of [
+      ["/p/secret_mask", "Secret Mask (@secret_mask) — Facet"],
+      [POST, "My very private question about my landlord · Facet"],
+      ["/", "Facet — one root, many masks"],
+    ] as const) {
+      const out = beforeSend(event("$pageview", `${ORIGIN}${path}`, { title }))!;
+      expect(out.properties).not.toHaveProperty("title");
+      expect(JSON.stringify(out.properties)).not.toMatch(/secret_mask|landlord|Secret Mask/);
+    }
+    expect(read("node_modules/posthog-js/lib/src/posthog-core.js")).toContain("properties['title'] = ");
+  });
+});
+
 describe("no codes, tokens or private paths in URLs", () => {
   it("keeps only utm_* query parameters", () => {
     expect(sanitizeUrl(`${ORIGIN}/?utm_source=hn&code=ABCD1234&token=x#frag`)).toBe(`${ORIGIN}/?utm_source=hn`);

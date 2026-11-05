@@ -57,10 +57,10 @@ export default function PrivacyPage() {
           notifications, admin pages and the sign-in page.
         </p>
         <p>
-          We do not identify visitors in analytics and do not link analytics events to accounts or personas. Page
-          addresses and referrers keep their path and only standard campaign tags that are short plain labels;
-          other query values are removed. Analytics data is processed in the US. IP addresses may be processed by
-          PostHog.
+          We do not send account identifiers, persona handles or page titles to analytics, and we do not identify
+          visitors. PostHog may associate page views from the same browser session. Page addresses and referrers
+          keep their path and only standard campaign tags that are short plain labels; other query values are
+          removed. Analytics data is processed in the US. IP addresses may be processed by PostHog.
         </p>
       </section>
 

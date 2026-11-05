@@ -106,11 +106,13 @@ const propertyBase = (key: string) => key.replace(/^\$(session_entry_|initial_)/
  * utm_* properties keep only safe values; other URL-derived query properties are removed; every URL value is cleaned;
  * path-only values (`$pathname`, `$session_entry_pathname`, ...) are kept only for public pages.
  * `$prev_pageview_*` (previous page's path, which can be a private route, its duration and scroll depth) is removed.
+ * `title` (the document title posthog-js adds to every page view) is removed: persona pages and posts carry the
+ * persona handle and user-written post titles in it.
  */
 export function sanitizeProperties(props: Record<string, unknown>): void {
   for (const [key, value] of Object.entries(props)) {
     const base = propertyBase(key);
-    if (key.startsWith("$prev_pageview_")) {
+    if (key.startsWith("$prev_pageview_") || key === "title") {
       delete props[key];
     } else if (UTM_KEYS.has(base)) {
       if (!(typeof value === "string" && isSafeCampaignValue(value))) delete props[key];

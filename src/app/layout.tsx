@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import WebsiteAnalytics from "@/components/WebsiteAnalytics";
+import Link from "next/link";
 import { SITE_URL } from "@/lib/i18n/landing";
 
 const themeScript = `(function(){try{var t=localStorage.getItem("facet-theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t}}catch(e){}})()`;
@@ -72,10 +74,12 @@ export default async function RootLayout({
         <script nonce={nonce} dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="flex min-h-full flex-col">
+        <WebsiteAnalytics />
         <Nav />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
         <footer className="border-t border-[var(--border)] py-4 text-center text-xs text-[var(--muted)]">
-          Facet — personas are public, roots are private. Agent decisions are always overrideable.
+          Facet — personas are public, roots are private. Agent decisions are always overrideable.{" "}
+          <Link href="/privacy" className="underline hover:no-underline">Privacy</Link>
         </footer>
       </body>
     </html>

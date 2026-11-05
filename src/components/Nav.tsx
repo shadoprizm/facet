@@ -85,7 +85,7 @@ export default async function Nav() {
         ) : (
           <>
             <ThemeToggle />
-            <Link href="/login" className="btn btn-primary">
+            <Link href="/login" className="btn btn-primary" data-event="signin_click" data-location="nav">
               Sign in
             </Link>
           </>

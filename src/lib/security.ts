@@ -5,6 +5,9 @@ export type SecurityHeader = Readonly<{
   value: string;
 }>;
 
+/** Ingestion host for the website analytics (PostHog, US region). It is the only third-party origin the page may call. */
+export const ANALYTICS_CONNECT_ORIGIN = "https://us.i.posthog.com";
+
 /**
  * Static response headers that are safe for HTML, API responses, errors, and
  * public assets. CSP is request-specific and is added separately by proxy.ts.
@@ -33,6 +36,7 @@ export const GLOBAL_SECURITY_HEADERS: readonly SecurityHeader[] = [
 const PUBLIC_EXACT_PATHS = new Set([
   "/",
   "/login",
+  "/privacy",
   "/auth/confirm",
   "/api/indexnow",
   "/api/stats",
@@ -212,7 +216,7 @@ export function buildContentSecurityPolicy({
     `style-src 'self' 'nonce-${nonce}'`,
     `img-src 'self' data: blob:${remoteSources}`,
     `media-src 'self'${remoteSources}`,
-    `connect-src 'self'${remoteSources}${developmentConnectSource}`,
+    `connect-src 'self'${remoteSources} ${ANALYTICS_CONNECT_ORIGIN}${developmentConnectSource}`,
     "font-src 'self' data:",
     "object-src 'none'",
     "base-uri 'self'",

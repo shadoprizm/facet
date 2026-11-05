@@ -66,10 +66,10 @@ export default async function Landing({ copy }: { copy: LandingCopy }) {
           {copy.hero}
         </p>
         <div className="mt-6 flex items-center justify-center gap-3">
-          <Link href="/login" className="btn btn-primary">
+          <Link href="/login" className="btn btn-primary" data-event="signup_click" data-location="hero">
             {copy.cta}
           </Link>
-          <Link href="/login" className="btn btn-ghost">
+          <Link href="/login" className="btn btn-ghost" data-event="signin_click" data-location="hero">
             {copy.signIn}
           </Link>
         </div>
